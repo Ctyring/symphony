@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sylar
+# Target rules for targets named symphony
 
 # Build rule for target.
-sylar: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sylar
-.PHONY : sylar
+symphony: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symphony
+.PHONY : symphony
 
 # fast build rule for target.
-sylar/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/build
-.PHONY : sylar/fast
+symphony/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/build
+.PHONY : symphony/fast
 
 #=============================================================================
 # Target rules for targets named test_zookeeper
@@ -155,1787 +155,1787 @@ test_service_discovery/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service_discovery.dir/build.make CMakeFiles/test_service_discovery.dir/build
 .PHONY : test_service_discovery/fast
 
-sylar/address.o: sylar/address.cc.o
+symphony/address.o: symphony/address.cc.o
 
-.PHONY : sylar/address.o
+.PHONY : symphony/address.o
 
 # target to build an object file
-sylar/address.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.o
-.PHONY : sylar/address.cc.o
+symphony/address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/address.cc.o
+.PHONY : symphony/address.cc.o
 
-sylar/address.i: sylar/address.cc.i
+symphony/address.i: symphony/address.cc.i
 
-.PHONY : sylar/address.i
+.PHONY : symphony/address.i
 
 # target to preprocess a source file
-sylar/address.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.i
-.PHONY : sylar/address.cc.i
+symphony/address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/address.cc.i
+.PHONY : symphony/address.cc.i
 
-sylar/address.s: sylar/address.cc.s
+symphony/address.s: symphony/address.cc.s
 
-.PHONY : sylar/address.s
+.PHONY : symphony/address.s
 
 # target to generate assembly for a file
-sylar/address.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/address.cc.s
-.PHONY : sylar/address.cc.s
+symphony/address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/address.cc.s
+.PHONY : symphony/address.cc.s
 
-sylar/application.o: sylar/application.cc.o
+symphony/application.o: symphony/application.cc.o
 
-.PHONY : sylar/application.o
+.PHONY : symphony/application.o
 
 # target to build an object file
-sylar/application.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/application.cc.o
-.PHONY : sylar/application.cc.o
+symphony/application.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/application.cc.o
+.PHONY : symphony/application.cc.o
 
-sylar/application.i: sylar/application.cc.i
+symphony/application.i: symphony/application.cc.i
 
-.PHONY : sylar/application.i
+.PHONY : symphony/application.i
 
 # target to preprocess a source file
-sylar/application.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/application.cc.i
-.PHONY : sylar/application.cc.i
+symphony/application.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/application.cc.i
+.PHONY : symphony/application.cc.i
 
-sylar/application.s: sylar/application.cc.s
+symphony/application.s: symphony/application.cc.s
 
-.PHONY : sylar/application.s
+.PHONY : symphony/application.s
 
 # target to generate assembly for a file
-sylar/application.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/application.cc.s
-.PHONY : sylar/application.cc.s
+symphony/application.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/application.cc.s
+.PHONY : symphony/application.cc.s
 
-sylar/bytearray.o: sylar/bytearray.cc.o
+symphony/bytearray.o: symphony/bytearray.cc.o
 
-.PHONY : sylar/bytearray.o
+.PHONY : symphony/bytearray.o
 
 # target to build an object file
-sylar/bytearray.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/bytearray.cc.o
-.PHONY : sylar/bytearray.cc.o
+symphony/bytearray.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/bytearray.cc.o
+.PHONY : symphony/bytearray.cc.o
 
-sylar/bytearray.i: sylar/bytearray.cc.i
+symphony/bytearray.i: symphony/bytearray.cc.i
 
-.PHONY : sylar/bytearray.i
+.PHONY : symphony/bytearray.i
 
 # target to preprocess a source file
-sylar/bytearray.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/bytearray.cc.i
-.PHONY : sylar/bytearray.cc.i
+symphony/bytearray.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/bytearray.cc.i
+.PHONY : symphony/bytearray.cc.i
 
-sylar/bytearray.s: sylar/bytearray.cc.s
+symphony/bytearray.s: symphony/bytearray.cc.s
 
-.PHONY : sylar/bytearray.s
+.PHONY : symphony/bytearray.s
 
 # target to generate assembly for a file
-sylar/bytearray.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/bytearray.cc.s
-.PHONY : sylar/bytearray.cc.s
+symphony/bytearray.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/bytearray.cc.s
+.PHONY : symphony/bytearray.cc.s
 
-sylar/config.o: sylar/config.cc.o
+symphony/config.o: symphony/config.cc.o
 
-.PHONY : sylar/config.o
+.PHONY : symphony/config.o
 
 # target to build an object file
-sylar/config.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.o
-.PHONY : sylar/config.cc.o
+symphony/config.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/config.cc.o
+.PHONY : symphony/config.cc.o
 
-sylar/config.i: sylar/config.cc.i
+symphony/config.i: symphony/config.cc.i
 
-.PHONY : sylar/config.i
+.PHONY : symphony/config.i
 
 # target to preprocess a source file
-sylar/config.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.i
-.PHONY : sylar/config.cc.i
+symphony/config.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/config.cc.i
+.PHONY : symphony/config.cc.i
 
-sylar/config.s: sylar/config.cc.s
+symphony/config.s: symphony/config.cc.s
 
-.PHONY : sylar/config.s
+.PHONY : symphony/config.s
 
 # target to generate assembly for a file
-sylar/config.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/config.cc.s
-.PHONY : sylar/config.cc.s
+symphony/config.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/config.cc.s
+.PHONY : symphony/config.cc.s
 
-sylar/daemon.o: sylar/daemon.cc.o
+symphony/daemon.o: symphony/daemon.cc.o
 
-.PHONY : sylar/daemon.o
+.PHONY : symphony/daemon.o
 
 # target to build an object file
-sylar/daemon.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/daemon.cc.o
-.PHONY : sylar/daemon.cc.o
+symphony/daemon.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/daemon.cc.o
+.PHONY : symphony/daemon.cc.o
 
-sylar/daemon.i: sylar/daemon.cc.i
+symphony/daemon.i: symphony/daemon.cc.i
 
-.PHONY : sylar/daemon.i
+.PHONY : symphony/daemon.i
 
 # target to preprocess a source file
-sylar/daemon.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/daemon.cc.i
-.PHONY : sylar/daemon.cc.i
+symphony/daemon.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/daemon.cc.i
+.PHONY : symphony/daemon.cc.i
 
-sylar/daemon.s: sylar/daemon.cc.s
+symphony/daemon.s: symphony/daemon.cc.s
 
-.PHONY : sylar/daemon.s
+.PHONY : symphony/daemon.s
 
 # target to generate assembly for a file
-sylar/daemon.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/daemon.cc.s
-.PHONY : sylar/daemon.cc.s
+symphony/daemon.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/daemon.cc.s
+.PHONY : symphony/daemon.cc.s
 
-sylar/db/fox_thread.o: sylar/db/fox_thread.cc.o
+symphony/db/fox_thread.o: symphony/db/fox_thread.cc.o
 
-.PHONY : sylar/db/fox_thread.o
+.PHONY : symphony/db/fox_thread.o
 
 # target to build an object file
-sylar/db/fox_thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/fox_thread.cc.o
-.PHONY : sylar/db/fox_thread.cc.o
+symphony/db/fox_thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/fox_thread.cc.o
+.PHONY : symphony/db/fox_thread.cc.o
 
-sylar/db/fox_thread.i: sylar/db/fox_thread.cc.i
+symphony/db/fox_thread.i: symphony/db/fox_thread.cc.i
 
-.PHONY : sylar/db/fox_thread.i
+.PHONY : symphony/db/fox_thread.i
 
 # target to preprocess a source file
-sylar/db/fox_thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/fox_thread.cc.i
-.PHONY : sylar/db/fox_thread.cc.i
+symphony/db/fox_thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/fox_thread.cc.i
+.PHONY : symphony/db/fox_thread.cc.i
 
-sylar/db/fox_thread.s: sylar/db/fox_thread.cc.s
+symphony/db/fox_thread.s: symphony/db/fox_thread.cc.s
 
-.PHONY : sylar/db/fox_thread.s
+.PHONY : symphony/db/fox_thread.s
 
 # target to generate assembly for a file
-sylar/db/fox_thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/fox_thread.cc.s
-.PHONY : sylar/db/fox_thread.cc.s
+symphony/db/fox_thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/fox_thread.cc.s
+.PHONY : symphony/db/fox_thread.cc.s
 
-sylar/db/mysql.o: sylar/db/mysql.cc.o
+symphony/db/mysql.o: symphony/db/mysql.cc.o
 
-.PHONY : sylar/db/mysql.o
+.PHONY : symphony/db/mysql.o
 
 # target to build an object file
-sylar/db/mysql.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/mysql.cc.o
-.PHONY : sylar/db/mysql.cc.o
+symphony/db/mysql.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/mysql.cc.o
+.PHONY : symphony/db/mysql.cc.o
 
-sylar/db/mysql.i: sylar/db/mysql.cc.i
+symphony/db/mysql.i: symphony/db/mysql.cc.i
 
-.PHONY : sylar/db/mysql.i
+.PHONY : symphony/db/mysql.i
 
 # target to preprocess a source file
-sylar/db/mysql.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/mysql.cc.i
-.PHONY : sylar/db/mysql.cc.i
+symphony/db/mysql.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/mysql.cc.i
+.PHONY : symphony/db/mysql.cc.i
 
-sylar/db/mysql.s: sylar/db/mysql.cc.s
+symphony/db/mysql.s: symphony/db/mysql.cc.s
 
-.PHONY : sylar/db/mysql.s
+.PHONY : symphony/db/mysql.s
 
 # target to generate assembly for a file
-sylar/db/mysql.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/mysql.cc.s
-.PHONY : sylar/db/mysql.cc.s
+symphony/db/mysql.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/mysql.cc.s
+.PHONY : symphony/db/mysql.cc.s
 
-sylar/db/redis.o: sylar/db/redis.cc.o
+symphony/db/redis.o: symphony/db/redis.cc.o
 
-.PHONY : sylar/db/redis.o
+.PHONY : symphony/db/redis.o
 
 # target to build an object file
-sylar/db/redis.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/redis.cc.o
-.PHONY : sylar/db/redis.cc.o
+symphony/db/redis.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/redis.cc.o
+.PHONY : symphony/db/redis.cc.o
 
-sylar/db/redis.i: sylar/db/redis.cc.i
+symphony/db/redis.i: symphony/db/redis.cc.i
 
-.PHONY : sylar/db/redis.i
+.PHONY : symphony/db/redis.i
 
 # target to preprocess a source file
-sylar/db/redis.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/redis.cc.i
-.PHONY : sylar/db/redis.cc.i
+symphony/db/redis.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/redis.cc.i
+.PHONY : symphony/db/redis.cc.i
 
-sylar/db/redis.s: sylar/db/redis.cc.s
+symphony/db/redis.s: symphony/db/redis.cc.s
 
-.PHONY : sylar/db/redis.s
+.PHONY : symphony/db/redis.s
 
 # target to generate assembly for a file
-sylar/db/redis.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/redis.cc.s
-.PHONY : sylar/db/redis.cc.s
+symphony/db/redis.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/redis.cc.s
+.PHONY : symphony/db/redis.cc.s
 
-sylar/db/sqlite3.o: sylar/db/sqlite3.cc.o
+symphony/db/sqlite3.o: symphony/db/sqlite3.cc.o
 
-.PHONY : sylar/db/sqlite3.o
+.PHONY : symphony/db/sqlite3.o
 
 # target to build an object file
-sylar/db/sqlite3.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/sqlite3.cc.o
-.PHONY : sylar/db/sqlite3.cc.o
+symphony/db/sqlite3.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/sqlite3.cc.o
+.PHONY : symphony/db/sqlite3.cc.o
 
-sylar/db/sqlite3.i: sylar/db/sqlite3.cc.i
+symphony/db/sqlite3.i: symphony/db/sqlite3.cc.i
 
-.PHONY : sylar/db/sqlite3.i
+.PHONY : symphony/db/sqlite3.i
 
 # target to preprocess a source file
-sylar/db/sqlite3.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/sqlite3.cc.i
-.PHONY : sylar/db/sqlite3.cc.i
+symphony/db/sqlite3.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/sqlite3.cc.i
+.PHONY : symphony/db/sqlite3.cc.i
 
-sylar/db/sqlite3.s: sylar/db/sqlite3.cc.s
+symphony/db/sqlite3.s: symphony/db/sqlite3.cc.s
 
-.PHONY : sylar/db/sqlite3.s
+.PHONY : symphony/db/sqlite3.s
 
 # target to generate assembly for a file
-sylar/db/sqlite3.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/db/sqlite3.cc.s
-.PHONY : sylar/db/sqlite3.cc.s
+symphony/db/sqlite3.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/db/sqlite3.cc.s
+.PHONY : symphony/db/sqlite3.cc.s
 
-sylar/ds/bitmap.o: sylar/ds/bitmap.cc.o
+symphony/ds/bitmap.o: symphony/ds/bitmap.cc.o
 
-.PHONY : sylar/ds/bitmap.o
+.PHONY : symphony/ds/bitmap.o
 
 # target to build an object file
-sylar/ds/bitmap.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/bitmap.cc.o
-.PHONY : sylar/ds/bitmap.cc.o
+symphony/ds/bitmap.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/bitmap.cc.o
+.PHONY : symphony/ds/bitmap.cc.o
 
-sylar/ds/bitmap.i: sylar/ds/bitmap.cc.i
+symphony/ds/bitmap.i: symphony/ds/bitmap.cc.i
 
-.PHONY : sylar/ds/bitmap.i
+.PHONY : symphony/ds/bitmap.i
 
 # target to preprocess a source file
-sylar/ds/bitmap.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/bitmap.cc.i
-.PHONY : sylar/ds/bitmap.cc.i
+symphony/ds/bitmap.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/bitmap.cc.i
+.PHONY : symphony/ds/bitmap.cc.i
 
-sylar/ds/bitmap.s: sylar/ds/bitmap.cc.s
+symphony/ds/bitmap.s: symphony/ds/bitmap.cc.s
 
-.PHONY : sylar/ds/bitmap.s
+.PHONY : symphony/ds/bitmap.s
 
 # target to generate assembly for a file
-sylar/ds/bitmap.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/bitmap.cc.s
-.PHONY : sylar/ds/bitmap.cc.s
+symphony/ds/bitmap.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/bitmap.cc.s
+.PHONY : symphony/ds/bitmap.cc.s
 
-sylar/ds/roaring.o: sylar/ds/roaring.c.o
+symphony/ds/roaring.o: symphony/ds/roaring.c.o
 
-.PHONY : sylar/ds/roaring.o
+.PHONY : symphony/ds/roaring.o
 
 # target to build an object file
-sylar/ds/roaring.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring.c.o
-.PHONY : sylar/ds/roaring.c.o
+symphony/ds/roaring.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring.c.o
+.PHONY : symphony/ds/roaring.c.o
 
-sylar/ds/roaring.i: sylar/ds/roaring.c.i
+symphony/ds/roaring.i: symphony/ds/roaring.c.i
 
-.PHONY : sylar/ds/roaring.i
+.PHONY : symphony/ds/roaring.i
 
 # target to preprocess a source file
-sylar/ds/roaring.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring.c.i
-.PHONY : sylar/ds/roaring.c.i
+symphony/ds/roaring.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring.c.i
+.PHONY : symphony/ds/roaring.c.i
 
-sylar/ds/roaring.s: sylar/ds/roaring.c.s
+symphony/ds/roaring.s: symphony/ds/roaring.c.s
 
-.PHONY : sylar/ds/roaring.s
+.PHONY : symphony/ds/roaring.s
 
 # target to generate assembly for a file
-sylar/ds/roaring.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring.c.s
-.PHONY : sylar/ds/roaring.c.s
+symphony/ds/roaring.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring.c.s
+.PHONY : symphony/ds/roaring.c.s
 
-sylar/ds/roaring_bitmap.o: sylar/ds/roaring_bitmap.cc.o
+symphony/ds/roaring_bitmap.o: symphony/ds/roaring_bitmap.cc.o
 
-.PHONY : sylar/ds/roaring_bitmap.o
+.PHONY : symphony/ds/roaring_bitmap.o
 
 # target to build an object file
-sylar/ds/roaring_bitmap.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring_bitmap.cc.o
-.PHONY : sylar/ds/roaring_bitmap.cc.o
+symphony/ds/roaring_bitmap.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring_bitmap.cc.o
+.PHONY : symphony/ds/roaring_bitmap.cc.o
 
-sylar/ds/roaring_bitmap.i: sylar/ds/roaring_bitmap.cc.i
+symphony/ds/roaring_bitmap.i: symphony/ds/roaring_bitmap.cc.i
 
-.PHONY : sylar/ds/roaring_bitmap.i
+.PHONY : symphony/ds/roaring_bitmap.i
 
 # target to preprocess a source file
-sylar/ds/roaring_bitmap.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring_bitmap.cc.i
-.PHONY : sylar/ds/roaring_bitmap.cc.i
+symphony/ds/roaring_bitmap.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring_bitmap.cc.i
+.PHONY : symphony/ds/roaring_bitmap.cc.i
 
-sylar/ds/roaring_bitmap.s: sylar/ds/roaring_bitmap.cc.s
+symphony/ds/roaring_bitmap.s: symphony/ds/roaring_bitmap.cc.s
 
-.PHONY : sylar/ds/roaring_bitmap.s
+.PHONY : symphony/ds/roaring_bitmap.s
 
 # target to generate assembly for a file
-sylar/ds/roaring_bitmap.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/roaring_bitmap.cc.s
-.PHONY : sylar/ds/roaring_bitmap.cc.s
+symphony/ds/roaring_bitmap.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/roaring_bitmap.cc.s
+.PHONY : symphony/ds/roaring_bitmap.cc.s
 
-sylar/ds/util.o: sylar/ds/util.cc.o
+symphony/ds/util.o: symphony/ds/util.cc.o
 
-.PHONY : sylar/ds/util.o
+.PHONY : symphony/ds/util.o
 
 # target to build an object file
-sylar/ds/util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/util.cc.o
-.PHONY : sylar/ds/util.cc.o
+symphony/ds/util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/util.cc.o
+.PHONY : symphony/ds/util.cc.o
 
-sylar/ds/util.i: sylar/ds/util.cc.i
+symphony/ds/util.i: symphony/ds/util.cc.i
 
-.PHONY : sylar/ds/util.i
+.PHONY : symphony/ds/util.i
 
 # target to preprocess a source file
-sylar/ds/util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/util.cc.i
-.PHONY : sylar/ds/util.cc.i
+symphony/ds/util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/util.cc.i
+.PHONY : symphony/ds/util.cc.i
 
-sylar/ds/util.s: sylar/ds/util.cc.s
+symphony/ds/util.s: symphony/ds/util.cc.s
 
-.PHONY : sylar/ds/util.s
+.PHONY : symphony/ds/util.s
 
 # target to generate assembly for a file
-sylar/ds/util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ds/util.cc.s
-.PHONY : sylar/ds/util.cc.s
+symphony/ds/util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ds/util.cc.s
+.PHONY : symphony/ds/util.cc.s
 
-sylar/email/email.o: sylar/email/email.cc.o
+symphony/email/email.o: symphony/email/email.cc.o
 
-.PHONY : sylar/email/email.o
+.PHONY : symphony/email/email.o
 
 # target to build an object file
-sylar/email/email.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/email.cc.o
-.PHONY : sylar/email/email.cc.o
+symphony/email/email.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/email.cc.o
+.PHONY : symphony/email/email.cc.o
 
-sylar/email/email.i: sylar/email/email.cc.i
+symphony/email/email.i: symphony/email/email.cc.i
 
-.PHONY : sylar/email/email.i
+.PHONY : symphony/email/email.i
 
 # target to preprocess a source file
-sylar/email/email.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/email.cc.i
-.PHONY : sylar/email/email.cc.i
+symphony/email/email.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/email.cc.i
+.PHONY : symphony/email/email.cc.i
 
-sylar/email/email.s: sylar/email/email.cc.s
+symphony/email/email.s: symphony/email/email.cc.s
 
-.PHONY : sylar/email/email.s
+.PHONY : symphony/email/email.s
 
 # target to generate assembly for a file
-sylar/email/email.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/email.cc.s
-.PHONY : sylar/email/email.cc.s
+symphony/email/email.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/email.cc.s
+.PHONY : symphony/email/email.cc.s
 
-sylar/email/smtp.o: sylar/email/smtp.cc.o
+symphony/email/smtp.o: symphony/email/smtp.cc.o
 
-.PHONY : sylar/email/smtp.o
+.PHONY : symphony/email/smtp.o
 
 # target to build an object file
-sylar/email/smtp.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/smtp.cc.o
-.PHONY : sylar/email/smtp.cc.o
+symphony/email/smtp.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/smtp.cc.o
+.PHONY : symphony/email/smtp.cc.o
 
-sylar/email/smtp.i: sylar/email/smtp.cc.i
+symphony/email/smtp.i: symphony/email/smtp.cc.i
 
-.PHONY : sylar/email/smtp.i
+.PHONY : symphony/email/smtp.i
 
 # target to preprocess a source file
-sylar/email/smtp.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/smtp.cc.i
-.PHONY : sylar/email/smtp.cc.i
+symphony/email/smtp.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/smtp.cc.i
+.PHONY : symphony/email/smtp.cc.i
 
-sylar/email/smtp.s: sylar/email/smtp.cc.s
+symphony/email/smtp.s: symphony/email/smtp.cc.s
 
-.PHONY : sylar/email/smtp.s
+.PHONY : symphony/email/smtp.s
 
 # target to generate assembly for a file
-sylar/email/smtp.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/email/smtp.cc.s
-.PHONY : sylar/email/smtp.cc.s
+symphony/email/smtp.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/email/smtp.cc.s
+.PHONY : symphony/email/smtp.cc.s
 
-sylar/env.o: sylar/env.cc.o
+symphony/env.o: symphony/env.cc.o
 
-.PHONY : sylar/env.o
+.PHONY : symphony/env.o
 
 # target to build an object file
-sylar/env.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/env.cc.o
-.PHONY : sylar/env.cc.o
+symphony/env.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/env.cc.o
+.PHONY : symphony/env.cc.o
 
-sylar/env.i: sylar/env.cc.i
+symphony/env.i: symphony/env.cc.i
 
-.PHONY : sylar/env.i
+.PHONY : symphony/env.i
 
 # target to preprocess a source file
-sylar/env.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/env.cc.i
-.PHONY : sylar/env.cc.i
+symphony/env.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/env.cc.i
+.PHONY : symphony/env.cc.i
 
-sylar/env.s: sylar/env.cc.s
+symphony/env.s: symphony/env.cc.s
 
-.PHONY : sylar/env.s
+.PHONY : symphony/env.s
 
 # target to generate assembly for a file
-sylar/env.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/env.cc.s
-.PHONY : sylar/env.cc.s
+symphony/env.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/env.cc.s
+.PHONY : symphony/env.cc.s
 
-sylar/fd_manager.o: sylar/fd_manager.cc.o
+symphony/fd_manager.o: symphony/fd_manager.cc.o
 
-.PHONY : sylar/fd_manager.o
+.PHONY : symphony/fd_manager.o
 
 # target to build an object file
-sylar/fd_manager.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.o
-.PHONY : sylar/fd_manager.cc.o
+symphony/fd_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fd_manager.cc.o
+.PHONY : symphony/fd_manager.cc.o
 
-sylar/fd_manager.i: sylar/fd_manager.cc.i
+symphony/fd_manager.i: symphony/fd_manager.cc.i
 
-.PHONY : sylar/fd_manager.i
+.PHONY : symphony/fd_manager.i
 
 # target to preprocess a source file
-sylar/fd_manager.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.i
-.PHONY : sylar/fd_manager.cc.i
+symphony/fd_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fd_manager.cc.i
+.PHONY : symphony/fd_manager.cc.i
 
-sylar/fd_manager.s: sylar/fd_manager.cc.s
+symphony/fd_manager.s: symphony/fd_manager.cc.s
 
-.PHONY : sylar/fd_manager.s
+.PHONY : symphony/fd_manager.s
 
 # target to generate assembly for a file
-sylar/fd_manager.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fd_manager.cc.s
-.PHONY : sylar/fd_manager.cc.s
+symphony/fd_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fd_manager.cc.s
+.PHONY : symphony/fd_manager.cc.s
 
-sylar/fiber.o: sylar/fiber.cc.o
+symphony/fiber.o: symphony/fiber.cc.o
 
-.PHONY : sylar/fiber.o
+.PHONY : symphony/fiber.o
 
 # target to build an object file
-sylar/fiber.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cc.o
-.PHONY : sylar/fiber.cc.o
+symphony/fiber.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fiber.cc.o
+.PHONY : symphony/fiber.cc.o
 
-sylar/fiber.i: sylar/fiber.cc.i
+symphony/fiber.i: symphony/fiber.cc.i
 
-.PHONY : sylar/fiber.i
+.PHONY : symphony/fiber.i
 
 # target to preprocess a source file
-sylar/fiber.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cc.i
-.PHONY : sylar/fiber.cc.i
+symphony/fiber.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fiber.cc.i
+.PHONY : symphony/fiber.cc.i
 
-sylar/fiber.s: sylar/fiber.cc.s
+symphony/fiber.s: symphony/fiber.cc.s
 
-.PHONY : sylar/fiber.s
+.PHONY : symphony/fiber.s
 
 # target to generate assembly for a file
-sylar/fiber.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/fiber.cc.s
-.PHONY : sylar/fiber.cc.s
+symphony/fiber.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/fiber.cc.s
+.PHONY : symphony/fiber.cc.s
 
-sylar/hook.o: sylar/hook.cc.o
+symphony/hook.o: symphony/hook.cc.o
 
-.PHONY : sylar/hook.o
+.PHONY : symphony/hook.o
 
 # target to build an object file
-sylar/hook.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.o
-.PHONY : sylar/hook.cc.o
+symphony/hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/hook.cc.o
+.PHONY : symphony/hook.cc.o
 
-sylar/hook.i: sylar/hook.cc.i
+symphony/hook.i: symphony/hook.cc.i
 
-.PHONY : sylar/hook.i
+.PHONY : symphony/hook.i
 
 # target to preprocess a source file
-sylar/hook.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.i
-.PHONY : sylar/hook.cc.i
+symphony/hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/hook.cc.i
+.PHONY : symphony/hook.cc.i
 
-sylar/hook.s: sylar/hook.cc.s
+symphony/hook.s: symphony/hook.cc.s
 
-.PHONY : sylar/hook.s
+.PHONY : symphony/hook.s
 
 # target to generate assembly for a file
-sylar/hook.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/hook.cc.s
-.PHONY : sylar/hook.cc.s
+symphony/hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/hook.cc.s
+.PHONY : symphony/hook.cc.s
 
-sylar/http/http.o: sylar/http/http.cc.o
+symphony/http/http.o: symphony/http/http.cc.o
 
-.PHONY : sylar/http/http.o
+.PHONY : symphony/http/http.o
 
 # target to build an object file
-sylar/http/http.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http.cc.o
-.PHONY : sylar/http/http.cc.o
+symphony/http/http.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http.cc.o
+.PHONY : symphony/http/http.cc.o
 
-sylar/http/http.i: sylar/http/http.cc.i
+symphony/http/http.i: symphony/http/http.cc.i
 
-.PHONY : sylar/http/http.i
+.PHONY : symphony/http/http.i
 
 # target to preprocess a source file
-sylar/http/http.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http.cc.i
-.PHONY : sylar/http/http.cc.i
+symphony/http/http.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http.cc.i
+.PHONY : symphony/http/http.cc.i
 
-sylar/http/http.s: sylar/http/http.cc.s
+symphony/http/http.s: symphony/http/http.cc.s
 
-.PHONY : sylar/http/http.s
+.PHONY : symphony/http/http.s
 
 # target to generate assembly for a file
-sylar/http/http.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http.cc.s
-.PHONY : sylar/http/http.cc.s
+symphony/http/http.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http.cc.s
+.PHONY : symphony/http/http.cc.s
 
-sylar/http/http11_parser.rl.o: sylar/http/http11_parser.rl.cc.o
+symphony/http/http11_parser.rl.o: symphony/http/http11_parser.rl.cc.o
 
-.PHONY : sylar/http/http11_parser.rl.o
+.PHONY : symphony/http/http11_parser.rl.o
 
 # target to build an object file
-sylar/http/http11_parser.rl.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.o
-.PHONY : sylar/http/http11_parser.rl.cc.o
+symphony/http/http11_parser.rl.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http11_parser.rl.cc.o
+.PHONY : symphony/http/http11_parser.rl.cc.o
 
-sylar/http/http11_parser.rl.i: sylar/http/http11_parser.rl.cc.i
+symphony/http/http11_parser.rl.i: symphony/http/http11_parser.rl.cc.i
 
-.PHONY : sylar/http/http11_parser.rl.i
+.PHONY : symphony/http/http11_parser.rl.i
 
 # target to preprocess a source file
-sylar/http/http11_parser.rl.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.i
-.PHONY : sylar/http/http11_parser.rl.cc.i
+symphony/http/http11_parser.rl.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http11_parser.rl.cc.i
+.PHONY : symphony/http/http11_parser.rl.cc.i
 
-sylar/http/http11_parser.rl.s: sylar/http/http11_parser.rl.cc.s
+symphony/http/http11_parser.rl.s: symphony/http/http11_parser.rl.cc.s
 
-.PHONY : sylar/http/http11_parser.rl.s
+.PHONY : symphony/http/http11_parser.rl.s
 
 # target to generate assembly for a file
-sylar/http/http11_parser.rl.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http11_parser.rl.cc.s
-.PHONY : sylar/http/http11_parser.rl.cc.s
+symphony/http/http11_parser.rl.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http11_parser.rl.cc.s
+.PHONY : symphony/http/http11_parser.rl.cc.s
 
-sylar/http/http_connection.o: sylar/http/http_connection.cc.o
+symphony/http/http_connection.o: symphony/http/http_connection.cc.o
 
-.PHONY : sylar/http/http_connection.o
+.PHONY : symphony/http/http_connection.o
 
 # target to build an object file
-sylar/http/http_connection.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_connection.cc.o
-.PHONY : sylar/http/http_connection.cc.o
+symphony/http/http_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_connection.cc.o
+.PHONY : symphony/http/http_connection.cc.o
 
-sylar/http/http_connection.i: sylar/http/http_connection.cc.i
+symphony/http/http_connection.i: symphony/http/http_connection.cc.i
 
-.PHONY : sylar/http/http_connection.i
+.PHONY : symphony/http/http_connection.i
 
 # target to preprocess a source file
-sylar/http/http_connection.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_connection.cc.i
-.PHONY : sylar/http/http_connection.cc.i
+symphony/http/http_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_connection.cc.i
+.PHONY : symphony/http/http_connection.cc.i
 
-sylar/http/http_connection.s: sylar/http/http_connection.cc.s
+symphony/http/http_connection.s: symphony/http/http_connection.cc.s
 
-.PHONY : sylar/http/http_connection.s
+.PHONY : symphony/http/http_connection.s
 
 # target to generate assembly for a file
-sylar/http/http_connection.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_connection.cc.s
-.PHONY : sylar/http/http_connection.cc.s
+symphony/http/http_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_connection.cc.s
+.PHONY : symphony/http/http_connection.cc.s
 
-sylar/http/http_parser.o: sylar/http/http_parser.cc.o
+symphony/http/http_parser.o: symphony/http/http_parser.cc.o
 
-.PHONY : sylar/http/http_parser.o
+.PHONY : symphony/http/http_parser.o
 
 # target to build an object file
-sylar/http/http_parser.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_parser.cc.o
-.PHONY : sylar/http/http_parser.cc.o
+symphony/http/http_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_parser.cc.o
+.PHONY : symphony/http/http_parser.cc.o
 
-sylar/http/http_parser.i: sylar/http/http_parser.cc.i
+symphony/http/http_parser.i: symphony/http/http_parser.cc.i
 
-.PHONY : sylar/http/http_parser.i
+.PHONY : symphony/http/http_parser.i
 
 # target to preprocess a source file
-sylar/http/http_parser.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_parser.cc.i
-.PHONY : sylar/http/http_parser.cc.i
+symphony/http/http_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_parser.cc.i
+.PHONY : symphony/http/http_parser.cc.i
 
-sylar/http/http_parser.s: sylar/http/http_parser.cc.s
+symphony/http/http_parser.s: symphony/http/http_parser.cc.s
 
-.PHONY : sylar/http/http_parser.s
+.PHONY : symphony/http/http_parser.s
 
 # target to generate assembly for a file
-sylar/http/http_parser.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_parser.cc.s
-.PHONY : sylar/http/http_parser.cc.s
+symphony/http/http_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_parser.cc.s
+.PHONY : symphony/http/http_parser.cc.s
 
-sylar/http/http_server.o: sylar/http/http_server.cc.o
+symphony/http/http_server.o: symphony/http/http_server.cc.o
 
-.PHONY : sylar/http/http_server.o
+.PHONY : symphony/http/http_server.o
 
 # target to build an object file
-sylar/http/http_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_server.cc.o
-.PHONY : sylar/http/http_server.cc.o
+symphony/http/http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_server.cc.o
+.PHONY : symphony/http/http_server.cc.o
 
-sylar/http/http_server.i: sylar/http/http_server.cc.i
+symphony/http/http_server.i: symphony/http/http_server.cc.i
 
-.PHONY : sylar/http/http_server.i
+.PHONY : symphony/http/http_server.i
 
 # target to preprocess a source file
-sylar/http/http_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_server.cc.i
-.PHONY : sylar/http/http_server.cc.i
+symphony/http/http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_server.cc.i
+.PHONY : symphony/http/http_server.cc.i
 
-sylar/http/http_server.s: sylar/http/http_server.cc.s
+symphony/http/http_server.s: symphony/http/http_server.cc.s
 
-.PHONY : sylar/http/http_server.s
+.PHONY : symphony/http/http_server.s
 
 # target to generate assembly for a file
-sylar/http/http_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_server.cc.s
-.PHONY : sylar/http/http_server.cc.s
+symphony/http/http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_server.cc.s
+.PHONY : symphony/http/http_server.cc.s
 
-sylar/http/http_session.o: sylar/http/http_session.cc.o
+symphony/http/http_session.o: symphony/http/http_session.cc.o
 
-.PHONY : sylar/http/http_session.o
+.PHONY : symphony/http/http_session.o
 
 # target to build an object file
-sylar/http/http_session.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_session.cc.o
-.PHONY : sylar/http/http_session.cc.o
+symphony/http/http_session.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_session.cc.o
+.PHONY : symphony/http/http_session.cc.o
 
-sylar/http/http_session.i: sylar/http/http_session.cc.i
+symphony/http/http_session.i: symphony/http/http_session.cc.i
 
-.PHONY : sylar/http/http_session.i
+.PHONY : symphony/http/http_session.i
 
 # target to preprocess a source file
-sylar/http/http_session.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_session.cc.i
-.PHONY : sylar/http/http_session.cc.i
+symphony/http/http_session.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_session.cc.i
+.PHONY : symphony/http/http_session.cc.i
 
-sylar/http/http_session.s: sylar/http/http_session.cc.s
+symphony/http/http_session.s: symphony/http/http_session.cc.s
 
-.PHONY : sylar/http/http_session.s
+.PHONY : symphony/http/http_session.s
 
 # target to generate assembly for a file
-sylar/http/http_session.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/http_session.cc.s
-.PHONY : sylar/http/http_session.cc.s
+symphony/http/http_session.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/http_session.cc.s
+.PHONY : symphony/http/http_session.cc.s
 
-sylar/http/httpclient_parser.rl.o: sylar/http/httpclient_parser.rl.cc.o
+symphony/http/httpclient_parser.rl.o: symphony/http/httpclient_parser.rl.cc.o
 
-.PHONY : sylar/http/httpclient_parser.rl.o
+.PHONY : symphony/http/httpclient_parser.rl.o
 
 # target to build an object file
-sylar/http/httpclient_parser.rl.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.o
-.PHONY : sylar/http/httpclient_parser.rl.cc.o
+symphony/http/httpclient_parser.rl.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/httpclient_parser.rl.cc.o
+.PHONY : symphony/http/httpclient_parser.rl.cc.o
 
-sylar/http/httpclient_parser.rl.i: sylar/http/httpclient_parser.rl.cc.i
+symphony/http/httpclient_parser.rl.i: symphony/http/httpclient_parser.rl.cc.i
 
-.PHONY : sylar/http/httpclient_parser.rl.i
+.PHONY : symphony/http/httpclient_parser.rl.i
 
 # target to preprocess a source file
-sylar/http/httpclient_parser.rl.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.i
-.PHONY : sylar/http/httpclient_parser.rl.cc.i
+symphony/http/httpclient_parser.rl.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/httpclient_parser.rl.cc.i
+.PHONY : symphony/http/httpclient_parser.rl.cc.i
 
-sylar/http/httpclient_parser.rl.s: sylar/http/httpclient_parser.rl.cc.s
+symphony/http/httpclient_parser.rl.s: symphony/http/httpclient_parser.rl.cc.s
 
-.PHONY : sylar/http/httpclient_parser.rl.s
+.PHONY : symphony/http/httpclient_parser.rl.s
 
 # target to generate assembly for a file
-sylar/http/httpclient_parser.rl.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/httpclient_parser.rl.cc.s
-.PHONY : sylar/http/httpclient_parser.rl.cc.s
+symphony/http/httpclient_parser.rl.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/httpclient_parser.rl.cc.s
+.PHONY : symphony/http/httpclient_parser.rl.cc.s
 
-sylar/http/servlet.o: sylar/http/servlet.cc.o
+symphony/http/servlet.o: symphony/http/servlet.cc.o
 
-.PHONY : sylar/http/servlet.o
+.PHONY : symphony/http/servlet.o
 
 # target to build an object file
-sylar/http/servlet.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlet.cc.o
-.PHONY : sylar/http/servlet.cc.o
+symphony/http/servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlet.cc.o
+.PHONY : symphony/http/servlet.cc.o
 
-sylar/http/servlet.i: sylar/http/servlet.cc.i
+symphony/http/servlet.i: symphony/http/servlet.cc.i
 
-.PHONY : sylar/http/servlet.i
+.PHONY : symphony/http/servlet.i
 
 # target to preprocess a source file
-sylar/http/servlet.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlet.cc.i
-.PHONY : sylar/http/servlet.cc.i
+symphony/http/servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlet.cc.i
+.PHONY : symphony/http/servlet.cc.i
 
-sylar/http/servlet.s: sylar/http/servlet.cc.s
+symphony/http/servlet.s: symphony/http/servlet.cc.s
 
-.PHONY : sylar/http/servlet.s
+.PHONY : symphony/http/servlet.s
 
 # target to generate assembly for a file
-sylar/http/servlet.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlet.cc.s
-.PHONY : sylar/http/servlet.cc.s
+symphony/http/servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlet.cc.s
+.PHONY : symphony/http/servlet.cc.s
 
-sylar/http/servlets/config_servlet.o: sylar/http/servlets/config_servlet.cc.o
+symphony/http/servlets/config_servlet.o: symphony/http/servlets/config_servlet.cc.o
 
-.PHONY : sylar/http/servlets/config_servlet.o
+.PHONY : symphony/http/servlets/config_servlet.o
 
 # target to build an object file
-sylar/http/servlets/config_servlet.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/config_servlet.cc.o
-.PHONY : sylar/http/servlets/config_servlet.cc.o
+symphony/http/servlets/config_servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/config_servlet.cc.o
+.PHONY : symphony/http/servlets/config_servlet.cc.o
 
-sylar/http/servlets/config_servlet.i: sylar/http/servlets/config_servlet.cc.i
+symphony/http/servlets/config_servlet.i: symphony/http/servlets/config_servlet.cc.i
 
-.PHONY : sylar/http/servlets/config_servlet.i
+.PHONY : symphony/http/servlets/config_servlet.i
 
 # target to preprocess a source file
-sylar/http/servlets/config_servlet.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/config_servlet.cc.i
-.PHONY : sylar/http/servlets/config_servlet.cc.i
+symphony/http/servlets/config_servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/config_servlet.cc.i
+.PHONY : symphony/http/servlets/config_servlet.cc.i
 
-sylar/http/servlets/config_servlet.s: sylar/http/servlets/config_servlet.cc.s
+symphony/http/servlets/config_servlet.s: symphony/http/servlets/config_servlet.cc.s
 
-.PHONY : sylar/http/servlets/config_servlet.s
+.PHONY : symphony/http/servlets/config_servlet.s
 
 # target to generate assembly for a file
-sylar/http/servlets/config_servlet.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/config_servlet.cc.s
-.PHONY : sylar/http/servlets/config_servlet.cc.s
+symphony/http/servlets/config_servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/config_servlet.cc.s
+.PHONY : symphony/http/servlets/config_servlet.cc.s
 
-sylar/http/servlets/status_servlet.o: sylar/http/servlets/status_servlet.cc.o
+symphony/http/servlets/status_servlet.o: symphony/http/servlets/status_servlet.cc.o
 
-.PHONY : sylar/http/servlets/status_servlet.o
+.PHONY : symphony/http/servlets/status_servlet.o
 
 # target to build an object file
-sylar/http/servlets/status_servlet.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/status_servlet.cc.o
-.PHONY : sylar/http/servlets/status_servlet.cc.o
+symphony/http/servlets/status_servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/status_servlet.cc.o
+.PHONY : symphony/http/servlets/status_servlet.cc.o
 
-sylar/http/servlets/status_servlet.i: sylar/http/servlets/status_servlet.cc.i
+symphony/http/servlets/status_servlet.i: symphony/http/servlets/status_servlet.cc.i
 
-.PHONY : sylar/http/servlets/status_servlet.i
+.PHONY : symphony/http/servlets/status_servlet.i
 
 # target to preprocess a source file
-sylar/http/servlets/status_servlet.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/status_servlet.cc.i
-.PHONY : sylar/http/servlets/status_servlet.cc.i
+symphony/http/servlets/status_servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/status_servlet.cc.i
+.PHONY : symphony/http/servlets/status_servlet.cc.i
 
-sylar/http/servlets/status_servlet.s: sylar/http/servlets/status_servlet.cc.s
+symphony/http/servlets/status_servlet.s: symphony/http/servlets/status_servlet.cc.s
 
-.PHONY : sylar/http/servlets/status_servlet.s
+.PHONY : symphony/http/servlets/status_servlet.s
 
 # target to generate assembly for a file
-sylar/http/servlets/status_servlet.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/servlets/status_servlet.cc.s
-.PHONY : sylar/http/servlets/status_servlet.cc.s
+symphony/http/servlets/status_servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/servlets/status_servlet.cc.s
+.PHONY : symphony/http/servlets/status_servlet.cc.s
 
-sylar/http/session_data.o: sylar/http/session_data.cc.o
+symphony/http/session_data.o: symphony/http/session_data.cc.o
 
-.PHONY : sylar/http/session_data.o
+.PHONY : symphony/http/session_data.o
 
 # target to build an object file
-sylar/http/session_data.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/session_data.cc.o
-.PHONY : sylar/http/session_data.cc.o
+symphony/http/session_data.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/session_data.cc.o
+.PHONY : symphony/http/session_data.cc.o
 
-sylar/http/session_data.i: sylar/http/session_data.cc.i
+symphony/http/session_data.i: symphony/http/session_data.cc.i
 
-.PHONY : sylar/http/session_data.i
+.PHONY : symphony/http/session_data.i
 
 # target to preprocess a source file
-sylar/http/session_data.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/session_data.cc.i
-.PHONY : sylar/http/session_data.cc.i
+symphony/http/session_data.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/session_data.cc.i
+.PHONY : symphony/http/session_data.cc.i
 
-sylar/http/session_data.s: sylar/http/session_data.cc.s
+symphony/http/session_data.s: symphony/http/session_data.cc.s
 
-.PHONY : sylar/http/session_data.s
+.PHONY : symphony/http/session_data.s
 
 # target to generate assembly for a file
-sylar/http/session_data.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/session_data.cc.s
-.PHONY : sylar/http/session_data.cc.s
+symphony/http/session_data.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/session_data.cc.s
+.PHONY : symphony/http/session_data.cc.s
 
-sylar/http/ws_connection.o: sylar/http/ws_connection.cc.o
+symphony/http/ws_connection.o: symphony/http/ws_connection.cc.o
 
-.PHONY : sylar/http/ws_connection.o
+.PHONY : symphony/http/ws_connection.o
 
 # target to build an object file
-sylar/http/ws_connection.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_connection.cc.o
-.PHONY : sylar/http/ws_connection.cc.o
+symphony/http/ws_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_connection.cc.o
+.PHONY : symphony/http/ws_connection.cc.o
 
-sylar/http/ws_connection.i: sylar/http/ws_connection.cc.i
+symphony/http/ws_connection.i: symphony/http/ws_connection.cc.i
 
-.PHONY : sylar/http/ws_connection.i
+.PHONY : symphony/http/ws_connection.i
 
 # target to preprocess a source file
-sylar/http/ws_connection.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_connection.cc.i
-.PHONY : sylar/http/ws_connection.cc.i
+symphony/http/ws_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_connection.cc.i
+.PHONY : symphony/http/ws_connection.cc.i
 
-sylar/http/ws_connection.s: sylar/http/ws_connection.cc.s
+symphony/http/ws_connection.s: symphony/http/ws_connection.cc.s
 
-.PHONY : sylar/http/ws_connection.s
+.PHONY : symphony/http/ws_connection.s
 
 # target to generate assembly for a file
-sylar/http/ws_connection.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_connection.cc.s
-.PHONY : sylar/http/ws_connection.cc.s
+symphony/http/ws_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_connection.cc.s
+.PHONY : symphony/http/ws_connection.cc.s
 
-sylar/http/ws_server.o: sylar/http/ws_server.cc.o
+symphony/http/ws_server.o: symphony/http/ws_server.cc.o
 
-.PHONY : sylar/http/ws_server.o
+.PHONY : symphony/http/ws_server.o
 
 # target to build an object file
-sylar/http/ws_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_server.cc.o
-.PHONY : sylar/http/ws_server.cc.o
+symphony/http/ws_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_server.cc.o
+.PHONY : symphony/http/ws_server.cc.o
 
-sylar/http/ws_server.i: sylar/http/ws_server.cc.i
+symphony/http/ws_server.i: symphony/http/ws_server.cc.i
 
-.PHONY : sylar/http/ws_server.i
+.PHONY : symphony/http/ws_server.i
 
 # target to preprocess a source file
-sylar/http/ws_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_server.cc.i
-.PHONY : sylar/http/ws_server.cc.i
+symphony/http/ws_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_server.cc.i
+.PHONY : symphony/http/ws_server.cc.i
 
-sylar/http/ws_server.s: sylar/http/ws_server.cc.s
+symphony/http/ws_server.s: symphony/http/ws_server.cc.s
 
-.PHONY : sylar/http/ws_server.s
+.PHONY : symphony/http/ws_server.s
 
 # target to generate assembly for a file
-sylar/http/ws_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_server.cc.s
-.PHONY : sylar/http/ws_server.cc.s
+symphony/http/ws_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_server.cc.s
+.PHONY : symphony/http/ws_server.cc.s
 
-sylar/http/ws_servlet.o: sylar/http/ws_servlet.cc.o
+symphony/http/ws_servlet.o: symphony/http/ws_servlet.cc.o
 
-.PHONY : sylar/http/ws_servlet.o
+.PHONY : symphony/http/ws_servlet.o
 
 # target to build an object file
-sylar/http/ws_servlet.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_servlet.cc.o
-.PHONY : sylar/http/ws_servlet.cc.o
+symphony/http/ws_servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_servlet.cc.o
+.PHONY : symphony/http/ws_servlet.cc.o
 
-sylar/http/ws_servlet.i: sylar/http/ws_servlet.cc.i
+symphony/http/ws_servlet.i: symphony/http/ws_servlet.cc.i
 
-.PHONY : sylar/http/ws_servlet.i
+.PHONY : symphony/http/ws_servlet.i
 
 # target to preprocess a source file
-sylar/http/ws_servlet.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_servlet.cc.i
-.PHONY : sylar/http/ws_servlet.cc.i
+symphony/http/ws_servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_servlet.cc.i
+.PHONY : symphony/http/ws_servlet.cc.i
 
-sylar/http/ws_servlet.s: sylar/http/ws_servlet.cc.s
+symphony/http/ws_servlet.s: symphony/http/ws_servlet.cc.s
 
-.PHONY : sylar/http/ws_servlet.s
+.PHONY : symphony/http/ws_servlet.s
 
 # target to generate assembly for a file
-sylar/http/ws_servlet.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_servlet.cc.s
-.PHONY : sylar/http/ws_servlet.cc.s
+symphony/http/ws_servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_servlet.cc.s
+.PHONY : symphony/http/ws_servlet.cc.s
 
-sylar/http/ws_session.o: sylar/http/ws_session.cc.o
+symphony/http/ws_session.o: symphony/http/ws_session.cc.o
 
-.PHONY : sylar/http/ws_session.o
+.PHONY : symphony/http/ws_session.o
 
 # target to build an object file
-sylar/http/ws_session.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_session.cc.o
-.PHONY : sylar/http/ws_session.cc.o
+symphony/http/ws_session.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_session.cc.o
+.PHONY : symphony/http/ws_session.cc.o
 
-sylar/http/ws_session.i: sylar/http/ws_session.cc.i
+symphony/http/ws_session.i: symphony/http/ws_session.cc.i
 
-.PHONY : sylar/http/ws_session.i
+.PHONY : symphony/http/ws_session.i
 
 # target to preprocess a source file
-sylar/http/ws_session.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_session.cc.i
-.PHONY : sylar/http/ws_session.cc.i
+symphony/http/ws_session.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_session.cc.i
+.PHONY : symphony/http/ws_session.cc.i
 
-sylar/http/ws_session.s: sylar/http/ws_session.cc.s
+symphony/http/ws_session.s: symphony/http/ws_session.cc.s
 
-.PHONY : sylar/http/ws_session.s
+.PHONY : symphony/http/ws_session.s
 
 # target to generate assembly for a file
-sylar/http/ws_session.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/http/ws_session.cc.s
-.PHONY : sylar/http/ws_session.cc.s
+symphony/http/ws_session.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/http/ws_session.cc.s
+.PHONY : symphony/http/ws_session.cc.s
 
-sylar/iomanager.o: sylar/iomanager.cc.o
+symphony/iomanager.o: symphony/iomanager.cc.o
 
-.PHONY : sylar/iomanager.o
+.PHONY : symphony/iomanager.o
 
 # target to build an object file
-sylar/iomanager.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.o
-.PHONY : sylar/iomanager.cc.o
+symphony/iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/iomanager.cc.o
+.PHONY : symphony/iomanager.cc.o
 
-sylar/iomanager.i: sylar/iomanager.cc.i
+symphony/iomanager.i: symphony/iomanager.cc.i
 
-.PHONY : sylar/iomanager.i
+.PHONY : symphony/iomanager.i
 
 # target to preprocess a source file
-sylar/iomanager.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.i
-.PHONY : sylar/iomanager.cc.i
+symphony/iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/iomanager.cc.i
+.PHONY : symphony/iomanager.cc.i
 
-sylar/iomanager.s: sylar/iomanager.cc.s
+symphony/iomanager.s: symphony/iomanager.cc.s
 
-.PHONY : sylar/iomanager.s
+.PHONY : symphony/iomanager.s
 
 # target to generate assembly for a file
-sylar/iomanager.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/iomanager.cc.s
-.PHONY : sylar/iomanager.cc.s
+symphony/iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/iomanager.cc.s
+.PHONY : symphony/iomanager.cc.s
 
-sylar/library.o: sylar/library.cc.o
+symphony/library.o: symphony/library.cc.o
 
-.PHONY : sylar/library.o
+.PHONY : symphony/library.o
 
 # target to build an object file
-sylar/library.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/library.cc.o
-.PHONY : sylar/library.cc.o
+symphony/library.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/library.cc.o
+.PHONY : symphony/library.cc.o
 
-sylar/library.i: sylar/library.cc.i
+symphony/library.i: symphony/library.cc.i
 
-.PHONY : sylar/library.i
+.PHONY : symphony/library.i
 
 # target to preprocess a source file
-sylar/library.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/library.cc.i
-.PHONY : sylar/library.cc.i
+symphony/library.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/library.cc.i
+.PHONY : symphony/library.cc.i
 
-sylar/library.s: sylar/library.cc.s
+symphony/library.s: symphony/library.cc.s
 
-.PHONY : sylar/library.s
+.PHONY : symphony/library.s
 
 # target to generate assembly for a file
-sylar/library.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/library.cc.s
-.PHONY : sylar/library.cc.s
+symphony/library.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/library.cc.s
+.PHONY : symphony/library.cc.s
 
-sylar/log.o: sylar/log.cc.o
+symphony/log.o: symphony/log.cc.o
 
-.PHONY : sylar/log.o
+.PHONY : symphony/log.o
 
 # target to build an object file
-sylar/log.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.o
-.PHONY : sylar/log.cc.o
+symphony/log.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/log.cc.o
+.PHONY : symphony/log.cc.o
 
-sylar/log.i: sylar/log.cc.i
+symphony/log.i: symphony/log.cc.i
 
-.PHONY : sylar/log.i
+.PHONY : symphony/log.i
 
 # target to preprocess a source file
-sylar/log.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.i
-.PHONY : sylar/log.cc.i
+symphony/log.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/log.cc.i
+.PHONY : symphony/log.cc.i
 
-sylar/log.s: sylar/log.cc.s
+symphony/log.s: symphony/log.cc.s
 
-.PHONY : sylar/log.s
+.PHONY : symphony/log.s
 
 # target to generate assembly for a file
-sylar/log.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/log.cc.s
-.PHONY : sylar/log.cc.s
+symphony/log.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/log.cc.s
+.PHONY : symphony/log.cc.s
 
-sylar/module.o: sylar/module.cc.o
+symphony/module.o: symphony/module.cc.o
 
-.PHONY : sylar/module.o
+.PHONY : symphony/module.o
 
 # target to build an object file
-sylar/module.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/module.cc.o
-.PHONY : sylar/module.cc.o
+symphony/module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/module.cc.o
+.PHONY : symphony/module.cc.o
 
-sylar/module.i: sylar/module.cc.i
+symphony/module.i: symphony/module.cc.i
 
-.PHONY : sylar/module.i
+.PHONY : symphony/module.i
 
 # target to preprocess a source file
-sylar/module.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/module.cc.i
-.PHONY : sylar/module.cc.i
+symphony/module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/module.cc.i
+.PHONY : symphony/module.cc.i
 
-sylar/module.s: sylar/module.cc.s
+symphony/module.s: symphony/module.cc.s
 
-.PHONY : sylar/module.s
+.PHONY : symphony/module.s
 
 # target to generate assembly for a file
-sylar/module.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/module.cc.s
-.PHONY : sylar/module.cc.s
+symphony/module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/module.cc.s
+.PHONY : symphony/module.cc.s
 
-sylar/mutex.o: sylar/mutex.cc.o
+symphony/mutex.o: symphony/mutex.cc.o
 
-.PHONY : sylar/mutex.o
+.PHONY : symphony/mutex.o
 
 # target to build an object file
-sylar/mutex.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.o
-.PHONY : sylar/mutex.cc.o
+symphony/mutex.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/mutex.cc.o
+.PHONY : symphony/mutex.cc.o
 
-sylar/mutex.i: sylar/mutex.cc.i
+symphony/mutex.i: symphony/mutex.cc.i
 
-.PHONY : sylar/mutex.i
+.PHONY : symphony/mutex.i
 
 # target to preprocess a source file
-sylar/mutex.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.i
-.PHONY : sylar/mutex.cc.i
+symphony/mutex.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/mutex.cc.i
+.PHONY : symphony/mutex.cc.i
 
-sylar/mutex.s: sylar/mutex.cc.s
+symphony/mutex.s: symphony/mutex.cc.s
 
-.PHONY : sylar/mutex.s
+.PHONY : symphony/mutex.s
 
 # target to generate assembly for a file
-sylar/mutex.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/mutex.cc.s
-.PHONY : sylar/mutex.cc.s
+symphony/mutex.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/mutex.cc.s
+.PHONY : symphony/mutex.cc.s
 
-sylar/ns/name_server_module.o: sylar/ns/name_server_module.cc.o
+symphony/ns/name_server_module.o: symphony/ns/name_server_module.cc.o
 
-.PHONY : sylar/ns/name_server_module.o
+.PHONY : symphony/ns/name_server_module.o
 
 # target to build an object file
-sylar/ns/name_server_module.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/name_server_module.cc.o
-.PHONY : sylar/ns/name_server_module.cc.o
+symphony/ns/name_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/name_server_module.cc.o
+.PHONY : symphony/ns/name_server_module.cc.o
 
-sylar/ns/name_server_module.i: sylar/ns/name_server_module.cc.i
+symphony/ns/name_server_module.i: symphony/ns/name_server_module.cc.i
 
-.PHONY : sylar/ns/name_server_module.i
+.PHONY : symphony/ns/name_server_module.i
 
 # target to preprocess a source file
-sylar/ns/name_server_module.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/name_server_module.cc.i
-.PHONY : sylar/ns/name_server_module.cc.i
+symphony/ns/name_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/name_server_module.cc.i
+.PHONY : symphony/ns/name_server_module.cc.i
 
-sylar/ns/name_server_module.s: sylar/ns/name_server_module.cc.s
+symphony/ns/name_server_module.s: symphony/ns/name_server_module.cc.s
 
-.PHONY : sylar/ns/name_server_module.s
+.PHONY : symphony/ns/name_server_module.s
 
 # target to generate assembly for a file
-sylar/ns/name_server_module.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/name_server_module.cc.s
-.PHONY : sylar/ns/name_server_module.cc.s
+symphony/ns/name_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/name_server_module.cc.s
+.PHONY : symphony/ns/name_server_module.cc.s
 
-sylar/ns/ns_client.o: sylar/ns/ns_client.cc.o
+symphony/ns/ns_client.o: symphony/ns/ns_client.cc.o
 
-.PHONY : sylar/ns/ns_client.o
+.PHONY : symphony/ns/ns_client.o
 
 # target to build an object file
-sylar/ns/ns_client.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_client.cc.o
-.PHONY : sylar/ns/ns_client.cc.o
+symphony/ns/ns_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_client.cc.o
+.PHONY : symphony/ns/ns_client.cc.o
 
-sylar/ns/ns_client.i: sylar/ns/ns_client.cc.i
+symphony/ns/ns_client.i: symphony/ns/ns_client.cc.i
 
-.PHONY : sylar/ns/ns_client.i
+.PHONY : symphony/ns/ns_client.i
 
 # target to preprocess a source file
-sylar/ns/ns_client.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_client.cc.i
-.PHONY : sylar/ns/ns_client.cc.i
+symphony/ns/ns_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_client.cc.i
+.PHONY : symphony/ns/ns_client.cc.i
 
-sylar/ns/ns_client.s: sylar/ns/ns_client.cc.s
+symphony/ns/ns_client.s: symphony/ns/ns_client.cc.s
 
-.PHONY : sylar/ns/ns_client.s
+.PHONY : symphony/ns/ns_client.s
 
 # target to generate assembly for a file
-sylar/ns/ns_client.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_client.cc.s
-.PHONY : sylar/ns/ns_client.cc.s
+symphony/ns/ns_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_client.cc.s
+.PHONY : symphony/ns/ns_client.cc.s
 
-sylar/ns/ns_protobuf.pb.o: sylar/ns/ns_protobuf.pb.cc.o
+symphony/ns/ns_protobuf.pb.o: symphony/ns/ns_protobuf.pb.cc.o
 
-.PHONY : sylar/ns/ns_protobuf.pb.o
+.PHONY : symphony/ns/ns_protobuf.pb.o
 
 # target to build an object file
-sylar/ns/ns_protobuf.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protobuf.pb.cc.o
-.PHONY : sylar/ns/ns_protobuf.pb.cc.o
+symphony/ns/ns_protobuf.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protobuf.pb.cc.o
+.PHONY : symphony/ns/ns_protobuf.pb.cc.o
 
-sylar/ns/ns_protobuf.pb.i: sylar/ns/ns_protobuf.pb.cc.i
+symphony/ns/ns_protobuf.pb.i: symphony/ns/ns_protobuf.pb.cc.i
 
-.PHONY : sylar/ns/ns_protobuf.pb.i
+.PHONY : symphony/ns/ns_protobuf.pb.i
 
 # target to preprocess a source file
-sylar/ns/ns_protobuf.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protobuf.pb.cc.i
-.PHONY : sylar/ns/ns_protobuf.pb.cc.i
+symphony/ns/ns_protobuf.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protobuf.pb.cc.i
+.PHONY : symphony/ns/ns_protobuf.pb.cc.i
 
-sylar/ns/ns_protobuf.pb.s: sylar/ns/ns_protobuf.pb.cc.s
+symphony/ns/ns_protobuf.pb.s: symphony/ns/ns_protobuf.pb.cc.s
 
-.PHONY : sylar/ns/ns_protobuf.pb.s
+.PHONY : symphony/ns/ns_protobuf.pb.s
 
 # target to generate assembly for a file
-sylar/ns/ns_protobuf.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protobuf.pb.cc.s
-.PHONY : sylar/ns/ns_protobuf.pb.cc.s
+symphony/ns/ns_protobuf.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protobuf.pb.cc.s
+.PHONY : symphony/ns/ns_protobuf.pb.cc.s
 
-sylar/ns/ns_protocol.o: sylar/ns/ns_protocol.cc.o
+symphony/ns/ns_protocol.o: symphony/ns/ns_protocol.cc.o
 
-.PHONY : sylar/ns/ns_protocol.o
+.PHONY : symphony/ns/ns_protocol.o
 
 # target to build an object file
-sylar/ns/ns_protocol.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protocol.cc.o
-.PHONY : sylar/ns/ns_protocol.cc.o
+symphony/ns/ns_protocol.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protocol.cc.o
+.PHONY : symphony/ns/ns_protocol.cc.o
 
-sylar/ns/ns_protocol.i: sylar/ns/ns_protocol.cc.i
+symphony/ns/ns_protocol.i: symphony/ns/ns_protocol.cc.i
 
-.PHONY : sylar/ns/ns_protocol.i
+.PHONY : symphony/ns/ns_protocol.i
 
 # target to preprocess a source file
-sylar/ns/ns_protocol.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protocol.cc.i
-.PHONY : sylar/ns/ns_protocol.cc.i
+symphony/ns/ns_protocol.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protocol.cc.i
+.PHONY : symphony/ns/ns_protocol.cc.i
 
-sylar/ns/ns_protocol.s: sylar/ns/ns_protocol.cc.s
+symphony/ns/ns_protocol.s: symphony/ns/ns_protocol.cc.s
 
-.PHONY : sylar/ns/ns_protocol.s
+.PHONY : symphony/ns/ns_protocol.s
 
 # target to generate assembly for a file
-sylar/ns/ns_protocol.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/ns/ns_protocol.cc.s
-.PHONY : sylar/ns/ns_protocol.cc.s
+symphony/ns/ns_protocol.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protocol.cc.s
+.PHONY : symphony/ns/ns_protocol.cc.s
 
-sylar/protocol.o: sylar/protocol.cc.o
+symphony/protocol.o: symphony/protocol.cc.o
 
-.PHONY : sylar/protocol.o
+.PHONY : symphony/protocol.o
 
 # target to build an object file
-sylar/protocol.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/protocol.cc.o
-.PHONY : sylar/protocol.cc.o
+symphony/protocol.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/protocol.cc.o
+.PHONY : symphony/protocol.cc.o
 
-sylar/protocol.i: sylar/protocol.cc.i
+symphony/protocol.i: symphony/protocol.cc.i
 
-.PHONY : sylar/protocol.i
+.PHONY : symphony/protocol.i
 
 # target to preprocess a source file
-sylar/protocol.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/protocol.cc.i
-.PHONY : sylar/protocol.cc.i
+symphony/protocol.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/protocol.cc.i
+.PHONY : symphony/protocol.cc.i
 
-sylar/protocol.s: sylar/protocol.cc.s
+symphony/protocol.s: symphony/protocol.cc.s
 
-.PHONY : sylar/protocol.s
+.PHONY : symphony/protocol.s
 
 # target to generate assembly for a file
-sylar/protocol.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/protocol.cc.s
-.PHONY : sylar/protocol.cc.s
+symphony/protocol.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/protocol.cc.s
+.PHONY : symphony/protocol.cc.s
 
-sylar/rock/rock_protocol.o: sylar/rock/rock_protocol.cc.o
+symphony/rock/rock_protocol.o: symphony/rock/rock_protocol.cc.o
 
-.PHONY : sylar/rock/rock_protocol.o
+.PHONY : symphony/rock/rock_protocol.o
 
 # target to build an object file
-sylar/rock/rock_protocol.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_protocol.cc.o
-.PHONY : sylar/rock/rock_protocol.cc.o
+symphony/rock/rock_protocol.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_protocol.cc.o
+.PHONY : symphony/rock/rock_protocol.cc.o
 
-sylar/rock/rock_protocol.i: sylar/rock/rock_protocol.cc.i
+symphony/rock/rock_protocol.i: symphony/rock/rock_protocol.cc.i
 
-.PHONY : sylar/rock/rock_protocol.i
+.PHONY : symphony/rock/rock_protocol.i
 
 # target to preprocess a source file
-sylar/rock/rock_protocol.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_protocol.cc.i
-.PHONY : sylar/rock/rock_protocol.cc.i
+symphony/rock/rock_protocol.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_protocol.cc.i
+.PHONY : symphony/rock/rock_protocol.cc.i
 
-sylar/rock/rock_protocol.s: sylar/rock/rock_protocol.cc.s
+symphony/rock/rock_protocol.s: symphony/rock/rock_protocol.cc.s
 
-.PHONY : sylar/rock/rock_protocol.s
+.PHONY : symphony/rock/rock_protocol.s
 
 # target to generate assembly for a file
-sylar/rock/rock_protocol.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_protocol.cc.s
-.PHONY : sylar/rock/rock_protocol.cc.s
+symphony/rock/rock_protocol.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_protocol.cc.s
+.PHONY : symphony/rock/rock_protocol.cc.s
 
-sylar/rock/rock_server.o: sylar/rock/rock_server.cc.o
+symphony/rock/rock_server.o: symphony/rock/rock_server.cc.o
 
-.PHONY : sylar/rock/rock_server.o
+.PHONY : symphony/rock/rock_server.o
 
 # target to build an object file
-sylar/rock/rock_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_server.cc.o
-.PHONY : sylar/rock/rock_server.cc.o
+symphony/rock/rock_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_server.cc.o
+.PHONY : symphony/rock/rock_server.cc.o
 
-sylar/rock/rock_server.i: sylar/rock/rock_server.cc.i
+symphony/rock/rock_server.i: symphony/rock/rock_server.cc.i
 
-.PHONY : sylar/rock/rock_server.i
+.PHONY : symphony/rock/rock_server.i
 
 # target to preprocess a source file
-sylar/rock/rock_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_server.cc.i
-.PHONY : sylar/rock/rock_server.cc.i
+symphony/rock/rock_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_server.cc.i
+.PHONY : symphony/rock/rock_server.cc.i
 
-sylar/rock/rock_server.s: sylar/rock/rock_server.cc.s
+symphony/rock/rock_server.s: symphony/rock/rock_server.cc.s
 
-.PHONY : sylar/rock/rock_server.s
+.PHONY : symphony/rock/rock_server.s
 
 # target to generate assembly for a file
-sylar/rock/rock_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_server.cc.s
-.PHONY : sylar/rock/rock_server.cc.s
+symphony/rock/rock_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_server.cc.s
+.PHONY : symphony/rock/rock_server.cc.s
 
-sylar/rock/rock_stream.o: sylar/rock/rock_stream.cc.o
+symphony/rock/rock_stream.o: symphony/rock/rock_stream.cc.o
 
-.PHONY : sylar/rock/rock_stream.o
+.PHONY : symphony/rock/rock_stream.o
 
 # target to build an object file
-sylar/rock/rock_stream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_stream.cc.o
-.PHONY : sylar/rock/rock_stream.cc.o
+symphony/rock/rock_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_stream.cc.o
+.PHONY : symphony/rock/rock_stream.cc.o
 
-sylar/rock/rock_stream.i: sylar/rock/rock_stream.cc.i
+symphony/rock/rock_stream.i: symphony/rock/rock_stream.cc.i
 
-.PHONY : sylar/rock/rock_stream.i
+.PHONY : symphony/rock/rock_stream.i
 
 # target to preprocess a source file
-sylar/rock/rock_stream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_stream.cc.i
-.PHONY : sylar/rock/rock_stream.cc.i
+symphony/rock/rock_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_stream.cc.i
+.PHONY : symphony/rock/rock_stream.cc.i
 
-sylar/rock/rock_stream.s: sylar/rock/rock_stream.cc.s
+symphony/rock/rock_stream.s: symphony/rock/rock_stream.cc.s
 
-.PHONY : sylar/rock/rock_stream.s
+.PHONY : symphony/rock/rock_stream.s
 
 # target to generate assembly for a file
-sylar/rock/rock_stream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/rock/rock_stream.cc.s
-.PHONY : sylar/rock/rock_stream.cc.s
+symphony/rock/rock_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/rock/rock_stream.cc.s
+.PHONY : symphony/rock/rock_stream.cc.s
 
-sylar/scheduler.o: sylar/scheduler.cc.o
+symphony/scheduler.o: symphony/scheduler.cc.o
 
-.PHONY : sylar/scheduler.o
+.PHONY : symphony/scheduler.o
 
 # target to build an object file
-sylar/scheduler.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cc.o
-.PHONY : sylar/scheduler.cc.o
+symphony/scheduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/scheduler.cc.o
+.PHONY : symphony/scheduler.cc.o
 
-sylar/scheduler.i: sylar/scheduler.cc.i
+symphony/scheduler.i: symphony/scheduler.cc.i
 
-.PHONY : sylar/scheduler.i
+.PHONY : symphony/scheduler.i
 
 # target to preprocess a source file
-sylar/scheduler.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cc.i
-.PHONY : sylar/scheduler.cc.i
+symphony/scheduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/scheduler.cc.i
+.PHONY : symphony/scheduler.cc.i
 
-sylar/scheduler.s: sylar/scheduler.cc.s
+symphony/scheduler.s: symphony/scheduler.cc.s
 
-.PHONY : sylar/scheduler.s
+.PHONY : symphony/scheduler.s
 
 # target to generate assembly for a file
-sylar/scheduler.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/scheduler.cc.s
-.PHONY : sylar/scheduler.cc.s
+symphony/scheduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/scheduler.cc.s
+.PHONY : symphony/scheduler.cc.s
 
-sylar/socket.o: sylar/socket.cc.o
+symphony/socket.o: symphony/socket.cc.o
 
-.PHONY : sylar/socket.o
+.PHONY : symphony/socket.o
 
 # target to build an object file
-sylar/socket.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.o
-.PHONY : sylar/socket.cc.o
+symphony/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/socket.cc.o
+.PHONY : symphony/socket.cc.o
 
-sylar/socket.i: sylar/socket.cc.i
+symphony/socket.i: symphony/socket.cc.i
 
-.PHONY : sylar/socket.i
+.PHONY : symphony/socket.i
 
 # target to preprocess a source file
-sylar/socket.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.i
-.PHONY : sylar/socket.cc.i
+symphony/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/socket.cc.i
+.PHONY : symphony/socket.cc.i
 
-sylar/socket.s: sylar/socket.cc.s
+symphony/socket.s: symphony/socket.cc.s
 
-.PHONY : sylar/socket.s
+.PHONY : symphony/socket.s
 
 # target to generate assembly for a file
-sylar/socket.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/socket.cc.s
-.PHONY : sylar/socket.cc.s
+symphony/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/socket.cc.s
+.PHONY : symphony/socket.cc.s
 
-sylar/stream.o: sylar/stream.cc.o
+symphony/stream.o: symphony/stream.cc.o
 
-.PHONY : sylar/stream.o
+.PHONY : symphony/stream.o
 
 # target to build an object file
-sylar/stream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/stream.cc.o
-.PHONY : sylar/stream.cc.o
+symphony/stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/stream.cc.o
+.PHONY : symphony/stream.cc.o
 
-sylar/stream.i: sylar/stream.cc.i
+symphony/stream.i: symphony/stream.cc.i
 
-.PHONY : sylar/stream.i
+.PHONY : symphony/stream.i
 
 # target to preprocess a source file
-sylar/stream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/stream.cc.i
-.PHONY : sylar/stream.cc.i
+symphony/stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/stream.cc.i
+.PHONY : symphony/stream.cc.i
 
-sylar/stream.s: sylar/stream.cc.s
+symphony/stream.s: symphony/stream.cc.s
 
-.PHONY : sylar/stream.s
+.PHONY : symphony/stream.s
 
 # target to generate assembly for a file
-sylar/stream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/stream.cc.s
-.PHONY : sylar/stream.cc.s
+symphony/stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/stream.cc.s
+.PHONY : symphony/stream.cc.s
 
-sylar/streams/async_socket_stream.o: sylar/streams/async_socket_stream.cc.o
+symphony/streams/async_socket_stream.o: symphony/streams/async_socket_stream.cc.o
 
-.PHONY : sylar/streams/async_socket_stream.o
+.PHONY : symphony/streams/async_socket_stream.o
 
 # target to build an object file
-sylar/streams/async_socket_stream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/async_socket_stream.cc.o
-.PHONY : sylar/streams/async_socket_stream.cc.o
+symphony/streams/async_socket_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/async_socket_stream.cc.o
+.PHONY : symphony/streams/async_socket_stream.cc.o
 
-sylar/streams/async_socket_stream.i: sylar/streams/async_socket_stream.cc.i
+symphony/streams/async_socket_stream.i: symphony/streams/async_socket_stream.cc.i
 
-.PHONY : sylar/streams/async_socket_stream.i
+.PHONY : symphony/streams/async_socket_stream.i
 
 # target to preprocess a source file
-sylar/streams/async_socket_stream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/async_socket_stream.cc.i
-.PHONY : sylar/streams/async_socket_stream.cc.i
+symphony/streams/async_socket_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/async_socket_stream.cc.i
+.PHONY : symphony/streams/async_socket_stream.cc.i
 
-sylar/streams/async_socket_stream.s: sylar/streams/async_socket_stream.cc.s
+symphony/streams/async_socket_stream.s: symphony/streams/async_socket_stream.cc.s
 
-.PHONY : sylar/streams/async_socket_stream.s
+.PHONY : symphony/streams/async_socket_stream.s
 
 # target to generate assembly for a file
-sylar/streams/async_socket_stream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/async_socket_stream.cc.s
-.PHONY : sylar/streams/async_socket_stream.cc.s
+symphony/streams/async_socket_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/async_socket_stream.cc.s
+.PHONY : symphony/streams/async_socket_stream.cc.s
 
-sylar/streams/load_balance.o: sylar/streams/load_balance.cc.o
+symphony/streams/load_balance.o: symphony/streams/load_balance.cc.o
 
-.PHONY : sylar/streams/load_balance.o
+.PHONY : symphony/streams/load_balance.o
 
 # target to build an object file
-sylar/streams/load_balance.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/load_balance.cc.o
-.PHONY : sylar/streams/load_balance.cc.o
+symphony/streams/load_balance.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/load_balance.cc.o
+.PHONY : symphony/streams/load_balance.cc.o
 
-sylar/streams/load_balance.i: sylar/streams/load_balance.cc.i
+symphony/streams/load_balance.i: symphony/streams/load_balance.cc.i
 
-.PHONY : sylar/streams/load_balance.i
+.PHONY : symphony/streams/load_balance.i
 
 # target to preprocess a source file
-sylar/streams/load_balance.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/load_balance.cc.i
-.PHONY : sylar/streams/load_balance.cc.i
+symphony/streams/load_balance.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/load_balance.cc.i
+.PHONY : symphony/streams/load_balance.cc.i
 
-sylar/streams/load_balance.s: sylar/streams/load_balance.cc.s
+symphony/streams/load_balance.s: symphony/streams/load_balance.cc.s
 
-.PHONY : sylar/streams/load_balance.s
+.PHONY : symphony/streams/load_balance.s
 
 # target to generate assembly for a file
-sylar/streams/load_balance.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/load_balance.cc.s
-.PHONY : sylar/streams/load_balance.cc.s
+symphony/streams/load_balance.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/load_balance.cc.s
+.PHONY : symphony/streams/load_balance.cc.s
 
-sylar/streams/service_discovery.o: sylar/streams/service_discovery.cc.o
+symphony/streams/service_discovery.o: symphony/streams/service_discovery.cc.o
 
-.PHONY : sylar/streams/service_discovery.o
+.PHONY : symphony/streams/service_discovery.o
 
 # target to build an object file
-sylar/streams/service_discovery.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/service_discovery.cc.o
-.PHONY : sylar/streams/service_discovery.cc.o
+symphony/streams/service_discovery.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/service_discovery.cc.o
+.PHONY : symphony/streams/service_discovery.cc.o
 
-sylar/streams/service_discovery.i: sylar/streams/service_discovery.cc.i
+symphony/streams/service_discovery.i: symphony/streams/service_discovery.cc.i
 
-.PHONY : sylar/streams/service_discovery.i
+.PHONY : symphony/streams/service_discovery.i
 
 # target to preprocess a source file
-sylar/streams/service_discovery.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/service_discovery.cc.i
-.PHONY : sylar/streams/service_discovery.cc.i
+symphony/streams/service_discovery.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/service_discovery.cc.i
+.PHONY : symphony/streams/service_discovery.cc.i
 
-sylar/streams/service_discovery.s: sylar/streams/service_discovery.cc.s
+symphony/streams/service_discovery.s: symphony/streams/service_discovery.cc.s
 
-.PHONY : sylar/streams/service_discovery.s
+.PHONY : symphony/streams/service_discovery.s
 
 # target to generate assembly for a file
-sylar/streams/service_discovery.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/service_discovery.cc.s
-.PHONY : sylar/streams/service_discovery.cc.s
+symphony/streams/service_discovery.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/service_discovery.cc.s
+.PHONY : symphony/streams/service_discovery.cc.s
 
-sylar/streams/socket_stream.o: sylar/streams/socket_stream.cc.o
+symphony/streams/socket_stream.o: symphony/streams/socket_stream.cc.o
 
-.PHONY : sylar/streams/socket_stream.o
+.PHONY : symphony/streams/socket_stream.o
 
 # target to build an object file
-sylar/streams/socket_stream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.o
-.PHONY : sylar/streams/socket_stream.cc.o
+symphony/streams/socket_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/socket_stream.cc.o
+.PHONY : symphony/streams/socket_stream.cc.o
 
-sylar/streams/socket_stream.i: sylar/streams/socket_stream.cc.i
+symphony/streams/socket_stream.i: symphony/streams/socket_stream.cc.i
 
-.PHONY : sylar/streams/socket_stream.i
+.PHONY : symphony/streams/socket_stream.i
 
 # target to preprocess a source file
-sylar/streams/socket_stream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.i
-.PHONY : sylar/streams/socket_stream.cc.i
+symphony/streams/socket_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/socket_stream.cc.i
+.PHONY : symphony/streams/socket_stream.cc.i
 
-sylar/streams/socket_stream.s: sylar/streams/socket_stream.cc.s
+symphony/streams/socket_stream.s: symphony/streams/socket_stream.cc.s
 
-.PHONY : sylar/streams/socket_stream.s
+.PHONY : symphony/streams/socket_stream.s
 
 # target to generate assembly for a file
-sylar/streams/socket_stream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/socket_stream.cc.s
-.PHONY : sylar/streams/socket_stream.cc.s
+symphony/streams/socket_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/socket_stream.cc.s
+.PHONY : symphony/streams/socket_stream.cc.s
 
-sylar/streams/zlib_stream.o: sylar/streams/zlib_stream.cc.o
+symphony/streams/zlib_stream.o: symphony/streams/zlib_stream.cc.o
 
-.PHONY : sylar/streams/zlib_stream.o
+.PHONY : symphony/streams/zlib_stream.o
 
 # target to build an object file
-sylar/streams/zlib_stream.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/zlib_stream.cc.o
-.PHONY : sylar/streams/zlib_stream.cc.o
+symphony/streams/zlib_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/zlib_stream.cc.o
+.PHONY : symphony/streams/zlib_stream.cc.o
 
-sylar/streams/zlib_stream.i: sylar/streams/zlib_stream.cc.i
+symphony/streams/zlib_stream.i: symphony/streams/zlib_stream.cc.i
 
-.PHONY : sylar/streams/zlib_stream.i
+.PHONY : symphony/streams/zlib_stream.i
 
 # target to preprocess a source file
-sylar/streams/zlib_stream.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/zlib_stream.cc.i
-.PHONY : sylar/streams/zlib_stream.cc.i
+symphony/streams/zlib_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/zlib_stream.cc.i
+.PHONY : symphony/streams/zlib_stream.cc.i
 
-sylar/streams/zlib_stream.s: sylar/streams/zlib_stream.cc.s
+symphony/streams/zlib_stream.s: symphony/streams/zlib_stream.cc.s
 
-.PHONY : sylar/streams/zlib_stream.s
+.PHONY : symphony/streams/zlib_stream.s
 
 # target to generate assembly for a file
-sylar/streams/zlib_stream.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/streams/zlib_stream.cc.s
-.PHONY : sylar/streams/zlib_stream.cc.s
+symphony/streams/zlib_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/streams/zlib_stream.cc.s
+.PHONY : symphony/streams/zlib_stream.cc.s
 
-sylar/tcp_server.o: sylar/tcp_server.cc.o
+symphony/tcp_server.o: symphony/tcp_server.cc.o
 
-.PHONY : sylar/tcp_server.o
+.PHONY : symphony/tcp_server.o
 
 # target to build an object file
-sylar/tcp_server.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/tcp_server.cc.o
-.PHONY : sylar/tcp_server.cc.o
+symphony/tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/tcp_server.cc.o
+.PHONY : symphony/tcp_server.cc.o
 
-sylar/tcp_server.i: sylar/tcp_server.cc.i
+symphony/tcp_server.i: symphony/tcp_server.cc.i
 
-.PHONY : sylar/tcp_server.i
+.PHONY : symphony/tcp_server.i
 
 # target to preprocess a source file
-sylar/tcp_server.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/tcp_server.cc.i
-.PHONY : sylar/tcp_server.cc.i
+symphony/tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/tcp_server.cc.i
+.PHONY : symphony/tcp_server.cc.i
 
-sylar/tcp_server.s: sylar/tcp_server.cc.s
+symphony/tcp_server.s: symphony/tcp_server.cc.s
 
-.PHONY : sylar/tcp_server.s
+.PHONY : symphony/tcp_server.s
 
 # target to generate assembly for a file
-sylar/tcp_server.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/tcp_server.cc.s
-.PHONY : sylar/tcp_server.cc.s
+symphony/tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/tcp_server.cc.s
+.PHONY : symphony/tcp_server.cc.s
 
-sylar/thread.o: sylar/thread.cc.o
+symphony/thread.o: symphony/thread.cc.o
 
-.PHONY : sylar/thread.o
+.PHONY : symphony/thread.o
 
 # target to build an object file
-sylar/thread.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.o
-.PHONY : sylar/thread.cc.o
+symphony/thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/thread.cc.o
+.PHONY : symphony/thread.cc.o
 
-sylar/thread.i: sylar/thread.cc.i
+symphony/thread.i: symphony/thread.cc.i
 
-.PHONY : sylar/thread.i
+.PHONY : symphony/thread.i
 
 # target to preprocess a source file
-sylar/thread.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.i
-.PHONY : sylar/thread.cc.i
+symphony/thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/thread.cc.i
+.PHONY : symphony/thread.cc.i
 
-sylar/thread.s: sylar/thread.cc.s
+symphony/thread.s: symphony/thread.cc.s
 
-.PHONY : sylar/thread.s
+.PHONY : symphony/thread.s
 
 # target to generate assembly for a file
-sylar/thread.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/thread.cc.s
-.PHONY : sylar/thread.cc.s
+symphony/thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/thread.cc.s
+.PHONY : symphony/thread.cc.s
 
-sylar/timer.o: sylar/timer.cc.o
+symphony/timer.o: symphony/timer.cc.o
 
-.PHONY : sylar/timer.o
+.PHONY : symphony/timer.o
 
 # target to build an object file
-sylar/timer.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.o
-.PHONY : sylar/timer.cc.o
+symphony/timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/timer.cc.o
+.PHONY : symphony/timer.cc.o
 
-sylar/timer.i: sylar/timer.cc.i
+symphony/timer.i: symphony/timer.cc.i
 
-.PHONY : sylar/timer.i
+.PHONY : symphony/timer.i
 
 # target to preprocess a source file
-sylar/timer.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.i
-.PHONY : sylar/timer.cc.i
+symphony/timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/timer.cc.i
+.PHONY : symphony/timer.cc.i
 
-sylar/timer.s: sylar/timer.cc.s
+symphony/timer.s: symphony/timer.cc.s
 
-.PHONY : sylar/timer.s
+.PHONY : symphony/timer.s
 
 # target to generate assembly for a file
-sylar/timer.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/timer.cc.s
-.PHONY : sylar/timer.cc.s
+symphony/timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/timer.cc.s
+.PHONY : symphony/timer.cc.s
 
-sylar/uri.rl.o: sylar/uri.rl.cc.o
+symphony/uri.rl.o: symphony/uri.rl.cc.o
 
-.PHONY : sylar/uri.rl.o
+.PHONY : symphony/uri.rl.o
 
 # target to build an object file
-sylar/uri.rl.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/uri.rl.cc.o
-.PHONY : sylar/uri.rl.cc.o
+symphony/uri.rl.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/uri.rl.cc.o
+.PHONY : symphony/uri.rl.cc.o
 
-sylar/uri.rl.i: sylar/uri.rl.cc.i
+symphony/uri.rl.i: symphony/uri.rl.cc.i
 
-.PHONY : sylar/uri.rl.i
+.PHONY : symphony/uri.rl.i
 
 # target to preprocess a source file
-sylar/uri.rl.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/uri.rl.cc.i
-.PHONY : sylar/uri.rl.cc.i
+symphony/uri.rl.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/uri.rl.cc.i
+.PHONY : symphony/uri.rl.cc.i
 
-sylar/uri.rl.s: sylar/uri.rl.cc.s
+symphony/uri.rl.s: symphony/uri.rl.cc.s
 
-.PHONY : sylar/uri.rl.s
+.PHONY : symphony/uri.rl.s
 
 # target to generate assembly for a file
-sylar/uri.rl.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/uri.rl.cc.s
-.PHONY : sylar/uri.rl.cc.s
+symphony/uri.rl.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/uri.rl.cc.s
+.PHONY : symphony/uri.rl.cc.s
 
-sylar/util.o: sylar/util.cc.o
+symphony/util.o: symphony/util.cc.o
 
-.PHONY : sylar/util.o
+.PHONY : symphony/util.o
 
 # target to build an object file
-sylar/util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cc.o
-.PHONY : sylar/util.cc.o
+symphony/util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util.cc.o
+.PHONY : symphony/util.cc.o
 
-sylar/util.i: sylar/util.cc.i
+symphony/util.i: symphony/util.cc.i
 
-.PHONY : sylar/util.i
+.PHONY : symphony/util.i
 
 # target to preprocess a source file
-sylar/util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cc.i
-.PHONY : sylar/util.cc.i
+symphony/util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util.cc.i
+.PHONY : symphony/util.cc.i
 
-sylar/util.s: sylar/util.cc.s
+symphony/util.s: symphony/util.cc.s
 
-.PHONY : sylar/util.s
+.PHONY : symphony/util.s
 
 # target to generate assembly for a file
-sylar/util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util.cc.s
-.PHONY : sylar/util.cc.s
+symphony/util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util.cc.s
+.PHONY : symphony/util.cc.s
 
-sylar/util/crypto_util.o: sylar/util/crypto_util.cc.o
+symphony/util/crypto_util.o: symphony/util/crypto_util.cc.o
 
-.PHONY : sylar/util/crypto_util.o
+.PHONY : symphony/util/crypto_util.o
 
 # target to build an object file
-sylar/util/crypto_util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/crypto_util.cc.o
-.PHONY : sylar/util/crypto_util.cc.o
+symphony/util/crypto_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/crypto_util.cc.o
+.PHONY : symphony/util/crypto_util.cc.o
 
-sylar/util/crypto_util.i: sylar/util/crypto_util.cc.i
+symphony/util/crypto_util.i: symphony/util/crypto_util.cc.i
 
-.PHONY : sylar/util/crypto_util.i
+.PHONY : symphony/util/crypto_util.i
 
 # target to preprocess a source file
-sylar/util/crypto_util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/crypto_util.cc.i
-.PHONY : sylar/util/crypto_util.cc.i
+symphony/util/crypto_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/crypto_util.cc.i
+.PHONY : symphony/util/crypto_util.cc.i
 
-sylar/util/crypto_util.s: sylar/util/crypto_util.cc.s
+symphony/util/crypto_util.s: symphony/util/crypto_util.cc.s
 
-.PHONY : sylar/util/crypto_util.s
+.PHONY : symphony/util/crypto_util.s
 
 # target to generate assembly for a file
-sylar/util/crypto_util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/crypto_util.cc.s
-.PHONY : sylar/util/crypto_util.cc.s
+symphony/util/crypto_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/crypto_util.cc.s
+.PHONY : symphony/util/crypto_util.cc.s
 
-sylar/util/hash_util.o: sylar/util/hash_util.cc.o
+symphony/util/hash_util.o: symphony/util/hash_util.cc.o
 
-.PHONY : sylar/util/hash_util.o
+.PHONY : symphony/util/hash_util.o
 
 # target to build an object file
-sylar/util/hash_util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/hash_util.cc.o
-.PHONY : sylar/util/hash_util.cc.o
+symphony/util/hash_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/hash_util.cc.o
+.PHONY : symphony/util/hash_util.cc.o
 
-sylar/util/hash_util.i: sylar/util/hash_util.cc.i
+symphony/util/hash_util.i: symphony/util/hash_util.cc.i
 
-.PHONY : sylar/util/hash_util.i
+.PHONY : symphony/util/hash_util.i
 
 # target to preprocess a source file
-sylar/util/hash_util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/hash_util.cc.i
-.PHONY : sylar/util/hash_util.cc.i
+symphony/util/hash_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/hash_util.cc.i
+.PHONY : symphony/util/hash_util.cc.i
 
-sylar/util/hash_util.s: sylar/util/hash_util.cc.s
+symphony/util/hash_util.s: symphony/util/hash_util.cc.s
 
-.PHONY : sylar/util/hash_util.s
+.PHONY : symphony/util/hash_util.s
 
 # target to generate assembly for a file
-sylar/util/hash_util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/hash_util.cc.s
-.PHONY : sylar/util/hash_util.cc.s
+symphony/util/hash_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/hash_util.cc.s
+.PHONY : symphony/util/hash_util.cc.s
 
-sylar/util/json_util.o: sylar/util/json_util.cc.o
+symphony/util/json_util.o: symphony/util/json_util.cc.o
 
-.PHONY : sylar/util/json_util.o
+.PHONY : symphony/util/json_util.o
 
 # target to build an object file
-sylar/util/json_util.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/json_util.cc.o
-.PHONY : sylar/util/json_util.cc.o
+symphony/util/json_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/json_util.cc.o
+.PHONY : symphony/util/json_util.cc.o
 
-sylar/util/json_util.i: sylar/util/json_util.cc.i
+symphony/util/json_util.i: symphony/util/json_util.cc.i
 
-.PHONY : sylar/util/json_util.i
+.PHONY : symphony/util/json_util.i
 
 # target to preprocess a source file
-sylar/util/json_util.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/json_util.cc.i
-.PHONY : sylar/util/json_util.cc.i
+symphony/util/json_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/json_util.cc.i
+.PHONY : symphony/util/json_util.cc.i
 
-sylar/util/json_util.s: sylar/util/json_util.cc.s
+symphony/util/json_util.s: symphony/util/json_util.cc.s
 
-.PHONY : sylar/util/json_util.s
+.PHONY : symphony/util/json_util.s
 
 # target to generate assembly for a file
-sylar/util/json_util.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/json_util.cc.s
-.PHONY : sylar/util/json_util.cc.s
+symphony/util/json_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/json_util.cc.s
+.PHONY : symphony/util/json_util.cc.s
 
-sylar/util/time.o: sylar/util/time.cc.o
+symphony/util/time.o: symphony/util/time.cc.o
 
-.PHONY : sylar/util/time.o
+.PHONY : symphony/util/time.o
 
 # target to build an object file
-sylar/util/time.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/time.cc.o
-.PHONY : sylar/util/time.cc.o
+symphony/util/time.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/time.cc.o
+.PHONY : symphony/util/time.cc.o
 
-sylar/util/time.i: sylar/util/time.cc.i
+symphony/util/time.i: symphony/util/time.cc.i
 
-.PHONY : sylar/util/time.i
+.PHONY : symphony/util/time.i
 
 # target to preprocess a source file
-sylar/util/time.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/time.cc.i
-.PHONY : sylar/util/time.cc.i
+symphony/util/time.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/time.cc.i
+.PHONY : symphony/util/time.cc.i
 
-sylar/util/time.s: sylar/util/time.cc.s
+symphony/util/time.s: symphony/util/time.cc.s
 
-.PHONY : sylar/util/time.s
+.PHONY : symphony/util/time.s
 
 # target to generate assembly for a file
-sylar/util/time.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/util/time.cc.s
-.PHONY : sylar/util/time.cc.s
+symphony/util/time.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/time.cc.s
+.PHONY : symphony/util/time.cc.s
 
-sylar/worker.o: sylar/worker.cc.o
+symphony/worker.o: symphony/worker.cc.o
 
-.PHONY : sylar/worker.o
+.PHONY : symphony/worker.o
 
 # target to build an object file
-sylar/worker.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/worker.cc.o
-.PHONY : sylar/worker.cc.o
+symphony/worker.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/worker.cc.o
+.PHONY : symphony/worker.cc.o
 
-sylar/worker.i: sylar/worker.cc.i
+symphony/worker.i: symphony/worker.cc.i
 
-.PHONY : sylar/worker.i
+.PHONY : symphony/worker.i
 
 # target to preprocess a source file
-sylar/worker.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/worker.cc.i
-.PHONY : sylar/worker.cc.i
+symphony/worker.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/worker.cc.i
+.PHONY : symphony/worker.cc.i
 
-sylar/worker.s: sylar/worker.cc.s
+symphony/worker.s: symphony/worker.cc.s
 
-.PHONY : sylar/worker.s
+.PHONY : symphony/worker.s
 
 # target to generate assembly for a file
-sylar/worker.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/worker.cc.s
-.PHONY : sylar/worker.cc.s
+symphony/worker.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/worker.cc.s
+.PHONY : symphony/worker.cc.s
 
-sylar/zk_client.o: sylar/zk_client.cc.o
+symphony/zk_client.o: symphony/zk_client.cc.o
 
-.PHONY : sylar/zk_client.o
+.PHONY : symphony/zk_client.o
 
 # target to build an object file
-sylar/zk_client.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/zk_client.cc.o
-.PHONY : sylar/zk_client.cc.o
+symphony/zk_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/zk_client.cc.o
+.PHONY : symphony/zk_client.cc.o
 
-sylar/zk_client.i: sylar/zk_client.cc.i
+symphony/zk_client.i: symphony/zk_client.cc.i
 
-.PHONY : sylar/zk_client.i
+.PHONY : symphony/zk_client.i
 
 # target to preprocess a source file
-sylar/zk_client.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/zk_client.cc.i
-.PHONY : sylar/zk_client.cc.i
+symphony/zk_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/zk_client.cc.i
+.PHONY : symphony/zk_client.cc.i
 
-sylar/zk_client.s: sylar/zk_client.cc.s
+symphony/zk_client.s: symphony/zk_client.cc.s
 
-.PHONY : sylar/zk_client.s
+.PHONY : symphony/zk_client.s
 
 # target to generate assembly for a file
-sylar/zk_client.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sylar.dir/build.make CMakeFiles/sylar.dir/sylar/zk_client.cc.s
-.PHONY : sylar/zk_client.cc.s
+symphony/zk_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/zk_client.cc.s
+.PHONY : symphony/zk_client.cc.s
 
 tests/test_service_discovery.o: tests/test_service_discovery.cc.o
 
@@ -1998,208 +1998,208 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... sylar"
+	@echo "... symphony"
 	@echo "... test_zookeeper"
 	@echo "... test_service_discovery"
 	@echo "... edit_cache"
-	@echo "... sylar/address.o"
-	@echo "... sylar/address.i"
-	@echo "... sylar/address.s"
-	@echo "... sylar/application.o"
-	@echo "... sylar/application.i"
-	@echo "... sylar/application.s"
-	@echo "... sylar/bytearray.o"
-	@echo "... sylar/bytearray.i"
-	@echo "... sylar/bytearray.s"
-	@echo "... sylar/config.o"
-	@echo "... sylar/config.i"
-	@echo "... sylar/config.s"
-	@echo "... sylar/daemon.o"
-	@echo "... sylar/daemon.i"
-	@echo "... sylar/daemon.s"
-	@echo "... sylar/db/fox_thread.o"
-	@echo "... sylar/db/fox_thread.i"
-	@echo "... sylar/db/fox_thread.s"
-	@echo "... sylar/db/mysql.o"
-	@echo "... sylar/db/mysql.i"
-	@echo "... sylar/db/mysql.s"
-	@echo "... sylar/db/redis.o"
-	@echo "... sylar/db/redis.i"
-	@echo "... sylar/db/redis.s"
-	@echo "... sylar/db/sqlite3.o"
-	@echo "... sylar/db/sqlite3.i"
-	@echo "... sylar/db/sqlite3.s"
-	@echo "... sylar/ds/bitmap.o"
-	@echo "... sylar/ds/bitmap.i"
-	@echo "... sylar/ds/bitmap.s"
-	@echo "... sylar/ds/roaring.o"
-	@echo "... sylar/ds/roaring.i"
-	@echo "... sylar/ds/roaring.s"
-	@echo "... sylar/ds/roaring_bitmap.o"
-	@echo "... sylar/ds/roaring_bitmap.i"
-	@echo "... sylar/ds/roaring_bitmap.s"
-	@echo "... sylar/ds/util.o"
-	@echo "... sylar/ds/util.i"
-	@echo "... sylar/ds/util.s"
-	@echo "... sylar/email/email.o"
-	@echo "... sylar/email/email.i"
-	@echo "... sylar/email/email.s"
-	@echo "... sylar/email/smtp.o"
-	@echo "... sylar/email/smtp.i"
-	@echo "... sylar/email/smtp.s"
-	@echo "... sylar/env.o"
-	@echo "... sylar/env.i"
-	@echo "... sylar/env.s"
-	@echo "... sylar/fd_manager.o"
-	@echo "... sylar/fd_manager.i"
-	@echo "... sylar/fd_manager.s"
-	@echo "... sylar/fiber.o"
-	@echo "... sylar/fiber.i"
-	@echo "... sylar/fiber.s"
-	@echo "... sylar/hook.o"
-	@echo "... sylar/hook.i"
-	@echo "... sylar/hook.s"
-	@echo "... sylar/http/http.o"
-	@echo "... sylar/http/http.i"
-	@echo "... sylar/http/http.s"
-	@echo "... sylar/http/http11_parser.rl.o"
-	@echo "... sylar/http/http11_parser.rl.i"
-	@echo "... sylar/http/http11_parser.rl.s"
-	@echo "... sylar/http/http_connection.o"
-	@echo "... sylar/http/http_connection.i"
-	@echo "... sylar/http/http_connection.s"
-	@echo "... sylar/http/http_parser.o"
-	@echo "... sylar/http/http_parser.i"
-	@echo "... sylar/http/http_parser.s"
-	@echo "... sylar/http/http_server.o"
-	@echo "... sylar/http/http_server.i"
-	@echo "... sylar/http/http_server.s"
-	@echo "... sylar/http/http_session.o"
-	@echo "... sylar/http/http_session.i"
-	@echo "... sylar/http/http_session.s"
-	@echo "... sylar/http/httpclient_parser.rl.o"
-	@echo "... sylar/http/httpclient_parser.rl.i"
-	@echo "... sylar/http/httpclient_parser.rl.s"
-	@echo "... sylar/http/servlet.o"
-	@echo "... sylar/http/servlet.i"
-	@echo "... sylar/http/servlet.s"
-	@echo "... sylar/http/servlets/config_servlet.o"
-	@echo "... sylar/http/servlets/config_servlet.i"
-	@echo "... sylar/http/servlets/config_servlet.s"
-	@echo "... sylar/http/servlets/status_servlet.o"
-	@echo "... sylar/http/servlets/status_servlet.i"
-	@echo "... sylar/http/servlets/status_servlet.s"
-	@echo "... sylar/http/session_data.o"
-	@echo "... sylar/http/session_data.i"
-	@echo "... sylar/http/session_data.s"
-	@echo "... sylar/http/ws_connection.o"
-	@echo "... sylar/http/ws_connection.i"
-	@echo "... sylar/http/ws_connection.s"
-	@echo "... sylar/http/ws_server.o"
-	@echo "... sylar/http/ws_server.i"
-	@echo "... sylar/http/ws_server.s"
-	@echo "... sylar/http/ws_servlet.o"
-	@echo "... sylar/http/ws_servlet.i"
-	@echo "... sylar/http/ws_servlet.s"
-	@echo "... sylar/http/ws_session.o"
-	@echo "... sylar/http/ws_session.i"
-	@echo "... sylar/http/ws_session.s"
-	@echo "... sylar/iomanager.o"
-	@echo "... sylar/iomanager.i"
-	@echo "... sylar/iomanager.s"
-	@echo "... sylar/library.o"
-	@echo "... sylar/library.i"
-	@echo "... sylar/library.s"
-	@echo "... sylar/log.o"
-	@echo "... sylar/log.i"
-	@echo "... sylar/log.s"
-	@echo "... sylar/module.o"
-	@echo "... sylar/module.i"
-	@echo "... sylar/module.s"
-	@echo "... sylar/mutex.o"
-	@echo "... sylar/mutex.i"
-	@echo "... sylar/mutex.s"
-	@echo "... sylar/ns/name_server_module.o"
-	@echo "... sylar/ns/name_server_module.i"
-	@echo "... sylar/ns/name_server_module.s"
-	@echo "... sylar/ns/ns_client.o"
-	@echo "... sylar/ns/ns_client.i"
-	@echo "... sylar/ns/ns_client.s"
-	@echo "... sylar/ns/ns_protobuf.pb.o"
-	@echo "... sylar/ns/ns_protobuf.pb.i"
-	@echo "... sylar/ns/ns_protobuf.pb.s"
-	@echo "... sylar/ns/ns_protocol.o"
-	@echo "... sylar/ns/ns_protocol.i"
-	@echo "... sylar/ns/ns_protocol.s"
-	@echo "... sylar/protocol.o"
-	@echo "... sylar/protocol.i"
-	@echo "... sylar/protocol.s"
-	@echo "... sylar/rock/rock_protocol.o"
-	@echo "... sylar/rock/rock_protocol.i"
-	@echo "... sylar/rock/rock_protocol.s"
-	@echo "... sylar/rock/rock_server.o"
-	@echo "... sylar/rock/rock_server.i"
-	@echo "... sylar/rock/rock_server.s"
-	@echo "... sylar/rock/rock_stream.o"
-	@echo "... sylar/rock/rock_stream.i"
-	@echo "... sylar/rock/rock_stream.s"
-	@echo "... sylar/scheduler.o"
-	@echo "... sylar/scheduler.i"
-	@echo "... sylar/scheduler.s"
-	@echo "... sylar/socket.o"
-	@echo "... sylar/socket.i"
-	@echo "... sylar/socket.s"
-	@echo "... sylar/stream.o"
-	@echo "... sylar/stream.i"
-	@echo "... sylar/stream.s"
-	@echo "... sylar/streams/async_socket_stream.o"
-	@echo "... sylar/streams/async_socket_stream.i"
-	@echo "... sylar/streams/async_socket_stream.s"
-	@echo "... sylar/streams/load_balance.o"
-	@echo "... sylar/streams/load_balance.i"
-	@echo "... sylar/streams/load_balance.s"
-	@echo "... sylar/streams/service_discovery.o"
-	@echo "... sylar/streams/service_discovery.i"
-	@echo "... sylar/streams/service_discovery.s"
-	@echo "... sylar/streams/socket_stream.o"
-	@echo "... sylar/streams/socket_stream.i"
-	@echo "... sylar/streams/socket_stream.s"
-	@echo "... sylar/streams/zlib_stream.o"
-	@echo "... sylar/streams/zlib_stream.i"
-	@echo "... sylar/streams/zlib_stream.s"
-	@echo "... sylar/tcp_server.o"
-	@echo "... sylar/tcp_server.i"
-	@echo "... sylar/tcp_server.s"
-	@echo "... sylar/thread.o"
-	@echo "... sylar/thread.i"
-	@echo "... sylar/thread.s"
-	@echo "... sylar/timer.o"
-	@echo "... sylar/timer.i"
-	@echo "... sylar/timer.s"
-	@echo "... sylar/uri.rl.o"
-	@echo "... sylar/uri.rl.i"
-	@echo "... sylar/uri.rl.s"
-	@echo "... sylar/util.o"
-	@echo "... sylar/util.i"
-	@echo "... sylar/util.s"
-	@echo "... sylar/util/crypto_util.o"
-	@echo "... sylar/util/crypto_util.i"
-	@echo "... sylar/util/crypto_util.s"
-	@echo "... sylar/util/hash_util.o"
-	@echo "... sylar/util/hash_util.i"
-	@echo "... sylar/util/hash_util.s"
-	@echo "... sylar/util/json_util.o"
-	@echo "... sylar/util/json_util.i"
-	@echo "... sylar/util/json_util.s"
-	@echo "... sylar/util/time.o"
-	@echo "... sylar/util/time.i"
-	@echo "... sylar/util/time.s"
-	@echo "... sylar/worker.o"
-	@echo "... sylar/worker.i"
-	@echo "... sylar/worker.s"
-	@echo "... sylar/zk_client.o"
-	@echo "... sylar/zk_client.i"
-	@echo "... sylar/zk_client.s"
+	@echo "... symphony/address.o"
+	@echo "... symphony/address.i"
+	@echo "... symphony/address.s"
+	@echo "... symphony/application.o"
+	@echo "... symphony/application.i"
+	@echo "... symphony/application.s"
+	@echo "... symphony/bytearray.o"
+	@echo "... symphony/bytearray.i"
+	@echo "... symphony/bytearray.s"
+	@echo "... symphony/config.o"
+	@echo "... symphony/config.i"
+	@echo "... symphony/config.s"
+	@echo "... symphony/daemon.o"
+	@echo "... symphony/daemon.i"
+	@echo "... symphony/daemon.s"
+	@echo "... symphony/db/fox_thread.o"
+	@echo "... symphony/db/fox_thread.i"
+	@echo "... symphony/db/fox_thread.s"
+	@echo "... symphony/db/mysql.o"
+	@echo "... symphony/db/mysql.i"
+	@echo "... symphony/db/mysql.s"
+	@echo "... symphony/db/redis.o"
+	@echo "... symphony/db/redis.i"
+	@echo "... symphony/db/redis.s"
+	@echo "... symphony/db/sqlite3.o"
+	@echo "... symphony/db/sqlite3.i"
+	@echo "... symphony/db/sqlite3.s"
+	@echo "... symphony/ds/bitmap.o"
+	@echo "... symphony/ds/bitmap.i"
+	@echo "... symphony/ds/bitmap.s"
+	@echo "... symphony/ds/roaring.o"
+	@echo "... symphony/ds/roaring.i"
+	@echo "... symphony/ds/roaring.s"
+	@echo "... symphony/ds/roaring_bitmap.o"
+	@echo "... symphony/ds/roaring_bitmap.i"
+	@echo "... symphony/ds/roaring_bitmap.s"
+	@echo "... symphony/ds/util.o"
+	@echo "... symphony/ds/util.i"
+	@echo "... symphony/ds/util.s"
+	@echo "... symphony/email/email.o"
+	@echo "... symphony/email/email.i"
+	@echo "... symphony/email/email.s"
+	@echo "... symphony/email/smtp.o"
+	@echo "... symphony/email/smtp.i"
+	@echo "... symphony/email/smtp.s"
+	@echo "... symphony/env.o"
+	@echo "... symphony/env.i"
+	@echo "... symphony/env.s"
+	@echo "... symphony/fd_manager.o"
+	@echo "... symphony/fd_manager.i"
+	@echo "... symphony/fd_manager.s"
+	@echo "... symphony/fiber.o"
+	@echo "... symphony/fiber.i"
+	@echo "... symphony/fiber.s"
+	@echo "... symphony/hook.o"
+	@echo "... symphony/hook.i"
+	@echo "... symphony/hook.s"
+	@echo "... symphony/http/http.o"
+	@echo "... symphony/http/http.i"
+	@echo "... symphony/http/http.s"
+	@echo "... symphony/http/http11_parser.rl.o"
+	@echo "... symphony/http/http11_parser.rl.i"
+	@echo "... symphony/http/http11_parser.rl.s"
+	@echo "... symphony/http/http_connection.o"
+	@echo "... symphony/http/http_connection.i"
+	@echo "... symphony/http/http_connection.s"
+	@echo "... symphony/http/http_parser.o"
+	@echo "... symphony/http/http_parser.i"
+	@echo "... symphony/http/http_parser.s"
+	@echo "... symphony/http/http_server.o"
+	@echo "... symphony/http/http_server.i"
+	@echo "... symphony/http/http_server.s"
+	@echo "... symphony/http/http_session.o"
+	@echo "... symphony/http/http_session.i"
+	@echo "... symphony/http/http_session.s"
+	@echo "... symphony/http/httpclient_parser.rl.o"
+	@echo "... symphony/http/httpclient_parser.rl.i"
+	@echo "... symphony/http/httpclient_parser.rl.s"
+	@echo "... symphony/http/servlet.o"
+	@echo "... symphony/http/servlet.i"
+	@echo "... symphony/http/servlet.s"
+	@echo "... symphony/http/servlets/config_servlet.o"
+	@echo "... symphony/http/servlets/config_servlet.i"
+	@echo "... symphony/http/servlets/config_servlet.s"
+	@echo "... symphony/http/servlets/status_servlet.o"
+	@echo "... symphony/http/servlets/status_servlet.i"
+	@echo "... symphony/http/servlets/status_servlet.s"
+	@echo "... symphony/http/session_data.o"
+	@echo "... symphony/http/session_data.i"
+	@echo "... symphony/http/session_data.s"
+	@echo "... symphony/http/ws_connection.o"
+	@echo "... symphony/http/ws_connection.i"
+	@echo "... symphony/http/ws_connection.s"
+	@echo "... symphony/http/ws_server.o"
+	@echo "... symphony/http/ws_server.i"
+	@echo "... symphony/http/ws_server.s"
+	@echo "... symphony/http/ws_servlet.o"
+	@echo "... symphony/http/ws_servlet.i"
+	@echo "... symphony/http/ws_servlet.s"
+	@echo "... symphony/http/ws_session.o"
+	@echo "... symphony/http/ws_session.i"
+	@echo "... symphony/http/ws_session.s"
+	@echo "... symphony/iomanager.o"
+	@echo "... symphony/iomanager.i"
+	@echo "... symphony/iomanager.s"
+	@echo "... symphony/library.o"
+	@echo "... symphony/library.i"
+	@echo "... symphony/library.s"
+	@echo "... symphony/log.o"
+	@echo "... symphony/log.i"
+	@echo "... symphony/log.s"
+	@echo "... symphony/module.o"
+	@echo "... symphony/module.i"
+	@echo "... symphony/module.s"
+	@echo "... symphony/mutex.o"
+	@echo "... symphony/mutex.i"
+	@echo "... symphony/mutex.s"
+	@echo "... symphony/ns/name_server_module.o"
+	@echo "... symphony/ns/name_server_module.i"
+	@echo "... symphony/ns/name_server_module.s"
+	@echo "... symphony/ns/ns_client.o"
+	@echo "... symphony/ns/ns_client.i"
+	@echo "... symphony/ns/ns_client.s"
+	@echo "... symphony/ns/ns_protobuf.pb.o"
+	@echo "... symphony/ns/ns_protobuf.pb.i"
+	@echo "... symphony/ns/ns_protobuf.pb.s"
+	@echo "... symphony/ns/ns_protocol.o"
+	@echo "... symphony/ns/ns_protocol.i"
+	@echo "... symphony/ns/ns_protocol.s"
+	@echo "... symphony/protocol.o"
+	@echo "... symphony/protocol.i"
+	@echo "... symphony/protocol.s"
+	@echo "... symphony/rock/rock_protocol.o"
+	@echo "... symphony/rock/rock_protocol.i"
+	@echo "... symphony/rock/rock_protocol.s"
+	@echo "... symphony/rock/rock_server.o"
+	@echo "... symphony/rock/rock_server.i"
+	@echo "... symphony/rock/rock_server.s"
+	@echo "... symphony/rock/rock_stream.o"
+	@echo "... symphony/rock/rock_stream.i"
+	@echo "... symphony/rock/rock_stream.s"
+	@echo "... symphony/scheduler.o"
+	@echo "... symphony/scheduler.i"
+	@echo "... symphony/scheduler.s"
+	@echo "... symphony/socket.o"
+	@echo "... symphony/socket.i"
+	@echo "... symphony/socket.s"
+	@echo "... symphony/stream.o"
+	@echo "... symphony/stream.i"
+	@echo "... symphony/stream.s"
+	@echo "... symphony/streams/async_socket_stream.o"
+	@echo "... symphony/streams/async_socket_stream.i"
+	@echo "... symphony/streams/async_socket_stream.s"
+	@echo "... symphony/streams/load_balance.o"
+	@echo "... symphony/streams/load_balance.i"
+	@echo "... symphony/streams/load_balance.s"
+	@echo "... symphony/streams/service_discovery.o"
+	@echo "... symphony/streams/service_discovery.i"
+	@echo "... symphony/streams/service_discovery.s"
+	@echo "... symphony/streams/socket_stream.o"
+	@echo "... symphony/streams/socket_stream.i"
+	@echo "... symphony/streams/socket_stream.s"
+	@echo "... symphony/streams/zlib_stream.o"
+	@echo "... symphony/streams/zlib_stream.i"
+	@echo "... symphony/streams/zlib_stream.s"
+	@echo "... symphony/tcp_server.o"
+	@echo "... symphony/tcp_server.i"
+	@echo "... symphony/tcp_server.s"
+	@echo "... symphony/thread.o"
+	@echo "... symphony/thread.i"
+	@echo "... symphony/thread.s"
+	@echo "... symphony/timer.o"
+	@echo "... symphony/timer.i"
+	@echo "... symphony/timer.s"
+	@echo "... symphony/uri.rl.o"
+	@echo "... symphony/uri.rl.i"
+	@echo "... symphony/uri.rl.s"
+	@echo "... symphony/util.o"
+	@echo "... symphony/util.i"
+	@echo "... symphony/util.s"
+	@echo "... symphony/util/crypto_util.o"
+	@echo "... symphony/util/crypto_util.i"
+	@echo "... symphony/util/crypto_util.s"
+	@echo "... symphony/util/hash_util.o"
+	@echo "... symphony/util/hash_util.i"
+	@echo "... symphony/util/hash_util.s"
+	@echo "... symphony/util/json_util.o"
+	@echo "... symphony/util/json_util.i"
+	@echo "... symphony/util/json_util.s"
+	@echo "... symphony/util/time.o"
+	@echo "... symphony/util/time.i"
+	@echo "... symphony/util/time.s"
+	@echo "... symphony/worker.o"
+	@echo "... symphony/worker.i"
+	@echo "... symphony/worker.s"
+	@echo "... symphony/zk_client.o"
+	@echo "... symphony/zk_client.i"
+	@echo "... symphony/zk_client.s"
 	@echo "... tests/test_service_discovery.o"
 	@echo "... tests/test_service_discovery.i"
 	@echo "... tests/test_service_discovery.s"

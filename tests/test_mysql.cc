@@ -1,6 +1,6 @@
 #include <iostream>
-#include "sylar/db/mysql.h"
-#include "sylar/iomanager.h"
+#include "symphony/db/mysql.h"
+#include "symphony/iomanager.h"
 
 void run() {
     do {
@@ -10,7 +10,7 @@ void run() {
         params["passwd"] = "blog123";
         params["dbname"] = "blog";
 
-        sylar::MySQL::ptr mysql(new sylar::MySQL(params));
+        symphony::MySQL::ptr mysql(new symphony::MySQL(params));
         if (!mysql->connect()) {
             std::cout << "connect fail" << std::endl;
             return;
@@ -25,22 +25,22 @@ void run() {
         // b.buffer = &a;
         // mysql_stmt_bind_param(m_
 
-        sylar::MySQLStmt::ptr stmt = sylar::MySQLStmt::Create(
+        symphony::MySQLStmt::ptr stmt = symphony::MySQLStmt::Create(
             mysql, "update user set update_time = ? where id = 1");
         stmt->bindString(1, "2018-01-01 10:10:10");
         int rt = stmt->execute();
         std::cout << "rt=" << rt << std::endl;
 
         // MYSQL_TIME mt;
-        // sylar::time_t_to_mysql_time(time(0), mt);
+        // symphony::time_t_to_mysql_time(time(0), mt);
 
         // int a = 0;
         ////auto stmt = mysql->prepare("select * from sylar where status >= ?");
         ////stmt->bind(0, a);
         ////auto res =
-        ///std::dynamic_pointer_cast<sylar::MySQLStmtRes>(stmt->query());
+        /// std::dynamic_pointer_cast<symphony::MySQLStmtRes>(stmt->query());
 
-        // auto res = std::dynamic_pointer_cast<sylar::MySQLStmtRes>
+        // auto res = std::dynamic_pointer_cast<symphony::MySQLStmtRes>
         //     //(mysql->queryStmt("select * from sylar"));
         //     (mysql->queryStmt("select *, 'hello' as xx from user where status
         //     >= ? and status <= ?"
@@ -48,7 +48,7 @@ void run() {
         //     //(mysql->queryStmt("select id,name, keyword, creator as aa,
         //     last_update_time from sylar "
         //     //                  " where last_update_time > ?", (time_t)0));
-        ////auto res = std::dynamic_pointer_cast<sylar::MySQLRes>
+        ////auto res = std::dynamic_pointer_cast<symphony::MySQLRes>
         ////    (mysql->query("select * from search_brand"));
         // if(!res) {
         //     std::cout << "invalid" << std::endl;
@@ -72,7 +72,7 @@ void run() {
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(1);
+    symphony::IOManager iom(1);
     // iom.schedule(run);
     iom.addTimer(1000, run, true);
     return 0;

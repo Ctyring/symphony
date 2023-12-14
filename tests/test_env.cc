@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <fstream>
 #include <iostream>
-#include "sylar/env.h"
+#include "symphony/env.h"
 
 struct A {
     A() {
@@ -24,28 +24,31 @@ A a;
 
 int main(int argc, char** argv) {
     std::cout << "argc=" << argc << std::endl;
-    sylar::EnvMgr::GetInstance()->addHelp("s", "start with the terminal");
-    sylar::EnvMgr::GetInstance()->addHelp("d", "run as daemon");
-    sylar::EnvMgr::GetInstance()->addHelp("p", "print help");
-    if (!sylar::EnvMgr::GetInstance()->init(argc, argv)) {
-        sylar::EnvMgr::GetInstance()->printHelp();
+    symphony::EnvMgr::GetInstance()->addHelp("s", "start with the terminal");
+    symphony::EnvMgr::GetInstance()->addHelp("d", "run as daemon");
+    symphony::EnvMgr::GetInstance()->addHelp("p", "print help");
+    if (!symphony::EnvMgr::GetInstance()->init(argc, argv)) {
+        symphony::EnvMgr::GetInstance()->printHelp();
         return 0;
     }
 
-    std::cout << "exe=" << sylar::EnvMgr::GetInstance()->getExe() << std::endl;
-    std::cout << "cwd=" << sylar::EnvMgr::GetInstance()->getCwd() << std::endl;
-
-    std::cout << "path=" << sylar::EnvMgr::GetInstance()->getEnv("PATH", "xxx")
+    std::cout << "exe=" << symphony::EnvMgr::GetInstance()->getExe()
               << std::endl;
-    std::cout << "test=" << sylar::EnvMgr::GetInstance()->getEnv("TEST", "")
+    std::cout << "cwd=" << symphony::EnvMgr::GetInstance()->getCwd()
+              << std::endl;
+
+    std::cout << "path="
+              << symphony::EnvMgr::GetInstance()->getEnv("PATH", "xxx")
+              << std::endl;
+    std::cout << "test=" << symphony::EnvMgr::GetInstance()->getEnv("TEST", "")
               << std::endl;
     std::cout << "set env "
-              << sylar::EnvMgr::GetInstance()->setEnv("TEST", "yy") 
+              << symphony::EnvMgr::GetInstance()->setEnv("TEST", "yy")
               << std::endl;
-    std::cout << "test=" << sylar::EnvMgr::GetInstance()->getEnv("TEST", "")
+    std::cout << "test=" << symphony::EnvMgr::GetInstance()->getEnv("TEST", "")
               << std::endl;
-    if (sylar::EnvMgr::GetInstance()->has("p")) {
-        sylar::EnvMgr::GetInstance()->printHelp();
+    if (symphony::EnvMgr::GetInstance()->has("p")) {
+        symphony::EnvMgr::GetInstance()->printHelp();
     }
     return 0;
 }

@@ -1,7 +1,7 @@
-#include "sylar/application.h"
+#include "symphony/application.h"
 
 int main(int argc, char** argv) {
-    sylar::Application app;
+    symphony::Application app;
     if (app.init(argc, argv)) {
         return app.run();
     }

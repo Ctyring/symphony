@@ -1,6 +1,6 @@
 cmake_miniMum_required(VERSION 3.0)
 
-project(sylar)
+project(symphony)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include (cmake/utils.cmake)
 set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -18,9 +18,9 @@ include_directories(.)
 include_directories(/yaml-cpp/include)
 include_directories(/usr/local/include)
 link_directories(/yaml-cpp/lib)
-link_directories(/root/cty/sylar/include)
+link_directories(/root/cty/symphony/include)
 
-option(TEST "ON for complile test" OFF)
+option(TEST "ON for complile test" ON)
 
 message("***", ${YAMLCPP})
 
@@ -46,87 +46,87 @@ if(ZLIB_FOUND)
 endif()
 
 set(LIB_SRC 
-	sylar/config.cc
-	sylar/fiber.cc
-	sylar/hook.cc
-	sylar/fd_manager.cc
-	sylar/iomanager.cc
-	sylar/log.cc
-	sylar/scheduler.cc
-	sylar/timer.cc
-	sylar/thread.cc
-	sylar/util.cc
-	sylar/address.cc
-	sylar/socket.cc
-	sylar/bytearray.cc
-	sylar/http/http.cc
-	sylar/http/http_parser.cc
-    sylar/http/http11_parser.rl.cc
-    sylar/http/httpclient_parser.rl.cc
-	sylar/tcp_server.cc
-	sylar/streams/socket_stream.cc
-    sylar/stream.cc
-	sylar/http/http_session.cc
-	sylar/http/http_server.cc
-	sylar/http/servlet.cc
-	sylar/http/http_connection.cc
-	sylar/daemon.cc
-	sylar/env.cc
-	sylar/http/ws_connection.cc
-    sylar/http/ws_session.cc
-    sylar/http/ws_server.cc
-    sylar/http/ws_servlet.cc
-	sylar/util/hash_util.cc
-	sylar/db/redis.cc
-	sylar/application.cc
-	sylar/util/time.cc
-	sylar/worker.cc
-	sylar/mutex.cc
-	sylar/module.cc
-	sylar/library.cc
-	sylar/util/json_util.cc
-	sylar/streams/zlib_stream.cc
-	sylar/streams/async_socket_stream.cc
-	sylar/protocol.cc
-    sylar/rock/rock_protocol.cc
-	sylar/util/crypto_util.cc
-	sylar/rock/rock_server.cc
-	sylar/db/sqlite3.cc
-	sylar/streams/load_balance.cc
-	sylar/rock/rock_stream.cc
-	sylar/email/email.cc
-	sylar/email/smtp.cc
-	sylar/db/mysql.cc
-	sylar/http/session_data.cc
-	sylar/http/servlets/config_servlet.cc
-    sylar/http/servlets/status_servlet.cc
-	sylar/ns/name_server_module.cc
-    sylar/ns/ns_client.cc
-    sylar/ns/ns_protocol.cc
-	sylar/ds/bitmap.cc
-	sylar/zk_client.cc
-	sylar/streams/service_discovery.cc
-	sylar/db/fox_thread.cc
-	sylar/ds/roaring_bitmap.cc
-    sylar/ds/roaring.c
-	sylar/ds/util.cc
+	symphony/config.cc
+	symphony/fiber.cc
+	symphony/hook.cc
+	symphony/fd_manager.cc
+	symphony/iomanager.cc
+	symphony/log.cc
+	symphony/scheduler.cc
+	symphony/timer.cc
+	symphony/thread.cc
+	symphony/util.cc
+	symphony/address.cc
+	symphony/socket.cc
+	symphony/bytearray.cc
+	symphony/http/http.cc
+	symphony/http/http_parser.cc
+    symphony/http/http11_parser.rl.cc
+    symphony/http/httpclient_parser.rl.cc
+	symphony/tcp_server.cc
+	symphony/streams/socket_stream.cc
+    symphony/stream.cc
+	symphony/http/http_session.cc
+	symphony/http/http_server.cc
+	symphony/http/servlet.cc
+	symphony/http/http_connection.cc
+	symphony/daemon.cc
+	symphony/env.cc
+	symphony/http/ws_connection.cc
+    symphony/http/ws_session.cc
+    symphony/http/ws_server.cc
+    symphony/http/ws_servlet.cc
+	symphony/util/hash_util.cc
+	symphony/db/redis.cc
+	symphony/application.cc
+	symphony/util/time.cc
+	symphony/worker.cc
+	symphony/mutex.cc
+	symphony/module.cc
+	symphony/library.cc
+	symphony/util/json_util.cc
+	symphony/streams/zlib_stream.cc
+	symphony/streams/async_socket_stream.cc
+	symphony/protocol.cc
+    symphony/rock/rock_protocol.cc
+	symphony/util/crypto_util.cc
+	symphony/rock/rock_server.cc
+	symphony/db/sqlite3.cc
+	symphony/streams/load_balance.cc
+	symphony/rock/rock_stream.cc
+	symphony/email/email.cc
+	symphony/email/smtp.cc
+	symphony/db/mysql.cc
+	symphony/http/session_data.cc
+	symphony/http/servlets/config_servlet.cc
+    symphony/http/servlets/status_servlet.cc
+	symphony/ns/name_server_module.cc
+    symphony/ns/ns_client.cc
+    symphony/ns/ns_protocol.cc
+	symphony/ds/bitmap.cc
+	symphony/zk_client.cc
+	symphony/streams/service_discovery.cc
+	symphony/db/fox_thread.cc
+	symphony/ds/roaring_bitmap.cc
+    symphony/ds/roaring.c
+	symphony/ds/util.cc
 	)
 
-ragelmaker(sylar/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar/http)
-ragelmaker(sylar/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar/http)
-ragelmaker(sylar/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/sylar)
+ragelmaker(symphony/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/symphony/http)
+ragelmaker(symphony/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/symphony/http)
+ragelmaker(symphony/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/symphony)
 
-protobufmaker(sylar/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
-# protobufmaker(sylar/test.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+# protobufmaker(symphony/test.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_library(sylar SHARED ${LIB_SRC})
-force_redefine_file_macro_for_sources(sylar)
+add_library(symphony SHARED ${LIB_SRC})
+force_redefine_file_macro_for_sources(symphony)
 
 find_library(YAMLCPP yaml-cpp)
 find_library(PTHREAD pthread)
 
 set(LIBS
-        sylar
+        symphony
 		dl
         pthread
         yaml-cpp
@@ -146,73 +146,73 @@ set(LIBS
 
 message("***", ${LIBS})
 if(TEST)
-sylar_add_executable(test1 "tests/test.cc" sylar "${LIBS}")
-sylar_add_executable(test_config "tests/test_config.cc" sylar "${LIBS}")
-sylar_add_executable(test_thread "tests/test_thread.cc" sylar "${LIBS}")
-sylar_add_executable(test_util "tests/test_util.cc" sylar "${LIBS}")
-sylar_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" sylar "${LIBS}")
-sylar_add_executable(test_hashmap "tests/test_hashmap.cc" sylar "${LIBS}")
-sylar_add_executable(test_dict "tests/test_dict.cc" sylar "${LIBS}")
-sylar_add_executable(test_array "tests/test_array.cc" sylar "${LIBS}")
-sylar_add_executable(test_fiber "tests/test_fiber.cc" sylar "${LIBS}")
-sylar_add_executable(test_scheduler "tests/test_scheduler.cc" sylar "${LIBS}")
-sylar_add_executable(test_iomanager "tests/test_iomanager.cc" sylar "${LIBS}")
-sylar_add_executable(test_hook "tests/test_hook.cc" sylar "${LIBS}")
-sylar_add_executable(test_address "tests/test_address.cc" sylar "${LIBS}")
-sylar_add_executable(test_socket "tests/test_socket.cc" sylar "${LIBS}")
-sylar_add_executable(test_bytearray "tests/test_bytearray.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test1 "tests/test.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_config "tests/test_config.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_thread "tests/test_thread.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_util "tests/test_util.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_hashmap "tests/test_hashmap.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_dict "tests/test_dict.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_array "tests/test_array.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_fiber "tests/test_fiber.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_scheduler "tests/test_scheduler.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_iomanager "tests/test_iomanager.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_hook "tests/test_hook.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_address "tests/test_address.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_socket "tests/test_socket.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_bytearray "tests/test_bytearray.cc" symphony "${LIBS}")
 
-sylar_add_executable(test_http "tests/test_http.cc" sylar "${LIBS}")
-sylar_add_executable(test_http_parser "tests/test_http_parser.cc" sylar "${LIBS}")
-sylar_add_executable(test_tcp_server "tests/test_tcp_server.cc" sylar "${LIBS}")
-sylar_add_executable(echo_server "examples/echo_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_http_server "tests/test_http_server.cc" sylar "${LIBS}")
-# sylar_add_executable(test_http_connection "tests/test_http_connection.cc" sylar "${LIBS}")
-sylar_add_executable(test_uri "tests/test_uri.cc" sylar "${LIBS}")
-sylar_add_executable(my_http_server "samples/my_http_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_daemon "tests/test_daemon.cc" sylar "${LIBS}")
-sylar_add_executable(test_env "tests/test_env.cc" sylar "${LIBS}")
-sylar_add_executable(test_ws_server "tests/test_ws_server.cc" sylar "${LIBS}")
-sylar_add_executable(test_ws_client "tests/test_ws_client.cc" sylar "${LIBS}")
-sylar_add_executable(test_application "tests/test_application.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_http "tests/test_http.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_http_parser "tests/test_http_parser.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_tcp_server "tests/test_tcp_server.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(echo_server "examples/echo_server.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_http_server "tests/test_http_server.cc" symphony "${LIBS}")
+# SYMPHONY_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_uri "tests/test_uri.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(my_http_server "samples/my_http_server.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_daemon "tests/test_daemon.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_env "tests/test_env.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_ws_server "tests/test_ws_server.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_ws_client "tests/test_ws_client.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_application "tests/test_application.cc" symphony "${LIBS}")
 
-sylar_add_executable(test_http_connection "tests/test_http_connection.cc" sylar "${LIBS}")
-sylar_add_executable(test_lru "tests/test_lru.cc" sylar "${LIBS}")
-sylar_add_executable(test_timed_cache "tests/test_timed_cache.cc" sylar "${LIBS}")
-sylar_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" sylar "${LIBS}")
-sylar_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_lru "tests/test_lru.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_timed_cache "tests/test_timed_cache.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" symphony "${LIBS}")
 
-sylar_add_executable(test_crypto "tests/test_crypto.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_crypto "tests/test_crypto.cc" symphony "${LIBS}")
 
-sylar_add_executable(test_sqlite3 "tests/test_sqlite3.cc" sylar "${LIBS}")
-sylar_add_executable(test_rock "tests/test_rock.cc" sylar "${LIBS}")
-sylar_add_executable(test_email "tests/test_email.cc" sylar "${LIBS}")
-sylar_add_executable(test_mysql "tests/test_mysql.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_sqlite3 "tests/test_sqlite3.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_rock "tests/test_rock.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_email "tests/test_email.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_mysql "tests/test_mysql.cc" symphony "${LIBS}")
 
 set(ORM_SRCS
-    sylar/orm/table.cc
-    sylar/orm/column.cc
-    sylar/orm/index.cc
-    sylar/orm/orm.cc
-    sylar/orm/util.cc
+    symphony/orm/table.cc
+    symphony/orm/column.cc
+    symphony/orm/index.cc
+    symphony/orm/orm.cc
+    symphony/orm/util.cc
     )
-sylar_add_executable(orm "${ORM_SRCS}" sylar "${LIBS}")
+SYMPHONY_add_executable(orm "${ORM_SRCS}" symphony "${LIBS}")
 
 add_library(test_module SHARED tests/test_module.cc)
 
-sylar_add_executable(bin_sylar "sylar/main.cc" sylar "${LIBS}")
-set_target_properties(bin_sylar PROPERTIES OUTPUT_NAME "sylar")
+SYMPHONY_add_executable(bin_symphony "symphony/main.cc" symphony "${LIBS}")
+set_target_properties(bin_symphony PROPERTIES OUTPUT_NAME "symphony")
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/orm_out)
 set(OLIBS ${LIBS})
 set(OLIBS ${OLIBS} orm_data)
-sylar_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
+SYMPHONY_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
 
-sylar_add_executable(test_nameserver "tests/test_nameserver.cc" sylar "${LIBS}")
-sylar_add_executable(test_bitmap "tests/test_bitmap.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
 endif()
-sylar_add_executable(test_zookeeper "tests/test_zookeeper.cc" sylar "${LIBS}")
-sylar_add_executable(test_service_discovery "tests/test_service_discovery.cc" sylar "${LIBS}")
+SYMPHONY_add_executable(test_zookeeper "tests/test_zookeeper.cc" symphony "${LIBS}")
+SYMPHONY_add_executable(test_service_discovery "tests/test_service_discovery.cc" symphony "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

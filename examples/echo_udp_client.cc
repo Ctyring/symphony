@@ -1,26 +1,26 @@
 #include <stdlib.h>
-#include "sylar/iomanager.h"
-#include "sylar/log.h"
-#include "sylar/socket.h"
+#include "symphony/iomanager.h"
+#include "symphony/log.h"
+#include "symphony/socket.h"
 
-static sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+static symphony::Logger::ptr g_logger = SYMPHONY_LOG_ROOT();
 
 const char* ip = nullptr;
 uint16_t port = 0;
 
 void run() {
-    sylar::IPAddress::ptr addr = sylar::Address::LookupAnyIPAddress(ip);
+    symphony::IPAddress::ptr addr = symphony::Address::LookupAnyIPAddress(ip);
     if (!addr) {
-        SYLAR_LOG_ERROR(g_logger) << "invalid ip: " << ip;
+        SYMPHONY_LOG_ERROR(g_logger) << "invalid ip: " << ip;
         return;
     }
     addr->setPort(port);
 
-    sylar::Socket::ptr sock = sylar::Socket::CreateUDP(addr);
+    symphony::Socket::ptr sock = symphony::Socket::CreateUDP(addr);
 
-    sylar::IOManager::GetThis()->schedule([sock]() {
-        sylar::Address::ptr addr(new sylar::IPv4Address);
-        SYLAR_LOG_INFO(g_logger) << "begin recv";
+    symphony::IOManager::GetThis()->schedule([sock]() {
+        symphony::Address::ptr addr(new symphony::IPv4Address);
+        SYMPHONY_LOG_INFO(g_logger) << "begin recv";
         while (true) {
             char buff[1024];
             int len = sock->recvFrom(buff, 1024, addr);
@@ -40,11 +40,12 @@ void run() {
             int len = sock->sendTo(line.c_str(), line.size(), addr);
             if (len < 0) {
                 int err = sock->getError();
-                SYLAR_LOG_ERROR(g_logger)
+                SYMPHONY_LOG_ERROR(g_logger)
                     << "send error err=" << err << " errstr=" << strerror(err)
                     << " len=" << len << " addr=" << *addr << " sock=" << *sock;
             } else {
-                SYLAR_LOG_INFO(g_logger) << "send " << line << " len:" << len;
+                SYMPHONY_LOG_INFO(g_logger)
+                    << "send " << line << " len:" << len;
             }
         }
     }
@@ -52,12 +53,12 @@ void run() {
 
 int main(int argc, char** argv) {
     if (argc < 3) {
-        SYLAR_LOG_INFO(g_logger) << "use as[" << argv[0] << " ip port]";
+        SYMPHONY_LOG_INFO(g_logger) << "use as[" << argv[0] << " ip port]";
         return 0;
     }
     ip = argv[1];
     port = atoi(argv[2]);
-    sylar::IOManager iom(2);
+    symphony::IOManager iom(2);
     iom.schedule(run);
     return 0;
 }

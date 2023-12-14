@@ -1,31 +1,32 @@
 #include <iostream>
-#include "sylar/log.h"
-#include "sylar/util.h"
+#include "symphony/log.h"
+#include "symphony/util.h"
 
 int main(int argc, char const* argv[]) {
-    sylar::Logger::ptr logger(new sylar::Logger);
-    logger->addAppender(sylar::LogAppender::ptr(new sylar::StdoutLogAppender));
+    symphony::Logger::ptr logger(new symphony::Logger);
+    logger->addAppender(
+        symphony::LogAppender::ptr(new symphony::StdoutLogAppender));
 
-    sylar::FileLogAppender::ptr file_appender(
-        new sylar::FileLogAppender("./log.txt"));
-    sylar::LogFormatter::ptr fmt(new sylar::LogFormatter("%d%T%p%T%m%n"));
+    symphony::FileLogAppender::ptr file_appender(
+        new symphony::FileLogAppender("./log.txt"));
+    symphony::LogFormatter::ptr fmt(new symphony::LogFormatter("%d%T%p%T%m%n"));
     file_appender->setFormatter(fmt);
-    file_appender->setLevel(sylar::LogLevel::ERROR);
+    file_appender->setLevel(symphony::LogLevel::ERROR);
     // logger->addAppender(file_appender);
 
-    sylar::TimeSlicingFileLogAppender::ptr ts_file_appender(
-        new sylar::TimeSlicingFileLogAppender(".", "test", ".log", 1));
+    symphony::TimeSlicingFileLogAppender::ptr ts_file_appender(
+        new symphony::TimeSlicingFileLogAppender(".", "test", ".log", 1));
     logger->addAppender(ts_file_appender);
-    // sylar::LogEvent::ptr event(new sylar::LogEvent(__FILE__, __LINE__, 0,
-    // sylar::GetThreadId(), sylar::GetFiberId(), 2, time(0)));
-    // logger->log(sylar::LogLevel::DEBUG, event);
+    // symphony::LogEvent::ptr event(new symphony::LogEvent(__FILE__, __LINE__,
+    // 0, symphony::GetThreadId(), symphony::GetFiberId(), 2, time(0)));
+    // logger->log(symphony::LogLevel::DEBUG, event);
     for (int i = 0; i < 10; i++) {
-        SYLAR_LOG_INFO(logger) << "test macro";
-        SYLAR_LOG_FMT_ERROR(logger, "test macro fmt error %s", "aa");
+        SYMPHONY_LOG_INFO(logger) << "test macro";
+        SYMPHONY_LOG_FMT_ERROR(logger, "test macro fmt error %s", "aa");
         sleep(10);
     }
 
-    // auto l = sylar::LoggerMgr::GetInstance()->getLogger("xx");
-    // SYLAR_LOG_INFO(l) << "xxx";
+    // auto l = symphony::LoggerMgr::GetInstance()->getLogger("xx");
+    // SYMPHONY_LOG_INFO(l) << "xxx";
     return 0;
 }

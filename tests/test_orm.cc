@@ -1,11 +1,11 @@
 #include "orm_out/test/orm/user_info.h"
-#include "sylar/db/mysql.h"
-#include "sylar/db/sqlite3.h"
+#include "symphony/db/mysql.h"
+#include "symphony/db/sqlite3.h"
 
 int main(int argc, char** argv) {
-    sylar::IDB::ptr db;
+    symphony::IDB::ptr db;
     if (argc == 1) {
-        db = sylar::SQLite3::Create("abc.db");
+        db = symphony::SQLite3::Create("abc.db");
         std::cout << "create table: "
                   << test::orm::UserInfoDao::CreateTableSQLite3(db)
                   << std::endl;
@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
         params["passwd"] = "123456";
         params["dbname"] = "sylar";
 
-        sylar::MySQL::ptr m(new sylar::MySQL(params));
+        symphony::MySQL::ptr m(new symphony::MySQL(params));
         m->connect();
         db = m;
         std::cout << "create table: "

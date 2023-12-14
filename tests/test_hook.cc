@@ -3,24 +3,24 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "sylar/hook.h"
-#include "sylar/iomanager.h"
-#include "sylar/log.h"
+#include "symphony/hook.h"
+#include "symphony/iomanager.h"
+#include "symphony/log.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+symphony::Logger::ptr g_logger = SYMPHONY_LOG_ROOT();
 
 void test_sleep() {
-    sylar::IOManager iom(1);
+    symphony::IOManager iom(1);
     iom.schedule([]() {
         sleep(2);
-        SYLAR_LOG_INFO(g_logger) << "sleep 2";
+        SYMPHONY_LOG_INFO(g_logger) << "sleep 2";
     });
 
     iom.schedule([]() {
         sleep(3);
-        SYLAR_LOG_INFO(g_logger) << "sleep 3";
+        SYMPHONY_LOG_INFO(g_logger) << "sleep 3";
     });
-    SYLAR_LOG_INFO(g_logger) << "test_sleep";
+    SYMPHONY_LOG_INFO(g_logger) << "test_sleep";
 }
 
 void test_sock() {
@@ -32,9 +32,9 @@ void test_sock() {
     addr.sin_port = htons(80);
     inet_pton(AF_INET, "39.156.66.10", &addr.sin_addr.s_addr);
 
-    SYLAR_LOG_INFO(g_logger) << "begin connect";
+    SYMPHONY_LOG_INFO(g_logger) << "begin connect";
     int rt = connect(sock, (const sockaddr*)&addr, sizeof(addr));
-    SYLAR_LOG_INFO(g_logger) << "connect rt=" << rt << " errno=" << errno;
+    SYMPHONY_LOG_INFO(g_logger) << "connect rt=" << rt << " errno=" << errno;
 
     if (rt) {
         return;
@@ -42,7 +42,7 @@ void test_sock() {
 
     const char data[] = "GET / HTTP/1.0\r\n\r\n";
     rt = send(sock, data, sizeof(data), 0);
-    SYLAR_LOG_INFO(g_logger) << "send rt=" << rt << " errno=" << errno;
+    SYMPHONY_LOG_INFO(g_logger) << "send rt=" << rt << " errno=" << errno;
 
     if (rt <= 0) {
         return;
@@ -52,19 +52,19 @@ void test_sock() {
     buff.resize(4096);
 
     rt = recv(sock, &buff[0], buff.size(), 0);
-    SYLAR_LOG_INFO(g_logger) << "recv rt=" << rt << " errno=" << errno;
+    SYMPHONY_LOG_INFO(g_logger) << "recv rt=" << rt << " errno=" << errno;
 
     if (rt <= 0) {
         return;
     }
 
     buff.resize(rt);
-    SYLAR_LOG_INFO(g_logger) << buff;
+    SYMPHONY_LOG_INFO(g_logger) << buff;
 }
 
 int main(int argc, char** argv) {
     // test_sleep();
-    sylar::IOManager iom;
+    symphony::IOManager iom;
     iom.schedule(test_sock);
     return 0;
 }

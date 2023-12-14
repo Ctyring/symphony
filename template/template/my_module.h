@@ -1,8 +1,8 @@
-#include "sylar/module.h"
+#include "symphony/module.h"
 
 namespace name_space {
 
-class MyModule : public sylar::Module {
+class MyModule : public symphony::Module {
    public:
     typedef std::shared_ptr<MyModule> ptr;
     MyModule();

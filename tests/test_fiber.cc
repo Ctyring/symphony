@@ -1,36 +1,36 @@
-#include "sylar/sylar.h"
+#include "symphony/symphony.h"
 
-sylar::Logger::ptr g_logger = SYLAR_LOG_ROOT();
+symphony::Logger::ptr g_logger = SYMPHONY_LOG_ROOT();
 
 void run_in_fiber() {
-    SYLAR_LOG_INFO(g_logger) << "run_in_fiber begin";
-    sylar::Fiber::YieldToHold();
-    SYLAR_LOG_INFO(g_logger) << "run_in_fiber end";
-    sylar::Fiber::YieldToHold();
+    SYMPHONY_LOG_INFO(g_logger) << "run_in_fiber begin";
+    symphony::Fiber::YieldToHold();
+    SYMPHONY_LOG_INFO(g_logger) << "run_in_fiber end";
+    symphony::Fiber::YieldToHold();
 }
 
 void test_fiber() {
-    SYLAR_LOG_INFO(g_logger) << "main begin -1";
+    SYMPHONY_LOG_INFO(g_logger) << "main begin -1";
     {
-        sylar::Fiber::GetThis();
-        SYLAR_LOG_INFO(g_logger) << "main begin";
-        sylar::Fiber::ptr fiber(new sylar::Fiber(run_in_fiber));
+        symphony::Fiber::GetThis();
+        SYMPHONY_LOG_INFO(g_logger) << "main begin";
+        symphony::Fiber::ptr fiber(new symphony::Fiber(run_in_fiber));
         fiber->call();
-        // SYLAR_LOG_INFO(g_logger) << "main after swapIn";
+        // SYMPHONY_LOG_INFO(g_logger) << "main after swapIn";
         // fiber->swapIn();
-        // SYLAR_LOG_INFO(g_logger) << "main after end";
+        // SYMPHONY_LOG_INFO(g_logger) << "main after end";
         // fiber->swapIn();
     }
-    SYLAR_LOG_INFO(g_logger) << "main after end2";
+    SYMPHONY_LOG_INFO(g_logger) << "main after end2";
 }
 
 int main(int argc, char** argv) {
-    sylar::Thread::SetName("main");
+    symphony::Thread::SetName("main");
 
-    std::vector<sylar::Thread::ptr> thrs;
+    std::vector<symphony::Thread::ptr> thrs;
     for (int i = 0; i < 3; ++i) {
-        thrs.push_back(sylar::Thread::ptr(
-            new sylar::Thread(&test_fiber, "name_" + std::to_string(i))));
+        thrs.push_back(symphony::Thread::ptr(
+            new symphony::Thread(&test_fiber, "name_" + std::to_string(i))));
     }
     for (auto i : thrs) {
         i->join();

@@ -1,7 +1,7 @@
-#include "sylar/ds/timed_cache.h"
+#include "symphony/ds/timed_cache.h"
 
 void test_timed_cache() {
-    sylar::ds::TimedCache<int, int> cache(30, 10);
+    symphony::ds::TimedCache<int, int> cache(30, 10);
     for (int i = 0; i < 105; ++i) {
         cache.set(i, i * 100, 1000);
     }
@@ -23,7 +23,7 @@ void test_timed_cache() {
 }
 
 void test_hash_timed_cache() {
-    sylar::ds::HashTimedCache<int, int> cache(2, 30, 10);
+    symphony::ds::HashTimedCache<int, int> cache(2, 30, 10);
 
     for (int i = 0; i < 105; ++i) {
         cache.set(i, i * 100, -1000 * i);

@@ -1,17 +1,17 @@
-#include "sylar/streams/zlib_stream.h"
-#include "sylar/util.h"
+#include "symphony/streams/zlib_stream.h"
+#include "symphony/util.h"
 
 void test_gzip() {
     std::cout << "===================gzip===================" << std::endl;
-    std::string data = sylar::random_string(102400);
+    std::string data = symphony::random_string(102400);
 
-    auto gzip_compress = sylar::ZlibStream::CreateGzip(true, 1);
+    auto gzip_compress = symphony::ZlibStream::CreateGzip(true, 1);
     std::cout << "compress: " << gzip_compress->write(data.c_str(), data.size())
               << " length: " << gzip_compress->getBuffers().size() << std::endl;
     std::cout << "flush: " << gzip_compress->flush() << std::endl;
 
     auto comperss_str = gzip_compress->getResult();
-    auto gzip_uncompress = sylar::ZlibStream::CreateGzip(false, 1);
+    auto gzip_uncompress = symphony::ZlibStream::CreateGzip(false, 1);
 
     std::cout << "uncompress: "
               << gzip_uncompress->write(comperss_str.c_str(),
@@ -28,15 +28,15 @@ void test_gzip() {
 
 void test_deflate() {
     std::cout << "===================deflate===================" << std::endl;
-    std::string data = sylar::random_string(102400);
+    std::string data = symphony::random_string(102400);
 
-    auto gzip_compress = sylar::ZlibStream::CreateDeflate(true, 1);
+    auto gzip_compress = symphony::ZlibStream::CreateDeflate(true, 1);
     std::cout << "compress: " << gzip_compress->write(data.c_str(), data.size())
               << " length: " << gzip_compress->getBuffers().size() << std::endl;
     std::cout << "flush: " << gzip_compress->flush() << std::endl;
 
     auto comperss_str = gzip_compress->getResult();
-    auto gzip_uncompress = sylar::ZlibStream::CreateDeflate(false, 1);
+    auto gzip_uncompress = symphony::ZlibStream::CreateDeflate(false, 1);
 
     std::cout << "uncompress: "
               << gzip_uncompress->write(comperss_str.c_str(),
@@ -53,15 +53,15 @@ void test_deflate() {
 
 void test_zlib() {
     std::cout << "===================zlib===================" << std::endl;
-    std::string data = sylar::random_string(102400);
+    std::string data = symphony::random_string(102400);
 
-    auto gzip_compress = sylar::ZlibStream::CreateZlib(true, 1);
+    auto gzip_compress = symphony::ZlibStream::CreateZlib(true, 1);
     std::cout << "compress: " << gzip_compress->write(data.c_str(), data.size())
               << " length: " << gzip_compress->getBuffers().size() << std::endl;
     std::cout << "flush: " << gzip_compress->flush() << std::endl;
 
     auto comperss_str = gzip_compress->getResult();
-    auto gzip_uncompress = sylar::ZlibStream::CreateZlib(false, 1);
+    auto gzip_uncompress = symphony::ZlibStream::CreateZlib(false, 1);
 
     std::cout << "uncompress: "
               << gzip_uncompress->write(comperss_str.c_str(),

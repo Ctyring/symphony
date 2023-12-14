@@ -1,22 +1,22 @@
-#include "sylar/email/email.h"
-#include "sylar/email/smtp.h"
+#include "symphony/email/email.h"
+#include "symphony/email/smtp.h"
 
 void test() {
-    sylar::EMail::ptr email =
-        sylar::EMail::Create("caotiyuan@163.com", "password", "hello world",
-                             "<B>hi </B>hello world", {"173479693@qq.com"});
-    sylar::EMailEntity::ptr entity =
-        sylar::EMailEntity::CreateAttach("sylar/sylar.h");
+    symphony::EMail::ptr email =
+        symphony::EMail::Create("caotiyuan@163.com", "password", "hello world",
+                                "<B>hi </B>hello world", {"173479693@qq.com"});
+    symphony::EMailEntity::ptr entity =
+        symphony::EMailEntity::CreateAttach("symphony/symphony.h");
     if (entity) {
         email->addEntity(entity);
     }
 
-    entity = sylar::EMailEntity::CreateAttach("sylar/address.cc");
+    entity = symphony::EMailEntity::CreateAttach("symphony/address.cc");
     if (entity) {
         email->addEntity(entity);
     }
 
-    auto client = sylar::SmtpClient::Create("smtp.163.com", 465, true);
+    auto client = symphony::SmtpClient::Create("smtp.163.com", 465, true);
     if (!client) {
         std::cout << "connect smtp.163.com:25 fail" << std::endl;
         return;
@@ -32,7 +32,7 @@ void test() {
 }
 
 int main(int argc, char** argv) {
-    sylar::IOManager iom(1);
+    symphony::IOManager iom(1);
     iom.schedule(test);
     iom.stop();
     return 0;

@@ -86,6 +86,8 @@ struct RockMsgHeader {
     uint8_t version;
     uint8_t flag;  // 0x1: zip
     int32_t length;
+
+    std::string toString() const;
 };
 
 class RockMessageDecoder : public MessageDecoder {

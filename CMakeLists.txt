@@ -110,6 +110,8 @@ set(LIB_SRC
 	symphony/ds/roaring_bitmap.cc
     symphony/ds/roaring.c
 	symphony/ds/util.cc
+	symphony/servers/log_server/ls_client.cc
+	# symphony/servers/log_server/log_server_module.cc
 	)
 
 ragelmaker(symphony/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/symphony/http)
@@ -146,48 +148,49 @@ set(LIBS
 
 message("***", ${LIBS})
 if(TEST)
-SYMPHONY_add_executable(test1 "tests/test.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_config "tests/test_config.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_thread "tests/test_thread.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_util "tests/test_util.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_hashmap "tests/test_hashmap.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_dict "tests/test_dict.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_array "tests/test_array.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_fiber "tests/test_fiber.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_scheduler "tests/test_scheduler.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_iomanager "tests/test_iomanager.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_hook "tests/test_hook.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_address "tests/test_address.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_socket "tests/test_socket.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_bytearray "tests/test_bytearray.cc" symphony "${LIBS}")
+symphony_add_executable(test1 "tests/test.cc" symphony "${LIBS}")
+symphony_add_executable(test_config "tests/test_config.cc" symphony "${LIBS}")
+symphony_add_executable(test_thread "tests/test_thread.cc" symphony "${LIBS}")
+symphony_add_executable(test_util "tests/test_util.cc" symphony "${LIBS}")
+symphony_add_executable(test_hashmultimap "tests/test_hashmultimap.cc" symphony "${LIBS}")
+symphony_add_executable(test_hashmap "tests/test_hashmap.cc" symphony "${LIBS}")
+symphony_add_executable(test_dict "tests/test_dict.cc" symphony "${LIBS}")
+symphony_add_executable(test_array "tests/test_array.cc" symphony "${LIBS}")
+symphony_add_executable(test_fiber "tests/test_fiber.cc" symphony "${LIBS}")
+symphony_add_executable(test_scheduler "tests/test_scheduler.cc" symphony "${LIBS}")
+symphony_add_executable(test_iomanager "tests/test_iomanager.cc" symphony "${LIBS}")
+symphony_add_executable(test_hook "tests/test_hook.cc" symphony "${LIBS}")
+symphony_add_executable(test_address "tests/test_address.cc" symphony "${LIBS}")
+symphony_add_executable(test_socket "tests/test_socket.cc" symphony "${LIBS}")
+symphony_add_executable(test_bytearray "tests/test_bytearray.cc" symphony "${LIBS}")
 
-SYMPHONY_add_executable(test_http "tests/test_http.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_http_parser "tests/test_http_parser.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_tcp_server "tests/test_tcp_server.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(echo_server "examples/echo_server.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_http_server "tests/test_http_server.cc" symphony "${LIBS}")
-# SYMPHONY_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_uri "tests/test_uri.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(my_http_server "samples/my_http_server.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_daemon "tests/test_daemon.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_env "tests/test_env.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_ws_server "tests/test_ws_server.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_ws_client "tests/test_ws_client.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_application "tests/test_application.cc" symphony "${LIBS}")
+symphony_add_executable(test_http "tests/test_http.cc" symphony "${LIBS}")
+symphony_add_executable(test_http_parser "tests/test_http_parser.cc" symphony "${LIBS}")
+symphony_add_executable(test_tcp_server "tests/test_tcp_server.cc" symphony "${LIBS}")
+symphony_add_executable(echo_server "examples/echo_server.cc" symphony "${LIBS}")
+symphony_add_executable(test_http_server "tests/test_http_server.cc" symphony "${LIBS}")
+# symphony_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
+symphony_add_executable(test_uri "tests/test_uri.cc" symphony "${LIBS}")
+symphony_add_executable(my_http_server "samples/my_http_server.cc" symphony "${LIBS}")
+symphony_add_executable(test_daemon "tests/test_daemon.cc" symphony "${LIBS}")
+symphony_add_executable(test_env "tests/test_env.cc" symphony "${LIBS}")
+symphony_add_executable(test_ws_server "tests/test_ws_server.cc" symphony "${LIBS}")
+symphony_add_executable(test_ws_client "tests/test_ws_client.cc" symphony "${LIBS}")
+symphony_add_executable(test_application "tests/test_application.cc" symphony "${LIBS}")
 
-SYMPHONY_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_lru "tests/test_lru.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_timed_cache "tests/test_timed_cache.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" symphony "${LIBS}")
+symphony_add_executable(test_http_connection "tests/test_http_connection.cc" symphony "${LIBS}")
+symphony_add_executable(test_lru "tests/test_lru.cc" symphony "${LIBS}")
+symphony_add_executable(test_timed_cache "tests/test_timed_cache.cc" symphony "${LIBS}")
+symphony_add_executable(test_timed_lru_cache "tests/test_timed_lru_cache.cc" symphony "${LIBS}")
+symphony_add_executable(test_zlib_stream "tests/test_zlib_stream.cc" symphony "${LIBS}")
 
-SYMPHONY_add_executable(test_crypto "tests/test_crypto.cc" symphony "${LIBS}")
+symphony_add_executable(test_crypto "tests/test_crypto.cc" symphony "${LIBS}")
 
-SYMPHONY_add_executable(test_sqlite3 "tests/test_sqlite3.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_rock "tests/test_rock.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_email "tests/test_email.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_mysql "tests/test_mysql.cc" symphony "${LIBS}")
+symphony_add_executable(test_sqlite3 "tests/test_sqlite3.cc" symphony "${LIBS}")
+symphony_add_executable(test_rock "tests/test_rock.cc" symphony "${LIBS}")
+symphony_add_executable(test_email "tests/test_email.cc" symphony "${LIBS}")
+symphony_add_executable(test_mysql "tests/test_mysql.cc" symphony "${LIBS}")
+symphony_add_executable(test_log_server "tests/test_logserver.cc" symphony "${LIBS}")
 
 set(ORM_SRCS
     symphony/orm/table.cc
@@ -196,23 +199,28 @@ set(ORM_SRCS
     symphony/orm/orm.cc
     symphony/orm/util.cc
     )
-SYMPHONY_add_executable(orm "${ORM_SRCS}" symphony "${LIBS}")
+symphony_add_executable(orm "${ORM_SRCS}" symphony "${LIBS}")
+
+set(LS_SRCS
+	symphony/servers/log_server/log_server_module.cc
+)
+add_library(log_server SHARED ${LS_SRCS})
 
 add_library(test_module SHARED tests/test_module.cc)
 
-SYMPHONY_add_executable(bin_symphony "symphony/main.cc" symphony "${LIBS}")
+symphony_add_executable(bin_symphony "symphony/main.cc" symphony "${LIBS}")
 set_target_properties(bin_symphony PROPERTIES OUTPUT_NAME "symphony")
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/orm_out)
 set(OLIBS ${LIBS})
 set(OLIBS ${OLIBS} orm_data)
-SYMPHONY_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
+symphony_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
 
-SYMPHONY_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
+symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
+symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
 endif()
-SYMPHONY_add_executable(test_zookeeper "tests/test_zookeeper.cc" symphony "${LIBS}")
-SYMPHONY_add_executable(test_service_discovery "tests/test_service_discovery.cc" symphony "${LIBS}")
+symphony_add_executable(test_zookeeper "tests/test_zookeeper.cc" symphony "${LIBS}")
+symphony_add_executable(test_service_discovery "tests/test_service_discovery.cc" symphony "${LIBS}")
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

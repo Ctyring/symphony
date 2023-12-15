@@ -163,6 +163,14 @@ static const uint8_t s_rock_magic[2] = {0xab, 0xcd};
 RockMsgHeader::RockMsgHeader()
     : magic{0xab, 0xcd}, version(1), flag(0), length(0) {}
 
+std::string RockMsgHeader::toString() const {
+    std::stringstream ss;
+    ss << "[RockMsgHeader magic=" << (int)magic[0] << (int)magic[1]
+       << " version=" << (int)version << " flag=" << (int)flag
+       << " length=" << length << "]";
+    return ss.str();
+}
+
 Message::ptr RockMessageDecoder::parseFrom(Stream::ptr stream) {
     try {
         RockMsgHeader header;
@@ -281,6 +289,8 @@ int32_t RockMessageDecoder::serializeTo(Stream::ptr stream, Message::ptr msg) {
         header.length = ba->getSize();
     }
     header.length = symphony::byteswapOnLittleEndian(header.length);
+    SYMPHONY_LOG_DEBUG(g_logger) << "msg=" << msg->toString();
+    SYMPHONY_LOG_DEBUG(g_logger) << "header=" << header.toString();
     if (stream->writeFixSize(&header, sizeof(header)) <= 0) {
         SYMPHONY_LOG_ERROR(g_logger)
             << "RockMessageDecoder serializeTo write header fail";

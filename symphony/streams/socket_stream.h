@@ -2,7 +2,7 @@
  * @file socket_stream.h
  * @brief Socket流式接口封装
  * @author cty
- * @email 564628276@qq.com
+ * @email 173479693@qq.com
  * @date 2019-06-06
  * @copyright Copyright (c) cty All rights reserved
  */

@@ -7,14 +7,14 @@ servers:
       io_worker: http_io
       process_worker:  http_io
       type: http
-    - address: ["0.0.0.0:8062", "0.0.0.0:8061"]
+    - address: ["0.0.0.0:8062", "127.0.0.1:8061"]
       timeout: 1000
       name: symphony-rock/1.0
       accept_worker: accept
       io_worker: io
       process_worker:  io
       type: rock
-    - address: ["0.0.0.0:8072", "localhost:8071"]
+    - address: ["0.0.0.0:8072", "127.0.0.1:8071"]
       keepalive: 1
       timeout: 1000
       name: symphony/2.1
@@ -22,4 +22,12 @@ servers:
       io_worker: io
       process_worker: worker
       type: nameserver
+    - address: ["0.0.0.0:8052", "127.0.0.1:8051"]
+      keepalive: 1
+      timeout: 1000
+      name: symphony/2.1
+      accept_worker: accept
+      io_worker: io
+      process_worker: worker
+      type: logserver
       

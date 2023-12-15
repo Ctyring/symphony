@@ -54,10 +54,10 @@ RM = /usr/local/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/cty/sylar
+CMAKE_SOURCE_DIR = /root/cty/symphony
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/cty/sylar
+CMAKE_BINARY_DIR = /root/cty/symphony
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/sylar/CMakeFiles /root/cty/sylar/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/symphony/CMakeFiles /root/cty/symphony/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/sylar/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/cty/symphony/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

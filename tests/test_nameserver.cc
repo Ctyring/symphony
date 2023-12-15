@@ -8,13 +8,13 @@ int type = 0;
 
 void run() {
     g_logger->setLevel(symphony::LogLevel::INFO);
-    auto addr = symphony::IPAddress::Create("127.0.0.1", 8072);
+    auto addr = symphony::IPAddress::Create("127.0.0.1", 8071);
     // if(!conn->connect(addr)) {
     //     SYMPHONY_LOG_ERROR(g_logger) << "connect to: " << *addr << " fail";
     //     return;
     // }
     if (type == 0) {
-        for (int i = 0; i < 5000; ++i) {
+        for (int i = 0; i < 1; ++i) {
             symphony::RockConnection::ptr conn(new symphony::RockConnection);
             conn->connect(addr);
             symphony::IOManager::GetThis()->addTimer(
@@ -43,7 +43,7 @@ void run() {
             conn->start();
         }
     } else {
-        for (int i = 0; i < 1000; ++i) {
+        for (int i = 0; i < 1; ++i) {
             symphony::ns::NSClient::ptr nsclient(new symphony::ns::NSClient);
             nsclient->init();
             nsclient->addQueryDomain(std::to_string(i % 2) + "domain.com");

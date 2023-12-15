@@ -391,6 +391,7 @@ void NameServerModule::setQueryDomain(symphony::RockStream::ptr rs,
 bool NameServerModule::handleTick(symphony::RockRequest::ptr request,
                                   symphony::RockResponse::ptr response,
                                   symphony::RockStream::ptr stream) {
+    SYMPHONY_LOG_DEBUG(g_logger) << "handleTick";
     return true;
 }
 

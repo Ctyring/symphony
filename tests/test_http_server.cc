@@ -31,10 +31,10 @@ void run() {
                            rsp->setBody("Glob:\r\n" + req->toString());
                            return 0;
                        });
-    sd->addGlobServlet("/sylarx/*", [](symphony::http::HttpRequest::ptr req,
-                                       symphony::http::HttpResponse::ptr rsp,
-                                       symphony::http::HttpSession::ptr
-                                           session) {
+    sd->addGlobServlet("/symphonyx/*", [](symphony::http::HttpRequest::ptr req,
+                                          symphony::http::HttpResponse::ptr rsp,
+                                          symphony::http::HttpSession::ptr
+                                              session) {
         rsp->setBody(XX(
             <html><head> < title > 404 Not Found</ title></ head><body>
                 <center> < h1 >

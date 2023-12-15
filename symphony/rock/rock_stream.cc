@@ -84,7 +84,6 @@ bool RockStream::RockCtx::doSend(AsyncSocketStream::ptr stream) {
 }
 
 AsyncSocketStream::Ctx::ptr RockStream::doRecv() {
-    // SYMPHONY_LOG_INFO(g_logger) << "doRecv " << this;
     auto msg = m_decoder->parseFrom(shared_from_this());
     if (!msg) {
         innerClose();
@@ -160,6 +159,7 @@ void RockStream::handleRequest(symphony::RockRequest::ptr req) {
         // innerClose();
         close();
     } else {
+        SYMPHONY_LOG_DEBUG(g_logger) << "handleRequest requestHandler";
         sendMessage(rsp);
     }
 }

@@ -140,6 +140,8 @@ void NSClient::onTimer() {
     auto rt = request(req, 1000);
     if (!rt->response) {
         SYMPHONY_LOG_ERROR(g_logger) << "tick error result=" << rt->result;
+    } else {
+        SYMPHONY_LOG_DEBUG(g_logger) << "tick ok";
     }
     sleep(1000);
     query();

@@ -24,3 +24,60 @@ message AccountLoginInfo {
   optional string imei = 9;
   optional string imodel = 10;
 }
+
+message RoleChatInfo {
+  required int64 roleid = 1;
+  optional int32 level = 2;
+  optional string rolename = 3;
+  optional int32 viplevel = 4;
+  optional int32 areaid = 5;
+  optional int32 channel = 6;
+  optional string text = 7;
+  required int64 optime = 8;
+  optional int64 targetid = 9;
+  optional int32 targetvip = 10;
+  optional string targetname = 11;
+  optional int32 chatchl = 12;
+}
+
+message RoleCreateInfo {
+  required int64 roleid = 1;
+  required int64 accountid = 2;
+  optional int32 areaid = 3;
+  optional int32 channel = 4;
+  required int64 optime = 5;
+  optional string rolename = 6;
+  optional string imodel = 7;
+  optional string imei = 8;
+  optional string idfa = 9;
+  optional string uuid = 10;
+}
+
+message RoleLoginInfo {
+  required int64 roleid = 1;
+  required int64 accountid = 2;
+  optional int32 channel = 3;
+  optional int32 level = 4;
+  optional int32 viplevel = 5;
+  required int64 optime = 6;
+  optional int32 areaid = 7;
+  optional string rolename = 8;
+  optional string uuid = 9;
+  optional string idfa = 10;
+  optional string imei = 11;
+  optional string imodel = 12;
+}
+
+message RoleLogoutInfo {
+  required int64 roleid = 1;
+  required int64 accountid = 2;
+  optional int32 channel = 3;
+  optional int32 level = 4;
+  optional int32 viplevel = 5;
+  required int64 optime = 6;
+  optional int32 areaid = 7;
+  optional string rolename = 8;
+  optional string idfa = 10;
+  optional string imei = 11;
+  optional string imodel = 12;
+}

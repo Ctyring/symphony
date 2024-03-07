@@ -52,11 +52,27 @@ extern AccountCreateInfoDefaultTypeInternal _AccountCreateInfo_default_instance_
 class AccountLoginInfo;
 struct AccountLoginInfoDefaultTypeInternal;
 extern AccountLoginInfoDefaultTypeInternal _AccountLoginInfo_default_instance_;
+class RoleChatInfo;
+struct RoleChatInfoDefaultTypeInternal;
+extern RoleChatInfoDefaultTypeInternal _RoleChatInfo_default_instance_;
+class RoleCreateInfo;
+struct RoleCreateInfoDefaultTypeInternal;
+extern RoleCreateInfoDefaultTypeInternal _RoleCreateInfo_default_instance_;
+class RoleLoginInfo;
+struct RoleLoginInfoDefaultTypeInternal;
+extern RoleLoginInfoDefaultTypeInternal _RoleLoginInfo_default_instance_;
+class RoleLogoutInfo;
+struct RoleLogoutInfoDefaultTypeInternal;
+extern RoleLogoutInfoDefaultTypeInternal _RoleLogoutInfo_default_instance_;
 }  // namespace ls
 }  // namespace symphony
 PROTOBUF_NAMESPACE_OPEN
 template<> ::symphony::ls::AccountCreateInfo* Arena::CreateMaybeMessage<::symphony::ls::AccountCreateInfo>(Arena*);
 template<> ::symphony::ls::AccountLoginInfo* Arena::CreateMaybeMessage<::symphony::ls::AccountLoginInfo>(Arena*);
+template<> ::symphony::ls::RoleChatInfo* Arena::CreateMaybeMessage<::symphony::ls::RoleChatInfo>(Arena*);
+template<> ::symphony::ls::RoleCreateInfo* Arena::CreateMaybeMessage<::symphony::ls::RoleCreateInfo>(Arena*);
+template<> ::symphony::ls::RoleLoginInfo* Arena::CreateMaybeMessage<::symphony::ls::RoleLoginInfo>(Arena*);
+template<> ::symphony::ls::RoleLogoutInfo* Arena::CreateMaybeMessage<::symphony::ls::RoleLogoutInfo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace symphony {
 namespace ls {
@@ -713,6 +729,1378 @@ class AccountLoginInfo final :
     int32_t version_;
     int32_t channel_;
     int64_t optime_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_symphony_2fservers_2flog_5fserver_2flog_5fprotobuf_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RoleChatInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:symphony.ls.RoleChatInfo) */ {
+ public:
+  inline RoleChatInfo() : RoleChatInfo(nullptr) {}
+  ~RoleChatInfo() override;
+  explicit PROTOBUF_CONSTEXPR RoleChatInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RoleChatInfo(const RoleChatInfo& from);
+  RoleChatInfo(RoleChatInfo&& from) noexcept
+    : RoleChatInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline RoleChatInfo& operator=(const RoleChatInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RoleChatInfo& operator=(RoleChatInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RoleChatInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RoleChatInfo* internal_default_instance() {
+    return reinterpret_cast<const RoleChatInfo*>(
+               &_RoleChatInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(RoleChatInfo& a, RoleChatInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RoleChatInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RoleChatInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RoleChatInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RoleChatInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RoleChatInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RoleChatInfo& from) {
+    RoleChatInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RoleChatInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "symphony.ls.RoleChatInfo";
+  }
+  protected:
+  explicit RoleChatInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRolenameFieldNumber = 3,
+    kTextFieldNumber = 7,
+    kTargetnameFieldNumber = 11,
+    kRoleidFieldNumber = 1,
+    kLevelFieldNumber = 2,
+    kViplevelFieldNumber = 4,
+    kAreaidFieldNumber = 5,
+    kChannelFieldNumber = 6,
+    kOptimeFieldNumber = 8,
+    kTargetidFieldNumber = 9,
+    kTargetvipFieldNumber = 10,
+    kChatchlFieldNumber = 12,
+  };
+  // optional string rolename = 3;
+  bool has_rolename() const;
+  private:
+  bool _internal_has_rolename() const;
+  public:
+  void clear_rolename();
+  const std::string& rolename() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_rolename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_rolename();
+  PROTOBUF_NODISCARD std::string* release_rolename();
+  void set_allocated_rolename(std::string* rolename);
+  private:
+  const std::string& _internal_rolename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rolename(const std::string& value);
+  std::string* _internal_mutable_rolename();
+  public:
+
+  // optional string text = 7;
+  bool has_text() const;
+  private:
+  bool _internal_has_text() const;
+  public:
+  void clear_text();
+  const std::string& text() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_text(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_text();
+  PROTOBUF_NODISCARD std::string* release_text();
+  void set_allocated_text(std::string* text);
+  private:
+  const std::string& _internal_text() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_text(const std::string& value);
+  std::string* _internal_mutable_text();
+  public:
+
+  // optional string targetname = 11;
+  bool has_targetname() const;
+  private:
+  bool _internal_has_targetname() const;
+  public:
+  void clear_targetname();
+  const std::string& targetname() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_targetname(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_targetname();
+  PROTOBUF_NODISCARD std::string* release_targetname();
+  void set_allocated_targetname(std::string* targetname);
+  private:
+  const std::string& _internal_targetname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_targetname(const std::string& value);
+  std::string* _internal_mutable_targetname();
+  public:
+
+  // required int64 roleid = 1;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  int64_t roleid() const;
+  void set_roleid(int64_t value);
+  private:
+  int64_t _internal_roleid() const;
+  void _internal_set_roleid(int64_t value);
+  public:
+
+  // optional int32 level = 2;
+  bool has_level() const;
+  private:
+  bool _internal_has_level() const;
+  public:
+  void clear_level();
+  int32_t level() const;
+  void set_level(int32_t value);
+  private:
+  int32_t _internal_level() const;
+  void _internal_set_level(int32_t value);
+  public:
+
+  // optional int32 viplevel = 4;
+  bool has_viplevel() const;
+  private:
+  bool _internal_has_viplevel() const;
+  public:
+  void clear_viplevel();
+  int32_t viplevel() const;
+  void set_viplevel(int32_t value);
+  private:
+  int32_t _internal_viplevel() const;
+  void _internal_set_viplevel(int32_t value);
+  public:
+
+  // optional int32 areaid = 5;
+  bool has_areaid() const;
+  private:
+  bool _internal_has_areaid() const;
+  public:
+  void clear_areaid();
+  int32_t areaid() const;
+  void set_areaid(int32_t value);
+  private:
+  int32_t _internal_areaid() const;
+  void _internal_set_areaid(int32_t value);
+  public:
+
+  // optional int32 channel = 6;
+  bool has_channel() const;
+  private:
+  bool _internal_has_channel() const;
+  public:
+  void clear_channel();
+  int32_t channel() const;
+  void set_channel(int32_t value);
+  private:
+  int32_t _internal_channel() const;
+  void _internal_set_channel(int32_t value);
+  public:
+
+  // required int64 optime = 8;
+  bool has_optime() const;
+  private:
+  bool _internal_has_optime() const;
+  public:
+  void clear_optime();
+  int64_t optime() const;
+  void set_optime(int64_t value);
+  private:
+  int64_t _internal_optime() const;
+  void _internal_set_optime(int64_t value);
+  public:
+
+  // optional int64 targetid = 9;
+  bool has_targetid() const;
+  private:
+  bool _internal_has_targetid() const;
+  public:
+  void clear_targetid();
+  int64_t targetid() const;
+  void set_targetid(int64_t value);
+  private:
+  int64_t _internal_targetid() const;
+  void _internal_set_targetid(int64_t value);
+  public:
+
+  // optional int32 targetvip = 10;
+  bool has_targetvip() const;
+  private:
+  bool _internal_has_targetvip() const;
+  public:
+  void clear_targetvip();
+  int32_t targetvip() const;
+  void set_targetvip(int32_t value);
+  private:
+  int32_t _internal_targetvip() const;
+  void _internal_set_targetvip(int32_t value);
+  public:
+
+  // optional int32 chatchl = 12;
+  bool has_chatchl() const;
+  private:
+  bool _internal_has_chatchl() const;
+  public:
+  void clear_chatchl();
+  int32_t chatchl() const;
+  void set_chatchl(int32_t value);
+  private:
+  int32_t _internal_chatchl() const;
+  void _internal_set_chatchl(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:symphony.ls.RoleChatInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rolename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr text_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr targetname_;
+    int64_t roleid_;
+    int32_t level_;
+    int32_t viplevel_;
+    int32_t areaid_;
+    int32_t channel_;
+    int64_t optime_;
+    int64_t targetid_;
+    int32_t targetvip_;
+    int32_t chatchl_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_symphony_2fservers_2flog_5fserver_2flog_5fprotobuf_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RoleCreateInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:symphony.ls.RoleCreateInfo) */ {
+ public:
+  inline RoleCreateInfo() : RoleCreateInfo(nullptr) {}
+  ~RoleCreateInfo() override;
+  explicit PROTOBUF_CONSTEXPR RoleCreateInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RoleCreateInfo(const RoleCreateInfo& from);
+  RoleCreateInfo(RoleCreateInfo&& from) noexcept
+    : RoleCreateInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline RoleCreateInfo& operator=(const RoleCreateInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RoleCreateInfo& operator=(RoleCreateInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RoleCreateInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RoleCreateInfo* internal_default_instance() {
+    return reinterpret_cast<const RoleCreateInfo*>(
+               &_RoleCreateInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(RoleCreateInfo& a, RoleCreateInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RoleCreateInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RoleCreateInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RoleCreateInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RoleCreateInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RoleCreateInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RoleCreateInfo& from) {
+    RoleCreateInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RoleCreateInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "symphony.ls.RoleCreateInfo";
+  }
+  protected:
+  explicit RoleCreateInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRolenameFieldNumber = 6,
+    kImodelFieldNumber = 7,
+    kImeiFieldNumber = 8,
+    kIdfaFieldNumber = 9,
+    kUuidFieldNumber = 10,
+    kRoleidFieldNumber = 1,
+    kAccountidFieldNumber = 2,
+    kAreaidFieldNumber = 3,
+    kChannelFieldNumber = 4,
+    kOptimeFieldNumber = 5,
+  };
+  // optional string rolename = 6;
+  bool has_rolename() const;
+  private:
+  bool _internal_has_rolename() const;
+  public:
+  void clear_rolename();
+  const std::string& rolename() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_rolename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_rolename();
+  PROTOBUF_NODISCARD std::string* release_rolename();
+  void set_allocated_rolename(std::string* rolename);
+  private:
+  const std::string& _internal_rolename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rolename(const std::string& value);
+  std::string* _internal_mutable_rolename();
+  public:
+
+  // optional string imodel = 7;
+  bool has_imodel() const;
+  private:
+  bool _internal_has_imodel() const;
+  public:
+  void clear_imodel();
+  const std::string& imodel() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imodel(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imodel();
+  PROTOBUF_NODISCARD std::string* release_imodel();
+  void set_allocated_imodel(std::string* imodel);
+  private:
+  const std::string& _internal_imodel() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imodel(const std::string& value);
+  std::string* _internal_mutable_imodel();
+  public:
+
+  // optional string imei = 8;
+  bool has_imei() const;
+  private:
+  bool _internal_has_imei() const;
+  public:
+  void clear_imei();
+  const std::string& imei() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imei(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imei();
+  PROTOBUF_NODISCARD std::string* release_imei();
+  void set_allocated_imei(std::string* imei);
+  private:
+  const std::string& _internal_imei() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imei(const std::string& value);
+  std::string* _internal_mutable_imei();
+  public:
+
+  // optional string idfa = 9;
+  bool has_idfa() const;
+  private:
+  bool _internal_has_idfa() const;
+  public:
+  void clear_idfa();
+  const std::string& idfa() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_idfa(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_idfa();
+  PROTOBUF_NODISCARD std::string* release_idfa();
+  void set_allocated_idfa(std::string* idfa);
+  private:
+  const std::string& _internal_idfa() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_idfa(const std::string& value);
+  std::string* _internal_mutable_idfa();
+  public:
+
+  // optional string uuid = 10;
+  bool has_uuid() const;
+  private:
+  bool _internal_has_uuid() const;
+  public:
+  void clear_uuid();
+  const std::string& uuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_uuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_uuid();
+  PROTOBUF_NODISCARD std::string* release_uuid();
+  void set_allocated_uuid(std::string* uuid);
+  private:
+  const std::string& _internal_uuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uuid(const std::string& value);
+  std::string* _internal_mutable_uuid();
+  public:
+
+  // required int64 roleid = 1;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  int64_t roleid() const;
+  void set_roleid(int64_t value);
+  private:
+  int64_t _internal_roleid() const;
+  void _internal_set_roleid(int64_t value);
+  public:
+
+  // required int64 accountid = 2;
+  bool has_accountid() const;
+  private:
+  bool _internal_has_accountid() const;
+  public:
+  void clear_accountid();
+  int64_t accountid() const;
+  void set_accountid(int64_t value);
+  private:
+  int64_t _internal_accountid() const;
+  void _internal_set_accountid(int64_t value);
+  public:
+
+  // optional int32 areaid = 3;
+  bool has_areaid() const;
+  private:
+  bool _internal_has_areaid() const;
+  public:
+  void clear_areaid();
+  int32_t areaid() const;
+  void set_areaid(int32_t value);
+  private:
+  int32_t _internal_areaid() const;
+  void _internal_set_areaid(int32_t value);
+  public:
+
+  // optional int32 channel = 4;
+  bool has_channel() const;
+  private:
+  bool _internal_has_channel() const;
+  public:
+  void clear_channel();
+  int32_t channel() const;
+  void set_channel(int32_t value);
+  private:
+  int32_t _internal_channel() const;
+  void _internal_set_channel(int32_t value);
+  public:
+
+  // required int64 optime = 5;
+  bool has_optime() const;
+  private:
+  bool _internal_has_optime() const;
+  public:
+  void clear_optime();
+  int64_t optime() const;
+  void set_optime(int64_t value);
+  private:
+  int64_t _internal_optime() const;
+  void _internal_set_optime(int64_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:symphony.ls.RoleCreateInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rolename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imodel_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imei_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr idfa_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
+    int64_t roleid_;
+    int64_t accountid_;
+    int32_t areaid_;
+    int32_t channel_;
+    int64_t optime_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_symphony_2fservers_2flog_5fserver_2flog_5fprotobuf_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RoleLoginInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:symphony.ls.RoleLoginInfo) */ {
+ public:
+  inline RoleLoginInfo() : RoleLoginInfo(nullptr) {}
+  ~RoleLoginInfo() override;
+  explicit PROTOBUF_CONSTEXPR RoleLoginInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RoleLoginInfo(const RoleLoginInfo& from);
+  RoleLoginInfo(RoleLoginInfo&& from) noexcept
+    : RoleLoginInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline RoleLoginInfo& operator=(const RoleLoginInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RoleLoginInfo& operator=(RoleLoginInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RoleLoginInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RoleLoginInfo* internal_default_instance() {
+    return reinterpret_cast<const RoleLoginInfo*>(
+               &_RoleLoginInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(RoleLoginInfo& a, RoleLoginInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RoleLoginInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RoleLoginInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RoleLoginInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RoleLoginInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RoleLoginInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RoleLoginInfo& from) {
+    RoleLoginInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RoleLoginInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "symphony.ls.RoleLoginInfo";
+  }
+  protected:
+  explicit RoleLoginInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRolenameFieldNumber = 8,
+    kUuidFieldNumber = 9,
+    kIdfaFieldNumber = 10,
+    kImeiFieldNumber = 11,
+    kImodelFieldNumber = 12,
+    kRoleidFieldNumber = 1,
+    kAccountidFieldNumber = 2,
+    kChannelFieldNumber = 3,
+    kLevelFieldNumber = 4,
+    kOptimeFieldNumber = 6,
+    kViplevelFieldNumber = 5,
+    kAreaidFieldNumber = 7,
+  };
+  // optional string rolename = 8;
+  bool has_rolename() const;
+  private:
+  bool _internal_has_rolename() const;
+  public:
+  void clear_rolename();
+  const std::string& rolename() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_rolename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_rolename();
+  PROTOBUF_NODISCARD std::string* release_rolename();
+  void set_allocated_rolename(std::string* rolename);
+  private:
+  const std::string& _internal_rolename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rolename(const std::string& value);
+  std::string* _internal_mutable_rolename();
+  public:
+
+  // optional string uuid = 9;
+  bool has_uuid() const;
+  private:
+  bool _internal_has_uuid() const;
+  public:
+  void clear_uuid();
+  const std::string& uuid() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_uuid(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_uuid();
+  PROTOBUF_NODISCARD std::string* release_uuid();
+  void set_allocated_uuid(std::string* uuid);
+  private:
+  const std::string& _internal_uuid() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_uuid(const std::string& value);
+  std::string* _internal_mutable_uuid();
+  public:
+
+  // optional string idfa = 10;
+  bool has_idfa() const;
+  private:
+  bool _internal_has_idfa() const;
+  public:
+  void clear_idfa();
+  const std::string& idfa() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_idfa(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_idfa();
+  PROTOBUF_NODISCARD std::string* release_idfa();
+  void set_allocated_idfa(std::string* idfa);
+  private:
+  const std::string& _internal_idfa() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_idfa(const std::string& value);
+  std::string* _internal_mutable_idfa();
+  public:
+
+  // optional string imei = 11;
+  bool has_imei() const;
+  private:
+  bool _internal_has_imei() const;
+  public:
+  void clear_imei();
+  const std::string& imei() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imei(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imei();
+  PROTOBUF_NODISCARD std::string* release_imei();
+  void set_allocated_imei(std::string* imei);
+  private:
+  const std::string& _internal_imei() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imei(const std::string& value);
+  std::string* _internal_mutable_imei();
+  public:
+
+  // optional string imodel = 12;
+  bool has_imodel() const;
+  private:
+  bool _internal_has_imodel() const;
+  public:
+  void clear_imodel();
+  const std::string& imodel() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imodel(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imodel();
+  PROTOBUF_NODISCARD std::string* release_imodel();
+  void set_allocated_imodel(std::string* imodel);
+  private:
+  const std::string& _internal_imodel() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imodel(const std::string& value);
+  std::string* _internal_mutable_imodel();
+  public:
+
+  // required int64 roleid = 1;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  int64_t roleid() const;
+  void set_roleid(int64_t value);
+  private:
+  int64_t _internal_roleid() const;
+  void _internal_set_roleid(int64_t value);
+  public:
+
+  // required int64 accountid = 2;
+  bool has_accountid() const;
+  private:
+  bool _internal_has_accountid() const;
+  public:
+  void clear_accountid();
+  int64_t accountid() const;
+  void set_accountid(int64_t value);
+  private:
+  int64_t _internal_accountid() const;
+  void _internal_set_accountid(int64_t value);
+  public:
+
+  // optional int32 channel = 3;
+  bool has_channel() const;
+  private:
+  bool _internal_has_channel() const;
+  public:
+  void clear_channel();
+  int32_t channel() const;
+  void set_channel(int32_t value);
+  private:
+  int32_t _internal_channel() const;
+  void _internal_set_channel(int32_t value);
+  public:
+
+  // optional int32 level = 4;
+  bool has_level() const;
+  private:
+  bool _internal_has_level() const;
+  public:
+  void clear_level();
+  int32_t level() const;
+  void set_level(int32_t value);
+  private:
+  int32_t _internal_level() const;
+  void _internal_set_level(int32_t value);
+  public:
+
+  // required int64 optime = 6;
+  bool has_optime() const;
+  private:
+  bool _internal_has_optime() const;
+  public:
+  void clear_optime();
+  int64_t optime() const;
+  void set_optime(int64_t value);
+  private:
+  int64_t _internal_optime() const;
+  void _internal_set_optime(int64_t value);
+  public:
+
+  // optional int32 viplevel = 5;
+  bool has_viplevel() const;
+  private:
+  bool _internal_has_viplevel() const;
+  public:
+  void clear_viplevel();
+  int32_t viplevel() const;
+  void set_viplevel(int32_t value);
+  private:
+  int32_t _internal_viplevel() const;
+  void _internal_set_viplevel(int32_t value);
+  public:
+
+  // optional int32 areaid = 7;
+  bool has_areaid() const;
+  private:
+  bool _internal_has_areaid() const;
+  public:
+  void clear_areaid();
+  int32_t areaid() const;
+  void set_areaid(int32_t value);
+  private:
+  int32_t _internal_areaid() const;
+  void _internal_set_areaid(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:symphony.ls.RoleLoginInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rolename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr idfa_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imei_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imodel_;
+    int64_t roleid_;
+    int64_t accountid_;
+    int32_t channel_;
+    int32_t level_;
+    int64_t optime_;
+    int32_t viplevel_;
+    int32_t areaid_;
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_symphony_2fservers_2flog_5fserver_2flog_5fprotobuf_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RoleLogoutInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:symphony.ls.RoleLogoutInfo) */ {
+ public:
+  inline RoleLogoutInfo() : RoleLogoutInfo(nullptr) {}
+  ~RoleLogoutInfo() override;
+  explicit PROTOBUF_CONSTEXPR RoleLogoutInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RoleLogoutInfo(const RoleLogoutInfo& from);
+  RoleLogoutInfo(RoleLogoutInfo&& from) noexcept
+    : RoleLogoutInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline RoleLogoutInfo& operator=(const RoleLogoutInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RoleLogoutInfo& operator=(RoleLogoutInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RoleLogoutInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RoleLogoutInfo* internal_default_instance() {
+    return reinterpret_cast<const RoleLogoutInfo*>(
+               &_RoleLogoutInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(RoleLogoutInfo& a, RoleLogoutInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RoleLogoutInfo* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() != nullptr &&
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RoleLogoutInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  RoleLogoutInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RoleLogoutInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RoleLogoutInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom( const RoleLogoutInfo& from) {
+    RoleLogoutInfo::MergeImpl(*this, from);
+  }
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RoleLogoutInfo* other);
+
+  private:
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "symphony.ls.RoleLogoutInfo";
+  }
+  protected:
+  explicit RoleLogoutInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRolenameFieldNumber = 8,
+    kCreatetimeFieldNumber = 9,
+    kIdfaFieldNumber = 10,
+    kImeiFieldNumber = 11,
+    kImodelFieldNumber = 12,
+    kRoleidFieldNumber = 1,
+    kAccountidFieldNumber = 2,
+    kChannelFieldNumber = 3,
+    kLevelFieldNumber = 4,
+    kOptimeFieldNumber = 6,
+    kViplevelFieldNumber = 5,
+    kAreaidFieldNumber = 7,
+  };
+  // optional string rolename = 8;
+  bool has_rolename() const;
+  private:
+  bool _internal_has_rolename() const;
+  public:
+  void clear_rolename();
+  const std::string& rolename() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_rolename(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_rolename();
+  PROTOBUF_NODISCARD std::string* release_rolename();
+  void set_allocated_rolename(std::string* rolename);
+  private:
+  const std::string& _internal_rolename() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_rolename(const std::string& value);
+  std::string* _internal_mutable_rolename();
+  public:
+
+  // optional string createtime = 9;
+  bool has_createtime() const;
+  private:
+  bool _internal_has_createtime() const;
+  public:
+  void clear_createtime();
+  const std::string& createtime() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_createtime(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_createtime();
+  PROTOBUF_NODISCARD std::string* release_createtime();
+  void set_allocated_createtime(std::string* createtime);
+  private:
+  const std::string& _internal_createtime() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_createtime(const std::string& value);
+  std::string* _internal_mutable_createtime();
+  public:
+
+  // optional string idfa = 10;
+  bool has_idfa() const;
+  private:
+  bool _internal_has_idfa() const;
+  public:
+  void clear_idfa();
+  const std::string& idfa() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_idfa(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_idfa();
+  PROTOBUF_NODISCARD std::string* release_idfa();
+  void set_allocated_idfa(std::string* idfa);
+  private:
+  const std::string& _internal_idfa() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_idfa(const std::string& value);
+  std::string* _internal_mutable_idfa();
+  public:
+
+  // optional string imei = 11;
+  bool has_imei() const;
+  private:
+  bool _internal_has_imei() const;
+  public:
+  void clear_imei();
+  const std::string& imei() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imei(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imei();
+  PROTOBUF_NODISCARD std::string* release_imei();
+  void set_allocated_imei(std::string* imei);
+  private:
+  const std::string& _internal_imei() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imei(const std::string& value);
+  std::string* _internal_mutable_imei();
+  public:
+
+  // optional string imodel = 12;
+  bool has_imodel() const;
+  private:
+  bool _internal_has_imodel() const;
+  public:
+  void clear_imodel();
+  const std::string& imodel() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_imodel(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_imodel();
+  PROTOBUF_NODISCARD std::string* release_imodel();
+  void set_allocated_imodel(std::string* imodel);
+  private:
+  const std::string& _internal_imodel() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_imodel(const std::string& value);
+  std::string* _internal_mutable_imodel();
+  public:
+
+  // required int64 roleid = 1;
+  bool has_roleid() const;
+  private:
+  bool _internal_has_roleid() const;
+  public:
+  void clear_roleid();
+  int64_t roleid() const;
+  void set_roleid(int64_t value);
+  private:
+  int64_t _internal_roleid() const;
+  void _internal_set_roleid(int64_t value);
+  public:
+
+  // required int64 accountid = 2;
+  bool has_accountid() const;
+  private:
+  bool _internal_has_accountid() const;
+  public:
+  void clear_accountid();
+  int64_t accountid() const;
+  void set_accountid(int64_t value);
+  private:
+  int64_t _internal_accountid() const;
+  void _internal_set_accountid(int64_t value);
+  public:
+
+  // optional int32 channel = 3;
+  bool has_channel() const;
+  private:
+  bool _internal_has_channel() const;
+  public:
+  void clear_channel();
+  int32_t channel() const;
+  void set_channel(int32_t value);
+  private:
+  int32_t _internal_channel() const;
+  void _internal_set_channel(int32_t value);
+  public:
+
+  // optional int32 level = 4;
+  bool has_level() const;
+  private:
+  bool _internal_has_level() const;
+  public:
+  void clear_level();
+  int32_t level() const;
+  void set_level(int32_t value);
+  private:
+  int32_t _internal_level() const;
+  void _internal_set_level(int32_t value);
+  public:
+
+  // required int64 optime = 6;
+  bool has_optime() const;
+  private:
+  bool _internal_has_optime() const;
+  public:
+  void clear_optime();
+  int64_t optime() const;
+  void set_optime(int64_t value);
+  private:
+  int64_t _internal_optime() const;
+  void _internal_set_optime(int64_t value);
+  public:
+
+  // optional int32 viplevel = 5;
+  bool has_viplevel() const;
+  private:
+  bool _internal_has_viplevel() const;
+  public:
+  void clear_viplevel();
+  int32_t viplevel() const;
+  void set_viplevel(int32_t value);
+  private:
+  int32_t _internal_viplevel() const;
+  void _internal_set_viplevel(int32_t value);
+  public:
+
+  // optional int32 areaid = 7;
+  bool has_areaid() const;
+  private:
+  bool _internal_has_areaid() const;
+  public:
+  void clear_areaid();
+  int32_t areaid() const;
+  void set_areaid(int32_t value);
+  private:
+  int32_t _internal_areaid() const;
+  void _internal_set_areaid(int32_t value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:symphony.ls.RoleLogoutInfo)
+ private:
+  class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rolename_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr createtime_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr idfa_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imei_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imodel_;
+    int64_t roleid_;
+    int64_t accountid_;
+    int32_t channel_;
+    int32_t level_;
+    int64_t optime_;
+    int32_t viplevel_;
+    int32_t areaid_;
   };
   union { Impl_ _impl_; };
   friend struct ::TableStruct_symphony_2fservers_2flog_5fserver_2flog_5fprotobuf_2eproto;
@@ -1772,9 +3160,2041 @@ inline void AccountLoginInfo::set_allocated_imodel(std::string* imodel) {
   // @@protoc_insertion_point(field_set_allocated:symphony.ls.AccountLoginInfo.imodel)
 }
 
+// -------------------------------------------------------------------
+
+// RoleChatInfo
+
+// required int64 roleid = 1;
+inline bool RoleChatInfo::_internal_has_roleid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void RoleChatInfo::clear_roleid() {
+  _impl_.roleid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline int64_t RoleChatInfo::_internal_roleid() const {
+  return _impl_.roleid_;
+}
+inline int64_t RoleChatInfo::roleid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.roleid)
+  return _internal_roleid();
+}
+inline void RoleChatInfo::_internal_set_roleid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.roleid_ = value;
+}
+inline void RoleChatInfo::set_roleid(int64_t value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.roleid)
+}
+
+// optional int32 level = 2;
+inline bool RoleChatInfo::_internal_has_level() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_level() const {
+  return _internal_has_level();
+}
+inline void RoleChatInfo::clear_level() {
+  _impl_.level_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline int32_t RoleChatInfo::_internal_level() const {
+  return _impl_.level_;
+}
+inline int32_t RoleChatInfo::level() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.level)
+  return _internal_level();
+}
+inline void RoleChatInfo::_internal_set_level(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.level_ = value;
+}
+inline void RoleChatInfo::set_level(int32_t value) {
+  _internal_set_level(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.level)
+}
+
+// optional string rolename = 3;
+inline bool RoleChatInfo::_internal_has_rolename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_rolename() const {
+  return _internal_has_rolename();
+}
+inline void RoleChatInfo::clear_rolename() {
+  _impl_.rolename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& RoleChatInfo::rolename() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.rolename)
+  return _internal_rolename();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleChatInfo::set_rolename(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.rolename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.rolename)
+}
+inline std::string* RoleChatInfo::mutable_rolename() {
+  std::string* _s = _internal_mutable_rolename();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleChatInfo.rolename)
+  return _s;
+}
+inline const std::string& RoleChatInfo::_internal_rolename() const {
+  return _impl_.rolename_.Get();
+}
+inline void RoleChatInfo::_internal_set_rolename(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.rolename_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::_internal_mutable_rolename() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.rolename_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::release_rolename() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleChatInfo.rolename)
+  if (!_internal_has_rolename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.rolename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleChatInfo::set_allocated_rolename(std::string* rolename) {
+  if (rolename != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.rolename_.SetAllocated(rolename, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleChatInfo.rolename)
+}
+
+// optional int32 viplevel = 4;
+inline bool RoleChatInfo::_internal_has_viplevel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_viplevel() const {
+  return _internal_has_viplevel();
+}
+inline void RoleChatInfo::clear_viplevel() {
+  _impl_.viplevel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline int32_t RoleChatInfo::_internal_viplevel() const {
+  return _impl_.viplevel_;
+}
+inline int32_t RoleChatInfo::viplevel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.viplevel)
+  return _internal_viplevel();
+}
+inline void RoleChatInfo::_internal_set_viplevel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.viplevel_ = value;
+}
+inline void RoleChatInfo::set_viplevel(int32_t value) {
+  _internal_set_viplevel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.viplevel)
+}
+
+// optional int32 areaid = 5;
+inline bool RoleChatInfo::_internal_has_areaid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_areaid() const {
+  return _internal_has_areaid();
+}
+inline void RoleChatInfo::clear_areaid() {
+  _impl_.areaid_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int32_t RoleChatInfo::_internal_areaid() const {
+  return _impl_.areaid_;
+}
+inline int32_t RoleChatInfo::areaid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.areaid)
+  return _internal_areaid();
+}
+inline void RoleChatInfo::_internal_set_areaid(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.areaid_ = value;
+}
+inline void RoleChatInfo::set_areaid(int32_t value) {
+  _internal_set_areaid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.areaid)
+}
+
+// optional int32 channel = 6;
+inline bool RoleChatInfo::_internal_has_channel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_channel() const {
+  return _internal_has_channel();
+}
+inline void RoleChatInfo::clear_channel() {
+  _impl_.channel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int32_t RoleChatInfo::_internal_channel() const {
+  return _impl_.channel_;
+}
+inline int32_t RoleChatInfo::channel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.channel)
+  return _internal_channel();
+}
+inline void RoleChatInfo::_internal_set_channel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.channel_ = value;
+}
+inline void RoleChatInfo::set_channel(int32_t value) {
+  _internal_set_channel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.channel)
+}
+
+// optional string text = 7;
+inline bool RoleChatInfo::_internal_has_text() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_text() const {
+  return _internal_has_text();
+}
+inline void RoleChatInfo::clear_text() {
+  _impl_.text_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& RoleChatInfo::text() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.text)
+  return _internal_text();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleChatInfo::set_text(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.text_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.text)
+}
+inline std::string* RoleChatInfo::mutable_text() {
+  std::string* _s = _internal_mutable_text();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleChatInfo.text)
+  return _s;
+}
+inline const std::string& RoleChatInfo::_internal_text() const {
+  return _impl_.text_.Get();
+}
+inline void RoleChatInfo::_internal_set_text(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.text_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::_internal_mutable_text() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.text_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::release_text() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleChatInfo.text)
+  if (!_internal_has_text()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.text_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.text_.IsDefault()) {
+    _impl_.text_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleChatInfo::set_allocated_text(std::string* text) {
+  if (text != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.text_.SetAllocated(text, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.text_.IsDefault()) {
+    _impl_.text_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleChatInfo.text)
+}
+
+// required int64 optime = 8;
+inline bool RoleChatInfo::_internal_has_optime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_optime() const {
+  return _internal_has_optime();
+}
+inline void RoleChatInfo::clear_optime() {
+  _impl_.optime_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline int64_t RoleChatInfo::_internal_optime() const {
+  return _impl_.optime_;
+}
+inline int64_t RoleChatInfo::optime() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.optime)
+  return _internal_optime();
+}
+inline void RoleChatInfo::_internal_set_optime(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.optime_ = value;
+}
+inline void RoleChatInfo::set_optime(int64_t value) {
+  _internal_set_optime(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.optime)
+}
+
+// optional int64 targetid = 9;
+inline bool RoleChatInfo::_internal_has_targetid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_targetid() const {
+  return _internal_has_targetid();
+}
+inline void RoleChatInfo::clear_targetid() {
+  _impl_.targetid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000200u;
+}
+inline int64_t RoleChatInfo::_internal_targetid() const {
+  return _impl_.targetid_;
+}
+inline int64_t RoleChatInfo::targetid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.targetid)
+  return _internal_targetid();
+}
+inline void RoleChatInfo::_internal_set_targetid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_.targetid_ = value;
+}
+inline void RoleChatInfo::set_targetid(int64_t value) {
+  _internal_set_targetid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.targetid)
+}
+
+// optional int32 targetvip = 10;
+inline bool RoleChatInfo::_internal_has_targetvip() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_targetvip() const {
+  return _internal_has_targetvip();
+}
+inline void RoleChatInfo::clear_targetvip() {
+  _impl_.targetvip_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000400u;
+}
+inline int32_t RoleChatInfo::_internal_targetvip() const {
+  return _impl_.targetvip_;
+}
+inline int32_t RoleChatInfo::targetvip() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.targetvip)
+  return _internal_targetvip();
+}
+inline void RoleChatInfo::_internal_set_targetvip(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_.targetvip_ = value;
+}
+inline void RoleChatInfo::set_targetvip(int32_t value) {
+  _internal_set_targetvip(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.targetvip)
+}
+
+// optional string targetname = 11;
+inline bool RoleChatInfo::_internal_has_targetname() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_targetname() const {
+  return _internal_has_targetname();
+}
+inline void RoleChatInfo::clear_targetname() {
+  _impl_.targetname_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& RoleChatInfo::targetname() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.targetname)
+  return _internal_targetname();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleChatInfo::set_targetname(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_.targetname_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.targetname)
+}
+inline std::string* RoleChatInfo::mutable_targetname() {
+  std::string* _s = _internal_mutable_targetname();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleChatInfo.targetname)
+  return _s;
+}
+inline const std::string& RoleChatInfo::_internal_targetname() const {
+  return _impl_.targetname_.Get();
+}
+inline void RoleChatInfo::_internal_set_targetname(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.targetname_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::_internal_mutable_targetname() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.targetname_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleChatInfo::release_targetname() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleChatInfo.targetname)
+  if (!_internal_has_targetname()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.targetname_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.targetname_.IsDefault()) {
+    _impl_.targetname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleChatInfo::set_allocated_targetname(std::string* targetname) {
+  if (targetname != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.targetname_.SetAllocated(targetname, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.targetname_.IsDefault()) {
+    _impl_.targetname_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleChatInfo.targetname)
+}
+
+// optional int32 chatchl = 12;
+inline bool RoleChatInfo::_internal_has_chatchl() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool RoleChatInfo::has_chatchl() const {
+  return _internal_has_chatchl();
+}
+inline void RoleChatInfo::clear_chatchl() {
+  _impl_.chatchl_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000800u;
+}
+inline int32_t RoleChatInfo::_internal_chatchl() const {
+  return _impl_.chatchl_;
+}
+inline int32_t RoleChatInfo::chatchl() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleChatInfo.chatchl)
+  return _internal_chatchl();
+}
+inline void RoleChatInfo::_internal_set_chatchl(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_.chatchl_ = value;
+}
+inline void RoleChatInfo::set_chatchl(int32_t value) {
+  _internal_set_chatchl(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleChatInfo.chatchl)
+}
+
+// -------------------------------------------------------------------
+
+// RoleCreateInfo
+
+// required int64 roleid = 1;
+inline bool RoleCreateInfo::_internal_has_roleid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void RoleCreateInfo::clear_roleid() {
+  _impl_.roleid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline int64_t RoleCreateInfo::_internal_roleid() const {
+  return _impl_.roleid_;
+}
+inline int64_t RoleCreateInfo::roleid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.roleid)
+  return _internal_roleid();
+}
+inline void RoleCreateInfo::_internal_set_roleid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.roleid_ = value;
+}
+inline void RoleCreateInfo::set_roleid(int64_t value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.roleid)
+}
+
+// required int64 accountid = 2;
+inline bool RoleCreateInfo::_internal_has_accountid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_accountid() const {
+  return _internal_has_accountid();
+}
+inline void RoleCreateInfo::clear_accountid() {
+  _impl_.accountid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int64_t RoleCreateInfo::_internal_accountid() const {
+  return _impl_.accountid_;
+}
+inline int64_t RoleCreateInfo::accountid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.accountid)
+  return _internal_accountid();
+}
+inline void RoleCreateInfo::_internal_set_accountid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.accountid_ = value;
+}
+inline void RoleCreateInfo::set_accountid(int64_t value) {
+  _internal_set_accountid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.accountid)
+}
+
+// optional int32 areaid = 3;
+inline bool RoleCreateInfo::_internal_has_areaid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_areaid() const {
+  return _internal_has_areaid();
+}
+inline void RoleCreateInfo::clear_areaid() {
+  _impl_.areaid_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int32_t RoleCreateInfo::_internal_areaid() const {
+  return _impl_.areaid_;
+}
+inline int32_t RoleCreateInfo::areaid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.areaid)
+  return _internal_areaid();
+}
+inline void RoleCreateInfo::_internal_set_areaid(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.areaid_ = value;
+}
+inline void RoleCreateInfo::set_areaid(int32_t value) {
+  _internal_set_areaid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.areaid)
+}
+
+// optional int32 channel = 4;
+inline bool RoleCreateInfo::_internal_has_channel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_channel() const {
+  return _internal_has_channel();
+}
+inline void RoleCreateInfo::clear_channel() {
+  _impl_.channel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline int32_t RoleCreateInfo::_internal_channel() const {
+  return _impl_.channel_;
+}
+inline int32_t RoleCreateInfo::channel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.channel)
+  return _internal_channel();
+}
+inline void RoleCreateInfo::_internal_set_channel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.channel_ = value;
+}
+inline void RoleCreateInfo::set_channel(int32_t value) {
+  _internal_set_channel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.channel)
+}
+
+// required int64 optime = 5;
+inline bool RoleCreateInfo::_internal_has_optime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_optime() const {
+  return _internal_has_optime();
+}
+inline void RoleCreateInfo::clear_optime() {
+  _impl_.optime_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000200u;
+}
+inline int64_t RoleCreateInfo::_internal_optime() const {
+  return _impl_.optime_;
+}
+inline int64_t RoleCreateInfo::optime() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.optime)
+  return _internal_optime();
+}
+inline void RoleCreateInfo::_internal_set_optime(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_.optime_ = value;
+}
+inline void RoleCreateInfo::set_optime(int64_t value) {
+  _internal_set_optime(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.optime)
+}
+
+// optional string rolename = 6;
+inline bool RoleCreateInfo::_internal_has_rolename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_rolename() const {
+  return _internal_has_rolename();
+}
+inline void RoleCreateInfo::clear_rolename() {
+  _impl_.rolename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& RoleCreateInfo::rolename() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.rolename)
+  return _internal_rolename();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleCreateInfo::set_rolename(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.rolename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.rolename)
+}
+inline std::string* RoleCreateInfo::mutable_rolename() {
+  std::string* _s = _internal_mutable_rolename();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleCreateInfo.rolename)
+  return _s;
+}
+inline const std::string& RoleCreateInfo::_internal_rolename() const {
+  return _impl_.rolename_.Get();
+}
+inline void RoleCreateInfo::_internal_set_rolename(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.rolename_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::_internal_mutable_rolename() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.rolename_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::release_rolename() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleCreateInfo.rolename)
+  if (!_internal_has_rolename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.rolename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleCreateInfo::set_allocated_rolename(std::string* rolename) {
+  if (rolename != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.rolename_.SetAllocated(rolename, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleCreateInfo.rolename)
+}
+
+// optional string imodel = 7;
+inline bool RoleCreateInfo::_internal_has_imodel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_imodel() const {
+  return _internal_has_imodel();
+}
+inline void RoleCreateInfo::clear_imodel() {
+  _impl_.imodel_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& RoleCreateInfo::imodel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.imodel)
+  return _internal_imodel();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleCreateInfo::set_imodel(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.imodel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.imodel)
+}
+inline std::string* RoleCreateInfo::mutable_imodel() {
+  std::string* _s = _internal_mutable_imodel();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleCreateInfo.imodel)
+  return _s;
+}
+inline const std::string& RoleCreateInfo::_internal_imodel() const {
+  return _impl_.imodel_.Get();
+}
+inline void RoleCreateInfo::_internal_set_imodel(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.imodel_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::_internal_mutable_imodel() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.imodel_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::release_imodel() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleCreateInfo.imodel)
+  if (!_internal_has_imodel()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.imodel_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleCreateInfo::set_allocated_imodel(std::string* imodel) {
+  if (imodel != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.imodel_.SetAllocated(imodel, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleCreateInfo.imodel)
+}
+
+// optional string imei = 8;
+inline bool RoleCreateInfo::_internal_has_imei() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_imei() const {
+  return _internal_has_imei();
+}
+inline void RoleCreateInfo::clear_imei() {
+  _impl_.imei_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& RoleCreateInfo::imei() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.imei)
+  return _internal_imei();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleCreateInfo::set_imei(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_.imei_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.imei)
+}
+inline std::string* RoleCreateInfo::mutable_imei() {
+  std::string* _s = _internal_mutable_imei();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleCreateInfo.imei)
+  return _s;
+}
+inline const std::string& RoleCreateInfo::_internal_imei() const {
+  return _impl_.imei_.Get();
+}
+inline void RoleCreateInfo::_internal_set_imei(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.imei_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::_internal_mutable_imei() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.imei_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::release_imei() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleCreateInfo.imei)
+  if (!_internal_has_imei()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.imei_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleCreateInfo::set_allocated_imei(std::string* imei) {
+  if (imei != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.imei_.SetAllocated(imei, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleCreateInfo.imei)
+}
+
+// optional string idfa = 9;
+inline bool RoleCreateInfo::_internal_has_idfa() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_idfa() const {
+  return _internal_has_idfa();
+}
+inline void RoleCreateInfo::clear_idfa() {
+  _impl_.idfa_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& RoleCreateInfo::idfa() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.idfa)
+  return _internal_idfa();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleCreateInfo::set_idfa(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_.idfa_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.idfa)
+}
+inline std::string* RoleCreateInfo::mutable_idfa() {
+  std::string* _s = _internal_mutable_idfa();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleCreateInfo.idfa)
+  return _s;
+}
+inline const std::string& RoleCreateInfo::_internal_idfa() const {
+  return _impl_.idfa_.Get();
+}
+inline void RoleCreateInfo::_internal_set_idfa(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.idfa_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::_internal_mutable_idfa() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  return _impl_.idfa_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::release_idfa() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleCreateInfo.idfa)
+  if (!_internal_has_idfa()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.idfa_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleCreateInfo::set_allocated_idfa(std::string* idfa) {
+  if (idfa != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.idfa_.SetAllocated(idfa, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleCreateInfo.idfa)
+}
+
+// optional string uuid = 10;
+inline bool RoleCreateInfo::_internal_has_uuid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool RoleCreateInfo::has_uuid() const {
+  return _internal_has_uuid();
+}
+inline void RoleCreateInfo::clear_uuid() {
+  _impl_.uuid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& RoleCreateInfo::uuid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleCreateInfo.uuid)
+  return _internal_uuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleCreateInfo::set_uuid(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000010u;
+ _impl_.uuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleCreateInfo.uuid)
+}
+inline std::string* RoleCreateInfo::mutable_uuid() {
+  std::string* _s = _internal_mutable_uuid();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleCreateInfo.uuid)
+  return _s;
+}
+inline const std::string& RoleCreateInfo::_internal_uuid() const {
+  return _impl_.uuid_.Get();
+}
+inline void RoleCreateInfo::_internal_set_uuid(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.uuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::_internal_mutable_uuid() {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  return _impl_.uuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleCreateInfo::release_uuid() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleCreateInfo.uuid)
+  if (!_internal_has_uuid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.uuid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.uuid_.IsDefault()) {
+    _impl_.uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleCreateInfo::set_allocated_uuid(std::string* uuid) {
+  if (uuid != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.uuid_.SetAllocated(uuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.uuid_.IsDefault()) {
+    _impl_.uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleCreateInfo.uuid)
+}
+
+// -------------------------------------------------------------------
+
+// RoleLoginInfo
+
+// required int64 roleid = 1;
+inline bool RoleLoginInfo::_internal_has_roleid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void RoleLoginInfo::clear_roleid() {
+  _impl_.roleid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline int64_t RoleLoginInfo::_internal_roleid() const {
+  return _impl_.roleid_;
+}
+inline int64_t RoleLoginInfo::roleid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.roleid)
+  return _internal_roleid();
+}
+inline void RoleLoginInfo::_internal_set_roleid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.roleid_ = value;
+}
+inline void RoleLoginInfo::set_roleid(int64_t value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.roleid)
+}
+
+// required int64 accountid = 2;
+inline bool RoleLoginInfo::_internal_has_accountid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_accountid() const {
+  return _internal_has_accountid();
+}
+inline void RoleLoginInfo::clear_accountid() {
+  _impl_.accountid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int64_t RoleLoginInfo::_internal_accountid() const {
+  return _impl_.accountid_;
+}
+inline int64_t RoleLoginInfo::accountid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.accountid)
+  return _internal_accountid();
+}
+inline void RoleLoginInfo::_internal_set_accountid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.accountid_ = value;
+}
+inline void RoleLoginInfo::set_accountid(int64_t value) {
+  _internal_set_accountid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.accountid)
+}
+
+// optional int32 channel = 3;
+inline bool RoleLoginInfo::_internal_has_channel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_channel() const {
+  return _internal_has_channel();
+}
+inline void RoleLoginInfo::clear_channel() {
+  _impl_.channel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int32_t RoleLoginInfo::_internal_channel() const {
+  return _impl_.channel_;
+}
+inline int32_t RoleLoginInfo::channel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.channel)
+  return _internal_channel();
+}
+inline void RoleLoginInfo::_internal_set_channel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.channel_ = value;
+}
+inline void RoleLoginInfo::set_channel(int32_t value) {
+  _internal_set_channel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.channel)
+}
+
+// optional int32 level = 4;
+inline bool RoleLoginInfo::_internal_has_level() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_level() const {
+  return _internal_has_level();
+}
+inline void RoleLoginInfo::clear_level() {
+  _impl_.level_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline int32_t RoleLoginInfo::_internal_level() const {
+  return _impl_.level_;
+}
+inline int32_t RoleLoginInfo::level() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.level)
+  return _internal_level();
+}
+inline void RoleLoginInfo::_internal_set_level(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.level_ = value;
+}
+inline void RoleLoginInfo::set_level(int32_t value) {
+  _internal_set_level(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.level)
+}
+
+// optional int32 viplevel = 5;
+inline bool RoleLoginInfo::_internal_has_viplevel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_viplevel() const {
+  return _internal_has_viplevel();
+}
+inline void RoleLoginInfo::clear_viplevel() {
+  _impl_.viplevel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000400u;
+}
+inline int32_t RoleLoginInfo::_internal_viplevel() const {
+  return _impl_.viplevel_;
+}
+inline int32_t RoleLoginInfo::viplevel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.viplevel)
+  return _internal_viplevel();
+}
+inline void RoleLoginInfo::_internal_set_viplevel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_.viplevel_ = value;
+}
+inline void RoleLoginInfo::set_viplevel(int32_t value) {
+  _internal_set_viplevel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.viplevel)
+}
+
+// required int64 optime = 6;
+inline bool RoleLoginInfo::_internal_has_optime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_optime() const {
+  return _internal_has_optime();
+}
+inline void RoleLoginInfo::clear_optime() {
+  _impl_.optime_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000200u;
+}
+inline int64_t RoleLoginInfo::_internal_optime() const {
+  return _impl_.optime_;
+}
+inline int64_t RoleLoginInfo::optime() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.optime)
+  return _internal_optime();
+}
+inline void RoleLoginInfo::_internal_set_optime(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_.optime_ = value;
+}
+inline void RoleLoginInfo::set_optime(int64_t value) {
+  _internal_set_optime(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.optime)
+}
+
+// optional int32 areaid = 7;
+inline bool RoleLoginInfo::_internal_has_areaid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_areaid() const {
+  return _internal_has_areaid();
+}
+inline void RoleLoginInfo::clear_areaid() {
+  _impl_.areaid_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000800u;
+}
+inline int32_t RoleLoginInfo::_internal_areaid() const {
+  return _impl_.areaid_;
+}
+inline int32_t RoleLoginInfo::areaid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.areaid)
+  return _internal_areaid();
+}
+inline void RoleLoginInfo::_internal_set_areaid(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_.areaid_ = value;
+}
+inline void RoleLoginInfo::set_areaid(int32_t value) {
+  _internal_set_areaid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.areaid)
+}
+
+// optional string rolename = 8;
+inline bool RoleLoginInfo::_internal_has_rolename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_rolename() const {
+  return _internal_has_rolename();
+}
+inline void RoleLoginInfo::clear_rolename() {
+  _impl_.rolename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& RoleLoginInfo::rolename() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.rolename)
+  return _internal_rolename();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLoginInfo::set_rolename(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.rolename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.rolename)
+}
+inline std::string* RoleLoginInfo::mutable_rolename() {
+  std::string* _s = _internal_mutable_rolename();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLoginInfo.rolename)
+  return _s;
+}
+inline const std::string& RoleLoginInfo::_internal_rolename() const {
+  return _impl_.rolename_.Get();
+}
+inline void RoleLoginInfo::_internal_set_rolename(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.rolename_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::_internal_mutable_rolename() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.rolename_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::release_rolename() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLoginInfo.rolename)
+  if (!_internal_has_rolename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.rolename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLoginInfo::set_allocated_rolename(std::string* rolename) {
+  if (rolename != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.rolename_.SetAllocated(rolename, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLoginInfo.rolename)
+}
+
+// optional string uuid = 9;
+inline bool RoleLoginInfo::_internal_has_uuid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_uuid() const {
+  return _internal_has_uuid();
+}
+inline void RoleLoginInfo::clear_uuid() {
+  _impl_.uuid_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& RoleLoginInfo::uuid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.uuid)
+  return _internal_uuid();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLoginInfo::set_uuid(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.uuid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.uuid)
+}
+inline std::string* RoleLoginInfo::mutable_uuid() {
+  std::string* _s = _internal_mutable_uuid();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLoginInfo.uuid)
+  return _s;
+}
+inline const std::string& RoleLoginInfo::_internal_uuid() const {
+  return _impl_.uuid_.Get();
+}
+inline void RoleLoginInfo::_internal_set_uuid(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.uuid_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::_internal_mutable_uuid() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.uuid_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::release_uuid() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLoginInfo.uuid)
+  if (!_internal_has_uuid()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.uuid_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.uuid_.IsDefault()) {
+    _impl_.uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLoginInfo::set_allocated_uuid(std::string* uuid) {
+  if (uuid != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.uuid_.SetAllocated(uuid, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.uuid_.IsDefault()) {
+    _impl_.uuid_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLoginInfo.uuid)
+}
+
+// optional string idfa = 10;
+inline bool RoleLoginInfo::_internal_has_idfa() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_idfa() const {
+  return _internal_has_idfa();
+}
+inline void RoleLoginInfo::clear_idfa() {
+  _impl_.idfa_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& RoleLoginInfo::idfa() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.idfa)
+  return _internal_idfa();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLoginInfo::set_idfa(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_.idfa_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.idfa)
+}
+inline std::string* RoleLoginInfo::mutable_idfa() {
+  std::string* _s = _internal_mutable_idfa();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLoginInfo.idfa)
+  return _s;
+}
+inline const std::string& RoleLoginInfo::_internal_idfa() const {
+  return _impl_.idfa_.Get();
+}
+inline void RoleLoginInfo::_internal_set_idfa(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.idfa_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::_internal_mutable_idfa() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.idfa_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::release_idfa() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLoginInfo.idfa)
+  if (!_internal_has_idfa()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.idfa_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLoginInfo::set_allocated_idfa(std::string* idfa) {
+  if (idfa != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.idfa_.SetAllocated(idfa, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLoginInfo.idfa)
+}
+
+// optional string imei = 11;
+inline bool RoleLoginInfo::_internal_has_imei() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_imei() const {
+  return _internal_has_imei();
+}
+inline void RoleLoginInfo::clear_imei() {
+  _impl_.imei_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& RoleLoginInfo::imei() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.imei)
+  return _internal_imei();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLoginInfo::set_imei(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_.imei_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.imei)
+}
+inline std::string* RoleLoginInfo::mutable_imei() {
+  std::string* _s = _internal_mutable_imei();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLoginInfo.imei)
+  return _s;
+}
+inline const std::string& RoleLoginInfo::_internal_imei() const {
+  return _impl_.imei_.Get();
+}
+inline void RoleLoginInfo::_internal_set_imei(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.imei_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::_internal_mutable_imei() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  return _impl_.imei_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::release_imei() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLoginInfo.imei)
+  if (!_internal_has_imei()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.imei_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLoginInfo::set_allocated_imei(std::string* imei) {
+  if (imei != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.imei_.SetAllocated(imei, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLoginInfo.imei)
+}
+
+// optional string imodel = 12;
+inline bool RoleLoginInfo::_internal_has_imodel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool RoleLoginInfo::has_imodel() const {
+  return _internal_has_imodel();
+}
+inline void RoleLoginInfo::clear_imodel() {
+  _impl_.imodel_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& RoleLoginInfo::imodel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLoginInfo.imodel)
+  return _internal_imodel();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLoginInfo::set_imodel(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000010u;
+ _impl_.imodel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLoginInfo.imodel)
+}
+inline std::string* RoleLoginInfo::mutable_imodel() {
+  std::string* _s = _internal_mutable_imodel();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLoginInfo.imodel)
+  return _s;
+}
+inline const std::string& RoleLoginInfo::_internal_imodel() const {
+  return _impl_.imodel_.Get();
+}
+inline void RoleLoginInfo::_internal_set_imodel(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.imodel_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::_internal_mutable_imodel() {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  return _impl_.imodel_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLoginInfo::release_imodel() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLoginInfo.imodel)
+  if (!_internal_has_imodel()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.imodel_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLoginInfo::set_allocated_imodel(std::string* imodel) {
+  if (imodel != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.imodel_.SetAllocated(imodel, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLoginInfo.imodel)
+}
+
+// -------------------------------------------------------------------
+
+// RoleLogoutInfo
+
+// required int64 roleid = 1;
+inline bool RoleLogoutInfo::_internal_has_roleid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_roleid() const {
+  return _internal_has_roleid();
+}
+inline void RoleLogoutInfo::clear_roleid() {
+  _impl_.roleid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000020u;
+}
+inline int64_t RoleLogoutInfo::_internal_roleid() const {
+  return _impl_.roleid_;
+}
+inline int64_t RoleLogoutInfo::roleid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.roleid)
+  return _internal_roleid();
+}
+inline void RoleLogoutInfo::_internal_set_roleid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_.roleid_ = value;
+}
+inline void RoleLogoutInfo::set_roleid(int64_t value) {
+  _internal_set_roleid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.roleid)
+}
+
+// required int64 accountid = 2;
+inline bool RoleLogoutInfo::_internal_has_accountid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_accountid() const {
+  return _internal_has_accountid();
+}
+inline void RoleLogoutInfo::clear_accountid() {
+  _impl_.accountid_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000040u;
+}
+inline int64_t RoleLogoutInfo::_internal_accountid() const {
+  return _impl_.accountid_;
+}
+inline int64_t RoleLogoutInfo::accountid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.accountid)
+  return _internal_accountid();
+}
+inline void RoleLogoutInfo::_internal_set_accountid(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_.accountid_ = value;
+}
+inline void RoleLogoutInfo::set_accountid(int64_t value) {
+  _internal_set_accountid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.accountid)
+}
+
+// optional int32 channel = 3;
+inline bool RoleLogoutInfo::_internal_has_channel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_channel() const {
+  return _internal_has_channel();
+}
+inline void RoleLogoutInfo::clear_channel() {
+  _impl_.channel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000080u;
+}
+inline int32_t RoleLogoutInfo::_internal_channel() const {
+  return _impl_.channel_;
+}
+inline int32_t RoleLogoutInfo::channel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.channel)
+  return _internal_channel();
+}
+inline void RoleLogoutInfo::_internal_set_channel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_.channel_ = value;
+}
+inline void RoleLogoutInfo::set_channel(int32_t value) {
+  _internal_set_channel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.channel)
+}
+
+// optional int32 level = 4;
+inline bool RoleLogoutInfo::_internal_has_level() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_level() const {
+  return _internal_has_level();
+}
+inline void RoleLogoutInfo::clear_level() {
+  _impl_.level_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000100u;
+}
+inline int32_t RoleLogoutInfo::_internal_level() const {
+  return _impl_.level_;
+}
+inline int32_t RoleLogoutInfo::level() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.level)
+  return _internal_level();
+}
+inline void RoleLogoutInfo::_internal_set_level(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_.level_ = value;
+}
+inline void RoleLogoutInfo::set_level(int32_t value) {
+  _internal_set_level(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.level)
+}
+
+// optional int32 viplevel = 5;
+inline bool RoleLogoutInfo::_internal_has_viplevel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_viplevel() const {
+  return _internal_has_viplevel();
+}
+inline void RoleLogoutInfo::clear_viplevel() {
+  _impl_.viplevel_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000400u;
+}
+inline int32_t RoleLogoutInfo::_internal_viplevel() const {
+  return _impl_.viplevel_;
+}
+inline int32_t RoleLogoutInfo::viplevel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.viplevel)
+  return _internal_viplevel();
+}
+inline void RoleLogoutInfo::_internal_set_viplevel(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_.viplevel_ = value;
+}
+inline void RoleLogoutInfo::set_viplevel(int32_t value) {
+  _internal_set_viplevel(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.viplevel)
+}
+
+// required int64 optime = 6;
+inline bool RoleLogoutInfo::_internal_has_optime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_optime() const {
+  return _internal_has_optime();
+}
+inline void RoleLogoutInfo::clear_optime() {
+  _impl_.optime_ = int64_t{0};
+  _impl_._has_bits_[0] &= ~0x00000200u;
+}
+inline int64_t RoleLogoutInfo::_internal_optime() const {
+  return _impl_.optime_;
+}
+inline int64_t RoleLogoutInfo::optime() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.optime)
+  return _internal_optime();
+}
+inline void RoleLogoutInfo::_internal_set_optime(int64_t value) {
+  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_.optime_ = value;
+}
+inline void RoleLogoutInfo::set_optime(int64_t value) {
+  _internal_set_optime(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.optime)
+}
+
+// optional int32 areaid = 7;
+inline bool RoleLogoutInfo::_internal_has_areaid() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_areaid() const {
+  return _internal_has_areaid();
+}
+inline void RoleLogoutInfo::clear_areaid() {
+  _impl_.areaid_ = 0;
+  _impl_._has_bits_[0] &= ~0x00000800u;
+}
+inline int32_t RoleLogoutInfo::_internal_areaid() const {
+  return _impl_.areaid_;
+}
+inline int32_t RoleLogoutInfo::areaid() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.areaid)
+  return _internal_areaid();
+}
+inline void RoleLogoutInfo::_internal_set_areaid(int32_t value) {
+  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_.areaid_ = value;
+}
+inline void RoleLogoutInfo::set_areaid(int32_t value) {
+  _internal_set_areaid(value);
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.areaid)
+}
+
+// optional string rolename = 8;
+inline bool RoleLogoutInfo::_internal_has_rolename() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_rolename() const {
+  return _internal_has_rolename();
+}
+inline void RoleLogoutInfo::clear_rolename() {
+  _impl_.rolename_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
+inline const std::string& RoleLogoutInfo::rolename() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.rolename)
+  return _internal_rolename();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLogoutInfo::set_rolename(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000001u;
+ _impl_.rolename_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.rolename)
+}
+inline std::string* RoleLogoutInfo::mutable_rolename() {
+  std::string* _s = _internal_mutable_rolename();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.rolename)
+  return _s;
+}
+inline const std::string& RoleLogoutInfo::_internal_rolename() const {
+  return _impl_.rolename_.Get();
+}
+inline void RoleLogoutInfo::_internal_set_rolename(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  _impl_.rolename_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::_internal_mutable_rolename() {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  return _impl_.rolename_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::release_rolename() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.rolename)
+  if (!_internal_has_rolename()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  auto* p = _impl_.rolename_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLogoutInfo::set_allocated_rolename(std::string* rolename) {
+  if (rolename != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  _impl_.rolename_.SetAllocated(rolename, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.rolename_.IsDefault()) {
+    _impl_.rolename_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.rolename)
+}
+
+// optional string createtime = 9;
+inline bool RoleLogoutInfo::_internal_has_createtime() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_createtime() const {
+  return _internal_has_createtime();
+}
+inline void RoleLogoutInfo::clear_createtime() {
+  _impl_.createtime_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000002u;
+}
+inline const std::string& RoleLogoutInfo::createtime() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.createtime)
+  return _internal_createtime();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLogoutInfo::set_createtime(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000002u;
+ _impl_.createtime_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.createtime)
+}
+inline std::string* RoleLogoutInfo::mutable_createtime() {
+  std::string* _s = _internal_mutable_createtime();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.createtime)
+  return _s;
+}
+inline const std::string& RoleLogoutInfo::_internal_createtime() const {
+  return _impl_.createtime_.Get();
+}
+inline void RoleLogoutInfo::_internal_set_createtime(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  _impl_.createtime_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::_internal_mutable_createtime() {
+  _impl_._has_bits_[0] |= 0x00000002u;
+  return _impl_.createtime_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::release_createtime() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.createtime)
+  if (!_internal_has_createtime()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000002u;
+  auto* p = _impl_.createtime_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.createtime_.IsDefault()) {
+    _impl_.createtime_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLogoutInfo::set_allocated_createtime(std::string* createtime) {
+  if (createtime != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000002u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000002u;
+  }
+  _impl_.createtime_.SetAllocated(createtime, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.createtime_.IsDefault()) {
+    _impl_.createtime_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.createtime)
+}
+
+// optional string idfa = 10;
+inline bool RoleLogoutInfo::_internal_has_idfa() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_idfa() const {
+  return _internal_has_idfa();
+}
+inline void RoleLogoutInfo::clear_idfa() {
+  _impl_.idfa_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000004u;
+}
+inline const std::string& RoleLogoutInfo::idfa() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.idfa)
+  return _internal_idfa();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLogoutInfo::set_idfa(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_.idfa_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.idfa)
+}
+inline std::string* RoleLogoutInfo::mutable_idfa() {
+  std::string* _s = _internal_mutable_idfa();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.idfa)
+  return _s;
+}
+inline const std::string& RoleLogoutInfo::_internal_idfa() const {
+  return _impl_.idfa_.Get();
+}
+inline void RoleLogoutInfo::_internal_set_idfa(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_.idfa_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::_internal_mutable_idfa() {
+  _impl_._has_bits_[0] |= 0x00000004u;
+  return _impl_.idfa_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::release_idfa() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.idfa)
+  if (!_internal_has_idfa()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000004u;
+  auto* p = _impl_.idfa_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLogoutInfo::set_allocated_idfa(std::string* idfa) {
+  if (idfa != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000004u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000004u;
+  }
+  _impl_.idfa_.SetAllocated(idfa, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.idfa_.IsDefault()) {
+    _impl_.idfa_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.idfa)
+}
+
+// optional string imei = 11;
+inline bool RoleLogoutInfo::_internal_has_imei() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_imei() const {
+  return _internal_has_imei();
+}
+inline void RoleLogoutInfo::clear_imei() {
+  _impl_.imei_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000008u;
+}
+inline const std::string& RoleLogoutInfo::imei() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.imei)
+  return _internal_imei();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLogoutInfo::set_imei(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_.imei_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.imei)
+}
+inline std::string* RoleLogoutInfo::mutable_imei() {
+  std::string* _s = _internal_mutable_imei();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.imei)
+  return _s;
+}
+inline const std::string& RoleLogoutInfo::_internal_imei() const {
+  return _impl_.imei_.Get();
+}
+inline void RoleLogoutInfo::_internal_set_imei(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_.imei_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::_internal_mutable_imei() {
+  _impl_._has_bits_[0] |= 0x00000008u;
+  return _impl_.imei_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::release_imei() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.imei)
+  if (!_internal_has_imei()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000008u;
+  auto* p = _impl_.imei_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLogoutInfo::set_allocated_imei(std::string* imei) {
+  if (imei != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000008u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000008u;
+  }
+  _impl_.imei_.SetAllocated(imei, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imei_.IsDefault()) {
+    _impl_.imei_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.imei)
+}
+
+// optional string imodel = 12;
+inline bool RoleLogoutInfo::_internal_has_imodel() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  return value;
+}
+inline bool RoleLogoutInfo::has_imodel() const {
+  return _internal_has_imodel();
+}
+inline void RoleLogoutInfo::clear_imodel() {
+  _impl_.imodel_.ClearToEmpty();
+  _impl_._has_bits_[0] &= ~0x00000010u;
+}
+inline const std::string& RoleLogoutInfo::imodel() const {
+  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.imodel)
+  return _internal_imodel();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void RoleLogoutInfo::set_imodel(ArgT0&& arg0, ArgT... args) {
+ _impl_._has_bits_[0] |= 0x00000010u;
+ _impl_.imodel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.imodel)
+}
+inline std::string* RoleLogoutInfo::mutable_imodel() {
+  std::string* _s = _internal_mutable_imodel();
+  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.imodel)
+  return _s;
+}
+inline const std::string& RoleLogoutInfo::_internal_imodel() const {
+  return _impl_.imodel_.Get();
+}
+inline void RoleLogoutInfo::_internal_set_imodel(const std::string& value) {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_.imodel_.Set(value, GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::_internal_mutable_imodel() {
+  _impl_._has_bits_[0] |= 0x00000010u;
+  return _impl_.imodel_.Mutable(GetArenaForAllocation());
+}
+inline std::string* RoleLogoutInfo::release_imodel() {
+  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.imodel)
+  if (!_internal_has_imodel()) {
+    return nullptr;
+  }
+  _impl_._has_bits_[0] &= ~0x00000010u;
+  auto* p = _impl_.imodel_.Release();
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  return p;
+}
+inline void RoleLogoutInfo::set_allocated_imodel(std::string* imodel) {
+  if (imodel != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000010u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000010u;
+  }
+  _impl_.imodel_.SetAllocated(imodel, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.imodel_.IsDefault()) {
+    _impl_.imodel_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.imodel)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

@@ -31,9 +31,28 @@ class LogServerModule : public RockModule {
                             symphony::RockResponse::ptr response,
                             symphony::RockStream::ptr stream);
 
+    bool handleRoleCreate(symphony::RockRequest::ptr request,
+                          symphony::RockResponse::ptr response,
+                          symphony::RockStream::ptr stream);
+
+    bool handleRoleLogin(symphony::RockRequest::ptr request,
+                         symphony::RockResponse::ptr response,
+                         symphony::RockStream::ptr stream);
+
+    bool handleRoleLogout(symphony::RockRequest::ptr request,
+                          symphony::RockResponse::ptr response,
+                          symphony::RockStream::ptr stream);
+
+    bool handleRoleChat(symphony::RockRequest::ptr request,
+                        symphony::RockResponse::ptr response,
+                        symphony::RockStream::ptr stream);
+    void onTimer();
+
    private:
+    std::uint64_t m_write_cnt = 0;
+    std::uint64_t m_last_write_time = 0;
     symphony::RWMutex m_mutex;
-    symphony::IDB::ptr m_log_db;
+    symphony::MySQL::ptr m_log_db;
 };
 }  // namespace ls
 }  // namespace symphony

@@ -1,6 +1,6 @@
 #include "ls_client.h"
 #include "log_server_protocol.h"
-
+#include "symphony/servers/log_server/log_protobuf.pb.h"
 namespace symphony {
 namespace ls {
 static symphony::Logger::ptr g_logger = SYMPHONY_LOG_NAME("system");

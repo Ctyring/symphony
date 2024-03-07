@@ -71,15 +71,15 @@ bool Table::init(const tinyxml2::XMLElement& node) {
     }
 
     const tinyxml2::XMLElement* idx = idxs->FirstChildElement("index");
-    if (!idx) {
-        SYMPHONY_LOG_ERROR(g_logger)
-            << "table name=" << m_name << " index is null";
-        return false;
-    }
+    // if (!idx) {
+    //     SYMPHONY_LOG_ERROR(g_logger)
+    //         << "table name=" << m_name << " index is null";
+    //     return false;
+    // }
 
     std::set<std::string> idx_names;
     bool has_pk = false;
-    do {
+    while (idx) {
         Index::ptr idx_ptr(new Index);
         if (!idx_ptr->init(*idx)) {
             SYMPHONY_LOG_ERROR(g_logger)
@@ -114,7 +114,7 @@ bool Table::init(const tinyxml2::XMLElement& node) {
 
         m_idxs.push_back(idx_ptr);
         idx = idx->NextSiblingElement("index");
-    } while (idx);
+    }
     return true;
 }
 

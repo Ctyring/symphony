@@ -1,4 +1,6 @@
 #pragma once
+#include "log_protobuf.pb.h"
+#include "symphony/db/mysql.h"
 #include "symphony/module.h"
 namespace symphony {
 namespace ls {
@@ -21,8 +23,17 @@ class LogServerModule : public RockModule {
                     symphony::RockResponse::ptr response,
                     symphony::RockStream::ptr stream);
 
+    bool handleAccountCreate(symphony::RockRequest::ptr request,
+                             symphony::RockResponse::ptr response,
+                             symphony::RockStream::ptr stream);
+
+    bool handleAccountLogin(symphony::RockRequest::ptr request,
+                            symphony::RockResponse::ptr response,
+                            symphony::RockStream::ptr stream);
+
    private:
     symphony::RWMutex m_mutex;
+    symphony::IDB::ptr m_log_db;
 };
 }  // namespace ls
 }  // namespace symphony

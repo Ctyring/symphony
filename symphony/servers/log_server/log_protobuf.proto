@@ -1,0 +1,26 @@
+package symphony.ls;
+message AccountCreateInfo {
+  required int64 accountid = 1;
+  optional int32 version = 2;
+  optional int32 channel = 3;
+  required int64 optime = 4;
+  optional string imodel = 5;
+  optional string imei = 6;
+  required string ip = 7;
+  optional string openid = 8;
+  optional string idfa = 9;
+  optional string uuid = 10;
+}
+
+message AccountLoginInfo {
+  required int64 accountid = 1;
+  optional int32 version = 2;
+  optional int32 channel = 3;
+  required int64 optime = 4;
+  required string ip = 5;
+  optional string openid = 6;
+  optional string uuid = 7;
+  optional string idfa = 8;
+  optional string imei = 9;
+  optional string imodel = 10;
+}

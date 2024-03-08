@@ -119,7 +119,10 @@ ragelmaker(symphony/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR
 ragelmaker(symphony/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/symphony)
 
 protobufmaker(symphony/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
-protobufmaker(symphony/servers/log_server/log_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/log_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_role.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_login_db.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+
 # protobufmaker(symphony/test.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(symphony SHARED ${LIB_SRC})

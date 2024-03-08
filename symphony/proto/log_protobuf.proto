@@ -1,4 +1,4 @@
-package symphony.ls;
+package symphony.proto;
 message AccountCreateInfo {
   required int64 accountid = 1;
   optional int32 version = 2;

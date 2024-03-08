@@ -99,7 +99,7 @@ bool LogServerModule::handleAccountCreate(symphony::RockRequest::ptr request,
                                           symphony::RockStream::ptr stream) {
     symphony::log::AccountCreateInfo::ptr aci(
         new symphony::log::AccountCreateInfo);
-    auto account_info = request->getAsPB<symphony::ls::AccountCreateInfo>();
+    auto account_info = request->getAsPB<symphony::proto::AccountCreateInfo>();
     if (!account_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;
@@ -123,7 +123,7 @@ bool LogServerModule::handleAccountLogin(symphony::RockRequest::ptr request,
                                          symphony::RockStream::ptr stream) {
     symphony::log::AccountLoginInfo::ptr aci(
         new symphony::log::AccountLoginInfo);
-    auto account_info = request->getAsPB<symphony::ls::AccountLoginInfo>();
+    auto account_info = request->getAsPB<symphony::proto::AccountLoginInfo>();
     if (!account_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;
@@ -146,7 +146,7 @@ bool LogServerModule::handleRoleCreate(symphony::RockRequest::ptr request,
                                        symphony::RockResponse::ptr response,
                                        symphony::RockStream::ptr stream) {
     symphony::log::RoleCreateInfo::ptr rci(new symphony::log::RoleCreateInfo);
-    auto role_info = request->getAsPB<symphony::ls::RoleCreateInfo>();
+    auto role_info = request->getAsPB<symphony::proto::RoleCreateInfo>();
     if (!role_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;
@@ -169,7 +169,7 @@ bool LogServerModule::handleRoleLogin(symphony::RockRequest::ptr request,
                                       symphony::RockResponse::ptr response,
                                       symphony::RockStream::ptr stream) {
     symphony::log::RoleLoginInfo::ptr rli(new symphony::log::RoleLoginInfo);
-    auto role_info = request->getAsPB<symphony::ls::RoleLoginInfo>();
+    auto role_info = request->getAsPB<symphony::proto::RoleLoginInfo>();
     if (!role_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;
@@ -194,7 +194,7 @@ bool LogServerModule::handleRoleLogout(symphony::RockRequest::ptr request,
                                        symphony::RockResponse::ptr response,
                                        symphony::RockStream::ptr stream) {
     symphony::log::RoleLogoutInfo::ptr rli(new symphony::log::RoleLogoutInfo);
-    auto role_info = request->getAsPB<symphony::ls::RoleLogoutInfo>();
+    auto role_info = request->getAsPB<symphony::proto::RoleLogoutInfo>();
     if (!role_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;
@@ -218,7 +218,7 @@ bool LogServerModule::handleRoleChat(symphony::RockRequest::ptr request,
                                      symphony::RockResponse::ptr response,
                                      symphony::RockStream::ptr stream) {
     symphony::log::RoleChatInfo::ptr rci(new symphony::log::RoleChatInfo);
-    auto role_info = request->getAsPB<symphony::ls::RoleChatInfo>();
+    auto role_info = request->getAsPB<symphony::proto::RoleChatInfo>();
     if (!role_info) {
         SYMPHONY_LOG_ERROR(g_logger) << "invalid account_info";
         return false;

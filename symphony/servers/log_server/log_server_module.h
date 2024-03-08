@@ -1,7 +1,7 @@
 #pragma once
-#include "log_protobuf.pb.h"
 #include "symphony/db/mysql.h"
 #include "symphony/module.h"
+#include "symphony/proto/log_protobuf.pb.h"
 namespace symphony {
 namespace ls {
 class LogServerModule : public RockModule {

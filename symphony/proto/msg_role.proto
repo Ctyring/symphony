@@ -1,0 +1,62 @@
+package symphony.proto;
+
+message RoleItem {
+    optional uint64    RoleID  = 1;
+    optional string    Name    = 2;
+    optional int32     Carrer  = 3;
+    optional int32     Level   = 4;
+}
+
+message RoleListReq {
+    optional uint64   AccountID    = 1;
+    optional int32    LoginCode    = 2;
+    optional uint32   ServerID     = 3;
+}
+
+message RoleListAck {
+    optional uint32    RetCode            = 1;
+    optional uint64    AccountID          = 2;
+    repeated  RoleItem RoleList  = 3;
+}
+
+message RoleCreateReq {
+    optional uint64   AccountID    = 1;
+    optional string   Name         = 2;
+    optional int32    Carrer       = 3;
+    optional int32    Channel      = 4;
+}
+
+message RoleCreateAck {
+    optional uint32    RetCode      = 1;
+    optional uint64    AccountID    = 2;
+    optional uint64    RoleID       = 3;
+    optional string    Name         = 4;
+    optional int32     Carrer       = 5;
+}
+
+message RoleDeleteReq {
+    optional uint64    AccountID    = 1;
+    optional uint64    RoleID       = 2;
+}
+
+message RoleDeleteAck {
+    optional uint32    RetCode = 1;
+}
+
+message RoleLoginReq {
+    optional uint64    AccountID    = 1;
+    optional uint64    RoleID       = 2;
+    optional int32     LangID       = 3; //语言ID
+}
+
+message RoleLogoutReq {
+    optional uint64    AccountID = 1;
+}
+
+message RoleLogoutAck {
+    optional uint32    RetCode = 1;
+}
+
+message RoleOtherLoginNty {
+    optional uint32    RetCode = 1;
+}

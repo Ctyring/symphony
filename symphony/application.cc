@@ -272,6 +272,9 @@ int Application::run_fiber() {
         } else if (i.type == "logserver") {
             server.reset(new symphony::RockServer("logserver", process_worker,
                                                   io_worker, accept_worker));
+        } else if (i.type == "dbserver") {
+            server.reset(new symphony::RockServer("dbserver", process_worker,
+                                                  io_worker, accept_worker));
         } else {
             SYMPHONY_LOG_ERROR(g_logger)
                 << "invalid server type=" << i.type

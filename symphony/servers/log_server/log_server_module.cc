@@ -1,11 +1,11 @@
 #include "log_server_module.h"
+#include "account_create_info.h"
+#include "account_login_info.h"
 #include "log_server_protocol.h"
-#include "orm_out/symphony/log/account_create_info.h"
-#include "orm_out/symphony/log/account_login_info.h"
-#include "orm_out/symphony/log/role_chat_info.h"
-#include "orm_out/symphony/log/role_create_info.h"
-#include "orm_out/symphony/log/role_login_info.h"
-#include "orm_out/symphony/log/role_logout_info.h"
+#include "role_chat_info.h"
+#include "role_create_info.h"
+#include "role_login_info.h"
+#include "role_logout_info.h"
 
 #include "symphony/log.h"
 namespace symphony {
@@ -22,6 +22,9 @@ LogServerModule::LogServerModule()
     symphony::MySQL::ptr m(new symphony::MySQL(params));
     m->connect();
     m_log_db = m;
+
+    // m_timer = symphony::IOManager::GetThis()->addTimer(
+    //     60 * 1000, std::bind(&LogServerModule::onTimer, this), true);
 }
 bool LogServerModule::handleRockRequest(symphony::RockRequest::ptr request,
                                         symphony::RockResponse::ptr response,
@@ -240,6 +243,7 @@ bool LogServerModule::handleTick(symphony::RockRequest::ptr request,
 }
 
 void LogServerModule::onTimer() {
+    SYMPHONY_LOG_DEBUG(g_logger) << "onTimer";
     // 获取时间
     uint64_t now = symphony::GetCurrentMS();
     if (m_last_write_time == 0) {

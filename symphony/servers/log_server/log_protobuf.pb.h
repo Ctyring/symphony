@@ -1883,7 +1883,6 @@ class RoleLogoutInfo final :
 
   enum : int {
     kRolenameFieldNumber = 8,
-    kCreatetimeFieldNumber = 9,
     kIdfaFieldNumber = 10,
     kImeiFieldNumber = 11,
     kImodelFieldNumber = 12,
@@ -1911,24 +1910,6 @@ class RoleLogoutInfo final :
   const std::string& _internal_rolename() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_rolename(const std::string& value);
   std::string* _internal_mutable_rolename();
-  public:
-
-  // optional string createtime = 9;
-  bool has_createtime() const;
-  private:
-  bool _internal_has_createtime() const;
-  public:
-  void clear_createtime();
-  const std::string& createtime() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_createtime(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_createtime();
-  PROTOBUF_NODISCARD std::string* release_createtime();
-  void set_allocated_createtime(std::string* createtime);
-  private:
-  const std::string& _internal_createtime() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_createtime(const std::string& value);
-  std::string* _internal_mutable_createtime();
   public:
 
   // optional string idfa = 10;
@@ -2090,7 +2071,6 @@ class RoleLogoutInfo final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr rolename_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr createtime_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr idfa_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imei_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr imodel_;
@@ -4650,7 +4630,7 @@ inline void RoleLoginInfo::set_allocated_imodel(std::string* imodel) {
 
 // required int64 roleid = 1;
 inline bool RoleLogoutInfo::_internal_has_roleid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_roleid() const {
@@ -4658,7 +4638,7 @@ inline bool RoleLogoutInfo::has_roleid() const {
 }
 inline void RoleLogoutInfo::clear_roleid() {
   _impl_.roleid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000020u;
+  _impl_._has_bits_[0] &= ~0x00000010u;
 }
 inline int64_t RoleLogoutInfo::_internal_roleid() const {
   return _impl_.roleid_;
@@ -4668,7 +4648,7 @@ inline int64_t RoleLogoutInfo::roleid() const {
   return _internal_roleid();
 }
 inline void RoleLogoutInfo::_internal_set_roleid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000020u;
+  _impl_._has_bits_[0] |= 0x00000010u;
   _impl_.roleid_ = value;
 }
 inline void RoleLogoutInfo::set_roleid(int64_t value) {
@@ -4678,7 +4658,7 @@ inline void RoleLogoutInfo::set_roleid(int64_t value) {
 
 // required int64 accountid = 2;
 inline bool RoleLogoutInfo::_internal_has_accountid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000020u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_accountid() const {
@@ -4686,7 +4666,7 @@ inline bool RoleLogoutInfo::has_accountid() const {
 }
 inline void RoleLogoutInfo::clear_accountid() {
   _impl_.accountid_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000040u;
+  _impl_._has_bits_[0] &= ~0x00000020u;
 }
 inline int64_t RoleLogoutInfo::_internal_accountid() const {
   return _impl_.accountid_;
@@ -4696,7 +4676,7 @@ inline int64_t RoleLogoutInfo::accountid() const {
   return _internal_accountid();
 }
 inline void RoleLogoutInfo::_internal_set_accountid(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000040u;
+  _impl_._has_bits_[0] |= 0x00000020u;
   _impl_.accountid_ = value;
 }
 inline void RoleLogoutInfo::set_accountid(int64_t value) {
@@ -4706,7 +4686,7 @@ inline void RoleLogoutInfo::set_accountid(int64_t value) {
 
 // optional int32 channel = 3;
 inline bool RoleLogoutInfo::_internal_has_channel() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000040u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_channel() const {
@@ -4714,7 +4694,7 @@ inline bool RoleLogoutInfo::has_channel() const {
 }
 inline void RoleLogoutInfo::clear_channel() {
   _impl_.channel_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000080u;
+  _impl_._has_bits_[0] &= ~0x00000040u;
 }
 inline int32_t RoleLogoutInfo::_internal_channel() const {
   return _impl_.channel_;
@@ -4724,7 +4704,7 @@ inline int32_t RoleLogoutInfo::channel() const {
   return _internal_channel();
 }
 inline void RoleLogoutInfo::_internal_set_channel(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000080u;
+  _impl_._has_bits_[0] |= 0x00000040u;
   _impl_.channel_ = value;
 }
 inline void RoleLogoutInfo::set_channel(int32_t value) {
@@ -4734,7 +4714,7 @@ inline void RoleLogoutInfo::set_channel(int32_t value) {
 
 // optional int32 level = 4;
 inline bool RoleLogoutInfo::_internal_has_level() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000080u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_level() const {
@@ -4742,7 +4722,7 @@ inline bool RoleLogoutInfo::has_level() const {
 }
 inline void RoleLogoutInfo::clear_level() {
   _impl_.level_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000100u;
+  _impl_._has_bits_[0] &= ~0x00000080u;
 }
 inline int32_t RoleLogoutInfo::_internal_level() const {
   return _impl_.level_;
@@ -4752,7 +4732,7 @@ inline int32_t RoleLogoutInfo::level() const {
   return _internal_level();
 }
 inline void RoleLogoutInfo::_internal_set_level(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000100u;
+  _impl_._has_bits_[0] |= 0x00000080u;
   _impl_.level_ = value;
 }
 inline void RoleLogoutInfo::set_level(int32_t value) {
@@ -4762,7 +4742,7 @@ inline void RoleLogoutInfo::set_level(int32_t value) {
 
 // optional int32 viplevel = 5;
 inline bool RoleLogoutInfo::_internal_has_viplevel() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_viplevel() const {
@@ -4770,7 +4750,7 @@ inline bool RoleLogoutInfo::has_viplevel() const {
 }
 inline void RoleLogoutInfo::clear_viplevel() {
   _impl_.viplevel_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000400u;
+  _impl_._has_bits_[0] &= ~0x00000200u;
 }
 inline int32_t RoleLogoutInfo::_internal_viplevel() const {
   return _impl_.viplevel_;
@@ -4780,7 +4760,7 @@ inline int32_t RoleLogoutInfo::viplevel() const {
   return _internal_viplevel();
 }
 inline void RoleLogoutInfo::_internal_set_viplevel(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000400u;
+  _impl_._has_bits_[0] |= 0x00000200u;
   _impl_.viplevel_ = value;
 }
 inline void RoleLogoutInfo::set_viplevel(int32_t value) {
@@ -4790,7 +4770,7 @@ inline void RoleLogoutInfo::set_viplevel(int32_t value) {
 
 // required int64 optime = 6;
 inline bool RoleLogoutInfo::_internal_has_optime() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000200u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000100u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_optime() const {
@@ -4798,7 +4778,7 @@ inline bool RoleLogoutInfo::has_optime() const {
 }
 inline void RoleLogoutInfo::clear_optime() {
   _impl_.optime_ = int64_t{0};
-  _impl_._has_bits_[0] &= ~0x00000200u;
+  _impl_._has_bits_[0] &= ~0x00000100u;
 }
 inline int64_t RoleLogoutInfo::_internal_optime() const {
   return _impl_.optime_;
@@ -4808,7 +4788,7 @@ inline int64_t RoleLogoutInfo::optime() const {
   return _internal_optime();
 }
 inline void RoleLogoutInfo::_internal_set_optime(int64_t value) {
-  _impl_._has_bits_[0] |= 0x00000200u;
+  _impl_._has_bits_[0] |= 0x00000100u;
   _impl_.optime_ = value;
 }
 inline void RoleLogoutInfo::set_optime(int64_t value) {
@@ -4818,7 +4798,7 @@ inline void RoleLogoutInfo::set_optime(int64_t value) {
 
 // optional int32 areaid = 7;
 inline bool RoleLogoutInfo::_internal_has_areaid() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000800u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000400u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_areaid() const {
@@ -4826,7 +4806,7 @@ inline bool RoleLogoutInfo::has_areaid() const {
 }
 inline void RoleLogoutInfo::clear_areaid() {
   _impl_.areaid_ = 0;
-  _impl_._has_bits_[0] &= ~0x00000800u;
+  _impl_._has_bits_[0] &= ~0x00000400u;
 }
 inline int32_t RoleLogoutInfo::_internal_areaid() const {
   return _impl_.areaid_;
@@ -4836,7 +4816,7 @@ inline int32_t RoleLogoutInfo::areaid() const {
   return _internal_areaid();
 }
 inline void RoleLogoutInfo::_internal_set_areaid(int32_t value) {
-  _impl_._has_bits_[0] |= 0x00000800u;
+  _impl_._has_bits_[0] |= 0x00000400u;
   _impl_.areaid_ = value;
 }
 inline void RoleLogoutInfo::set_areaid(int32_t value) {
@@ -4912,77 +4892,9 @@ inline void RoleLogoutInfo::set_allocated_rolename(std::string* rolename) {
   // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.rolename)
 }
 
-// optional string createtime = 9;
-inline bool RoleLogoutInfo::_internal_has_createtime() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool RoleLogoutInfo::has_createtime() const {
-  return _internal_has_createtime();
-}
-inline void RoleLogoutInfo::clear_createtime() {
-  _impl_.createtime_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& RoleLogoutInfo::createtime() const {
-  // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.createtime)
-  return _internal_createtime();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void RoleLogoutInfo::set_createtime(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000002u;
- _impl_.createtime_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.createtime)
-}
-inline std::string* RoleLogoutInfo::mutable_createtime() {
-  std::string* _s = _internal_mutable_createtime();
-  // @@protoc_insertion_point(field_mutable:symphony.ls.RoleLogoutInfo.createtime)
-  return _s;
-}
-inline const std::string& RoleLogoutInfo::_internal_createtime() const {
-  return _impl_.createtime_.Get();
-}
-inline void RoleLogoutInfo::_internal_set_createtime(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  _impl_.createtime_.Set(value, GetArenaForAllocation());
-}
-inline std::string* RoleLogoutInfo::_internal_mutable_createtime() {
-  _impl_._has_bits_[0] |= 0x00000002u;
-  return _impl_.createtime_.Mutable(GetArenaForAllocation());
-}
-inline std::string* RoleLogoutInfo::release_createtime() {
-  // @@protoc_insertion_point(field_release:symphony.ls.RoleLogoutInfo.createtime)
-  if (!_internal_has_createtime()) {
-    return nullptr;
-  }
-  _impl_._has_bits_[0] &= ~0x00000002u;
-  auto* p = _impl_.createtime_.Release();
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.createtime_.IsDefault()) {
-    _impl_.createtime_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  return p;
-}
-inline void RoleLogoutInfo::set_allocated_createtime(std::string* createtime) {
-  if (createtime != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000002u;
-  } else {
-    _impl_._has_bits_[0] &= ~0x00000002u;
-  }
-  _impl_.createtime_.SetAllocated(createtime, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.createtime_.IsDefault()) {
-    _impl_.createtime_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:symphony.ls.RoleLogoutInfo.createtime)
-}
-
 // optional string idfa = 10;
 inline bool RoleLogoutInfo::_internal_has_idfa() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_idfa() const {
@@ -4990,7 +4902,7 @@ inline bool RoleLogoutInfo::has_idfa() const {
 }
 inline void RoleLogoutInfo::clear_idfa() {
   _impl_.idfa_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& RoleLogoutInfo::idfa() const {
   // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.idfa)
@@ -4999,7 +4911,7 @@ inline const std::string& RoleLogoutInfo::idfa() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RoleLogoutInfo::set_idfa(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000004u;
+ _impl_._has_bits_[0] |= 0x00000002u;
  _impl_.idfa_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.idfa)
 }
@@ -5012,11 +4924,11 @@ inline const std::string& RoleLogoutInfo::_internal_idfa() const {
   return _impl_.idfa_.Get();
 }
 inline void RoleLogoutInfo::_internal_set_idfa(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.idfa_.Set(value, GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::_internal_mutable_idfa() {
-  _impl_._has_bits_[0] |= 0x00000004u;
+  _impl_._has_bits_[0] |= 0x00000002u;
   return _impl_.idfa_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::release_idfa() {
@@ -5024,7 +4936,7 @@ inline std::string* RoleLogoutInfo::release_idfa() {
   if (!_internal_has_idfa()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000004u;
+  _impl_._has_bits_[0] &= ~0x00000002u;
   auto* p = _impl_.idfa_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.idfa_.IsDefault()) {
@@ -5035,9 +4947,9 @@ inline std::string* RoleLogoutInfo::release_idfa() {
 }
 inline void RoleLogoutInfo::set_allocated_idfa(std::string* idfa) {
   if (idfa != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000004u;
+    _impl_._has_bits_[0] |= 0x00000002u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000004u;
+    _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.idfa_.SetAllocated(idfa, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5050,7 +4962,7 @@ inline void RoleLogoutInfo::set_allocated_idfa(std::string* idfa) {
 
 // optional string imei = 11;
 inline bool RoleLogoutInfo::_internal_has_imei() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_imei() const {
@@ -5058,7 +4970,7 @@ inline bool RoleLogoutInfo::has_imei() const {
 }
 inline void RoleLogoutInfo::clear_imei() {
   _impl_.imei_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& RoleLogoutInfo::imei() const {
   // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.imei)
@@ -5067,7 +4979,7 @@ inline const std::string& RoleLogoutInfo::imei() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RoleLogoutInfo::set_imei(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000008u;
+ _impl_._has_bits_[0] |= 0x00000004u;
  _impl_.imei_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.imei)
 }
@@ -5080,11 +4992,11 @@ inline const std::string& RoleLogoutInfo::_internal_imei() const {
   return _impl_.imei_.Get();
 }
 inline void RoleLogoutInfo::_internal_set_imei(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.imei_.Set(value, GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::_internal_mutable_imei() {
-  _impl_._has_bits_[0] |= 0x00000008u;
+  _impl_._has_bits_[0] |= 0x00000004u;
   return _impl_.imei_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::release_imei() {
@@ -5092,7 +5004,7 @@ inline std::string* RoleLogoutInfo::release_imei() {
   if (!_internal_has_imei()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000008u;
+  _impl_._has_bits_[0] &= ~0x00000004u;
   auto* p = _impl_.imei_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.imei_.IsDefault()) {
@@ -5103,9 +5015,9 @@ inline std::string* RoleLogoutInfo::release_imei() {
 }
 inline void RoleLogoutInfo::set_allocated_imei(std::string* imei) {
   if (imei != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000008u;
+    _impl_._has_bits_[0] |= 0x00000004u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000008u;
+    _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.imei_.SetAllocated(imei, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -5118,7 +5030,7 @@ inline void RoleLogoutInfo::set_allocated_imei(std::string* imei) {
 
 // optional string imodel = 12;
 inline bool RoleLogoutInfo::_internal_has_imodel() const {
-  bool value = (_impl_._has_bits_[0] & 0x00000010u) != 0;
+  bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
 inline bool RoleLogoutInfo::has_imodel() const {
@@ -5126,7 +5038,7 @@ inline bool RoleLogoutInfo::has_imodel() const {
 }
 inline void RoleLogoutInfo::clear_imodel() {
   _impl_.imodel_.ClearToEmpty();
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& RoleLogoutInfo::imodel() const {
   // @@protoc_insertion_point(field_get:symphony.ls.RoleLogoutInfo.imodel)
@@ -5135,7 +5047,7 @@ inline const std::string& RoleLogoutInfo::imodel() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void RoleLogoutInfo::set_imodel(ArgT0&& arg0, ArgT... args) {
- _impl_._has_bits_[0] |= 0x00000010u;
+ _impl_._has_bits_[0] |= 0x00000008u;
  _impl_.imodel_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:symphony.ls.RoleLogoutInfo.imodel)
 }
@@ -5148,11 +5060,11 @@ inline const std::string& RoleLogoutInfo::_internal_imodel() const {
   return _impl_.imodel_.Get();
 }
 inline void RoleLogoutInfo::_internal_set_imodel(const std::string& value) {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.imodel_.Set(value, GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::_internal_mutable_imodel() {
-  _impl_._has_bits_[0] |= 0x00000010u;
+  _impl_._has_bits_[0] |= 0x00000008u;
   return _impl_.imodel_.Mutable(GetArenaForAllocation());
 }
 inline std::string* RoleLogoutInfo::release_imodel() {
@@ -5160,7 +5072,7 @@ inline std::string* RoleLogoutInfo::release_imodel() {
   if (!_internal_has_imodel()) {
     return nullptr;
   }
-  _impl_._has_bits_[0] &= ~0x00000010u;
+  _impl_._has_bits_[0] &= ~0x00000008u;
   auto* p = _impl_.imodel_.Release();
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (_impl_.imodel_.IsDefault()) {
@@ -5171,9 +5083,9 @@ inline std::string* RoleLogoutInfo::release_imodel() {
 }
 inline void RoleLogoutInfo::set_allocated_imodel(std::string* imodel) {
   if (imodel != nullptr) {
-    _impl_._has_bits_[0] |= 0x00000010u;
+    _impl_._has_bits_[0] |= 0x00000008u;
   } else {
-    _impl_._has_bits_[0] &= ~0x00000010u;
+    _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.imodel_.SetAllocated(imodel, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING

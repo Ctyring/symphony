@@ -53,6 +53,7 @@ class LogServerModule : public RockModule {
     std::uint64_t m_last_write_time = 0;
     symphony::RWMutex m_mutex;
     symphony::MySQL::ptr m_log_db;
+    symphony::Timer::ptr m_timer;
 };
 }  // namespace ls
 }  // namespace symphony

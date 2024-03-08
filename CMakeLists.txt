@@ -110,7 +110,6 @@ set(LIB_SRC
 	symphony/ds/roaring_bitmap.cc
     symphony/ds/roaring.c
 	symphony/ds/util.cc
-	symphony/servers/log_server/ls_client.cc
 	# symphony/servers/log_server/log_server_module.cc
 	)
 
@@ -202,11 +201,6 @@ set(ORM_SRCS
     )
 symphony_add_executable(orm "${ORM_SRCS}" symphony "${LIBS}")
 
-set(LS_SRCS
-	symphony/servers/log_server/log_server_module.cc
-)
-add_library(log_server SHARED ${LS_SRCS})
-
 add_library(test_module SHARED tests/test_module.cc)
 
 symphony_add_executable(bin_symphony "symphony/main.cc" symphony "${LIBS}")
@@ -216,6 +210,18 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/orm_out)
 set(OLIBS ${LIBS})
 set(OLIBS ${OLIBS} orm_data)
 symphony_add_executable(test_orm "tests/test_orm.cc" orm_data "${OLIBS}")
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/orm_out)
+set(LS_SRCS
+	symphony/servers/log_server/account_create_info.cc
+	symphony/servers/log_server/account_login_info.cc
+	symphony/servers/log_server/role_chat_info.cc
+	symphony/servers/log_server/role_create_info.cc
+	symphony/servers/log_server/role_login_info.cc
+	symphony/servers/log_server/role_logout_info.cc
+	symphony/servers/log_server/log_server_module.cc
+)
+add_library(log_server SHARED ${LS_SRCS})
 
 symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
 symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")

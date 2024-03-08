@@ -22,10 +22,14 @@ LogServerModule::LogServerModule()
     symphony::MySQL::ptr m(new symphony::MySQL(params));
     m->connect();
     m_log_db = m;
-
-    // m_timer = symphony::IOManager::GetThis()->addTimer(
-    //     60 * 1000, std::bind(&LogServerModule::onTimer, this), true);
 }
+
+bool symphony::ls::LogServerModule::onServerReady() {
+    m_timer = symphony::IOManager::GetThis()->addTimer(
+        60 * 1000, std::bind(&LogServerModule::onTimer, this), true);
+    return true;
+}
+
 bool LogServerModule::handleRockRequest(symphony::RockRequest::ptr request,
                                         symphony::RockResponse::ptr response,
                                         symphony::RockStream::ptr stream) {
@@ -243,7 +247,6 @@ bool LogServerModule::handleTick(symphony::RockRequest::ptr request,
 }
 
 void LogServerModule::onTimer() {
-    SYMPHONY_LOG_DEBUG(g_logger) << "onTimer";
     // 获取时间
     uint64_t now = symphony::GetCurrentMS();
     if (m_last_write_time == 0) {

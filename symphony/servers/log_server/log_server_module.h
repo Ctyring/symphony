@@ -9,6 +9,7 @@ class LogServerModule : public RockModule {
     typedef std::shared_ptr<LogServerModule> ptr;
     LogServerModule();
 
+    bool onServerReady() override;
     virtual bool handleRockRequest(symphony::RockRequest::ptr request,
                                    symphony::RockResponse::ptr response,
                                    symphony::RockStream::ptr stream) override;

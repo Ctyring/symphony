@@ -110,6 +110,7 @@ set(LIB_SRC
 	symphony/ds/roaring_bitmap.cc
     symphony/ds/roaring.c
 	symphony/ds/util.cc
+	symphony/servers/log_server/ls_client.cc
 	# symphony/servers/log_server/log_server_module.cc
 	)
 

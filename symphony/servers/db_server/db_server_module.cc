@@ -3,6 +3,7 @@
 #include "db_server_protocol.h"
 #include "symphony/log.h"
 #include "symphony/proto/msg_game.pb.h"
+#include "symphony/proto/msg_id.pb.h"
 #include "symphony/proto/msg_ret_code.pb.h"
 #include "symphony/proto/msg_role.pb.h"
 namespace symphony {
@@ -43,6 +44,7 @@ bool handleMsgRoleListReq(symphony::RockRequest::ptr request,
         << "handleMsgRoleListReq: " << req.DebugString() << std::endl;
     symphony::proto::RoleListAck ack;
     DBMgr::GetInstance()->getRoleList(req.accountid(), ack);
+    response->setCmd((int)symphony::proto::MSG_ROLE_LIST_ACK);
     response->setBody(ack.SerializeAsString());
     return true;
 }
@@ -60,6 +62,7 @@ bool handleMsgRoleLoginReq(symphony::RockRequest::ptr request,
     if (!DBMgr::GetInstance()->getRoleData(req.roleid(), ack)) {
         ack.set_retcode(MRC_INVALID_ROLEID);
         ack.set_roleid(req.roleid());
+        response->setCmd((int)symphony::proto::MSG_ROLE_LOGIN_ACK);
         response->setBody(ack.SerializeAsString());
         return true;
     }
@@ -77,6 +80,7 @@ bool handleMsgRoleLoginReq(symphony::RockRequest::ptr request,
     DBMgr::GetInstance()->getCounterData(req.roleid(), ack);
     DBMgr::GetInstance()->getFriendData(req.roleid(), ack);
     DBMgr::GetInstance()->getSkillData(req.roleid(), ack);
+    response->setCmd((int)symphony::proto::MSG_ROLE_LOGIN_ACK);
     response->setBody(ack.SerializeAsString());
     return true;
 }
@@ -102,6 +106,7 @@ bool handleMsgLogicSvrRegReq(symphony::RockRequest::ptr request,
 
     symphony::proto::LogicRegToDbSvrAck ack;
     ack.set_retcode(MRC_SUCCESSED);
+    response->setCmd((int)symphony::proto::MSG_LOGIC_REGTO_DBSVR_ACK);
     response->setBody(ack.SerializeAsString());
     return true;
 }

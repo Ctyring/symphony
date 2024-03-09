@@ -1,7 +1,7 @@
 #pragma once
 namespace symphony {
 namespace db {
-enum class LSCommand {
+enum class DSCommand {
     LOG_TYPE_NONE = 0x11000,
     TICK = 0x11001,                       // 心跳
     MSG_ROLE_LIST_REQ = 0x11002,          // 请求角色列表

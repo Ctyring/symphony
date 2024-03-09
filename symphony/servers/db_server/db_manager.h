@@ -26,7 +26,7 @@ class DBManager {
 
     bool getTaskData(uint64_t u64ID, symphony::proto::DBRoleLoginAck& Ack);
 
-    bool GetMountData(uint64_t u64ID, symphony::proto::DBRoleLoginAck& Ack);
+    bool getMountData(uint64_t u64ID, symphony::proto::DBRoleLoginAck& Ack);
 
     bool getActivtyData(uint64_t u64ID, symphony::proto::DBRoleLoginAck& Ack);
 

@@ -374,7 +374,7 @@ bool DBManager::getTaskData(uint64_t u64ID,
 
     return true;
 }
-bool DBManager::GetMountData(uint64_t u64ID,
+bool DBManager::getMountData(uint64_t u64ID,
                              symphony::proto::DBRoleLoginAck& Ack) {
     std::string sql = "select * from mount where roleid = ?";
     symphony::MySQLStmt::ptr stmt = symphony::MySQLStmt::Create(m_game_db, sql);

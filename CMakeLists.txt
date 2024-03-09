@@ -122,9 +122,15 @@ protobufmaker(symphony/ns/ns_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/log_protobuf.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/msg_role.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/msg_login_db.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
-
-# protobufmaker(symphony/test.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
-
+protobufmaker(symphony/proto/msg_ret_code.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_base.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_game.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_account.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_copy.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_id.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_login_clt_data.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_move.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/msg_payment.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 add_library(symphony SHARED ${LIB_SRC})
 force_redefine_file_macro_for_sources(symphony)
 

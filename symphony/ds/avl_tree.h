@@ -1,9 +1,12 @@
 #pragma once
+#include <string.h>
 #include <vector>
+#include "assert.h"
+#include "symphony/macro.h"
 template <typename TKey, typename TValue>
 class TreeNode {
    public:
-    TreeNode() : m_pLeft(NULL), m_pRight(NULL), m_nHeight(0) {}
+    TreeNode() : m_nHeight(0), m_pLeft(nullptr), m_pRight(nullptr) {}
 
    public:
     TKey* GetKey() { return &m_Key; }
@@ -89,7 +92,7 @@ template <typename TKey, typename TValue>
 TValue* AVLTree<TKey, TValue>::InsertAlloc(TKey Key) {
     TNodeTypePtr pNode = AllocNode();
     if (pNode == NULL) {
-        ASSERT(FALSE);
+        SYMPHONY_ASSERT(false);
         return NULL;
     }
 
@@ -180,7 +183,7 @@ bool AVLTree<TKey, TValue>::Delete(TNodeTypePtr pNode) {
         return false;
     }
 
-    ASSERT(Find(*pNode->GetKey()) != NULL);
+    SYMPHONY_ASSERT(Find(*pNode->GetKey()) != NULL);
 
     return Delete(*pNode->GetKey());
 }
@@ -234,7 +237,7 @@ bool AVLTree<TKey, TValue>::AllocBufferNode(int nSize) {
         return false;
     }
 
-    memset(pNode, 0, sizeof(TNodeType) * nSize);
+    memset(static_cast<void*>(pNode), 0, sizeof(TNodeType) * nSize);
 
     m_NodeBuff.push_back(pNode);
 
@@ -350,7 +353,7 @@ template <typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::Insert(TKey Key, TValue Value) {
     TNodeTypePtr pNode = AllocNode();
     if (pNode == NULL) {
-        ASSERT(FALSE);
+        SYMPHONY_ASSERT(false);
         return false;
     }
 
@@ -373,14 +376,14 @@ template <typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode,
                                         TNodeTypePtr pInsertNode) {
     if (pParentNode == NULL) {
-        ASSERT(FALSE);
+        SYMPHONY_ASSERT(false);
         return false;
     }
 
     if (pParentNode->m_Key > pInsertNode->m_Key) {
         if (pParentNode->m_pLeft != NULL) {
             if (!InsertInner(pParentNode->m_pLeft, pInsertNode)) {
-                ASSERT(FALSE);
+                SYMPHONY_ASSERT(false);
                 return false;
             }
         } else {
@@ -400,7 +403,7 @@ bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode,
     } else if (pParentNode->m_Key < pInsertNode->m_Key) {
         if (pParentNode->m_pRight != NULL) {
             if (!InsertInner(pParentNode->m_pRight, pInsertNode)) {
-                ASSERT(FALSE);
+                SYMPHONY_ASSERT(false);
                 return false;
             }
         } else {

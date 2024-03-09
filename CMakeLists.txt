@@ -239,6 +239,13 @@ set(DS_SRCS
 )
 add_library(db_server SHARED ${DS_SRCS})
 
+set(AS_SRCS
+	symphony/servers/account_server/account_manager.cc
+	symphony/servers/account_server/account_server_module.cc
+	symphony/servers/account_server/game_log_manager.cc
+)
+add_library(as_server SHARED ${AS_SRCS})
+
 symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
 symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
 endif()

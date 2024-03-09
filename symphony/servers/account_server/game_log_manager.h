@@ -14,12 +14,14 @@ class CGameLogManager {
 
     template <typename T>
     bool WriteGameLog(T& Data) {
-        ERROR_RETURN_FALSE(CGameService::GetInstancePtr()->GetLogSvrConnID() >
-                           0);
+        // ERROR_RETURN_FALSE(CGameService::GetInstancePtr()->GetLogSvrConnID()
+        // >
+        //                    0);
 
-        ServiceBase::GetInstancePtr()->SendMsgRawData(
-            CGameService::GetInstancePtr()->GetLogSvrConnID(), MSG_LOG_DATA_NTF,
-            0, 0, (const char*)&Data, sizeof(T));
+        // ServiceBase::GetInstancePtr()->SendMsgRawData(
+        //     CGameService::GetInstancePtr()->GetLogSvrConnID(),
+        //     symphony::proto::MSG_LOG_DATA_NTF, 0, 0, (const char*)&Data,
+        //     sizeof(T));
 
         return true;
     }

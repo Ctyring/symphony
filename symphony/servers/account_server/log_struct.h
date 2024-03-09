@@ -1,7 +1,7 @@
 #ifndef __LOG_STRUCT_H__
 #define __LOG_STRUCT_H__
 
-#include "symphony.h"
+#include "symphony/symphony.h"
 
 enum ELogType {
     ELT_LOG_TYPE_NONE = 0,
@@ -46,7 +46,7 @@ struct Log_AccountCreate : public Log_BaseData {
     bool GetLogSql(char* pBuff) {
         snprintf(pBuff, 4096,
                  "insert into account_create(accountid, channel, version, "
-                 "optime, ip, uuid, idfa, imei, imodel, openid) values(%lld, "
+                 "optime, ip, uuid, idfa, imei, imodel, openid) values(%ld, "
                  "%u, %d, '%s', '%s','%s','%s','%s', '%s', '%s')",
                  m_uAccountID, m_nChannel, m_dwVersion,
                  CommonFunc::TimeToString(m_uOpTime).c_str(),
@@ -68,7 +68,7 @@ struct Log_AccountLogin : public Log_BaseData {
     bool GetLogSql(char* pBuff) {
         snprintf(pBuff, 4096,
                  "insert into account_login(accountid, channel, version, "
-                 "optime, ip, uuid, idfa, imei, imodel, openid) values(%lld, "
+                 "optime, ip, uuid, idfa, imei, imodel, openid) values(%ld, "
                  "%u, %d, '%s', '%s','%s', '%s','%s', '%s', '%s')",
                  m_uAccountID, m_nChannel, m_dwVersion,
                  CommonFunc::TimeToString(m_uOpTime).c_str(),
@@ -84,7 +84,7 @@ struct Log_RoleCreate : public Log_BaseData {
     bool GetLogSql(char* pBuff) {
         snprintf(pBuff, 4096,
                  "insert into role_create(roleid, accountid, areaid, channel, "
-                 "optime, rolename, idfa) values(%lld, %lld, %d, %d, "
+                 "optime, rolename, idfa) values(%ld, %ld, %d, %d, "
                  "'%s','%s', '%s')",
                  m_uRoleID, m_uAccountID, m_nAreaID, m_nChannel,
                  CommonFunc::TimeToString(m_uOpTime).c_str(), m_szRoleName,
@@ -100,7 +100,7 @@ struct Log_RoleLogin : public Log_BaseData {
     bool GetLogSql(char* pBuff) {
         snprintf(pBuff, 2048,
                  "insert into role_login(roleid, accountid, areaid, channel, "
-                 "level, viplevel, optime, rolename, idfa) values(%lld, %lld, "
+                 "level, viplevel, optime, rolename, idfa) values(%ld, %ld, "
                  "%d, %d, %d, %d, '%s', '%s', '%s')",
                  m_uRoleID, m_uAccountID, m_nAreaID, m_nChannel, m_nLevel,
                  m_nVipLevel, CommonFunc::TimeToString(m_uOpTime).c_str(),
@@ -116,7 +116,7 @@ struct Log_RoleLogout : public Log_BaseData {
     bool GetLogSql(char* pBuff) {
         snprintf(pBuff, 2048,
                  "insert into role_logout(roleid, accountid, areaid, channel, "
-                 "level, viplevel, optime, rolename, idfa) values(%lld, %lld, "
+                 "level, viplevel, optime, rolename, idfa) values(%ld, %ld, "
                  "%d, %d, %d, %d, '%s', '%s', '%s')",
                  m_uRoleID, m_uAccountID, m_nAreaID, m_nChannel, m_nLevel,
                  m_nVipLevel, CommonFunc::TimeToString(m_uOpTime).c_str(),
@@ -171,8 +171,8 @@ struct Log_RoleChat : public Log_BaseData {
         snprintf(pBuff, 2048,
                  "insert into role_chat(roleid,rolename, areaid, channel, "
                  "optime, level, viplevel, chatchl, text, targetid, targetvip, "
-                 "targetname) values(%lld, '%s', %d ,%d, '%s', %d, %d,%d, "
-                 "'%s', %lld, %ld, '%s')",
+                 "targetname) values(%ld, '%s', %d ,%d, '%s', %d, %d,%d, "
+                 "'%s', %ld, %d, '%s')",
                  m_uRoleID, m_szRoleName, m_nAreaID, m_nChannel,
                  CommonFunc::TimeToString(m_uOpTime).c_str(), m_nLevel,
                  m_nVipLevel, m_nChatChl, m_szText, m_uTargetID, m_nTargetVip,

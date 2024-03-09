@@ -156,7 +156,7 @@ Rect2D::Rect2D() {
     m_fRight = 0;
 }
 
-VOID Rect2D::Init(FLOAT fLeft, FLOAT fTop, FLOAT fRight, FLOAT fBottom) {
+void Rect2D::Init(FLOAT fLeft, FLOAT fTop, FLOAT fRight, FLOAT fBottom) {
     m_fLeft = fLeft;
     m_fTop = fTop;
     m_fBottom = fBottom;
@@ -179,7 +179,7 @@ bool Rect2D::Intersects(Rect2D rcArea) {
              m_fTop < rcArea.m_fBottom || rcArea.m_fTop < m_fBottom);
 }
 
-VOID Rect2D::Reset() {
+void Rect2D::Reset() {
     m_fLeft = 0;
     m_fTop = 0;
     m_fBottom = 0;
@@ -311,7 +311,7 @@ float Vector3D::ToDegreesAngle() {
 }
 
 bool Vector3D::FromString(const char* pStr) {
-    return CommonConvert::StringToPos((CHAR*)pStr, m_x, m_y, m_z);
+    return CommonConvert::StringToPos((char*)pStr, m_x, m_y, m_z);
 }
 
 Vector3D Vector3D::operator/(const Vector3D& rhs) const {
@@ -430,7 +430,7 @@ Circle2D::Circle2D(CPoint2D pt, FLOAT fRadius) {
     m_fRadius = fRadius;
 }
 
-VOID Circle2D::Init(FLOAT fX, FLOAT fY, FLOAT fRadius) {
+void Circle2D::Init(FLOAT fX, FLOAT fY, FLOAT fRadius) {
     m_CenterPos.m_x = fX;
     m_CenterPos.m_y = fY;
     m_fRadius = fRadius;
@@ -444,7 +444,7 @@ bool Circle2D::Intersects(Rect2D rcArea) {
     return true;
 }
 
-VOID Circle2D::Reset() {
+void Circle2D::Reset() {
     m_CenterPos.m_x = 0;
     m_CenterPos.m_y = 0;
     m_fRadius = 0;

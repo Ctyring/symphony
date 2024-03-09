@@ -78,4 +78,83 @@
 #include "util/hash_util.h"
 #include "util/json_util.h"
 
+#include "symphony/common/convert.h"
+#include "symphony/common/func.h"
+#include "symphony/common/socket.h"
+#include "symphony/common/time.h"
+
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+
+#define WSAEWOULDBLOCK EWOULDBLOCK
+#define WSAEINPROGRESS EINPROGRESS
+#define WSAEALREADY EALREADY
+#define WSAENOTSOCK ENOTSOCK
+#define WSAEDESTADDRREQ EDESTADDRREQ
+#define WSAEMSGSIZE EMSGSIZE
+#define WSAEPROTOTYPE EPROTOTYPE
+#define WSAENOPROTOOPT ENOPROTOOPT
+#define WSAEPROTONOSUPPORT EPROTONOSUPPORT
+#define WSAESOCKTNOSUPPORT ESOCKTNOSUPPORT
+#define WSAEOPNOTSUPP EOPNOTSUPP
+#define WSAEPFNOSUPPORT EPFNOSUPPORT
+#define WSAEAFNOSUPPORT EAFNOSUPPORT
+#define WSAEADDRINUSE EADDRINUSE
+#define WSAEADDRNOTAVAIL EADDRNOTAVAIL
+#define WSAENETDOWN ENETDOWN
+#define WSAENETUNREACH ENETUNREACH
+#define WSAENETRESET ENETRESET
+#define WSAECONNABORTED ECONNABORTED
+#define WSAECONNRESET ECONNRESET
+#define WSAENOBUFS ENOBUFS
+#define WSAEISCONN EISCONN
+#define WSAENOTCONN ENOTCONN
+#define WSAESHUTDOWN ESHUTDOWN
+#define WSAETOOMANYREFS ETOOMANYREFS
+#define WSAETIMEDOUT ETIMEDOUT
+#define WSAECONNREFUSED ECONNREFUSED
+#define WSAELOOP ELOOP
+#define WSAENAMETOOLONG ENAMETOOLONG
+#define WSAEHOSTDOWN EHOSTDOWN
+#define WSAEHOSTUNREACH EHOSTUNREACH
+#define WSAENOTEMPTY ENOTEMPTY
+#define WSAEPROCLIM EPROCLIM
+#define WSAEUSERS EUSERS
+#define WSAEDQUOT EDQUOT
+#define WSAESTALE ESTALE
+#define WSAEREMOTE EREMOTE
+
+typedef char INT8;
+typedef unsigned char UINT8;
+typedef short INT16;
+typedef unsigned short UINT16;
+typedef int INT32;
+typedef unsigned int UINT32;
+typedef int BOOL;
+typedef void VOID;
+typedef float FLOAT;
+typedef double DOUBLE;
+typedef long long INT64;
+typedef unsigned long long UINT64;
+typedef unsigned char BYTE;
+typedef char CHAR;
+typedef int SOCKET;
+typedef int HANDLE;
+
+#define INVALID_SOCKET (-1)
+#define TRUE 1
+#define FALSE 0
+#define INVALID_HANDLE_VALUE 0
+#endif
+
+#ifdef OS_PLATFORM_WINDOWS
+#ifdef SERVER_ENGINE
+#define EngineClass _declspec(dllexport)
+#else
+#define EngineClass _declspec(dllimport)
+#endif
+#else
+#define EngineClass
 #endif

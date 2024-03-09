@@ -227,6 +227,12 @@ set(LS_SRCS
 )
 add_library(log_server SHARED ${LS_SRCS})
 
+set(DS_SRCS
+	symphony/servers/db_server/db_manager.cc
+	symphony/servers/db_server/db_server_module.cc
+)
+add_library(db_server SHARED ${DS_SRCS})
+
 symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
 symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
 endif()

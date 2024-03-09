@@ -70,12 +70,36 @@ class MySQLRes : public ISQLData {
     time_t getTime(int idx) override;
     bool next() override;
 
+    int fieldIndex(const char* szField);
+    const char* fieldName(int nCol);
+    int seekRow(int offerset);
+    int getIntField(int nField, int nNullValue = 0);
+    int getIntField(const char* szField, int nNullValue = 0);
+
+    int64_t getInt64Field(int nField, int64_t nNullValue = 0);
+    int64_t getInt64Field(const char* szField, int64_t nNullValue = 0);
+
+    double getFloatField(int nField, double fNullValue = 0.0);
+    double getFloatField(const char* szField, double fNullValue = 0.0);
+
+    // 0...n-1列
+    const char* getStringField(int nField, const char* szNullValue = "");
+    const char* getStringField(const char* szField,
+                               const char* szNullValue = "");
+
+    const unsigned char* getBlobField(int nField, int& nLen);
+    const unsigned char* getBlobField(const char* szField, int& nLen);
+
+    bool fieldIsNull(int nField);
+    bool fieldIsNull(const char* szField);
+
    private:
     int m_errno;
     std::string m_errstr;
     MYSQL_ROW m_cur;
     unsigned long* m_curLength;
     std::shared_ptr<MYSQL_RES> m_data;
+    MYSQL_FIELD* m_field;
 };
 
 class MySQLStmtRes : public ISQLData {

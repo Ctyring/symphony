@@ -598,6 +598,256 @@ bool MySQLRes::next() {
     return m_cur;
 }
 
+int MySQLRes::seekRow(int offerset) {
+    if (offerset < 0) {
+        offerset = 0;
+    }
+
+    int data_count = getDataCount();
+    if (offerset >= data_count) {
+        offerset = data_count - 1;
+    }
+
+    mysql_data_seek(m_data.get(), offerset);
+
+    m_cur = mysql_fetch_row(m_data.get());
+
+    return offerset;
+}
+
+int MySQLRes::fieldIndex(const char* szField) {
+    if (NULL == m_data.get()) {
+        return -1;
+    }
+
+    if (NULL == szField) {
+        return -1;
+    }
+
+    mysql_field_seek(m_data.get(), 0);  // 定位到第0列
+    int i = 0;
+    while (i < getDataCount()) {
+        m_field = mysql_fetch_field(m_data.get());
+        if (m_field == NULL) {
+            return -1;
+        }
+#ifdef WIN32
+        if (_stricmp(m_field->name, szField) == 0)  // 找到
+#else
+        if (strcasecmp(m_field->name, szField) == 0)  // 找到
+#endif
+        {
+            return i;
+        }
+
+        i++;
+    }
+
+    return -1;
+}
+
+const char* MySQLRes::fieldName(int nCol) {
+    if (m_data.get() == NULL) {
+        return NULL;
+    }
+
+    mysql_field_seek(m_data.get(), nCol);
+
+    m_field = mysql_fetch_field(m_data.get());
+    if (m_field != NULL) {
+        return m_field->name;
+    }
+
+    return NULL;
+}
+
+int MySQLRes::getIntField(int nField, int nNullValue /*=0*/) {
+    if (NULL == m_data.get()) {
+        return nNullValue;
+    }
+
+    if (nField + 1 > (int)getDataCount()) {
+        return nNullValue;
+    }
+
+    if (NULL == m_cur) {
+        return nNullValue;
+    }
+
+    return atoi(m_cur[nField]);
+}
+
+int MySQLRes::getIntField(const char* szField, int nNullValue /*=0*/) {
+    if (NULL == m_data.get() || NULL == szField) {
+        return nNullValue;
+    }
+
+    if (NULL == m_cur) {
+        return nNullValue;
+    }
+
+    const char* filed = getStringField(szField);
+    if (NULL == filed) {
+        return nNullValue;
+    }
+
+    return atoi(filed);
+}
+
+const char* MySQLRes::getStringField(int nField,
+                                     const char* szNullValue /*=""*/) {
+    if (NULL == m_data.get()) {
+        return szNullValue;
+    }
+
+    if (nField + 1 > (int)getDataCount()) {
+        return szNullValue;
+    }
+
+    if (NULL == m_cur) {
+        return szNullValue;
+    }
+
+    if (m_cur[nField] == NULL) {
+        return szNullValue;
+    }
+
+    return m_cur[nField];
+}
+
+const char* MySQLRes::getStringField(const char* szField,
+                                     const char* szNullValue /*=""*/) {
+    if (NULL == m_data.get()) {
+        return szNullValue;
+    }
+
+    int nField = fieldIndex(szField);
+    if (nField == -1) {
+        return szNullValue;
+    }
+
+    return getStringField(nField, szNullValue);
+}
+
+int64_t MySQLRes::getInt64Field(int nField, int64_t nNullValue /*= 0*/) {
+    if (NULL == m_data.get()) {
+        return nNullValue;
+    }
+
+    if (nField + 1 > (int)getDataCount()) {
+        return nNullValue;
+    }
+
+    if (NULL == m_cur) {
+        return nNullValue;
+    }
+#ifdef WIN32
+    return _atoi64(_row[nField]);
+#else
+    return atoll(m_cur[nField]);
+#endif
+}
+
+int64_t MySQLRes::getInt64Field(const char* szField,
+                                int64_t nNullValue /*= 0*/) {
+    if (NULL == m_data.get() || NULL == szField) {
+        return nNullValue;
+    }
+
+    if (NULL == m_cur) {
+        return nNullValue;
+    }
+
+    const char* filed = getStringField(szField);
+    if (NULL == filed) {
+        return nNullValue;
+    }
+
+#ifdef WIN32
+    return _atoi64(filed);
+#else
+    return atoll(filed);
+#endif
+}
+
+double MySQLRes::getFloatField(int nField, double fNullValue /*=0.0*/) {
+    const char* field = getStringField(nField);
+    if (NULL == field) {
+        return fNullValue;
+    }
+
+    return atof(field);
+}
+
+double MySQLRes::getFloatField(const char* szField,
+                               double fNullValue /*=0.0*/) {
+    const char* field = getStringField(szField);
+    if (NULL == field) {
+        return fNullValue;
+    }
+
+    return atof(field);
+}
+
+const unsigned char* MySQLRes::getBlobField(int nField, int& nLen) {
+    const unsigned char* pData = (const unsigned char*)getStringField(nField);
+    if (NULL == pData) {
+        return NULL;
+    }
+
+    unsigned long* FieldLength = mysql_fetch_lengths(m_data.get());
+    nLen = (int)FieldLength[nField];
+
+    return pData;
+}
+
+const unsigned char* MySQLRes::getBlobField(const char* szField, int& nLen) {
+    if (NULL == m_data.get()) {
+        return NULL;
+    }
+
+    int nField = fieldIndex(szField);
+    if (nField == -1) {
+        return NULL;
+    }
+
+    const unsigned char* pData = (const unsigned char*)getStringField(nField);
+    if (NULL == pData) {
+        return NULL;
+    }
+
+    unsigned long* FieldLength = mysql_fetch_lengths(m_data.get());
+    nLen = (int)FieldLength[nField];
+
+    return pData;
+}
+
+bool MySQLRes::fieldIsNull(int nField) {
+    if (NULL == m_data.get()) {
+        return NULL;
+    }
+
+    const unsigned char* pData = (const unsigned char*)getStringField(nField);
+    if (NULL == pData) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+bool MySQLRes::fieldIsNull(const char* szField) {
+    if (NULL == m_data.get()) {
+        return NULL;
+    }
+
+    const unsigned char* pData = (const unsigned char*)getStringField(szField);
+    if (NULL == pData) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 MySQLStmtRes::ptr MySQLStmtRes::Create(std::shared_ptr<MySQLStmt> stmt) {
     int eno = mysql_stmt_errno(stmt->getRaw());
     const char* errstr = mysql_stmt_error(stmt->getRaw());

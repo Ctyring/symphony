@@ -57,7 +57,7 @@ std::string CommonConvert::IntToString(int32_t nValue) {
 std::string CommonConvert::IntToString(int64_t uValue) {
     char szValue[64] = {0};
 
-    snprintf(szValue, 64, "%lld", uValue);
+    snprintf(szValue, 64, "%ld", uValue);
 
     return std::string(szValue);
 }
@@ -73,7 +73,7 @@ std::string CommonConvert::IntToString(uint32_t nValue) {
 std::string CommonConvert::IntToString(uint64_t uValue) {
     char szValue[64] = {0};
 
-    snprintf(szValue, 64, "%lld", uValue);
+    snprintf(szValue, 64, "%ld", uValue);
 
     return std::string(szValue);
 }
@@ -87,7 +87,7 @@ bool CommonConvert::StringToPos(const char* pStr,
     }
 
     char szTempBuf[256] = {0};
-    strncpy(szTempBuf, pStr, strlen(pStr));
+    memcpy(szTempBuf, pStr, strlen(pStr));
 
     char* pPos = strchr(szTempBuf, ',');
     if (pPos == NULL) {
@@ -125,7 +125,7 @@ bool CommonConvert::StringToBox(const char* pStr,
     }
 
     char szTempBuf[256] = {0};
-    strncpy(szTempBuf, pStr, strlen(pStr));
+    memcpy(szTempBuf, pStr, strlen(pStr));
 
     char* pPos = strchr(szTempBuf, ',');
     if (pPos == NULL) {
@@ -275,7 +275,7 @@ bool CommonConvert::StringToVector(const char* pStrValue,
     }
 
     char szBuf[1024] = {0};
-    strncpy(szBuf, pStrValue, 1024);
+    memcpy(szBuf, pStrValue, 1024);
 
     char* pBeginPos = szBuf;
     char* pEndPos = strchr(pBeginPos, cDelim);
@@ -350,7 +350,7 @@ bool CommonConvert::StringToVector(const char* pStrValue,
     }
 
     char szBuf[1024] = {0};
-    strncpy(szBuf, pStrValue, 1024);
+    memcpy(szBuf, pStrValue, 1024);
 
     char* pBeginPos = szBuf;
     char* pEndPos = strchr(pBeginPos, cDelim);
@@ -658,7 +658,7 @@ bool CommonConvert::StrCopy(char* pszDest, const char* pszSrc, int32_t nLen) {
     }
 
     // 这个方法并不会自动加上终止符
-    strncpy(pszDest, pszSrc, nCpyLen);
+    memcpy(pszDest, pszSrc, nCpyLen);
     pszDest[nCpyLen] = '\0';
 
     return true;

@@ -239,6 +239,21 @@ std::string AccountServerModule::statusString() {
     std::string ss;
     return ss;
 }
+
+extern "C" {
+
+symphony::Module* CreateModule() {
+    std::cout << "=============AccountServerModule Start================="
+              << std::endl;
+    return new AccountServerModule;
+}
+
+void DestoryModule(symphony::Module* ptr) {
+    std::cout << "=============Destory AccountServerModule================="
+              << std::endl;
+    delete ptr;
+}
+}
 }  // namespace as
 
 }  // namespace symphony

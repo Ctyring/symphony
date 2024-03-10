@@ -389,23 +389,23 @@ std::string CommonFunc::GetLastErrorStr(int32_t nError) {
 int CommonFunc::CreateShareMemory(int32_t nModuleID,
                                   int32_t nPage,
                                   int32_t nSize) {
-    int hShare = NULL;
+    int hShare = 0;
 #ifdef WIN32
     char szMemName[128] = {0};
     snprintf(szMemName, 128, "SM_%d", (nModuleID << 16) | nPage);
-    hShare = CreateFileMapping(INVALID_HANDLE_VALUE, NULL, PAGE_READWRITE, 0,
+    hShare = CreateFileMapping(INVALID_HANDLE_VALUE, 0, PAGE_READWRITE, 0,
                                nSize, szMemName);
-    if (hShare != NULL) {
+    if (hShare != 0) {
         if (GetLastError() == ERROR_ALREADY_EXISTS) {
             CloseHandle(hShare);
-            hShare = NULL;
+            hShare = 0;
         }
     }
 #else
     hShare =
         shmget((nModuleID << 16) | nPage, nSize, 0666 | IPC_CREAT | IPC_EXCL);
     if (hShare == -1) {
-        hShare = NULL;
+        hShare = 0;
     }
 #endif
     return hShare;
@@ -438,7 +438,7 @@ int CommonFunc::CreateShareMemory(int32_t nModuleID,
 
 // s:10m:6:p:16
 int CommonFunc::OpenShareMemory(int32_t nModuleID, int32_t nPage) {
-    int hShare = NULL;
+    int hShare = 0;
 #ifdef WIN32
     char szMemName[128] = {0};
     snprintf(szMemName, 128, "SM_%d", nModuleID << 16 | nPage);
@@ -446,7 +446,7 @@ int CommonFunc::OpenShareMemory(int32_t nModuleID, int32_t nPage) {
 #else
     hShare = shmget(nModuleID << 16 | nPage, 0, 0);
     if (hShare == -1) {
-        return NULL;
+        return 0;
     }
 #endif
     return hShare;

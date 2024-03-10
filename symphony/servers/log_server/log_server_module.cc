@@ -24,7 +24,7 @@ LogServerModule::LogServerModule()
     m_log_db = m;
 }
 
-bool symphony::ls::LogServerModule::onServerReady() {
+bool LogServerModule::onServerReady() {
     m_timer = symphony::IOManager::GetThis()->addTimer(
         60 * 1000, std::bind(&LogServerModule::onTimer, this), true);
     return true;

@@ -111,6 +111,13 @@ set(LIB_SRC
     symphony/ds/roaring.c
 	symphony/ds/util.cc
 	symphony/servers/log_server/ls_client.cc
+	symphony/common/convert.cc
+	symphony/common/func.cc
+	symphony/common/line.cc
+	symphony/common/math.cc
+	symphony/common/socket.cc
+	symphony/common/time.cc
+	symphony/util/str_util.cc
 	# symphony/servers/log_server/log_server_module.cc
 	)
 
@@ -244,7 +251,7 @@ set(AS_SRCS
 	symphony/servers/account_server/account_server_module.cc
 	symphony/servers/account_server/game_log_manager.cc
 )
-add_library(as_server SHARED ${AS_SRCS})
+add_library(account_server SHARED ${AS_SRCS})
 
 symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
 symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")

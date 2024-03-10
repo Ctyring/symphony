@@ -31,13 +31,13 @@
 #include "singleton.h"
 #include "socket.h"
 #include "stream.h"
+#include "symphony/util/global_define.h"
 #include "tcp_server.h"
 #include "thread.h"
 #include "timer.h"
 #include "uri.h"
 #include "util.h"
 #include "worker.h"
-
 // #include "db/db.h"
 // #include "db/mysql.h"
 #include "db/sqlite3.h"
@@ -87,6 +87,19 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+
+#include "symphony/proto/log_protobuf.pb.h"
+#include "symphony/proto/msg_account.pb.h"
+#include "symphony/proto/msg_base.pb.h"
+#include "symphony/proto/msg_copy.pb.h"
+#include "symphony/proto/msg_game.pb.h"
+#include "symphony/proto/msg_id.pb.h"
+#include "symphony/proto/msg_login_clt_data.pb.h"
+#include "symphony/proto/msg_login_db.pb.h"
+#include "symphony/proto/msg_move.pb.h"
+#include "symphony/proto/msg_payment.pb.h"
+#include "symphony/proto/msg_ret_code.pb.h"
+#include "symphony/proto/msg_role.pb.h"
 
 #define WSAEWOULDBLOCK EWOULDBLOCK
 #define WSAEINPROGRESS EINPROGRESS

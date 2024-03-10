@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <sys/socket.h>
 #include "fcntl.h"
-#include "symphony.h"
+#include "symphony/symphony.h"
 
 bool CommonSocket::SetSocketReuseable(int hSocket) {
     int nReuse = 1;
@@ -160,7 +160,8 @@ std::string CommonSocket::HttpGet(std::string strHost,
     // 循环接收
     int32_t nDataLen = 0;
     int32_t nBytes;
-    while (nBytes = recv(hSocket, szRecvBuff + nDataLen, 10240 - nDataLen, 0)) {
+    while (
+        (nBytes = recv(hSocket, szRecvBuff + nDataLen, 10240 - nDataLen, 0))) {
         nDataLen += nBytes;
         if (nDataLen >= 10240) {
             break;

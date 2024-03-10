@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+
 namespace symphony {
 
 class str_util {

@@ -1,6 +1,6 @@
-#include "CommonConvert.h"
-#include "CommonMath.h"
-#include "stdafx.h"
+#include "math.h"
+#include <math.h>
+#include "convert.h"
 
 Vector2D::Vector2D(float _x /*= 0.0f*/, float _y /*= 0.0f */) {
     m_x = _x;
@@ -31,24 +31,24 @@ float Vector2D::Normalized() {
     return fLength;
 }
 
-FLOAT Vector2D::DistanceToSegment(Vector2D pt1, Vector2D pt2) {
-    FLOAT cross = (pt2.m_x - pt1.m_x) * (m_x - pt1.m_x) +
+float Vector2D::DistanceToSegment(Vector2D pt1, Vector2D pt2) {
+    float cross = (pt2.m_x - pt1.m_x) * (m_x - pt1.m_x) +
                   (pt2.m_y - pt1.m_y) * (m_y - pt1.m_y);
     if (cross <= 0) {
         return sqrtf((m_x - pt1.m_x) * (m_x - pt1.m_x) +
                      (m_y - pt1.m_y) * (m_y - pt1.m_y));
     }
 
-    FLOAT d2 = (pt2.m_x - pt1.m_x) * (pt2.m_x - pt1.m_x) +
+    float d2 = (pt2.m_x - pt1.m_x) * (pt2.m_x - pt1.m_x) +
                (pt2.m_y - pt1.m_y) * (pt2.m_y - pt1.m_y);
     if (cross >= d2) {
         return sqrtf((m_x - pt2.m_x) * (m_x - pt2.m_x) +
                      (m_y - pt2.m_y) * (m_y - pt2.m_y));
     }
 
-    FLOAT r = cross / d2;
-    FLOAT px = pt1.m_x + (pt2.m_x - pt1.m_x) * r;
-    FLOAT py = pt1.m_y + (pt2.m_y - pt1.m_y) * r;
+    float r = cross / d2;
+    float px = pt1.m_x + (pt2.m_x - pt1.m_x) * r;
+    float py = pt1.m_y + (pt2.m_y - pt1.m_y) * r;
 
     return sqrtf((m_x - px) * (m_x - px) + (py - pt1.m_y) * (py - pt1.m_y));
 }
@@ -74,12 +74,12 @@ float Vector2D::ToDegreesAngle() {
     return ToRadiansAngle() * RAD_TO_DEG;
 }
 
-Vector2D Vector2D::Rotate(Vector2D A, FLOAT radianAngle) {
+Vector2D Vector2D::Rotate(Vector2D A, float radianAngle) {
     return Vector2D(A.m_x * cos(radianAngle) - A.m_y * sin(radianAngle),
                     A.m_x * sin(radianAngle) + A.m_y * cos(radianAngle));
 }
 
-void Vector2D::Rotate(FLOAT radianAngle) {
+void Vector2D::Rotate(float radianAngle) {
     float tmx = 0, tmy = 0;
     tmx = m_x * cos(radianAngle) - m_y * sin(radianAngle);
     tmy = m_x * sin(radianAngle) + m_y * cos(radianAngle);
@@ -156,7 +156,7 @@ Rect2D::Rect2D() {
     m_fRight = 0;
 }
 
-void Rect2D::Init(FLOAT fLeft, FLOAT fTop, FLOAT fRight, FLOAT fBottom) {
+void Rect2D::Init(float fLeft, float fTop, float fRight, float fBottom) {
     m_fLeft = fLeft;
     m_fTop = fTop;
     m_fBottom = fBottom;
@@ -279,13 +279,13 @@ float Vector3D::AngleBetween2D(Vector3D& dest) {
                  sqrtf(dest.m_x * dest.m_x + dest.m_z * dest.m_z));
 }
 
-Vector2D Vector3D::Rotate(Vector2D A, FLOAT radianAngle) {
+Vector2D Vector3D::Rotate(Vector2D A, float radianAngle) {
     return Vector2D(A.m_x * cos(radianAngle) - A.m_y * sin(radianAngle),
                     A.m_x * sin(radianAngle) + A.m_y * cos(radianAngle));
 }
 
 Vector3D Vector3D::ParallelComponent(Vector3D& unitBasis) {
-    FLOAT projection = DotProduct(unitBasis);
+    float projection = DotProduct(unitBasis);
     return unitBasis * projection;
 }
 
@@ -390,17 +390,17 @@ Vector3D& Vector3D::operator=(const Vector3D& v) {
     return *this;
 }
 
-FLOAT CommonMath::DegreesToRadians(FLOAT fDegrees) {
+float CommonMath::DegreesToRadians(float fDegrees) {
     return fDegrees * DEG_TO_RAD;
 }
 
-FLOAT CommonMath::RadiansToDegrees(FLOAT fRadians) {
+float CommonMath::RadiansToDegrees(float fRadians) {
     return fRadians * RAD_TO_DEG;
 }
 
-FLOAT CommonMath::Clamp(const FLOAT fValue,
-                        const FLOAT fMin,
-                        const FLOAT fMax) {
+float CommonMath::Clamp(const float fValue,
+                        const float fMin,
+                        const float fMax) {
     if (fValue < fMin) {
         return fMin;
     }
@@ -413,24 +413,24 @@ FLOAT CommonMath::Clamp(const FLOAT fValue,
 }
 
 bool CommonMath::IsInCircle(Vector3D tTarPos,
-                            FLOAT fTarRadius,
+                            float fTarRadius,
                             Vector3D tCirclePos,
-                            FLOAT fCircleRadius) {
+                            float fCircleRadius) {
     return tTarPos.Distance2D(tCirclePos) < fCircleRadius + fTarRadius;
 }
 
-Circle2D::Circle2D(FLOAT fX, FLOAT fY, FLOAT fRadius) {
+Circle2D::Circle2D(float fX, float fY, float fRadius) {
     m_CenterPos.m_x = fX;
     m_CenterPos.m_y = fY;
     m_fRadius = fRadius;
 }
 
-Circle2D::Circle2D(CPoint2D pt, FLOAT fRadius) {
+Circle2D::Circle2D(CPoint2D pt, float fRadius) {
     m_CenterPos = pt;
     m_fRadius = fRadius;
 }
 
-void Circle2D::Init(FLOAT fX, FLOAT fY, FLOAT fRadius) {
+void Circle2D::Init(float fX, float fY, float fRadius) {
     m_CenterPos.m_x = fX;
     m_CenterPos.m_y = fY;
     m_fRadius = fRadius;

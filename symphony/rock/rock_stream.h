@@ -46,6 +46,9 @@ class RockStream : public symphony::AsyncSocketStream {
     void setRequestHandler(request_handler v) { m_requestHandler = v; }
     void setNotifyHandler(notify_handler v) { m_notifyHandler = v; }
 
+    int32_t getConnId() const { return m_connId; }
+    void setConnId(int32_t v) { m_connId = v; }
+
     template <class T>
     void setData(const T& v) {
         m_data = v;
@@ -86,6 +89,7 @@ class RockStream : public symphony::AsyncSocketStream {
     request_handler m_requestHandler;
     notify_handler m_notifyHandler;
     boost::any m_data;
+    int32_t m_connId = 0;
 };
 
 class RockSession : public RockStream {

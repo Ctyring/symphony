@@ -20,7 +20,9 @@ BOOL LogicSvrManager::Init() {
 
     m_pThread = new std::thread(&LogicSvrManager::SaveLogicServerThread, this);
 
-    ERROR_RETURN_FALSE(m_pThread != NULL);
+    if (m_pThread == NULL) {
+        return false;
+    }
 
     return TRUE;
 }
@@ -106,7 +108,12 @@ BOOL LogicSvrManager::UpdateLogicServerInfo(INT32 nServerID,
                                             INT32 nErrorCount,
                                             const std::string& strSvrName) {
     LogicServerNode* pNode = GetLogicServerInfo(nServerID);
-    ERROR_RETURN_FALSE(pNode != NULL);
+    if (pNode == nullptr) {
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "LogicSvrManager::UpdateLogicServerInfo Failed, ServerID:"
+            << nServerID;
+        return false;
+    }
 
     if ((pNode->m_nMaxOnline != nMaxOnline) ||
         (pNode->m_nCurOnline != nCurOnline) || (pNode->m_nTotalNum != nTotal) ||
@@ -302,7 +309,7 @@ BOOL LogicSvrManager::ReloadServerList(INT32 nServerID) {
             pNode->m_CheckChannelList.clear();
             std::vector<std::string> vtValue;
             CommonConvert::SpliteString(strCheckChannel, ";", vtValue);
-            for (int i = 0; i < vtValue.size(); i++) {
+            for (int i = 0; i < (int)vtValue.size(); i++) {
                 INT32 nTemp = CommonConvert::StringToInt(vtValue[i].c_str());
                 if (nTemp > 0) {
                     pNode->m_CheckChannelList.insert(nTemp);
@@ -317,7 +324,7 @@ BOOL LogicSvrManager::ReloadServerList(INT32 nServerID) {
             pNode->m_CheckIpList.clear();
             std::vector<std::string> vtValue;
             CommonConvert::SpliteString(strCheckIp, ";", vtValue);
-            for (int i = 0; i < vtValue.size(); i++) {
+            for (int i = 0; i < (int)vtValue.size(); i++) {
                 INT32 nTemp = CommonSocket::IpAddrStrToInt(vtValue[i].c_str());
                 if (nTemp > 0) {
                     pNode->m_CheckIpList.insert(nTemp);
@@ -372,7 +379,7 @@ BOOL LogicSvrManager::SaveLogicServerThread() {
                          "port,http_port,svr_flag, "
                          "corner_mark,opentime,min_version, max_version, "
                          "check_chan, check_ip) values(%d, '%s', '%s','%s', "
-                         "%d, %d, %d, %d, %ld,'%s','%s','%s','%s');",
+                         "%d, %d, %d, %d, %llu,'%s','%s','%s','%s');",
                          pTempNode->m_nServerID,
                          pTempNode->m_strSvrName.c_str(), "127.0.0.1",
                          pTempNode->m_strInnerAddr.c_str(), pTempNode->m_nPort,

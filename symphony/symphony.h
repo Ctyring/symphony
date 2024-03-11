@@ -31,7 +31,7 @@
 #include "singleton.h"
 #include "socket.h"
 #include "stream.h"
-#include "symphony/util/global_define.h"
+
 #include "tcp_server.h"
 #include "thread.h"
 #include "timer.h"
@@ -138,6 +138,7 @@
 #define WSAEDQUOT EDQUOT
 #define WSAESTALE ESTALE
 #define WSAEREMOTE EREMOTE
+#define SQL_BUFF_LEN 1024
 
 typedef char INT8;
 typedef unsigned char UINT8;

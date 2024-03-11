@@ -231,6 +231,7 @@ class IPv4Address : public IPAddress {
 
     const sockaddr* getAddr() const override;
     sockaddr* getAddr() override;
+
     socklen_t getAddrLen() const override;
     std::ostream& insert(std::ostream& os) const override;
 

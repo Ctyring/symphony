@@ -1,4 +1,5 @@
 #include "symphony/servers/login_server/login_server_module.h"
+#include "login_client_manager.h"
 #include "symphony/module.h"
 #include "symphony/symphony.h"
 namespace symphony {
@@ -13,7 +14,13 @@ bool LoginServerModule::onServerReady() {
 bool LoginServerModule::handleRockRequest(symphony::RockRequest::ptr request,
                                           symphony::RockResponse::ptr response,
                                           symphony::RockStream::ptr stream) {
-    switch (request->getCmd()) {}
+    switch (request->getCmd()) {
+        default:
+            SYMPHONY_LOG_ERROR(g_logger)
+                << "unknow cmd: " << request->getCmd() << std::endl;
+            return true;
+    }
+    return true;
 }
 
 bool LoginServerModule::handleMsgCheckVersionReq(
@@ -142,101 +149,280 @@ bool LoginServerModule::handleMsgSelectServerReq(
     symphony::proto::SelectServerReq req;
     req.ParsePartialFromArray(request->getBody().c_str(),
                               request->getBody().size());
+    if (req.serverid() != 0) {
+        return true;
+    }
+    if (req.accountid() > 0) {
+        return true;
+    }
 
-    ERROR_RETURN_TRUE(req.serverid() != 0);
-    ERROR_RETURN_TRUE(req.accountid() > 0);
+    int32_t nConnID = stream->getConnId();
     if (!CLoginClientMgr::GetInstancePtr()->CheckClientMessage(
-            nConnID, pPacket->m_nMsgID)) {
-        CLog::GetInstancePtr()->LogError("非法的消息请求SelectServer!!!");
+            nConnID, request->getCmd())) {
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "非法的消息请求SelectServer!!!" << std::endl;
         return TRUE;
     }
 
     CLoginClientMgr::GetInstancePtr()->RemoveByConnID(nConnID);
 
     LogicServerNode* pServerNode =
-        m_LogicSvrMgr.GetLogicServerInfo(Req.serverid());
+        m_LogicSvrMgr.GetLogicServerInfo(req.serverid());
     if (pServerNode == NULL) {
-        CLog::GetInstancePtr()->LogError("选择服务器错误 无效的服务器ID:%d",
-                                         Req.serverid());
-        SelectServerAck Ack;
-        Ack.set_serveraddr("0.0.0.0");
-        Ack.set_serverport(0);
-        Ack.set_retcode(MRC_INVALID_SERVER_ID);
-        ERROR_RETURN_TRUE(ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
-            nConnID, MSG_SELECT_SERVER_ACK, 0, 0, Ack));
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "选择服务器错误 无效的服务器ID:" << req.serverid() << std::endl;
+        symphony::proto::SelectServerAck ack;
+        ack.set_serveraddr("0.0.0.0");
+        ack.set_serverport(0);
+        ack.set_retcode(MRC_INVALID_SERVER_ID);
+        response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+        response->setBody(ack.SerializeAsString());
         return TRUE;
     }
 
     if (pServerNode->m_ServerFlag == ESF_MAINTAIN ||
         pServerNode->m_ServerStatus != ESS_SVR_ONLINE) {
-        CLog::GetInstancePtr()->LogError("服务器:%d 维护中 ServerFlag:%d",
-                                         Req.serverid(),
-                                         pServerNode->m_ServerFlag);
-        SelectServerAck Ack;
-        Ack.set_serveraddr("0.0.0.0");
-        Ack.set_serverport(0);
-        Ack.set_retcode(MRC_SERVER_MAINTAIN);
-        ERROR_RETURN_TRUE(ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
-            nConnID, MSG_SELECT_SERVER_ACK, 0, 0, Ack));
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "服务器:" << req.serverid()
+            << " 维护中 ServerFlag:" << pServerNode->m_ServerFlag << std::endl;
+        symphony::proto::SelectServerAck ack;
+        ack.set_serveraddr("0.0.0.0");
+        ack.set_serverport(0);
+        ack.set_retcode(MRC_SERVER_MAINTAIN);
+        response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+        response->setBody(ack.SerializeAsString());
         return TRUE;
     }
 
     if (pServerNode->m_ServerStatus != ESS_SVR_ONLINE) {
-        CLog::GetInstancePtr()->LogError("选择服务器错误 服务器:%d 不在线",
-                                         Req.serverid());
-        SelectServerAck Ack;
-        Ack.set_serveraddr("0.0.0.0");
-        Ack.set_serverport(0);
-        Ack.set_retcode(MRC_SERVER_NOT_AVAILABLE);
-        ERROR_RETURN_TRUE(ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
-            nConnID, MSG_SELECT_SERVER_ACK, 0, 0, Ack));
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "选择服务器错误 服务器:" << req.serverid() << " 不在线"
+            << std::endl;
+        symphony::proto::SelectServerAck ack;
+        ack.set_serveraddr("0.0.0.0");
+        ack.set_serverport(0);
+        ack.set_retcode(MRC_SERVER_NOT_AVAILABLE);
+        response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+        response->setBody(ack.SerializeAsString());
         return TRUE;
     }
 
     if (pServerNode->m_uSvrOpenTime > CommonFunc::GetCurrTime()) {
-        SelectServerAck Ack;
-        Ack.set_serveraddr("0.0.0.0");
-        Ack.set_serverport(0);
-        Ack.set_retcode(MRC_SERVER_NOT_OPENTIME);
-        ERROR_RETURN_TRUE(ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
-            nConnID, MSG_SELECT_SERVER_ACK, 0, 0, Ack));
+        symphony::proto::SelectServerAck ack;
+        ack.set_serveraddr("0.0.0.0");
+        ack.set_serverport(0);
+        ack.set_retcode(MRC_SERVER_NOT_OPENTIME);
+        response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+        response->setBody(ack.SerializeAsString());
         return TRUE;
     }
 
-    Req.set_checkrole(pServerNode->m_ServerFlag == ESF_BUSY);
-    ERROR_RETURN_TRUE(ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
-        pServerNode->m_nConnID, MSG_SELECT_SERVER_REQ, 0, nConnID, Req));
-
+    req.set_checkrole(pServerNode->m_ServerFlag == ESF_BUSY);
+    response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_REQ);
+    response->setBody(req.SerializeAsString());
     return TRUE;
 }
 bool LoginServerModule::handleMsgAccountRegAck(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::AccountRegAck ack;
+    ack.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    if (stream->getConnId() == 0) {
+        return true;
+    }
+
+    response->setCmd((int)symphony::proto::MSG_ACCOUNT_REG_ACK);
+    response->setBody(ack.SerializeAsString());
+    return true;
+}
 bool LoginServerModule::handleMsgAccountLoginAck(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::AccountLoginAck Ack;
+    Ack.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    INT32 nConnID = stream->getConnId();
+    if (nConnID == 0) {
+        return TRUE;
+    }
+
+    LogicServerNode* pNode = m_LogicSvrMgr.GetLogicServerInfo(Ack.lastsvrid());
+    if (pNode == NULL) {
+        pNode = m_LogicSvrMgr.GetSuggestServer(Ack.review(), Ack.channel(),
+                                               Ack.ipaddr());
+    }
+
+    if (pNode == NULL) {
+        Ack.set_lastsvrid(0);
+        Ack.set_lastsvrname("No Server");
+    } else {
+        Ack.set_lastsvrid(pNode->m_nServerID);
+        Ack.set_lastsvrname(pNode->m_strSvrName);
+    }
+
+    response->setCmd((int)symphony::proto::MSG_ACCOUNT_LOGIN_ACK);
+    response->setBody(Ack.SerializeAsString());
+
+    return TRUE;
+}
 bool LoginServerModule::handleMsgLogicSvrRegReq(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::LogicRegToLoginReq Req;
+    Req.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+    m_LogicSvrMgr.RegisterLogicServer(stream->getConnId(), Req.serverid(),
+                                      Req.serverport(), Req.httpport(),
+                                      Req.servername(), Req.svrinnerip());
+    symphony::proto::LogicRegToLoginAck Ack;
+    Ack.set_retcode(MRC_SUCCESSED);
+
+    LogicServerNode* pServerNode =
+        m_LogicSvrMgr.GetLogicServerInfo(Req.serverid());
+    if (pServerNode != NULL) {
+        Ack.set_svropentime(pServerNode->m_uSvrOpenTime);
+    }
+
+    response->setCmd((int)symphony::proto::MSG_LOGIC_REGTO_LOGIN_ACK);
+    response->setBody(Ack.SerializeAsString());
+
+    // CConnection* pConnection =
+    //     ServiceBase::GetInstancePtr()->GetConnectionByID(pPacket->m_nConnID);
+    // ERROR_RETURN_TRUE(pConnection != NULL);
+    // pConnection->SetConnectionData(1);
+    return true;
+}
 bool LoginServerModule::handleMsgLogicUpdateReq(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::LogicUpdateInfoReq Req;
+    Req.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    if (Req.serverid() <= 0) {
+        return TRUE;
+    }
+    m_LogicSvrMgr.UpdateLogicServerInfo(
+        Req.serverid(), Req.maxonline(), Req.curonline(), Req.totalnum(),
+        Req.cachenum(), Req.status(), Req.dberrcnt(), Req.servername());
+
+    LogicServerNode* pServerNode =
+        m_LogicSvrMgr.GetLogicServerInfo(Req.serverid());
+    if (pServerNode == NULL) {
+        return TRUE;
+    }
+
+    symphony::proto::LogicUpdateInfoAck Ack;
+    Ack.set_svropentime(pServerNode->m_uSvrOpenTime);
+    Ack.set_retcode(MRC_SUCCESSED);
+    response->setCmd((int)symphony::proto::MSG_LOGIC_UPDATE_ACK);
+    response->setBody(Ack.SerializeAsString());
+    return true;
+}
 bool LoginServerModule::handleMsgSelectServerAck(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::SelectServerAck Ack;
+    Ack.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    if (Ack.retcode() != MRC_SUCCESSED) {
+        response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+        response->setBody(Ack.SerializeAsString());
+        return TRUE;
+    }
+
+    LogicServerNode* pNode = m_LogicSvrMgr.GetLogicServerInfo(Ack.serverid());
+    if (pNode == NULL) {
+        return TRUE;
+    }
+
+    Ack.set_serveraddr(pNode->m_strOuterAddr);
+    Ack.set_serverport(pNode->m_nPort);
+    Ack.set_retcode(MRC_SUCCESSED);
+
+    response->setCmd((int)symphony::proto::MSG_SELECT_SERVER_ACK);
+    response->setBody(Ack.SerializeAsString());
+
+    symphony::proto::SetLastServerNty Nty;
+    Nty.set_accountid(Ack.accountid());
+    Nty.set_serverid(Ack.serverid());
+
+    symphony::RockRequest::ptr to_cmd =
+        std::make_shared<symphony::RockRequest>();
+    // to_cmd->setSn(symphony::Atomic::addFetch(m_sn, 1));
+    to_cmd->setCmd((int)symphony::proto::MSG_SET_LAST_SERVER_NTY);
+    to_cmd->setBody(Nty.SerializeAsString());
+    stream->request(to_cmd, 1000);
+    return true;
+    // CGameService::GetInstancePtr()->SendCmdToAccountConnection(
+    //     MSG_SET_LAST_SERVER_NTY, 0, 1, Nty);
+}
 bool LoginServerModule::handleMsgSealAccountAck(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::SealAccountAck Ack;
+    Ack.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    int nConnID = stream->getConnId();
+    if (nConnID == 0) {
+        return true;
+    }
+
+    std::string strResult = CommonConvert::IntToString((int64_t)0);
+    response->setCmd((int)symphony::proto::MSG_SEAL_ACCOUNT_ACK);
+    response->setBody(strResult);
+
+    if (Ack.retcode() != MRC_SUCCESSED) {
+        return TRUE;
+    }
+
+    if (Ack.accountid() > 0) {
+        symphony::proto::SealAccountNtf Ntf;
+        Ntf.set_accountid(Ack.accountid());
+        // INT32 nLogicConnID = m_LogicSvrMgr.GetLogicConnID(Ack.serverid());
+
+        symphony::RockRequest::ptr to_cmd =
+            std::make_shared<symphony::RockRequest>();
+        // to_cmd->setSn(symphony::Atomic::addFetch(m_sn, 1));
+        to_cmd->setCmd((int)symphony::proto::MSG_SEAL_ACCOUNT_NTY);
+        to_cmd->setBody(Ntf.SerializeAsString());
+        stream->request(to_cmd, 1000);
+    }
+
+    return TRUE;
+}
 bool LoginServerModule::handleMsgGameParamReq(
     symphony::RockRequest::ptr request,
     symphony::RockResponse::ptr response,
-    symphony::RockStream::ptr stream);
+    symphony::RockStream::ptr stream) {
+    symphony::proto::Msg_GameParamReq Req;
+    Req.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+
+    symphony::proto::Msg_GameParamAck Ack;
+    for (INT32 i = 0; i < (int)m_LogicSvrMgr.m_vtGameParam.size(); i++) {
+        GameParamNode& tNode = m_LogicSvrMgr.m_vtGameParam.at(i);
+        if (tNode.m_nChannel == 0 || tNode.m_nChannel == Req.channel()) {
+            Ack.add_paramkey(tNode.m_strParamKey);
+            Ack.add_paramvalue(tNode.m_strParamValue);
+        }
+    }
+
+    response->setCmd((int)symphony::proto::MSG_GAME_PARAM_ACK);
+    response->setBody(Ack.SerializeAsString());
+    return TRUE;
+}
 
 extern "C" {
 

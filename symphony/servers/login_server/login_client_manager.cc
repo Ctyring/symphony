@@ -39,7 +39,9 @@ BOOL CLoginClientMgr::RemoveByConnID(INT32 nConnID) {
 
 CLoginClient* CLoginClientMgr::CreateLoginClient(INT32 nConnID) {
     CLoginClient* pLoginClient = InsertAlloc(nConnID);
-    ERROR_RETURN_NULL(pLoginClient != NULL);
+    if (pLoginClient == NULL) {
+        return NULL;
+    }
 
     pLoginClient->m_nConnID = nConnID;
     pLoginClient->m_ClientStatue = ECS_NONE;

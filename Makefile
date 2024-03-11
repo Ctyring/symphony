@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named symphony
+# Target rules for targets named test_service_discovery
 
 # Build rule for target.
-symphony: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symphony
-.PHONY : symphony
+test_service_discovery: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_service_discovery
+.PHONY : test_service_discovery
 
 # fast build rule for target.
-symphony/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/build
-.PHONY : symphony/fast
+test_service_discovery/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service_discovery.dir/build.make CMakeFiles/test_service_discovery.dir/build
+.PHONY : test_service_discovery/fast
 
 #=============================================================================
 # Target rules for targets named test_zookeeper
@@ -143,17 +143,721 @@ test_zookeeper/fast:
 .PHONY : test_zookeeper/fast
 
 #=============================================================================
-# Target rules for targets named test_service_discovery
+# Target rules for targets named test_bitmap
 
 # Build rule for target.
-test_service_discovery: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_service_discovery
-.PHONY : test_service_discovery
+test_bitmap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_bitmap
+.PHONY : test_bitmap
 
 # fast build rule for target.
-test_service_discovery/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service_discovery.dir/build.make CMakeFiles/test_service_discovery.dir/build
-.PHONY : test_service_discovery/fast
+test_bitmap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bitmap.dir/build.make CMakeFiles/test_bitmap.dir/build
+.PHONY : test_bitmap/fast
+
+#=============================================================================
+# Target rules for targets named center_server
+
+# Build rule for target.
+center_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 center_server
+.PHONY : center_server
+
+# fast build rule for target.
+center_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/build
+.PHONY : center_server/fast
+
+#=============================================================================
+# Target rules for targets named test_uri
+
+# Build rule for target.
+test_uri: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
+
+# fast build rule for target.
+test_uri/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
+
+#=============================================================================
+# Target rules for targets named test_tcp_server
+
+# Build rule for target.
+test_tcp_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_tcp_server
+.PHONY : test_tcp_server
+
+# fast build rule for target.
+test_tcp_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/build
+.PHONY : test_tcp_server/fast
+
+#=============================================================================
+# Target rules for targets named test_bytearray
+
+# Build rule for target.
+test_bytearray: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_bytearray
+.PHONY : test_bytearray
+
+# fast build rule for target.
+test_bytearray/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/build
+.PHONY : test_bytearray/fast
+
+#=============================================================================
+# Target rules for targets named test_ws_server
+
+# Build rule for target.
+test_ws_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ws_server
+.PHONY : test_ws_server
+
+# fast build rule for target.
+test_ws_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_server.dir/build.make CMakeFiles/test_ws_server.dir/build
+.PHONY : test_ws_server/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
+#=============================================================================
+# Target rules for targets named symphony
+
+# Build rule for target.
+symphony: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 symphony
+.PHONY : symphony
+
+# fast build rule for target.
+symphony/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/build
+.PHONY : symphony/fast
+
+#=============================================================================
+# Target rules for targets named login_server
+
+# Build rule for target.
+login_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 login_server
+.PHONY : login_server
+
+# fast build rule for target.
+login_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/build
+.PHONY : login_server/fast
+
+#=============================================================================
+# Target rules for targets named test_zlib_stream
+
+# Build rule for target.
+test_zlib_stream: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_zlib_stream
+.PHONY : test_zlib_stream
+
+# fast build rule for target.
+test_zlib_stream/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_zlib_stream.dir/build.make CMakeFiles/test_zlib_stream.dir/build
+.PHONY : test_zlib_stream/fast
+
+#=============================================================================
+# Target rules for targets named log_server
+
+# Build rule for target.
+log_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 log_server
+.PHONY : log_server
+
+# fast build rule for target.
+log_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/build
+.PHONY : log_server/fast
+
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
+#=============================================================================
+# Target rules for targets named test_hashmultimap
+
+# Build rule for target.
+test_hashmultimap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hashmultimap
+.PHONY : test_hashmultimap
+
+# fast build rule for target.
+test_hashmultimap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmultimap.dir/build.make CMakeFiles/test_hashmultimap.dir/build
+.PHONY : test_hashmultimap/fast
+
+#=============================================================================
+# Target rules for targets named test_nameserver
+
+# Build rule for target.
+test_nameserver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_nameserver
+.PHONY : test_nameserver
+
+# fast build rule for target.
+test_nameserver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_nameserver.dir/build.make CMakeFiles/test_nameserver.dir/build
+.PHONY : test_nameserver/fast
+
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
+# Target rules for targets named test_hashmap
+
+# Build rule for target.
+test_hashmap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hashmap
+.PHONY : test_hashmap
+
+# fast build rule for target.
+test_hashmap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmap.dir/build.make CMakeFiles/test_hashmap.dir/build
+.PHONY : test_hashmap/fast
+
+#=============================================================================
+# Target rules for targets named orm
+
+# Build rule for target.
+orm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orm
+.PHONY : orm
+
+# fast build rule for target.
+orm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/build
+.PHONY : orm/fast
+
+#=============================================================================
+# Target rules for targets named test_dict
+
+# Build rule for target.
+test_dict: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_dict
+.PHONY : test_dict
+
+# fast build rule for target.
+test_dict/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dict.dir/build.make CMakeFiles/test_dict.dir/build
+.PHONY : test_dict/fast
+
+#=============================================================================
+# Target rules for targets named test_application
+
+# Build rule for target.
+test_application: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_application
+.PHONY : test_application
+
+# fast build rule for target.
+test_application/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/build
+.PHONY : test_application/fast
+
+#=============================================================================
+# Target rules for targets named test_log_server
+
+# Build rule for target.
+test_log_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_log_server
+.PHONY : test_log_server
+
+# fast build rule for target.
+test_log_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_log_server.dir/build.make CMakeFiles/test_log_server.dir/build
+.PHONY : test_log_server/fast
+
+#=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+#=============================================================================
+# Target rules for targets named test_sqlite3
+
+# Build rule for target.
+test_sqlite3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_sqlite3
+.PHONY : test_sqlite3
+
+# fast build rule for target.
+test_sqlite3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sqlite3.dir/build.make CMakeFiles/test_sqlite3.dir/build
+.PHONY : test_sqlite3/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
+# Target rules for targets named test_env
+
+# Build rule for target.
+test_env: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_env
+.PHONY : test_env
+
+# fast build rule for target.
+test_env/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/build
+.PHONY : test_env/fast
+
+#=============================================================================
+# Target rules for targets named test_array
+
+# Build rule for target.
+test_array: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_array
+.PHONY : test_array
+
+# fast build rule for target.
+test_array/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_array.dir/build.make CMakeFiles/test_array.dir/build
+.PHONY : test_array/fast
+
+#=============================================================================
+# Target rules for targets named test1
+
+# Build rule for target.
+test1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
+.PHONY : test1
+
+# fast build rule for target.
+test1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
+.PHONY : test1/fast
+
+#=============================================================================
+# Target rules for targets named test_crypto
+
+# Build rule for target.
+test_crypto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_crypto
+.PHONY : test_crypto
+
+# fast build rule for target.
+test_crypto/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_crypto.dir/build.make CMakeFiles/test_crypto.dir/build
+.PHONY : test_crypto/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named test_daemon
+
+# Build rule for target.
+test_daemon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_daemon
+.PHONY : test_daemon
+
+# fast build rule for target.
+test_daemon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/build
+.PHONY : test_daemon/fast
+
+#=============================================================================
+# Target rules for targets named test_ws_client
+
+# Build rule for target.
+test_ws_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ws_client
+.PHONY : test_ws_client
+
+# fast build rule for target.
+test_ws_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_client.dir/build.make CMakeFiles/test_ws_client.dir/build
+.PHONY : test_ws_client/fast
+
+#=============================================================================
+# Target rules for targets named test_orm
+
+# Build rule for target.
+test_orm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_orm
+.PHONY : test_orm
+
+# fast build rule for target.
+test_orm/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_orm.dir/build.make CMakeFiles/test_orm.dir/build
+.PHONY : test_orm/fast
+
+#=============================================================================
+# Target rules for targets named my_http_server
+
+# Build rule for target.
+my_http_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_http_server
+.PHONY : my_http_server
+
+# fast build rule for target.
+my_http_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/build
+.PHONY : my_http_server/fast
+
+#=============================================================================
+# Target rules for targets named test_lru
+
+# Build rule for target.
+test_lru: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lru
+.PHONY : test_lru
+
+# fast build rule for target.
+test_lru/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lru.dir/build.make CMakeFiles/test_lru.dir/build
+.PHONY : test_lru/fast
+
+#=============================================================================
+# Target rules for targets named test_email
+
+# Build rule for target.
+test_email: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_email
+.PHONY : test_email
+
+# fast build rule for target.
+test_email/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_email.dir/build.make CMakeFiles/test_email.dir/build
+.PHONY : test_email/fast
+
+#=============================================================================
+# Target rules for targets named test_http_parser
+
+# Build rule for target.
+test_http_parser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_parser
+.PHONY : test_http_parser
+
+# fast build rule for target.
+test_http_parser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+.PHONY : test_http_parser/fast
+
+#=============================================================================
+# Target rules for targets named test_module
+
+# Build rule for target.
+test_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_module
+.PHONY : test_module
+
+# fast build rule for target.
+test_module/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_module.dir/build.make CMakeFiles/test_module.dir/build
+.PHONY : test_module/fast
+
+#=============================================================================
+# Target rules for targets named test_timed_lru_cache
+
+# Build rule for target.
+test_timed_lru_cache: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_timed_lru_cache
+.PHONY : test_timed_lru_cache
+
+# fast build rule for target.
+test_timed_lru_cache/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_lru_cache.dir/build.make CMakeFiles/test_timed_lru_cache.dir/build
+.PHONY : test_timed_lru_cache/fast
+
+#=============================================================================
+# Target rules for targets named test_rock
+
+# Build rule for target.
+test_rock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_rock
+.PHONY : test_rock
+
+# fast build rule for target.
+test_rock/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rock.dir/build.make CMakeFiles/test_rock.dir/build
+.PHONY : test_rock/fast
+
+#=============================================================================
+# Target rules for targets named test_http
+
+# Build rule for target.
+test_http: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http
+.PHONY : test_http
+
+# fast build rule for target.
+test_http/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/build
+.PHONY : test_http/fast
+
+#=============================================================================
+# Target rules for targets named test_mysql
+
+# Build rule for target.
+test_mysql: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_mysql
+.PHONY : test_mysql
+
+# fast build rule for target.
+test_mysql/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_mysql.dir/build.make CMakeFiles/test_mysql.dir/build
+.PHONY : test_mysql/fast
+
+#=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
+
+#=============================================================================
+# Target rules for targets named test_timed_cache
+
+# Build rule for target.
+test_timed_cache: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_timed_cache
+.PHONY : test_timed_cache
+
+# fast build rule for target.
+test_timed_cache/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_cache.dir/build.make CMakeFiles/test_timed_cache.dir/build
+.PHONY : test_timed_cache/fast
+
+#=============================================================================
+# Target rules for targets named db_server
+
+# Build rule for target.
+db_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 db_server
+.PHONY : db_server
+
+# fast build rule for target.
+db_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/build
+.PHONY : db_server/fast
+
+#=============================================================================
+# Target rules for targets named bin_symphony
+
+# Build rule for target.
+bin_symphony: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin_symphony
+.PHONY : bin_symphony
+
+# fast build rule for target.
+bin_symphony/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_symphony.dir/build.make CMakeFiles/bin_symphony.dir/build
+.PHONY : bin_symphony/fast
+
+#=============================================================================
+# Target rules for targets named account_server
+
+# Build rule for target.
+account_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 account_server
+.PHONY : account_server
+
+# fast build rule for target.
+account_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/build
+.PHONY : account_server/fast
+
+#=============================================================================
+# Target rules for targets named orm_data
+
+# Build rule for target.
+orm_data: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orm_data
+.PHONY : orm_data
+
+# fast build rule for target.
+orm_data/fast:
+	$(MAKE) $(MAKESILENT) -f orm_out/CMakeFiles/orm_data.dir/build.make orm_out/CMakeFiles/orm_data.dir/build
+.PHONY : orm_data/fast
+
+examples/echo_server.o: examples/echo_server.cc.o
+
+.PHONY : examples/echo_server.o
+
+# target to build an object file
+examples/echo_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.o
+.PHONY : examples/echo_server.cc.o
+
+examples/echo_server.i: examples/echo_server.cc.i
+
+.PHONY : examples/echo_server.i
+
+# target to preprocess a source file
+examples/echo_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.i
+.PHONY : examples/echo_server.cc.i
+
+examples/echo_server.s: examples/echo_server.cc.s
+
+.PHONY : examples/echo_server.s
+
+# target to generate assembly for a file
+examples/echo_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.s
+.PHONY : examples/echo_server.cc.s
+
+samples/my_http_server.o: samples/my_http_server.cc.o
+
+.PHONY : samples/my_http_server.o
+
+# target to build an object file
+samples/my_http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.o
+.PHONY : samples/my_http_server.cc.o
+
+samples/my_http_server.i: samples/my_http_server.cc.i
+
+.PHONY : samples/my_http_server.i
+
+# target to preprocess a source file
+samples/my_http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.i
+.PHONY : samples/my_http_server.cc.i
+
+samples/my_http_server.s: samples/my_http_server.cc.s
+
+.PHONY : samples/my_http_server.s
+
+# target to generate assembly for a file
+samples/my_http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_http_server.dir/build.make CMakeFiles/my_http_server.dir/samples/my_http_server.cc.s
+.PHONY : samples/my_http_server.cc.s
 
 symphony/address.o: symphony/address.cc.o
 
@@ -235,6 +939,168 @@ symphony/bytearray.s: symphony/bytearray.cc.s
 symphony/bytearray.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/bytearray.cc.s
 .PHONY : symphony/bytearray.cc.s
+
+symphony/common/convert.o: symphony/common/convert.cc.o
+
+.PHONY : symphony/common/convert.o
+
+# target to build an object file
+symphony/common/convert.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/convert.cc.o
+.PHONY : symphony/common/convert.cc.o
+
+symphony/common/convert.i: symphony/common/convert.cc.i
+
+.PHONY : symphony/common/convert.i
+
+# target to preprocess a source file
+symphony/common/convert.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/convert.cc.i
+.PHONY : symphony/common/convert.cc.i
+
+symphony/common/convert.s: symphony/common/convert.cc.s
+
+.PHONY : symphony/common/convert.s
+
+# target to generate assembly for a file
+symphony/common/convert.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/convert.cc.s
+.PHONY : symphony/common/convert.cc.s
+
+symphony/common/func.o: symphony/common/func.cc.o
+
+.PHONY : symphony/common/func.o
+
+# target to build an object file
+symphony/common/func.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/func.cc.o
+.PHONY : symphony/common/func.cc.o
+
+symphony/common/func.i: symphony/common/func.cc.i
+
+.PHONY : symphony/common/func.i
+
+# target to preprocess a source file
+symphony/common/func.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/func.cc.i
+.PHONY : symphony/common/func.cc.i
+
+symphony/common/func.s: symphony/common/func.cc.s
+
+.PHONY : symphony/common/func.s
+
+# target to generate assembly for a file
+symphony/common/func.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/func.cc.s
+.PHONY : symphony/common/func.cc.s
+
+symphony/common/line.o: symphony/common/line.cc.o
+
+.PHONY : symphony/common/line.o
+
+# target to build an object file
+symphony/common/line.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/line.cc.o
+.PHONY : symphony/common/line.cc.o
+
+symphony/common/line.i: symphony/common/line.cc.i
+
+.PHONY : symphony/common/line.i
+
+# target to preprocess a source file
+symphony/common/line.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/line.cc.i
+.PHONY : symphony/common/line.cc.i
+
+symphony/common/line.s: symphony/common/line.cc.s
+
+.PHONY : symphony/common/line.s
+
+# target to generate assembly for a file
+symphony/common/line.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/line.cc.s
+.PHONY : symphony/common/line.cc.s
+
+symphony/common/math.o: symphony/common/math.cc.o
+
+.PHONY : symphony/common/math.o
+
+# target to build an object file
+symphony/common/math.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/math.cc.o
+.PHONY : symphony/common/math.cc.o
+
+symphony/common/math.i: symphony/common/math.cc.i
+
+.PHONY : symphony/common/math.i
+
+# target to preprocess a source file
+symphony/common/math.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/math.cc.i
+.PHONY : symphony/common/math.cc.i
+
+symphony/common/math.s: symphony/common/math.cc.s
+
+.PHONY : symphony/common/math.s
+
+# target to generate assembly for a file
+symphony/common/math.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/math.cc.s
+.PHONY : symphony/common/math.cc.s
+
+symphony/common/socket.o: symphony/common/socket.cc.o
+
+.PHONY : symphony/common/socket.o
+
+# target to build an object file
+symphony/common/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/socket.cc.o
+.PHONY : symphony/common/socket.cc.o
+
+symphony/common/socket.i: symphony/common/socket.cc.i
+
+.PHONY : symphony/common/socket.i
+
+# target to preprocess a source file
+symphony/common/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/socket.cc.i
+.PHONY : symphony/common/socket.cc.i
+
+symphony/common/socket.s: symphony/common/socket.cc.s
+
+.PHONY : symphony/common/socket.s
+
+# target to generate assembly for a file
+symphony/common/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/socket.cc.s
+.PHONY : symphony/common/socket.cc.s
+
+symphony/common/time.o: symphony/common/time.cc.o
+
+.PHONY : symphony/common/time.o
+
+# target to build an object file
+symphony/common/time.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/time.cc.o
+.PHONY : symphony/common/time.cc.o
+
+symphony/common/time.i: symphony/common/time.cc.i
+
+.PHONY : symphony/common/time.i
+
+# target to preprocess a source file
+symphony/common/time.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/time.cc.i
+.PHONY : symphony/common/time.cc.i
+
+symphony/common/time.s: symphony/common/time.cc.s
+
+.PHONY : symphony/common/time.s
+
+# target to generate assembly for a file
+symphony/common/time.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/common/time.cc.s
+.PHONY : symphony/common/time.cc.s
 
 symphony/config.o: symphony/config.cc.o
 
@@ -1154,6 +2020,33 @@ symphony/log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/log.cc.s
 .PHONY : symphony/log.cc.s
 
+symphony/main.o: symphony/main.cc.o
+
+.PHONY : symphony/main.o
+
+# target to build an object file
+symphony/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_symphony.dir/build.make CMakeFiles/bin_symphony.dir/symphony/main.cc.o
+.PHONY : symphony/main.cc.o
+
+symphony/main.i: symphony/main.cc.i
+
+.PHONY : symphony/main.i
+
+# target to preprocess a source file
+symphony/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_symphony.dir/build.make CMakeFiles/bin_symphony.dir/symphony/main.cc.i
+.PHONY : symphony/main.cc.i
+
+symphony/main.s: symphony/main.cc.s
+
+.PHONY : symphony/main.s
+
+# target to generate assembly for a file
+symphony/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_symphony.dir/build.make CMakeFiles/bin_symphony.dir/symphony/main.cc.s
+.PHONY : symphony/main.cc.s
+
 symphony/module.o: symphony/module.cc.o
 
 .PHONY : symphony/module.o
@@ -1316,6 +2209,465 @@ symphony/ns/ns_protocol.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/ns/ns_protocol.cc.s
 .PHONY : symphony/ns/ns_protocol.cc.s
 
+symphony/orm/column.o: symphony/orm/column.cc.o
+
+.PHONY : symphony/orm/column.o
+
+# target to build an object file
+symphony/orm/column.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/column.cc.o
+.PHONY : symphony/orm/column.cc.o
+
+symphony/orm/column.i: symphony/orm/column.cc.i
+
+.PHONY : symphony/orm/column.i
+
+# target to preprocess a source file
+symphony/orm/column.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/column.cc.i
+.PHONY : symphony/orm/column.cc.i
+
+symphony/orm/column.s: symphony/orm/column.cc.s
+
+.PHONY : symphony/orm/column.s
+
+# target to generate assembly for a file
+symphony/orm/column.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/column.cc.s
+.PHONY : symphony/orm/column.cc.s
+
+symphony/orm/index.o: symphony/orm/index.cc.o
+
+.PHONY : symphony/orm/index.o
+
+# target to build an object file
+symphony/orm/index.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/index.cc.o
+.PHONY : symphony/orm/index.cc.o
+
+symphony/orm/index.i: symphony/orm/index.cc.i
+
+.PHONY : symphony/orm/index.i
+
+# target to preprocess a source file
+symphony/orm/index.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/index.cc.i
+.PHONY : symphony/orm/index.cc.i
+
+symphony/orm/index.s: symphony/orm/index.cc.s
+
+.PHONY : symphony/orm/index.s
+
+# target to generate assembly for a file
+symphony/orm/index.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/index.cc.s
+.PHONY : symphony/orm/index.cc.s
+
+symphony/orm/orm.o: symphony/orm/orm.cc.o
+
+.PHONY : symphony/orm/orm.o
+
+# target to build an object file
+symphony/orm/orm.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/orm.cc.o
+.PHONY : symphony/orm/orm.cc.o
+
+symphony/orm/orm.i: symphony/orm/orm.cc.i
+
+.PHONY : symphony/orm/orm.i
+
+# target to preprocess a source file
+symphony/orm/orm.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/orm.cc.i
+.PHONY : symphony/orm/orm.cc.i
+
+symphony/orm/orm.s: symphony/orm/orm.cc.s
+
+.PHONY : symphony/orm/orm.s
+
+# target to generate assembly for a file
+symphony/orm/orm.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/orm.cc.s
+.PHONY : symphony/orm/orm.cc.s
+
+symphony/orm/table.o: symphony/orm/table.cc.o
+
+.PHONY : symphony/orm/table.o
+
+# target to build an object file
+symphony/orm/table.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/table.cc.o
+.PHONY : symphony/orm/table.cc.o
+
+symphony/orm/table.i: symphony/orm/table.cc.i
+
+.PHONY : symphony/orm/table.i
+
+# target to preprocess a source file
+symphony/orm/table.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/table.cc.i
+.PHONY : symphony/orm/table.cc.i
+
+symphony/orm/table.s: symphony/orm/table.cc.s
+
+.PHONY : symphony/orm/table.s
+
+# target to generate assembly for a file
+symphony/orm/table.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/table.cc.s
+.PHONY : symphony/orm/table.cc.s
+
+symphony/orm/util.o: symphony/orm/util.cc.o
+
+.PHONY : symphony/orm/util.o
+
+# target to build an object file
+symphony/orm/util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/util.cc.o
+.PHONY : symphony/orm/util.cc.o
+
+symphony/orm/util.i: symphony/orm/util.cc.i
+
+.PHONY : symphony/orm/util.i
+
+# target to preprocess a source file
+symphony/orm/util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/util.cc.i
+.PHONY : symphony/orm/util.cc.i
+
+symphony/orm/util.s: symphony/orm/util.cc.s
+
+.PHONY : symphony/orm/util.s
+
+# target to generate assembly for a file
+symphony/orm/util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/util.cc.s
+.PHONY : symphony/orm/util.cc.s
+
+symphony/proto/log_protobuf.pb.o: symphony/proto/log_protobuf.pb.cc.o
+
+.PHONY : symphony/proto/log_protobuf.pb.o
+
+# target to build an object file
+symphony/proto/log_protobuf.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/log_protobuf.pb.cc.o
+.PHONY : symphony/proto/log_protobuf.pb.cc.o
+
+symphony/proto/log_protobuf.pb.i: symphony/proto/log_protobuf.pb.cc.i
+
+.PHONY : symphony/proto/log_protobuf.pb.i
+
+# target to preprocess a source file
+symphony/proto/log_protobuf.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/log_protobuf.pb.cc.i
+.PHONY : symphony/proto/log_protobuf.pb.cc.i
+
+symphony/proto/log_protobuf.pb.s: symphony/proto/log_protobuf.pb.cc.s
+
+.PHONY : symphony/proto/log_protobuf.pb.s
+
+# target to generate assembly for a file
+symphony/proto/log_protobuf.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/log_protobuf.pb.cc.s
+.PHONY : symphony/proto/log_protobuf.pb.cc.s
+
+symphony/proto/msg_account.pb.o: symphony/proto/msg_account.pb.cc.o
+
+.PHONY : symphony/proto/msg_account.pb.o
+
+# target to build an object file
+symphony/proto/msg_account.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_account.pb.cc.o
+.PHONY : symphony/proto/msg_account.pb.cc.o
+
+symphony/proto/msg_account.pb.i: symphony/proto/msg_account.pb.cc.i
+
+.PHONY : symphony/proto/msg_account.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_account.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_account.pb.cc.i
+.PHONY : symphony/proto/msg_account.pb.cc.i
+
+symphony/proto/msg_account.pb.s: symphony/proto/msg_account.pb.cc.s
+
+.PHONY : symphony/proto/msg_account.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_account.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_account.pb.cc.s
+.PHONY : symphony/proto/msg_account.pb.cc.s
+
+symphony/proto/msg_base.pb.o: symphony/proto/msg_base.pb.cc.o
+
+.PHONY : symphony/proto/msg_base.pb.o
+
+# target to build an object file
+symphony/proto/msg_base.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_base.pb.cc.o
+.PHONY : symphony/proto/msg_base.pb.cc.o
+
+symphony/proto/msg_base.pb.i: symphony/proto/msg_base.pb.cc.i
+
+.PHONY : symphony/proto/msg_base.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_base.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_base.pb.cc.i
+.PHONY : symphony/proto/msg_base.pb.cc.i
+
+symphony/proto/msg_base.pb.s: symphony/proto/msg_base.pb.cc.s
+
+.PHONY : symphony/proto/msg_base.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_base.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_base.pb.cc.s
+.PHONY : symphony/proto/msg_base.pb.cc.s
+
+symphony/proto/msg_copy.pb.o: symphony/proto/msg_copy.pb.cc.o
+
+.PHONY : symphony/proto/msg_copy.pb.o
+
+# target to build an object file
+symphony/proto/msg_copy.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_copy.pb.cc.o
+.PHONY : symphony/proto/msg_copy.pb.cc.o
+
+symphony/proto/msg_copy.pb.i: symphony/proto/msg_copy.pb.cc.i
+
+.PHONY : symphony/proto/msg_copy.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_copy.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_copy.pb.cc.i
+.PHONY : symphony/proto/msg_copy.pb.cc.i
+
+symphony/proto/msg_copy.pb.s: symphony/proto/msg_copy.pb.cc.s
+
+.PHONY : symphony/proto/msg_copy.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_copy.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_copy.pb.cc.s
+.PHONY : symphony/proto/msg_copy.pb.cc.s
+
+symphony/proto/msg_game.pb.o: symphony/proto/msg_game.pb.cc.o
+
+.PHONY : symphony/proto/msg_game.pb.o
+
+# target to build an object file
+symphony/proto/msg_game.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_game.pb.cc.o
+.PHONY : symphony/proto/msg_game.pb.cc.o
+
+symphony/proto/msg_game.pb.i: symphony/proto/msg_game.pb.cc.i
+
+.PHONY : symphony/proto/msg_game.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_game.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_game.pb.cc.i
+.PHONY : symphony/proto/msg_game.pb.cc.i
+
+symphony/proto/msg_game.pb.s: symphony/proto/msg_game.pb.cc.s
+
+.PHONY : symphony/proto/msg_game.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_game.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_game.pb.cc.s
+.PHONY : symphony/proto/msg_game.pb.cc.s
+
+symphony/proto/msg_id.pb.o: symphony/proto/msg_id.pb.cc.o
+
+.PHONY : symphony/proto/msg_id.pb.o
+
+# target to build an object file
+symphony/proto/msg_id.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_id.pb.cc.o
+.PHONY : symphony/proto/msg_id.pb.cc.o
+
+symphony/proto/msg_id.pb.i: symphony/proto/msg_id.pb.cc.i
+
+.PHONY : symphony/proto/msg_id.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_id.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_id.pb.cc.i
+.PHONY : symphony/proto/msg_id.pb.cc.i
+
+symphony/proto/msg_id.pb.s: symphony/proto/msg_id.pb.cc.s
+
+.PHONY : symphony/proto/msg_id.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_id.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_id.pb.cc.s
+.PHONY : symphony/proto/msg_id.pb.cc.s
+
+symphony/proto/msg_login_clt_data.pb.o: symphony/proto/msg_login_clt_data.pb.cc.o
+
+.PHONY : symphony/proto/msg_login_clt_data.pb.o
+
+# target to build an object file
+symphony/proto/msg_login_clt_data.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_clt_data.pb.cc.o
+.PHONY : symphony/proto/msg_login_clt_data.pb.cc.o
+
+symphony/proto/msg_login_clt_data.pb.i: symphony/proto/msg_login_clt_data.pb.cc.i
+
+.PHONY : symphony/proto/msg_login_clt_data.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_login_clt_data.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_clt_data.pb.cc.i
+.PHONY : symphony/proto/msg_login_clt_data.pb.cc.i
+
+symphony/proto/msg_login_clt_data.pb.s: symphony/proto/msg_login_clt_data.pb.cc.s
+
+.PHONY : symphony/proto/msg_login_clt_data.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_login_clt_data.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_clt_data.pb.cc.s
+.PHONY : symphony/proto/msg_login_clt_data.pb.cc.s
+
+symphony/proto/msg_login_db.pb.o: symphony/proto/msg_login_db.pb.cc.o
+
+.PHONY : symphony/proto/msg_login_db.pb.o
+
+# target to build an object file
+symphony/proto/msg_login_db.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_db.pb.cc.o
+.PHONY : symphony/proto/msg_login_db.pb.cc.o
+
+symphony/proto/msg_login_db.pb.i: symphony/proto/msg_login_db.pb.cc.i
+
+.PHONY : symphony/proto/msg_login_db.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_login_db.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_db.pb.cc.i
+.PHONY : symphony/proto/msg_login_db.pb.cc.i
+
+symphony/proto/msg_login_db.pb.s: symphony/proto/msg_login_db.pb.cc.s
+
+.PHONY : symphony/proto/msg_login_db.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_login_db.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_login_db.pb.cc.s
+.PHONY : symphony/proto/msg_login_db.pb.cc.s
+
+symphony/proto/msg_move.pb.o: symphony/proto/msg_move.pb.cc.o
+
+.PHONY : symphony/proto/msg_move.pb.o
+
+# target to build an object file
+symphony/proto/msg_move.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_move.pb.cc.o
+.PHONY : symphony/proto/msg_move.pb.cc.o
+
+symphony/proto/msg_move.pb.i: symphony/proto/msg_move.pb.cc.i
+
+.PHONY : symphony/proto/msg_move.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_move.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_move.pb.cc.i
+.PHONY : symphony/proto/msg_move.pb.cc.i
+
+symphony/proto/msg_move.pb.s: symphony/proto/msg_move.pb.cc.s
+
+.PHONY : symphony/proto/msg_move.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_move.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_move.pb.cc.s
+.PHONY : symphony/proto/msg_move.pb.cc.s
+
+symphony/proto/msg_payment.pb.o: symphony/proto/msg_payment.pb.cc.o
+
+.PHONY : symphony/proto/msg_payment.pb.o
+
+# target to build an object file
+symphony/proto/msg_payment.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_payment.pb.cc.o
+.PHONY : symphony/proto/msg_payment.pb.cc.o
+
+symphony/proto/msg_payment.pb.i: symphony/proto/msg_payment.pb.cc.i
+
+.PHONY : symphony/proto/msg_payment.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_payment.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_payment.pb.cc.i
+.PHONY : symphony/proto/msg_payment.pb.cc.i
+
+symphony/proto/msg_payment.pb.s: symphony/proto/msg_payment.pb.cc.s
+
+.PHONY : symphony/proto/msg_payment.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_payment.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_payment.pb.cc.s
+.PHONY : symphony/proto/msg_payment.pb.cc.s
+
+symphony/proto/msg_ret_code.pb.o: symphony/proto/msg_ret_code.pb.cc.o
+
+.PHONY : symphony/proto/msg_ret_code.pb.o
+
+# target to build an object file
+symphony/proto/msg_ret_code.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_ret_code.pb.cc.o
+.PHONY : symphony/proto/msg_ret_code.pb.cc.o
+
+symphony/proto/msg_ret_code.pb.i: symphony/proto/msg_ret_code.pb.cc.i
+
+.PHONY : symphony/proto/msg_ret_code.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_ret_code.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_ret_code.pb.cc.i
+.PHONY : symphony/proto/msg_ret_code.pb.cc.i
+
+symphony/proto/msg_ret_code.pb.s: symphony/proto/msg_ret_code.pb.cc.s
+
+.PHONY : symphony/proto/msg_ret_code.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_ret_code.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_ret_code.pb.cc.s
+.PHONY : symphony/proto/msg_ret_code.pb.cc.s
+
+symphony/proto/msg_role.pb.o: symphony/proto/msg_role.pb.cc.o
+
+.PHONY : symphony/proto/msg_role.pb.o
+
+# target to build an object file
+symphony/proto/msg_role.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_role.pb.cc.o
+.PHONY : symphony/proto/msg_role.pb.cc.o
+
+symphony/proto/msg_role.pb.i: symphony/proto/msg_role.pb.cc.i
+
+.PHONY : symphony/proto/msg_role.pb.i
+
+# target to preprocess a source file
+symphony/proto/msg_role.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_role.pb.cc.i
+.PHONY : symphony/proto/msg_role.pb.cc.i
+
+symphony/proto/msg_role.pb.s: symphony/proto/msg_role.pb.cc.s
+
+.PHONY : symphony/proto/msg_role.pb.s
+
+# target to generate assembly for a file
+symphony/proto/msg_role.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/msg_role.pb.cc.s
+.PHONY : symphony/proto/msg_role.pb.cc.s
+
 symphony/protocol.o: symphony/protocol.cc.o
 
 .PHONY : symphony/protocol.o
@@ -1450,6 +2802,492 @@ symphony/scheduler.s: symphony/scheduler.cc.s
 symphony/scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/scheduler.cc.s
 .PHONY : symphony/scheduler.cc.s
+
+symphony/servers/account_server/account_manager.o: symphony/servers/account_server/account_manager.cc.o
+
+.PHONY : symphony/servers/account_server/account_manager.o
+
+# target to build an object file
+symphony/servers/account_server/account_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_manager.cc.o
+.PHONY : symphony/servers/account_server/account_manager.cc.o
+
+symphony/servers/account_server/account_manager.i: symphony/servers/account_server/account_manager.cc.i
+
+.PHONY : symphony/servers/account_server/account_manager.i
+
+# target to preprocess a source file
+symphony/servers/account_server/account_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_manager.cc.i
+.PHONY : symphony/servers/account_server/account_manager.cc.i
+
+symphony/servers/account_server/account_manager.s: symphony/servers/account_server/account_manager.cc.s
+
+.PHONY : symphony/servers/account_server/account_manager.s
+
+# target to generate assembly for a file
+symphony/servers/account_server/account_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_manager.cc.s
+.PHONY : symphony/servers/account_server/account_manager.cc.s
+
+symphony/servers/account_server/account_server_module.o: symphony/servers/account_server/account_server_module.cc.o
+
+.PHONY : symphony/servers/account_server/account_server_module.o
+
+# target to build an object file
+symphony/servers/account_server/account_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_server_module.cc.o
+.PHONY : symphony/servers/account_server/account_server_module.cc.o
+
+symphony/servers/account_server/account_server_module.i: symphony/servers/account_server/account_server_module.cc.i
+
+.PHONY : symphony/servers/account_server/account_server_module.i
+
+# target to preprocess a source file
+symphony/servers/account_server/account_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_server_module.cc.i
+.PHONY : symphony/servers/account_server/account_server_module.cc.i
+
+symphony/servers/account_server/account_server_module.s: symphony/servers/account_server/account_server_module.cc.s
+
+.PHONY : symphony/servers/account_server/account_server_module.s
+
+# target to generate assembly for a file
+symphony/servers/account_server/account_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/account_server_module.cc.s
+.PHONY : symphony/servers/account_server/account_server_module.cc.s
+
+symphony/servers/account_server/game_log_manager.o: symphony/servers/account_server/game_log_manager.cc.o
+
+.PHONY : symphony/servers/account_server/game_log_manager.o
+
+# target to build an object file
+symphony/servers/account_server/game_log_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/game_log_manager.cc.o
+.PHONY : symphony/servers/account_server/game_log_manager.cc.o
+
+symphony/servers/account_server/game_log_manager.i: symphony/servers/account_server/game_log_manager.cc.i
+
+.PHONY : symphony/servers/account_server/game_log_manager.i
+
+# target to preprocess a source file
+symphony/servers/account_server/game_log_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/game_log_manager.cc.i
+.PHONY : symphony/servers/account_server/game_log_manager.cc.i
+
+symphony/servers/account_server/game_log_manager.s: symphony/servers/account_server/game_log_manager.cc.s
+
+.PHONY : symphony/servers/account_server/game_log_manager.s
+
+# target to generate assembly for a file
+symphony/servers/account_server/game_log_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_server.dir/build.make CMakeFiles/account_server.dir/symphony/servers/account_server/game_log_manager.cc.s
+.PHONY : symphony/servers/account_server/game_log_manager.cc.s
+
+symphony/servers/center_server/center_server_module.o: symphony/servers/center_server/center_server_module.cc.o
+
+.PHONY : symphony/servers/center_server/center_server_module.o
+
+# target to build an object file
+symphony/servers/center_server/center_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/center_server_module.cc.o
+.PHONY : symphony/servers/center_server/center_server_module.cc.o
+
+symphony/servers/center_server/center_server_module.i: symphony/servers/center_server/center_server_module.cc.i
+
+.PHONY : symphony/servers/center_server/center_server_module.i
+
+# target to preprocess a source file
+symphony/servers/center_server/center_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/center_server_module.cc.i
+.PHONY : symphony/servers/center_server/center_server_module.cc.i
+
+symphony/servers/center_server/center_server_module.s: symphony/servers/center_server/center_server_module.cc.s
+
+.PHONY : symphony/servers/center_server/center_server_module.s
+
+# target to generate assembly for a file
+symphony/servers/center_server/center_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/center_server_module.cc.s
+.PHONY : symphony/servers/center_server/center_server_module.cc.s
+
+symphony/servers/center_server/logic_svr_manager.o: symphony/servers/center_server/logic_svr_manager.cc.o
+
+.PHONY : symphony/servers/center_server/logic_svr_manager.o
+
+# target to build an object file
+symphony/servers/center_server/logic_svr_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/logic_svr_manager.cc.o
+.PHONY : symphony/servers/center_server/logic_svr_manager.cc.o
+
+symphony/servers/center_server/logic_svr_manager.i: symphony/servers/center_server/logic_svr_manager.cc.i
+
+.PHONY : symphony/servers/center_server/logic_svr_manager.i
+
+# target to preprocess a source file
+symphony/servers/center_server/logic_svr_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/logic_svr_manager.cc.i
+.PHONY : symphony/servers/center_server/logic_svr_manager.cc.i
+
+symphony/servers/center_server/logic_svr_manager.s: symphony/servers/center_server/logic_svr_manager.cc.s
+
+.PHONY : symphony/servers/center_server/logic_svr_manager.s
+
+# target to generate assembly for a file
+symphony/servers/center_server/logic_svr_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/center_server.dir/build.make CMakeFiles/center_server.dir/symphony/servers/center_server/logic_svr_manager.cc.s
+.PHONY : symphony/servers/center_server/logic_svr_manager.cc.s
+
+symphony/servers/db_server/db_manager.o: symphony/servers/db_server/db_manager.cc.o
+
+.PHONY : symphony/servers/db_server/db_manager.o
+
+# target to build an object file
+symphony/servers/db_server/db_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_manager.cc.o
+.PHONY : symphony/servers/db_server/db_manager.cc.o
+
+symphony/servers/db_server/db_manager.i: symphony/servers/db_server/db_manager.cc.i
+
+.PHONY : symphony/servers/db_server/db_manager.i
+
+# target to preprocess a source file
+symphony/servers/db_server/db_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_manager.cc.i
+.PHONY : symphony/servers/db_server/db_manager.cc.i
+
+symphony/servers/db_server/db_manager.s: symphony/servers/db_server/db_manager.cc.s
+
+.PHONY : symphony/servers/db_server/db_manager.s
+
+# target to generate assembly for a file
+symphony/servers/db_server/db_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_manager.cc.s
+.PHONY : symphony/servers/db_server/db_manager.cc.s
+
+symphony/servers/db_server/db_server_module.o: symphony/servers/db_server/db_server_module.cc.o
+
+.PHONY : symphony/servers/db_server/db_server_module.o
+
+# target to build an object file
+symphony/servers/db_server/db_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_server_module.cc.o
+.PHONY : symphony/servers/db_server/db_server_module.cc.o
+
+symphony/servers/db_server/db_server_module.i: symphony/servers/db_server/db_server_module.cc.i
+
+.PHONY : symphony/servers/db_server/db_server_module.i
+
+# target to preprocess a source file
+symphony/servers/db_server/db_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_server_module.cc.i
+.PHONY : symphony/servers/db_server/db_server_module.cc.i
+
+symphony/servers/db_server/db_server_module.s: symphony/servers/db_server/db_server_module.cc.s
+
+.PHONY : symphony/servers/db_server/db_server_module.s
+
+# target to generate assembly for a file
+symphony/servers/db_server/db_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/db_server.dir/build.make CMakeFiles/db_server.dir/symphony/servers/db_server/db_server_module.cc.s
+.PHONY : symphony/servers/db_server/db_server_module.cc.s
+
+symphony/servers/log_server/account_create_info.o: symphony/servers/log_server/account_create_info.cc.o
+
+.PHONY : symphony/servers/log_server/account_create_info.o
+
+# target to build an object file
+symphony/servers/log_server/account_create_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_create_info.cc.o
+.PHONY : symphony/servers/log_server/account_create_info.cc.o
+
+symphony/servers/log_server/account_create_info.i: symphony/servers/log_server/account_create_info.cc.i
+
+.PHONY : symphony/servers/log_server/account_create_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/account_create_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_create_info.cc.i
+.PHONY : symphony/servers/log_server/account_create_info.cc.i
+
+symphony/servers/log_server/account_create_info.s: symphony/servers/log_server/account_create_info.cc.s
+
+.PHONY : symphony/servers/log_server/account_create_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/account_create_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_create_info.cc.s
+.PHONY : symphony/servers/log_server/account_create_info.cc.s
+
+symphony/servers/log_server/account_login_info.o: symphony/servers/log_server/account_login_info.cc.o
+
+.PHONY : symphony/servers/log_server/account_login_info.o
+
+# target to build an object file
+symphony/servers/log_server/account_login_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_login_info.cc.o
+.PHONY : symphony/servers/log_server/account_login_info.cc.o
+
+symphony/servers/log_server/account_login_info.i: symphony/servers/log_server/account_login_info.cc.i
+
+.PHONY : symphony/servers/log_server/account_login_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/account_login_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_login_info.cc.i
+.PHONY : symphony/servers/log_server/account_login_info.cc.i
+
+symphony/servers/log_server/account_login_info.s: symphony/servers/log_server/account_login_info.cc.s
+
+.PHONY : symphony/servers/log_server/account_login_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/account_login_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/account_login_info.cc.s
+.PHONY : symphony/servers/log_server/account_login_info.cc.s
+
+symphony/servers/log_server/log_server_module.o: symphony/servers/log_server/log_server_module.cc.o
+
+.PHONY : symphony/servers/log_server/log_server_module.o
+
+# target to build an object file
+symphony/servers/log_server/log_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/log_server_module.cc.o
+.PHONY : symphony/servers/log_server/log_server_module.cc.o
+
+symphony/servers/log_server/log_server_module.i: symphony/servers/log_server/log_server_module.cc.i
+
+.PHONY : symphony/servers/log_server/log_server_module.i
+
+# target to preprocess a source file
+symphony/servers/log_server/log_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/log_server_module.cc.i
+.PHONY : symphony/servers/log_server/log_server_module.cc.i
+
+symphony/servers/log_server/log_server_module.s: symphony/servers/log_server/log_server_module.cc.s
+
+.PHONY : symphony/servers/log_server/log_server_module.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/log_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/log_server_module.cc.s
+.PHONY : symphony/servers/log_server/log_server_module.cc.s
+
+symphony/servers/log_server/ls_client.o: symphony/servers/log_server/ls_client.cc.o
+
+.PHONY : symphony/servers/log_server/ls_client.o
+
+# target to build an object file
+symphony/servers/log_server/ls_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/servers/log_server/ls_client.cc.o
+.PHONY : symphony/servers/log_server/ls_client.cc.o
+
+symphony/servers/log_server/ls_client.i: symphony/servers/log_server/ls_client.cc.i
+
+.PHONY : symphony/servers/log_server/ls_client.i
+
+# target to preprocess a source file
+symphony/servers/log_server/ls_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/servers/log_server/ls_client.cc.i
+.PHONY : symphony/servers/log_server/ls_client.cc.i
+
+symphony/servers/log_server/ls_client.s: symphony/servers/log_server/ls_client.cc.s
+
+.PHONY : symphony/servers/log_server/ls_client.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/ls_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/servers/log_server/ls_client.cc.s
+.PHONY : symphony/servers/log_server/ls_client.cc.s
+
+symphony/servers/log_server/role_chat_info.o: symphony/servers/log_server/role_chat_info.cc.o
+
+.PHONY : symphony/servers/log_server/role_chat_info.o
+
+# target to build an object file
+symphony/servers/log_server/role_chat_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_chat_info.cc.o
+.PHONY : symphony/servers/log_server/role_chat_info.cc.o
+
+symphony/servers/log_server/role_chat_info.i: symphony/servers/log_server/role_chat_info.cc.i
+
+.PHONY : symphony/servers/log_server/role_chat_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/role_chat_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_chat_info.cc.i
+.PHONY : symphony/servers/log_server/role_chat_info.cc.i
+
+symphony/servers/log_server/role_chat_info.s: symphony/servers/log_server/role_chat_info.cc.s
+
+.PHONY : symphony/servers/log_server/role_chat_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/role_chat_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_chat_info.cc.s
+.PHONY : symphony/servers/log_server/role_chat_info.cc.s
+
+symphony/servers/log_server/role_create_info.o: symphony/servers/log_server/role_create_info.cc.o
+
+.PHONY : symphony/servers/log_server/role_create_info.o
+
+# target to build an object file
+symphony/servers/log_server/role_create_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_create_info.cc.o
+.PHONY : symphony/servers/log_server/role_create_info.cc.o
+
+symphony/servers/log_server/role_create_info.i: symphony/servers/log_server/role_create_info.cc.i
+
+.PHONY : symphony/servers/log_server/role_create_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/role_create_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_create_info.cc.i
+.PHONY : symphony/servers/log_server/role_create_info.cc.i
+
+symphony/servers/log_server/role_create_info.s: symphony/servers/log_server/role_create_info.cc.s
+
+.PHONY : symphony/servers/log_server/role_create_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/role_create_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_create_info.cc.s
+.PHONY : symphony/servers/log_server/role_create_info.cc.s
+
+symphony/servers/log_server/role_login_info.o: symphony/servers/log_server/role_login_info.cc.o
+
+.PHONY : symphony/servers/log_server/role_login_info.o
+
+# target to build an object file
+symphony/servers/log_server/role_login_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_login_info.cc.o
+.PHONY : symphony/servers/log_server/role_login_info.cc.o
+
+symphony/servers/log_server/role_login_info.i: symphony/servers/log_server/role_login_info.cc.i
+
+.PHONY : symphony/servers/log_server/role_login_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/role_login_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_login_info.cc.i
+.PHONY : symphony/servers/log_server/role_login_info.cc.i
+
+symphony/servers/log_server/role_login_info.s: symphony/servers/log_server/role_login_info.cc.s
+
+.PHONY : symphony/servers/log_server/role_login_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/role_login_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_login_info.cc.s
+.PHONY : symphony/servers/log_server/role_login_info.cc.s
+
+symphony/servers/log_server/role_logout_info.o: symphony/servers/log_server/role_logout_info.cc.o
+
+.PHONY : symphony/servers/log_server/role_logout_info.o
+
+# target to build an object file
+symphony/servers/log_server/role_logout_info.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_logout_info.cc.o
+.PHONY : symphony/servers/log_server/role_logout_info.cc.o
+
+symphony/servers/log_server/role_logout_info.i: symphony/servers/log_server/role_logout_info.cc.i
+
+.PHONY : symphony/servers/log_server/role_logout_info.i
+
+# target to preprocess a source file
+symphony/servers/log_server/role_logout_info.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_logout_info.cc.i
+.PHONY : symphony/servers/log_server/role_logout_info.cc.i
+
+symphony/servers/log_server/role_logout_info.s: symphony/servers/log_server/role_logout_info.cc.s
+
+.PHONY : symphony/servers/log_server/role_logout_info.s
+
+# target to generate assembly for a file
+symphony/servers/log_server/role_logout_info.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/log_server.dir/build.make CMakeFiles/log_server.dir/symphony/servers/log_server/role_logout_info.cc.s
+.PHONY : symphony/servers/log_server/role_logout_info.cc.s
+
+symphony/servers/login_server/logic_svr_manager.o: symphony/servers/login_server/logic_svr_manager.cc.o
+
+.PHONY : symphony/servers/login_server/logic_svr_manager.o
+
+# target to build an object file
+symphony/servers/login_server/logic_svr_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/logic_svr_manager.cc.o
+.PHONY : symphony/servers/login_server/logic_svr_manager.cc.o
+
+symphony/servers/login_server/logic_svr_manager.i: symphony/servers/login_server/logic_svr_manager.cc.i
+
+.PHONY : symphony/servers/login_server/logic_svr_manager.i
+
+# target to preprocess a source file
+symphony/servers/login_server/logic_svr_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/logic_svr_manager.cc.i
+.PHONY : symphony/servers/login_server/logic_svr_manager.cc.i
+
+symphony/servers/login_server/logic_svr_manager.s: symphony/servers/login_server/logic_svr_manager.cc.s
+
+.PHONY : symphony/servers/login_server/logic_svr_manager.s
+
+# target to generate assembly for a file
+symphony/servers/login_server/logic_svr_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/logic_svr_manager.cc.s
+.PHONY : symphony/servers/login_server/logic_svr_manager.cc.s
+
+symphony/servers/login_server/login_client_manager.o: symphony/servers/login_server/login_client_manager.cc.o
+
+.PHONY : symphony/servers/login_server/login_client_manager.o
+
+# target to build an object file
+symphony/servers/login_server/login_client_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_client_manager.cc.o
+.PHONY : symphony/servers/login_server/login_client_manager.cc.o
+
+symphony/servers/login_server/login_client_manager.i: symphony/servers/login_server/login_client_manager.cc.i
+
+.PHONY : symphony/servers/login_server/login_client_manager.i
+
+# target to preprocess a source file
+symphony/servers/login_server/login_client_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_client_manager.cc.i
+.PHONY : symphony/servers/login_server/login_client_manager.cc.i
+
+symphony/servers/login_server/login_client_manager.s: symphony/servers/login_server/login_client_manager.cc.s
+
+.PHONY : symphony/servers/login_server/login_client_manager.s
+
+# target to generate assembly for a file
+symphony/servers/login_server/login_client_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_client_manager.cc.s
+.PHONY : symphony/servers/login_server/login_client_manager.cc.s
+
+symphony/servers/login_server/login_server_module.o: symphony/servers/login_server/login_server_module.cc.o
+
+.PHONY : symphony/servers/login_server/login_server_module.o
+
+# target to build an object file
+symphony/servers/login_server/login_server_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_server_module.cc.o
+.PHONY : symphony/servers/login_server/login_server_module.cc.o
+
+symphony/servers/login_server/login_server_module.i: symphony/servers/login_server/login_server_module.cc.i
+
+.PHONY : symphony/servers/login_server/login_server_module.i
+
+# target to preprocess a source file
+symphony/servers/login_server/login_server_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_server_module.cc.i
+.PHONY : symphony/servers/login_server/login_server_module.cc.i
+
+symphony/servers/login_server/login_server_module.s: symphony/servers/login_server/login_server_module.cc.s
+
+.PHONY : symphony/servers/login_server/login_server_module.s
+
+# target to generate assembly for a file
+symphony/servers/login_server/login_server_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/login_server.dir/build.make CMakeFiles/login_server.dir/symphony/servers/login_server/login_server_module.cc.s
+.PHONY : symphony/servers/login_server/login_server_module.cc.s
 
 symphony/socket.o: symphony/socket.cc.o
 
@@ -1856,6 +3694,33 @@ symphony/util/json_util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/json_util.cc.s
 .PHONY : symphony/util/json_util.cc.s
 
+symphony/util/str_util.o: symphony/util/str_util.cc.o
+
+.PHONY : symphony/util/str_util.o
+
+# target to build an object file
+symphony/util/str_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/str_util.cc.o
+.PHONY : symphony/util/str_util.cc.o
+
+symphony/util/str_util.i: symphony/util/str_util.cc.i
+
+.PHONY : symphony/util/str_util.i
+
+# target to preprocess a source file
+symphony/util/str_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/str_util.cc.i
+.PHONY : symphony/util/str_util.cc.i
+
+symphony/util/str_util.s: symphony/util/str_util.cc.s
+
+.PHONY : symphony/util/str_util.s
+
+# target to generate assembly for a file
+symphony/util/str_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/util/str_util.cc.s
+.PHONY : symphony/util/str_util.cc.s
+
 symphony/util/time.o: symphony/util/time.cc.o
 
 .PHONY : symphony/util/time.o
@@ -1937,6 +3802,789 @@ symphony/zk_client.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/zk_client.cc.s
 .PHONY : symphony/zk_client.cc.s
 
+tests/test.o: tests/test.cc.o
+
+.PHONY : tests/test.o
+
+# target to build an object file
+tests/test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test.cc.o
+.PHONY : tests/test.cc.o
+
+tests/test.i: tests/test.cc.i
+
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test.cc.i
+.PHONY : tests/test.cc.i
+
+tests/test.s: tests/test.cc.s
+
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/tests/test.cc.s
+.PHONY : tests/test.cc.s
+
+tests/test_address.o: tests/test_address.cc.o
+
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.o
+.PHONY : tests/test_address.cc.o
+
+tests/test_address.i: tests/test_address.cc.i
+
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.i
+.PHONY : tests/test_address.cc.i
+
+tests/test_address.s: tests/test_address.cc.s
+
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
+.PHONY : tests/test_address.cc.s
+
+tests/test_application.o: tests/test_application.cc.o
+
+.PHONY : tests/test_application.o
+
+# target to build an object file
+tests/test_application.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.o
+.PHONY : tests/test_application.cc.o
+
+tests/test_application.i: tests/test_application.cc.i
+
+.PHONY : tests/test_application.i
+
+# target to preprocess a source file
+tests/test_application.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.i
+.PHONY : tests/test_application.cc.i
+
+tests/test_application.s: tests/test_application.cc.s
+
+.PHONY : tests/test_application.s
+
+# target to generate assembly for a file
+tests/test_application.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.s
+.PHONY : tests/test_application.cc.s
+
+tests/test_array.o: tests/test_array.cc.o
+
+.PHONY : tests/test_array.o
+
+# target to build an object file
+tests/test_array.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_array.dir/build.make CMakeFiles/test_array.dir/tests/test_array.cc.o
+.PHONY : tests/test_array.cc.o
+
+tests/test_array.i: tests/test_array.cc.i
+
+.PHONY : tests/test_array.i
+
+# target to preprocess a source file
+tests/test_array.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_array.dir/build.make CMakeFiles/test_array.dir/tests/test_array.cc.i
+.PHONY : tests/test_array.cc.i
+
+tests/test_array.s: tests/test_array.cc.s
+
+.PHONY : tests/test_array.s
+
+# target to generate assembly for a file
+tests/test_array.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_array.dir/build.make CMakeFiles/test_array.dir/tests/test_array.cc.s
+.PHONY : tests/test_array.cc.s
+
+tests/test_bitmap.o: tests/test_bitmap.cc.o
+
+.PHONY : tests/test_bitmap.o
+
+# target to build an object file
+tests/test_bitmap.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bitmap.dir/build.make CMakeFiles/test_bitmap.dir/tests/test_bitmap.cc.o
+.PHONY : tests/test_bitmap.cc.o
+
+tests/test_bitmap.i: tests/test_bitmap.cc.i
+
+.PHONY : tests/test_bitmap.i
+
+# target to preprocess a source file
+tests/test_bitmap.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bitmap.dir/build.make CMakeFiles/test_bitmap.dir/tests/test_bitmap.cc.i
+.PHONY : tests/test_bitmap.cc.i
+
+tests/test_bitmap.s: tests/test_bitmap.cc.s
+
+.PHONY : tests/test_bitmap.s
+
+# target to generate assembly for a file
+tests/test_bitmap.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bitmap.dir/build.make CMakeFiles/test_bitmap.dir/tests/test_bitmap.cc.s
+.PHONY : tests/test_bitmap.cc.s
+
+tests/test_bytearray.o: tests/test_bytearray.cc.o
+
+.PHONY : tests/test_bytearray.o
+
+# target to build an object file
+tests/test_bytearray.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o
+.PHONY : tests/test_bytearray.cc.o
+
+tests/test_bytearray.i: tests/test_bytearray.cc.i
+
+.PHONY : tests/test_bytearray.i
+
+# target to preprocess a source file
+tests/test_bytearray.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
+.PHONY : tests/test_bytearray.cc.i
+
+tests/test_bytearray.s: tests/test_bytearray.cc.s
+
+.PHONY : tests/test_bytearray.s
+
+# target to generate assembly for a file
+tests/test_bytearray.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_bytearray.dir/build.make CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
+.PHONY : tests/test_bytearray.cc.s
+
+tests/test_config.o: tests/test_config.cc.o
+
+.PHONY : tests/test_config.o
+
+# target to build an object file
+tests/test_config.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.o
+.PHONY : tests/test_config.cc.o
+
+tests/test_config.i: tests/test_config.cc.i
+
+.PHONY : tests/test_config.i
+
+# target to preprocess a source file
+tests/test_config.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.i
+.PHONY : tests/test_config.cc.i
+
+tests/test_config.s: tests/test_config.cc.s
+
+.PHONY : tests/test_config.s
+
+# target to generate assembly for a file
+tests/test_config.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
+.PHONY : tests/test_config.cc.s
+
+tests/test_crypto.o: tests/test_crypto.cc.o
+
+.PHONY : tests/test_crypto.o
+
+# target to build an object file
+tests/test_crypto.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_crypto.dir/build.make CMakeFiles/test_crypto.dir/tests/test_crypto.cc.o
+.PHONY : tests/test_crypto.cc.o
+
+tests/test_crypto.i: tests/test_crypto.cc.i
+
+.PHONY : tests/test_crypto.i
+
+# target to preprocess a source file
+tests/test_crypto.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_crypto.dir/build.make CMakeFiles/test_crypto.dir/tests/test_crypto.cc.i
+.PHONY : tests/test_crypto.cc.i
+
+tests/test_crypto.s: tests/test_crypto.cc.s
+
+.PHONY : tests/test_crypto.s
+
+# target to generate assembly for a file
+tests/test_crypto.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_crypto.dir/build.make CMakeFiles/test_crypto.dir/tests/test_crypto.cc.s
+.PHONY : tests/test_crypto.cc.s
+
+tests/test_daemon.o: tests/test_daemon.cc.o
+
+.PHONY : tests/test_daemon.o
+
+# target to build an object file
+tests/test_daemon.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.o
+.PHONY : tests/test_daemon.cc.o
+
+tests/test_daemon.i: tests/test_daemon.cc.i
+
+.PHONY : tests/test_daemon.i
+
+# target to preprocess a source file
+tests/test_daemon.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.i
+.PHONY : tests/test_daemon.cc.i
+
+tests/test_daemon.s: tests/test_daemon.cc.s
+
+.PHONY : tests/test_daemon.s
+
+# target to generate assembly for a file
+tests/test_daemon.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.s
+.PHONY : tests/test_daemon.cc.s
+
+tests/test_dict.o: tests/test_dict.cc.o
+
+.PHONY : tests/test_dict.o
+
+# target to build an object file
+tests/test_dict.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dict.dir/build.make CMakeFiles/test_dict.dir/tests/test_dict.cc.o
+.PHONY : tests/test_dict.cc.o
+
+tests/test_dict.i: tests/test_dict.cc.i
+
+.PHONY : tests/test_dict.i
+
+# target to preprocess a source file
+tests/test_dict.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dict.dir/build.make CMakeFiles/test_dict.dir/tests/test_dict.cc.i
+.PHONY : tests/test_dict.cc.i
+
+tests/test_dict.s: tests/test_dict.cc.s
+
+.PHONY : tests/test_dict.s
+
+# target to generate assembly for a file
+tests/test_dict.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_dict.dir/build.make CMakeFiles/test_dict.dir/tests/test_dict.cc.s
+.PHONY : tests/test_dict.cc.s
+
+tests/test_email.o: tests/test_email.cc.o
+
+.PHONY : tests/test_email.o
+
+# target to build an object file
+tests/test_email.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_email.dir/build.make CMakeFiles/test_email.dir/tests/test_email.cc.o
+.PHONY : tests/test_email.cc.o
+
+tests/test_email.i: tests/test_email.cc.i
+
+.PHONY : tests/test_email.i
+
+# target to preprocess a source file
+tests/test_email.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_email.dir/build.make CMakeFiles/test_email.dir/tests/test_email.cc.i
+.PHONY : tests/test_email.cc.i
+
+tests/test_email.s: tests/test_email.cc.s
+
+.PHONY : tests/test_email.s
+
+# target to generate assembly for a file
+tests/test_email.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_email.dir/build.make CMakeFiles/test_email.dir/tests/test_email.cc.s
+.PHONY : tests/test_email.cc.s
+
+tests/test_env.o: tests/test_env.cc.o
+
+.PHONY : tests/test_env.o
+
+# target to build an object file
+tests/test_env.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.o
+.PHONY : tests/test_env.cc.o
+
+tests/test_env.i: tests/test_env.cc.i
+
+.PHONY : tests/test_env.i
+
+# target to preprocess a source file
+tests/test_env.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.i
+.PHONY : tests/test_env.cc.i
+
+tests/test_env.s: tests/test_env.cc.s
+
+.PHONY : tests/test_env.s
+
+# target to generate assembly for a file
+tests/test_env.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.s
+.PHONY : tests/test_env.cc.s
+
+tests/test_fiber.o: tests/test_fiber.cc.o
+
+.PHONY : tests/test_fiber.o
+
+# target to build an object file
+tests/test_fiber.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
+.PHONY : tests/test_fiber.cc.o
+
+tests/test_fiber.i: tests/test_fiber.cc.i
+
+.PHONY : tests/test_fiber.i
+
+# target to preprocess a source file
+tests/test_fiber.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
+.PHONY : tests/test_fiber.cc.i
+
+tests/test_fiber.s: tests/test_fiber.cc.s
+
+.PHONY : tests/test_fiber.s
+
+# target to generate assembly for a file
+tests/test_fiber.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
+.PHONY : tests/test_fiber.cc.s
+
+tests/test_hashmap.o: tests/test_hashmap.cc.o
+
+.PHONY : tests/test_hashmap.o
+
+# target to build an object file
+tests/test_hashmap.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmap.dir/build.make CMakeFiles/test_hashmap.dir/tests/test_hashmap.cc.o
+.PHONY : tests/test_hashmap.cc.o
+
+tests/test_hashmap.i: tests/test_hashmap.cc.i
+
+.PHONY : tests/test_hashmap.i
+
+# target to preprocess a source file
+tests/test_hashmap.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmap.dir/build.make CMakeFiles/test_hashmap.dir/tests/test_hashmap.cc.i
+.PHONY : tests/test_hashmap.cc.i
+
+tests/test_hashmap.s: tests/test_hashmap.cc.s
+
+.PHONY : tests/test_hashmap.s
+
+# target to generate assembly for a file
+tests/test_hashmap.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmap.dir/build.make CMakeFiles/test_hashmap.dir/tests/test_hashmap.cc.s
+.PHONY : tests/test_hashmap.cc.s
+
+tests/test_hashmultimap.o: tests/test_hashmultimap.cc.o
+
+.PHONY : tests/test_hashmultimap.o
+
+# target to build an object file
+tests/test_hashmultimap.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmultimap.dir/build.make CMakeFiles/test_hashmultimap.dir/tests/test_hashmultimap.cc.o
+.PHONY : tests/test_hashmultimap.cc.o
+
+tests/test_hashmultimap.i: tests/test_hashmultimap.cc.i
+
+.PHONY : tests/test_hashmultimap.i
+
+# target to preprocess a source file
+tests/test_hashmultimap.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmultimap.dir/build.make CMakeFiles/test_hashmultimap.dir/tests/test_hashmultimap.cc.i
+.PHONY : tests/test_hashmultimap.cc.i
+
+tests/test_hashmultimap.s: tests/test_hashmultimap.cc.s
+
+.PHONY : tests/test_hashmultimap.s
+
+# target to generate assembly for a file
+tests/test_hashmultimap.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hashmultimap.dir/build.make CMakeFiles/test_hashmultimap.dir/tests/test_hashmultimap.cc.s
+.PHONY : tests/test_hashmultimap.cc.s
+
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
+
+tests/test_http.o: tests/test_http.cc.o
+
+.PHONY : tests/test_http.o
+
+# target to build an object file
+tests/test_http.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.o
+.PHONY : tests/test_http.cc.o
+
+tests/test_http.i: tests/test_http.cc.i
+
+.PHONY : tests/test_http.i
+
+# target to preprocess a source file
+tests/test_http.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.i
+.PHONY : tests/test_http.cc.i
+
+tests/test_http.s: tests/test_http.cc.s
+
+.PHONY : tests/test_http.s
+
+# target to generate assembly for a file
+tests/test_http.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
+.PHONY : tests/test_http.cc.s
+
+tests/test_http_connection.o: tests/test_http_connection.cc.o
+
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.o
+.PHONY : tests/test_http_connection.cc.o
+
+tests/test_http_connection.i: tests/test_http_connection.cc.i
+
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.i
+.PHONY : tests/test_http_connection.cc.i
+
+tests/test_http_connection.s: tests/test_http_connection.cc.s
+
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.s
+.PHONY : tests/test_http_connection.cc.s
+
+tests/test_http_parser.o: tests/test_http_parser.cc.o
+
+.PHONY : tests/test_http_parser.o
+
+# target to build an object file
+tests/test_http_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.o
+.PHONY : tests/test_http_parser.cc.o
+
+tests/test_http_parser.i: tests/test_http_parser.cc.i
+
+.PHONY : tests/test_http_parser.i
+
+# target to preprocess a source file
+tests/test_http_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.i
+.PHONY : tests/test_http_parser.cc.i
+
+tests/test_http_parser.s: tests/test_http_parser.cc.s
+
+.PHONY : tests/test_http_parser.s
+
+# target to generate assembly for a file
+tests/test_http_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.s
+.PHONY : tests/test_http_parser.cc.s
+
+tests/test_http_server.o: tests/test_http_server.cc.o
+
+.PHONY : tests/test_http_server.o
+
+# target to build an object file
+tests/test_http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o
+.PHONY : tests/test_http_server.cc.o
+
+tests/test_http_server.i: tests/test_http_server.cc.i
+
+.PHONY : tests/test_http_server.i
+
+# target to preprocess a source file
+tests/test_http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.i
+.PHONY : tests/test_http_server.cc.i
+
+tests/test_http_server.s: tests/test_http_server.cc.s
+
+.PHONY : tests/test_http_server.s
+
+# target to generate assembly for a file
+tests/test_http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.s
+.PHONY : tests/test_http_server.cc.s
+
+tests/test_iomanager.o: tests/test_iomanager.cc.o
+
+.PHONY : tests/test_iomanager.o
+
+# target to build an object file
+tests/test_iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.cc.o
+
+tests/test_iomanager.i: tests/test_iomanager.cc.i
+
+.PHONY : tests/test_iomanager.i
+
+# target to preprocess a source file
+tests/test_iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.cc.i
+
+tests/test_iomanager.s: tests/test_iomanager.cc.s
+
+.PHONY : tests/test_iomanager.s
+
+# target to generate assembly for a file
+tests/test_iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.cc.s
+
+tests/test_logserver.o: tests/test_logserver.cc.o
+
+.PHONY : tests/test_logserver.o
+
+# target to build an object file
+tests/test_logserver.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_log_server.dir/build.make CMakeFiles/test_log_server.dir/tests/test_logserver.cc.o
+.PHONY : tests/test_logserver.cc.o
+
+tests/test_logserver.i: tests/test_logserver.cc.i
+
+.PHONY : tests/test_logserver.i
+
+# target to preprocess a source file
+tests/test_logserver.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_log_server.dir/build.make CMakeFiles/test_log_server.dir/tests/test_logserver.cc.i
+.PHONY : tests/test_logserver.cc.i
+
+tests/test_logserver.s: tests/test_logserver.cc.s
+
+.PHONY : tests/test_logserver.s
+
+# target to generate assembly for a file
+tests/test_logserver.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_log_server.dir/build.make CMakeFiles/test_log_server.dir/tests/test_logserver.cc.s
+.PHONY : tests/test_logserver.cc.s
+
+tests/test_lru.o: tests/test_lru.cc.o
+
+.PHONY : tests/test_lru.o
+
+# target to build an object file
+tests/test_lru.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lru.dir/build.make CMakeFiles/test_lru.dir/tests/test_lru.cc.o
+.PHONY : tests/test_lru.cc.o
+
+tests/test_lru.i: tests/test_lru.cc.i
+
+.PHONY : tests/test_lru.i
+
+# target to preprocess a source file
+tests/test_lru.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lru.dir/build.make CMakeFiles/test_lru.dir/tests/test_lru.cc.i
+.PHONY : tests/test_lru.cc.i
+
+tests/test_lru.s: tests/test_lru.cc.s
+
+.PHONY : tests/test_lru.s
+
+# target to generate assembly for a file
+tests/test_lru.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lru.dir/build.make CMakeFiles/test_lru.dir/tests/test_lru.cc.s
+.PHONY : tests/test_lru.cc.s
+
+tests/test_module.o: tests/test_module.cc.o
+
+.PHONY : tests/test_module.o
+
+# target to build an object file
+tests/test_module.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_module.dir/build.make CMakeFiles/test_module.dir/tests/test_module.cc.o
+.PHONY : tests/test_module.cc.o
+
+tests/test_module.i: tests/test_module.cc.i
+
+.PHONY : tests/test_module.i
+
+# target to preprocess a source file
+tests/test_module.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_module.dir/build.make CMakeFiles/test_module.dir/tests/test_module.cc.i
+.PHONY : tests/test_module.cc.i
+
+tests/test_module.s: tests/test_module.cc.s
+
+.PHONY : tests/test_module.s
+
+# target to generate assembly for a file
+tests/test_module.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_module.dir/build.make CMakeFiles/test_module.dir/tests/test_module.cc.s
+.PHONY : tests/test_module.cc.s
+
+tests/test_mysql.o: tests/test_mysql.cc.o
+
+.PHONY : tests/test_mysql.o
+
+# target to build an object file
+tests/test_mysql.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_mysql.dir/build.make CMakeFiles/test_mysql.dir/tests/test_mysql.cc.o
+.PHONY : tests/test_mysql.cc.o
+
+tests/test_mysql.i: tests/test_mysql.cc.i
+
+.PHONY : tests/test_mysql.i
+
+# target to preprocess a source file
+tests/test_mysql.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_mysql.dir/build.make CMakeFiles/test_mysql.dir/tests/test_mysql.cc.i
+.PHONY : tests/test_mysql.cc.i
+
+tests/test_mysql.s: tests/test_mysql.cc.s
+
+.PHONY : tests/test_mysql.s
+
+# target to generate assembly for a file
+tests/test_mysql.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_mysql.dir/build.make CMakeFiles/test_mysql.dir/tests/test_mysql.cc.s
+.PHONY : tests/test_mysql.cc.s
+
+tests/test_nameserver.o: tests/test_nameserver.cc.o
+
+.PHONY : tests/test_nameserver.o
+
+# target to build an object file
+tests/test_nameserver.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_nameserver.dir/build.make CMakeFiles/test_nameserver.dir/tests/test_nameserver.cc.o
+.PHONY : tests/test_nameserver.cc.o
+
+tests/test_nameserver.i: tests/test_nameserver.cc.i
+
+.PHONY : tests/test_nameserver.i
+
+# target to preprocess a source file
+tests/test_nameserver.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_nameserver.dir/build.make CMakeFiles/test_nameserver.dir/tests/test_nameserver.cc.i
+.PHONY : tests/test_nameserver.cc.i
+
+tests/test_nameserver.s: tests/test_nameserver.cc.s
+
+.PHONY : tests/test_nameserver.s
+
+# target to generate assembly for a file
+tests/test_nameserver.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_nameserver.dir/build.make CMakeFiles/test_nameserver.dir/tests/test_nameserver.cc.s
+.PHONY : tests/test_nameserver.cc.s
+
+tests/test_orm.o: tests/test_orm.cc.o
+
+.PHONY : tests/test_orm.o
+
+# target to build an object file
+tests/test_orm.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_orm.dir/build.make CMakeFiles/test_orm.dir/tests/test_orm.cc.o
+.PHONY : tests/test_orm.cc.o
+
+tests/test_orm.i: tests/test_orm.cc.i
+
+.PHONY : tests/test_orm.i
+
+# target to preprocess a source file
+tests/test_orm.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_orm.dir/build.make CMakeFiles/test_orm.dir/tests/test_orm.cc.i
+.PHONY : tests/test_orm.cc.i
+
+tests/test_orm.s: tests/test_orm.cc.s
+
+.PHONY : tests/test_orm.s
+
+# target to generate assembly for a file
+tests/test_orm.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_orm.dir/build.make CMakeFiles/test_orm.dir/tests/test_orm.cc.s
+.PHONY : tests/test_orm.cc.s
+
+tests/test_rock.o: tests/test_rock.cc.o
+
+.PHONY : tests/test_rock.o
+
+# target to build an object file
+tests/test_rock.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rock.dir/build.make CMakeFiles/test_rock.dir/tests/test_rock.cc.o
+.PHONY : tests/test_rock.cc.o
+
+tests/test_rock.i: tests/test_rock.cc.i
+
+.PHONY : tests/test_rock.i
+
+# target to preprocess a source file
+tests/test_rock.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rock.dir/build.make CMakeFiles/test_rock.dir/tests/test_rock.cc.i
+.PHONY : tests/test_rock.cc.i
+
+tests/test_rock.s: tests/test_rock.cc.s
+
+.PHONY : tests/test_rock.s
+
+# target to generate assembly for a file
+tests/test_rock.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_rock.dir/build.make CMakeFiles/test_rock.dir/tests/test_rock.cc.s
+.PHONY : tests/test_rock.cc.s
+
+tests/test_scheduler.o: tests/test_scheduler.cc.o
+
+.PHONY : tests/test_scheduler.o
+
+# target to build an object file
+tests/test_scheduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o
+.PHONY : tests/test_scheduler.cc.o
+
+tests/test_scheduler.i: tests/test_scheduler.cc.i
+
+.PHONY : tests/test_scheduler.i
+
+# target to preprocess a source file
+tests/test_scheduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.i
+.PHONY : tests/test_scheduler.cc.i
+
+tests/test_scheduler.s: tests/test_scheduler.cc.s
+
+.PHONY : tests/test_scheduler.s
+
+# target to generate assembly for a file
+tests/test_scheduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
+.PHONY : tests/test_scheduler.cc.s
+
 tests/test_service_discovery.o: tests/test_service_discovery.cc.o
 
 .PHONY : tests/test_service_discovery.o
@@ -1963,6 +4611,303 @@ tests/test_service_discovery.s: tests/test_service_discovery.cc.s
 tests/test_service_discovery.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service_discovery.dir/build.make CMakeFiles/test_service_discovery.dir/tests/test_service_discovery.cc.s
 .PHONY : tests/test_service_discovery.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
+
+tests/test_sqlite3.o: tests/test_sqlite3.cc.o
+
+.PHONY : tests/test_sqlite3.o
+
+# target to build an object file
+tests/test_sqlite3.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sqlite3.dir/build.make CMakeFiles/test_sqlite3.dir/tests/test_sqlite3.cc.o
+.PHONY : tests/test_sqlite3.cc.o
+
+tests/test_sqlite3.i: tests/test_sqlite3.cc.i
+
+.PHONY : tests/test_sqlite3.i
+
+# target to preprocess a source file
+tests/test_sqlite3.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sqlite3.dir/build.make CMakeFiles/test_sqlite3.dir/tests/test_sqlite3.cc.i
+.PHONY : tests/test_sqlite3.cc.i
+
+tests/test_sqlite3.s: tests/test_sqlite3.cc.s
+
+.PHONY : tests/test_sqlite3.s
+
+# target to generate assembly for a file
+tests/test_sqlite3.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sqlite3.dir/build.make CMakeFiles/test_sqlite3.dir/tests/test_sqlite3.cc.s
+.PHONY : tests/test_sqlite3.cc.s
+
+tests/test_tcp_server.o: tests/test_tcp_server.cc.o
+
+.PHONY : tests/test_tcp_server.o
+
+# target to build an object file
+tests/test_tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o
+.PHONY : tests/test_tcp_server.cc.o
+
+tests/test_tcp_server.i: tests/test_tcp_server.cc.i
+
+.PHONY : tests/test_tcp_server.i
+
+# target to preprocess a source file
+tests/test_tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.i
+.PHONY : tests/test_tcp_server.cc.i
+
+tests/test_tcp_server.s: tests/test_tcp_server.cc.s
+
+.PHONY : tests/test_tcp_server.s
+
+# target to generate assembly for a file
+tests/test_tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s
+.PHONY : tests/test_tcp_server.cc.s
+
+tests/test_thread.o: tests/test_thread.cc.o
+
+.PHONY : tests/test_thread.o
+
+# target to build an object file
+tests/test_thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.o
+.PHONY : tests/test_thread.cc.o
+
+tests/test_thread.i: tests/test_thread.cc.i
+
+.PHONY : tests/test_thread.i
+
+# target to preprocess a source file
+tests/test_thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.i
+.PHONY : tests/test_thread.cc.i
+
+tests/test_thread.s: tests/test_thread.cc.s
+
+.PHONY : tests/test_thread.s
+
+# target to generate assembly for a file
+tests/test_thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
+.PHONY : tests/test_thread.cc.s
+
+tests/test_timed_cache.o: tests/test_timed_cache.cc.o
+
+.PHONY : tests/test_timed_cache.o
+
+# target to build an object file
+tests/test_timed_cache.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_cache.dir/build.make CMakeFiles/test_timed_cache.dir/tests/test_timed_cache.cc.o
+.PHONY : tests/test_timed_cache.cc.o
+
+tests/test_timed_cache.i: tests/test_timed_cache.cc.i
+
+.PHONY : tests/test_timed_cache.i
+
+# target to preprocess a source file
+tests/test_timed_cache.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_cache.dir/build.make CMakeFiles/test_timed_cache.dir/tests/test_timed_cache.cc.i
+.PHONY : tests/test_timed_cache.cc.i
+
+tests/test_timed_cache.s: tests/test_timed_cache.cc.s
+
+.PHONY : tests/test_timed_cache.s
+
+# target to generate assembly for a file
+tests/test_timed_cache.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_cache.dir/build.make CMakeFiles/test_timed_cache.dir/tests/test_timed_cache.cc.s
+.PHONY : tests/test_timed_cache.cc.s
+
+tests/test_timed_lru_cache.o: tests/test_timed_lru_cache.cc.o
+
+.PHONY : tests/test_timed_lru_cache.o
+
+# target to build an object file
+tests/test_timed_lru_cache.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_lru_cache.dir/build.make CMakeFiles/test_timed_lru_cache.dir/tests/test_timed_lru_cache.cc.o
+.PHONY : tests/test_timed_lru_cache.cc.o
+
+tests/test_timed_lru_cache.i: tests/test_timed_lru_cache.cc.i
+
+.PHONY : tests/test_timed_lru_cache.i
+
+# target to preprocess a source file
+tests/test_timed_lru_cache.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_lru_cache.dir/build.make CMakeFiles/test_timed_lru_cache.dir/tests/test_timed_lru_cache.cc.i
+.PHONY : tests/test_timed_lru_cache.cc.i
+
+tests/test_timed_lru_cache.s: tests/test_timed_lru_cache.cc.s
+
+.PHONY : tests/test_timed_lru_cache.s
+
+# target to generate assembly for a file
+tests/test_timed_lru_cache.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_timed_lru_cache.dir/build.make CMakeFiles/test_timed_lru_cache.dir/tests/test_timed_lru_cache.cc.s
+.PHONY : tests/test_timed_lru_cache.cc.s
+
+tests/test_uri.o: tests/test_uri.cc.o
+
+.PHONY : tests/test_uri.o
+
+# target to build an object file
+tests/test_uri.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.o
+.PHONY : tests/test_uri.cc.o
+
+tests/test_uri.i: tests/test_uri.cc.i
+
+.PHONY : tests/test_uri.i
+
+# target to preprocess a source file
+tests/test_uri.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.i
+.PHONY : tests/test_uri.cc.i
+
+tests/test_uri.s: tests/test_uri.cc.s
+
+.PHONY : tests/test_uri.s
+
+# target to generate assembly for a file
+tests/test_uri.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.s
+.PHONY : tests/test_uri.cc.s
+
+tests/test_util.o: tests/test_util.cc.o
+
+.PHONY : tests/test_util.o
+
+# target to build an object file
+tests/test_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.o
+.PHONY : tests/test_util.cc.o
+
+tests/test_util.i: tests/test_util.cc.i
+
+.PHONY : tests/test_util.i
+
+# target to preprocess a source file
+tests/test_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.i
+.PHONY : tests/test_util.cc.i
+
+tests/test_util.s: tests/test_util.cc.s
+
+.PHONY : tests/test_util.s
+
+# target to generate assembly for a file
+tests/test_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.s
+.PHONY : tests/test_util.cc.s
+
+tests/test_ws_client.o: tests/test_ws_client.cc.o
+
+.PHONY : tests/test_ws_client.o
+
+# target to build an object file
+tests/test_ws_client.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_client.dir/build.make CMakeFiles/test_ws_client.dir/tests/test_ws_client.cc.o
+.PHONY : tests/test_ws_client.cc.o
+
+tests/test_ws_client.i: tests/test_ws_client.cc.i
+
+.PHONY : tests/test_ws_client.i
+
+# target to preprocess a source file
+tests/test_ws_client.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_client.dir/build.make CMakeFiles/test_ws_client.dir/tests/test_ws_client.cc.i
+.PHONY : tests/test_ws_client.cc.i
+
+tests/test_ws_client.s: tests/test_ws_client.cc.s
+
+.PHONY : tests/test_ws_client.s
+
+# target to generate assembly for a file
+tests/test_ws_client.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_client.dir/build.make CMakeFiles/test_ws_client.dir/tests/test_ws_client.cc.s
+.PHONY : tests/test_ws_client.cc.s
+
+tests/test_ws_server.o: tests/test_ws_server.cc.o
+
+.PHONY : tests/test_ws_server.o
+
+# target to build an object file
+tests/test_ws_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_server.dir/build.make CMakeFiles/test_ws_server.dir/tests/test_ws_server.cc.o
+.PHONY : tests/test_ws_server.cc.o
+
+tests/test_ws_server.i: tests/test_ws_server.cc.i
+
+.PHONY : tests/test_ws_server.i
+
+# target to preprocess a source file
+tests/test_ws_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_server.dir/build.make CMakeFiles/test_ws_server.dir/tests/test_ws_server.cc.i
+.PHONY : tests/test_ws_server.cc.i
+
+tests/test_ws_server.s: tests/test_ws_server.cc.s
+
+.PHONY : tests/test_ws_server.s
+
+# target to generate assembly for a file
+tests/test_ws_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ws_server.dir/build.make CMakeFiles/test_ws_server.dir/tests/test_ws_server.cc.s
+.PHONY : tests/test_ws_server.cc.s
+
+tests/test_zlib_stream.o: tests/test_zlib_stream.cc.o
+
+.PHONY : tests/test_zlib_stream.o
+
+# target to build an object file
+tests/test_zlib_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_zlib_stream.dir/build.make CMakeFiles/test_zlib_stream.dir/tests/test_zlib_stream.cc.o
+.PHONY : tests/test_zlib_stream.cc.o
+
+tests/test_zlib_stream.i: tests/test_zlib_stream.cc.i
+
+.PHONY : tests/test_zlib_stream.i
+
+# target to preprocess a source file
+tests/test_zlib_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_zlib_stream.dir/build.make CMakeFiles/test_zlib_stream.dir/tests/test_zlib_stream.cc.i
+.PHONY : tests/test_zlib_stream.cc.i
+
+tests/test_zlib_stream.s: tests/test_zlib_stream.cc.s
+
+.PHONY : tests/test_zlib_stream.s
+
+# target to generate assembly for a file
+tests/test_zlib_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_zlib_stream.dir/build.make CMakeFiles/test_zlib_stream.dir/tests/test_zlib_stream.cc.s
+.PHONY : tests/test_zlib_stream.cc.s
 
 tests/test_zookeeper.o: tests/test_zookeeper.cc.o
 
@@ -1998,10 +4943,66 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... symphony"
-	@echo "... test_zookeeper"
-	@echo "... test_service_discovery"
 	@echo "... edit_cache"
+	@echo "... test_service_discovery"
+	@echo "... test_zookeeper"
+	@echo "... test_bitmap"
+	@echo "... center_server"
+	@echo "... test_uri"
+	@echo "... test_tcp_server"
+	@echo "... test_bytearray"
+	@echo "... test_ws_server"
+	@echo "... test_iomanager"
+	@echo "... test_scheduler"
+	@echo "... test_socket"
+	@echo "... test_config"
+	@echo "... test_thread"
+	@echo "... symphony"
+	@echo "... login_server"
+	@echo "... test_zlib_stream"
+	@echo "... log_server"
+	@echo "... test_address"
+	@echo "... test_hashmultimap"
+	@echo "... test_nameserver"
+	@echo "... test_hook"
+	@echo "... test_http_connection"
+	@echo "... test_hashmap"
+	@echo "... orm"
+	@echo "... test_dict"
+	@echo "... test_application"
+	@echo "... test_log_server"
+	@echo "... echo_server"
+	@echo "... test_sqlite3"
+	@echo "... test_util"
+	@echo "... test_env"
+	@echo "... test_array"
+	@echo "... test1"
+	@echo "... test_crypto"
+	@echo "... test_fiber"
+	@echo "... test_daemon"
+	@echo "... test_ws_client"
+	@echo "... test_orm"
+	@echo "... my_http_server"
+	@echo "... test_lru"
+	@echo "... test_email"
+	@echo "... test_http_parser"
+	@echo "... test_module"
+	@echo "... test_timed_lru_cache"
+	@echo "... test_rock"
+	@echo "... test_http"
+	@echo "... test_mysql"
+	@echo "... test_http_server"
+	@echo "... test_timed_cache"
+	@echo "... db_server"
+	@echo "... bin_symphony"
+	@echo "... account_server"
+	@echo "... orm_data"
+	@echo "... examples/echo_server.o"
+	@echo "... examples/echo_server.i"
+	@echo "... examples/echo_server.s"
+	@echo "... samples/my_http_server.o"
+	@echo "... samples/my_http_server.i"
+	@echo "... samples/my_http_server.s"
 	@echo "... symphony/address.o"
 	@echo "... symphony/address.i"
 	@echo "... symphony/address.s"
@@ -2011,6 +5012,24 @@ help:
 	@echo "... symphony/bytearray.o"
 	@echo "... symphony/bytearray.i"
 	@echo "... symphony/bytearray.s"
+	@echo "... symphony/common/convert.o"
+	@echo "... symphony/common/convert.i"
+	@echo "... symphony/common/convert.s"
+	@echo "... symphony/common/func.o"
+	@echo "... symphony/common/func.i"
+	@echo "... symphony/common/func.s"
+	@echo "... symphony/common/line.o"
+	@echo "... symphony/common/line.i"
+	@echo "... symphony/common/line.s"
+	@echo "... symphony/common/math.o"
+	@echo "... symphony/common/math.i"
+	@echo "... symphony/common/math.s"
+	@echo "... symphony/common/socket.o"
+	@echo "... symphony/common/socket.i"
+	@echo "... symphony/common/socket.s"
+	@echo "... symphony/common/time.o"
+	@echo "... symphony/common/time.i"
+	@echo "... symphony/common/time.s"
 	@echo "... symphony/config.o"
 	@echo "... symphony/config.i"
 	@echo "... symphony/config.s"
@@ -2113,6 +5132,9 @@ help:
 	@echo "... symphony/log.o"
 	@echo "... symphony/log.i"
 	@echo "... symphony/log.s"
+	@echo "... symphony/main.o"
+	@echo "... symphony/main.i"
+	@echo "... symphony/main.s"
 	@echo "... symphony/module.o"
 	@echo "... symphony/module.i"
 	@echo "... symphony/module.s"
@@ -2131,6 +5153,57 @@ help:
 	@echo "... symphony/ns/ns_protocol.o"
 	@echo "... symphony/ns/ns_protocol.i"
 	@echo "... symphony/ns/ns_protocol.s"
+	@echo "... symphony/orm/column.o"
+	@echo "... symphony/orm/column.i"
+	@echo "... symphony/orm/column.s"
+	@echo "... symphony/orm/index.o"
+	@echo "... symphony/orm/index.i"
+	@echo "... symphony/orm/index.s"
+	@echo "... symphony/orm/orm.o"
+	@echo "... symphony/orm/orm.i"
+	@echo "... symphony/orm/orm.s"
+	@echo "... symphony/orm/table.o"
+	@echo "... symphony/orm/table.i"
+	@echo "... symphony/orm/table.s"
+	@echo "... symphony/orm/util.o"
+	@echo "... symphony/orm/util.i"
+	@echo "... symphony/orm/util.s"
+	@echo "... symphony/proto/log_protobuf.pb.o"
+	@echo "... symphony/proto/log_protobuf.pb.i"
+	@echo "... symphony/proto/log_protobuf.pb.s"
+	@echo "... symphony/proto/msg_account.pb.o"
+	@echo "... symphony/proto/msg_account.pb.i"
+	@echo "... symphony/proto/msg_account.pb.s"
+	@echo "... symphony/proto/msg_base.pb.o"
+	@echo "... symphony/proto/msg_base.pb.i"
+	@echo "... symphony/proto/msg_base.pb.s"
+	@echo "... symphony/proto/msg_copy.pb.o"
+	@echo "... symphony/proto/msg_copy.pb.i"
+	@echo "... symphony/proto/msg_copy.pb.s"
+	@echo "... symphony/proto/msg_game.pb.o"
+	@echo "... symphony/proto/msg_game.pb.i"
+	@echo "... symphony/proto/msg_game.pb.s"
+	@echo "... symphony/proto/msg_id.pb.o"
+	@echo "... symphony/proto/msg_id.pb.i"
+	@echo "... symphony/proto/msg_id.pb.s"
+	@echo "... symphony/proto/msg_login_clt_data.pb.o"
+	@echo "... symphony/proto/msg_login_clt_data.pb.i"
+	@echo "... symphony/proto/msg_login_clt_data.pb.s"
+	@echo "... symphony/proto/msg_login_db.pb.o"
+	@echo "... symphony/proto/msg_login_db.pb.i"
+	@echo "... symphony/proto/msg_login_db.pb.s"
+	@echo "... symphony/proto/msg_move.pb.o"
+	@echo "... symphony/proto/msg_move.pb.i"
+	@echo "... symphony/proto/msg_move.pb.s"
+	@echo "... symphony/proto/msg_payment.pb.o"
+	@echo "... symphony/proto/msg_payment.pb.i"
+	@echo "... symphony/proto/msg_payment.pb.s"
+	@echo "... symphony/proto/msg_ret_code.pb.o"
+	@echo "... symphony/proto/msg_ret_code.pb.i"
+	@echo "... symphony/proto/msg_ret_code.pb.s"
+	@echo "... symphony/proto/msg_role.pb.o"
+	@echo "... symphony/proto/msg_role.pb.i"
+	@echo "... symphony/proto/msg_role.pb.s"
 	@echo "... symphony/protocol.o"
 	@echo "... symphony/protocol.i"
 	@echo "... symphony/protocol.s"
@@ -2146,6 +5219,60 @@ help:
 	@echo "... symphony/scheduler.o"
 	@echo "... symphony/scheduler.i"
 	@echo "... symphony/scheduler.s"
+	@echo "... symphony/servers/account_server/account_manager.o"
+	@echo "... symphony/servers/account_server/account_manager.i"
+	@echo "... symphony/servers/account_server/account_manager.s"
+	@echo "... symphony/servers/account_server/account_server_module.o"
+	@echo "... symphony/servers/account_server/account_server_module.i"
+	@echo "... symphony/servers/account_server/account_server_module.s"
+	@echo "... symphony/servers/account_server/game_log_manager.o"
+	@echo "... symphony/servers/account_server/game_log_manager.i"
+	@echo "... symphony/servers/account_server/game_log_manager.s"
+	@echo "... symphony/servers/center_server/center_server_module.o"
+	@echo "... symphony/servers/center_server/center_server_module.i"
+	@echo "... symphony/servers/center_server/center_server_module.s"
+	@echo "... symphony/servers/center_server/logic_svr_manager.o"
+	@echo "... symphony/servers/center_server/logic_svr_manager.i"
+	@echo "... symphony/servers/center_server/logic_svr_manager.s"
+	@echo "... symphony/servers/db_server/db_manager.o"
+	@echo "... symphony/servers/db_server/db_manager.i"
+	@echo "... symphony/servers/db_server/db_manager.s"
+	@echo "... symphony/servers/db_server/db_server_module.o"
+	@echo "... symphony/servers/db_server/db_server_module.i"
+	@echo "... symphony/servers/db_server/db_server_module.s"
+	@echo "... symphony/servers/log_server/account_create_info.o"
+	@echo "... symphony/servers/log_server/account_create_info.i"
+	@echo "... symphony/servers/log_server/account_create_info.s"
+	@echo "... symphony/servers/log_server/account_login_info.o"
+	@echo "... symphony/servers/log_server/account_login_info.i"
+	@echo "... symphony/servers/log_server/account_login_info.s"
+	@echo "... symphony/servers/log_server/log_server_module.o"
+	@echo "... symphony/servers/log_server/log_server_module.i"
+	@echo "... symphony/servers/log_server/log_server_module.s"
+	@echo "... symphony/servers/log_server/ls_client.o"
+	@echo "... symphony/servers/log_server/ls_client.i"
+	@echo "... symphony/servers/log_server/ls_client.s"
+	@echo "... symphony/servers/log_server/role_chat_info.o"
+	@echo "... symphony/servers/log_server/role_chat_info.i"
+	@echo "... symphony/servers/log_server/role_chat_info.s"
+	@echo "... symphony/servers/log_server/role_create_info.o"
+	@echo "... symphony/servers/log_server/role_create_info.i"
+	@echo "... symphony/servers/log_server/role_create_info.s"
+	@echo "... symphony/servers/log_server/role_login_info.o"
+	@echo "... symphony/servers/log_server/role_login_info.i"
+	@echo "... symphony/servers/log_server/role_login_info.s"
+	@echo "... symphony/servers/log_server/role_logout_info.o"
+	@echo "... symphony/servers/log_server/role_logout_info.i"
+	@echo "... symphony/servers/log_server/role_logout_info.s"
+	@echo "... symphony/servers/login_server/logic_svr_manager.o"
+	@echo "... symphony/servers/login_server/logic_svr_manager.i"
+	@echo "... symphony/servers/login_server/logic_svr_manager.s"
+	@echo "... symphony/servers/login_server/login_client_manager.o"
+	@echo "... symphony/servers/login_server/login_client_manager.i"
+	@echo "... symphony/servers/login_server/login_client_manager.s"
+	@echo "... symphony/servers/login_server/login_server_module.o"
+	@echo "... symphony/servers/login_server/login_server_module.i"
+	@echo "... symphony/servers/login_server/login_server_module.s"
 	@echo "... symphony/socket.o"
 	@echo "... symphony/socket.i"
 	@echo "... symphony/socket.s"
@@ -2191,6 +5318,9 @@ help:
 	@echo "... symphony/util/json_util.o"
 	@echo "... symphony/util/json_util.i"
 	@echo "... symphony/util/json_util.s"
+	@echo "... symphony/util/str_util.o"
+	@echo "... symphony/util/str_util.i"
+	@echo "... symphony/util/str_util.s"
 	@echo "... symphony/util/time.o"
 	@echo "... symphony/util/time.i"
 	@echo "... symphony/util/time.s"
@@ -2200,9 +5330,129 @@ help:
 	@echo "... symphony/zk_client.o"
 	@echo "... symphony/zk_client.i"
 	@echo "... symphony/zk_client.s"
+	@echo "... tests/test.o"
+	@echo "... tests/test.i"
+	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
+	@echo "... tests/test_application.o"
+	@echo "... tests/test_application.i"
+	@echo "... tests/test_application.s"
+	@echo "... tests/test_array.o"
+	@echo "... tests/test_array.i"
+	@echo "... tests/test_array.s"
+	@echo "... tests/test_bitmap.o"
+	@echo "... tests/test_bitmap.i"
+	@echo "... tests/test_bitmap.s"
+	@echo "... tests/test_bytearray.o"
+	@echo "... tests/test_bytearray.i"
+	@echo "... tests/test_bytearray.s"
+	@echo "... tests/test_config.o"
+	@echo "... tests/test_config.i"
+	@echo "... tests/test_config.s"
+	@echo "... tests/test_crypto.o"
+	@echo "... tests/test_crypto.i"
+	@echo "... tests/test_crypto.s"
+	@echo "... tests/test_daemon.o"
+	@echo "... tests/test_daemon.i"
+	@echo "... tests/test_daemon.s"
+	@echo "... tests/test_dict.o"
+	@echo "... tests/test_dict.i"
+	@echo "... tests/test_dict.s"
+	@echo "... tests/test_email.o"
+	@echo "... tests/test_email.i"
+	@echo "... tests/test_email.s"
+	@echo "... tests/test_env.o"
+	@echo "... tests/test_env.i"
+	@echo "... tests/test_env.s"
+	@echo "... tests/test_fiber.o"
+	@echo "... tests/test_fiber.i"
+	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hashmap.o"
+	@echo "... tests/test_hashmap.i"
+	@echo "... tests/test_hashmap.s"
+	@echo "... tests/test_hashmultimap.o"
+	@echo "... tests/test_hashmultimap.i"
+	@echo "... tests/test_hashmultimap.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
+	@echo "... tests/test_http.o"
+	@echo "... tests/test_http.i"
+	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
+	@echo "... tests/test_http_parser.o"
+	@echo "... tests/test_http_parser.i"
+	@echo "... tests/test_http_parser.s"
+	@echo "... tests/test_http_server.o"
+	@echo "... tests/test_http_server.i"
+	@echo "... tests/test_http_server.s"
+	@echo "... tests/test_iomanager.o"
+	@echo "... tests/test_iomanager.i"
+	@echo "... tests/test_iomanager.s"
+	@echo "... tests/test_logserver.o"
+	@echo "... tests/test_logserver.i"
+	@echo "... tests/test_logserver.s"
+	@echo "... tests/test_lru.o"
+	@echo "... tests/test_lru.i"
+	@echo "... tests/test_lru.s"
+	@echo "... tests/test_module.o"
+	@echo "... tests/test_module.i"
+	@echo "... tests/test_module.s"
+	@echo "... tests/test_mysql.o"
+	@echo "... tests/test_mysql.i"
+	@echo "... tests/test_mysql.s"
+	@echo "... tests/test_nameserver.o"
+	@echo "... tests/test_nameserver.i"
+	@echo "... tests/test_nameserver.s"
+	@echo "... tests/test_orm.o"
+	@echo "... tests/test_orm.i"
+	@echo "... tests/test_orm.s"
+	@echo "... tests/test_rock.o"
+	@echo "... tests/test_rock.i"
+	@echo "... tests/test_rock.s"
+	@echo "... tests/test_scheduler.o"
+	@echo "... tests/test_scheduler.i"
+	@echo "... tests/test_scheduler.s"
 	@echo "... tests/test_service_discovery.o"
 	@echo "... tests/test_service_discovery.i"
 	@echo "... tests/test_service_discovery.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
+	@echo "... tests/test_sqlite3.o"
+	@echo "... tests/test_sqlite3.i"
+	@echo "... tests/test_sqlite3.s"
+	@echo "... tests/test_tcp_server.o"
+	@echo "... tests/test_tcp_server.i"
+	@echo "... tests/test_tcp_server.s"
+	@echo "... tests/test_thread.o"
+	@echo "... tests/test_thread.i"
+	@echo "... tests/test_thread.s"
+	@echo "... tests/test_timed_cache.o"
+	@echo "... tests/test_timed_cache.i"
+	@echo "... tests/test_timed_cache.s"
+	@echo "... tests/test_timed_lru_cache.o"
+	@echo "... tests/test_timed_lru_cache.i"
+	@echo "... tests/test_timed_lru_cache.s"
+	@echo "... tests/test_uri.o"
+	@echo "... tests/test_uri.i"
+	@echo "... tests/test_uri.s"
+	@echo "... tests/test_util.o"
+	@echo "... tests/test_util.i"
+	@echo "... tests/test_util.s"
+	@echo "... tests/test_ws_client.o"
+	@echo "... tests/test_ws_client.i"
+	@echo "... tests/test_ws_client.s"
+	@echo "... tests/test_ws_server.o"
+	@echo "... tests/test_ws_server.i"
+	@echo "... tests/test_ws_server.s"
+	@echo "... tests/test_zlib_stream.o"
+	@echo "... tests/test_zlib_stream.i"
+	@echo "... tests/test_zlib_stream.s"
 	@echo "... tests/test_zookeeper.o"
 	@echo "... tests/test_zookeeper.i"
 	@echo "... tests/test_zookeeper.s"

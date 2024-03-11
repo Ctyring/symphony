@@ -260,6 +260,12 @@ set(LOS_SRCS
 )
 add_library(login_server SHARED ${LOS_SRCS})
 
+set(CS_SRCS
+	symphony/servers/center_server/center_server_module.cc
+	symphony/servers/center_server/logic_svr_manager.cc
+)
+add_library(center_server SHARED ${CS_SRCS})
+
 symphony_add_executable(test_nameserver "tests/test_nameserver.cc" symphony "${LIBS}")
 symphony_add_executable(test_bitmap "tests/test_bitmap.cc" symphony "${LIBS}")
 endif()

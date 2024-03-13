@@ -2344,6 +2344,33 @@ symphony/orm/util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/orm.dir/build.make CMakeFiles/orm.dir/symphony/orm/util.cc.s
 .PHONY : symphony/orm/util.cc.s
 
+symphony/proto/game_define.pb.o: symphony/proto/game_define.pb.cc.o
+
+.PHONY : symphony/proto/game_define.pb.o
+
+# target to build an object file
+symphony/proto/game_define.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/game_define.pb.cc.o
+.PHONY : symphony/proto/game_define.pb.cc.o
+
+symphony/proto/game_define.pb.i: symphony/proto/game_define.pb.cc.i
+
+.PHONY : symphony/proto/game_define.pb.i
+
+# target to preprocess a source file
+symphony/proto/game_define.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/game_define.pb.cc.i
+.PHONY : symphony/proto/game_define.pb.cc.i
+
+symphony/proto/game_define.pb.s: symphony/proto/game_define.pb.cc.s
+
+.PHONY : symphony/proto/game_define.pb.s
+
+# target to generate assembly for a file
+symphony/proto/game_define.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/symphony.dir/build.make CMakeFiles/symphony.dir/symphony/proto/game_define.pb.cc.s
+.PHONY : symphony/proto/game_define.pb.cc.s
+
 symphony/proto/log_protobuf.pb.o: symphony/proto/log_protobuf.pb.cc.o
 
 .PHONY : symphony/proto/log_protobuf.pb.o
@@ -5168,6 +5195,9 @@ help:
 	@echo "... symphony/orm/util.o"
 	@echo "... symphony/orm/util.i"
 	@echo "... symphony/orm/util.s"
+	@echo "... symphony/proto/game_define.pb.o"
+	@echo "... symphony/proto/game_define.pb.i"
+	@echo "... symphony/proto/game_define.pb.s"
 	@echo "... symphony/proto/log_protobuf.pb.o"
 	@echo "... symphony/proto/log_protobuf.pb.i"
 	@echo "... symphony/proto/log_protobuf.pb.s"

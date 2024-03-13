@@ -44,6 +44,7 @@
 
 #include "ds/cache_status.h"
 #include "ds/lru_cache.h"
+#include "ds/server_define.h"
 #include "ds/timed_cache.h"
 #include "ds/timed_lru_cache.h"
 
@@ -80,6 +81,7 @@
 
 #include "symphony/common/convert.h"
 #include "symphony/common/func.h"
+#include "symphony/common/shared_memory.h"
 #include "symphony/common/socket.h"
 #include "symphony/common/time.h"
 
@@ -88,6 +90,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "symphony/proto/game_define.pb.h"
 #include "symphony/proto/log_protobuf.pb.h"
 #include "symphony/proto/msg_account.pb.h"
 #include "symphony/proto/msg_base.pb.h"
@@ -139,6 +142,7 @@
 #define WSAESTALE ESTALE
 #define WSAEREMOTE EREMOTE
 #define SQL_BUFF_LEN 1024
+#define ROLE_NAME_LEN 255
 
 typedef char INT8;
 typedef unsigned char UINT8;

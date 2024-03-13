@@ -173,6 +173,8 @@ class MySQL : public IDB, public std::enable_shared_from_this<MySQL> {
     bool connect();
     bool ping();
 
+    bool close();
+
     virtual int execute(const char* format, ...) override;
     int execute(const char* format, va_list ap);
     virtual int execute(const std::string& sql) override;
@@ -285,6 +287,8 @@ class MySQLStmt : public IStmt, public std::enable_shared_from_this<MySQLStmt> {
     int bindString(int idx, const std::string& value) override;
     int bindBlob(int idx, const void* value, int64_t size) override;
     int bindBlob(int idx, const std::string& value) override;
+    int bindTinyBlob(int idx, const void* value, int64_t size) override;
+    int bindTinyBlob(int idx, const std::string& value) override;
     // int bindTime(int idx, const MYSQL_TIME& value, int type =
     // MYSQL_TYPE_TIMESTAMP);
     int bindTime(int idx, const time_t& value) override;

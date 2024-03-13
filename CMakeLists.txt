@@ -138,6 +138,7 @@ protobufmaker(symphony/proto/msg_id.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/msg_login_clt_data.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/msg_move.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 protobufmaker(symphony/proto/msg_payment.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
+protobufmaker(symphony/proto/game_define.proto LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR})
 add_library(symphony SHARED ${LIB_SRC})
 force_redefine_file_macro_for_sources(symphony)
 

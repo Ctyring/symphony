@@ -103,6 +103,13 @@ bool MySQL::connect() {
     return true;
 }
 
+bool MySQL::close() {
+    if (m_mysql) {
+        mysql_close(m_mysql.get());
+    }
+    return true;
+}
+
 symphony::IStmt::ptr MySQL::prepare(const std::string& sql) {
     return MySQLStmt::Create(shared_from_this(), sql);
 }
@@ -440,6 +447,20 @@ int MySQLStmt::bindString(int idx, const char* value) {
 int MySQLStmt::bindString(int idx, const std::string& value) {
     idx -= 1;
     m_binds[idx].buffer_type = MYSQL_TYPE_STRING;
+    BIND_COPY_LEN(value.c_str(), value.size());
+    return 0;
+}
+
+int MySQLStmt::bindTinyBlob(int idx, const void* value, int64_t size) {
+    idx -= 1;
+    m_binds[idx].buffer_type = MYSQL_TYPE_TINY_BLOB;
+    BIND_COPY_LEN(value, size);
+    return 0;
+}
+
+int MySQLStmt::bindTinyBlob(int idx, const std::string& value) {
+    idx -= 1;
+    m_binds[idx].buffer_type = MYSQL_TYPE_TINY_BLOB;
     BIND_COPY_LEN(value.c_str(), value.size());
     return 0;
 }

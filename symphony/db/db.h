@@ -77,6 +77,8 @@ class IStmt {
     virtual int bindDouble(int idx, const double& value) = 0;
     virtual int bindString(int idx, const char* value) = 0;
     virtual int bindString(int idx, const std::string& value) = 0;
+    virtual int bindTinyBlob(int idx, const void* value, int64_t size) = 0;
+    virtual int bindTinyBlob(int idx, const std::string& value) = 0;
     virtual int bindBlob(int idx, const void* value, int64_t size) = 0;
     virtual int bindBlob(int idx, const std::string& value) = 0;
     virtual int bindTime(int idx, const time_t& value) = 0;

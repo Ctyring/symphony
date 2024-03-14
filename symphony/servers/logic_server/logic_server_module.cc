@@ -1,8 +1,13 @@
 #include "symphony/servers/logic_server/logic_server_module.h"
+#include "game_log_manager.h"
+#include "global_data_manager.h"
 #include "login_code_manager.h"
 #include "player_manager.h"
 #include "player_object.h"
 #include "role_module.h"
+#include "symphony/common/config_file.h"
+#include "symphony/ds/global_data.h"
+#include "symphony/ds/static_data.h"
 #include "symphony/log.h"
 #include "symphony/servers/logic_server/simple_manager.h"
 #include "symphony/symphony.h"
@@ -84,7 +89,7 @@ bool handleMsgSelectServerReq(symphony::RockRequest::ptr request,
     symphony::proto::SelectServerAck Ack;
     Ack.set_retcode(MRC_SUCCESSED);
     Ack.set_accountid(Req.accountid());
-    Ack.set_serverid(0);
+    Ack.set_serverid(CConfigFile::GetInstancePtr()->GetIntValue("areaid"));
     Ack.set_logincode(
         CLoginCodeManager::GetInstancePtr()->CreateLoginCode(Req.accountid()));
 
@@ -177,7 +182,82 @@ bool handleMsgRoleListAck(symphony::RockRequest::ptr request,
 }
 bool handleMsgRoleCreateReq(symphony::RockRequest::ptr request,
                             symphony::RockResponse::ptr response,
-                            symphony::RockStream::ptr stream);
+                            symphony::RockStream::ptr stream) {
+    symphony::proto::RoleCreateReq Req;
+    Req.ParsePartialFromArray(request->getBody().c_str(),
+                              request->getBody().size());
+    // 检验名字是否可用
+    if (Req.accountid() == 0 || Req.carrer() == 0) {
+        return true;
+    }
+
+    symphony::proto::RoleCreateAck Ack;
+
+    Ack.set_accountid(Req.accountid());
+    Ack.set_roleid(0);
+    Ack.set_carrer(Req.carrer());
+    Ack.set_name(Req.name());
+
+    std::string strName = Req.name();
+
+    if (!CommonConvert::IsTextUTF8(strName.c_str(), (UINT32)strName.size())) {
+        Ack.set_retcode(MRC_ROLE_NAME_MUST_UTF8);
+        response->setCmd((int)symphony::proto::MSG_ROLE_CREATE_ACK);
+        response->setBody(Ack.SerializeAsString());
+        return true;
+    }
+
+    if (CSimpleManager::GetInstancePtr()->CheckNameExist(strName)) {
+        Ack.set_retcode(MRC_ROLE_NAME_EXIST);
+        response->setCmd((int)symphony::proto::MSG_ROLE_CREATE_ACK);
+        response->setBody(Ack.SerializeAsString());
+        return TRUE;
+    }
+
+    StCarrerInfo* pCarrerInfo =
+        CStaticData::GetInstancePtr()->GetCarrerInfo(Req.carrer());
+    if (pCarrerInfo == NULL) {
+        Ack.set_retcode(MRC_INVALID_CARRERID);
+        response->setCmd((int)symphony::proto::MSG_ROLE_CREATE_ACK);
+        response->setBody(Ack.SerializeAsString());
+        return TRUE;
+    }
+
+    UINT64 u64RoleID = CGlobalDataManager::GetInstancePtr()->MakeNewGuid();
+    if (u64RoleID == 0) {
+        return true;
+    }
+    if (u64RoleID == 0) {
+        return true;
+    }
+
+    CSimpleInfo* pSimpleInfo =
+        CSimpleManager::GetInstancePtr()->CreateSimpleInfo(
+            u64RoleID, Req.accountid(), Req.name(), Req.carrer());
+    if (pSimpleInfo == NULL) {
+        return true;
+    }
+
+    CPlayerObject* pPlayer =
+        CPlayerManager::GetInstancePtr()->CreatePlayer(u64RoleID);
+    if (pPlayer == NULL || pPlayer->Init(u64RoleID) == FALSE) {
+        return true;
+    }
+
+    CRoleModule* pRoleModule = (CRoleModule*)pPlayer->GetModuleByType(MT_ROLE);
+    pRoleModule->InitBaseData(u64RoleID, Req.name(), Req.carrer(),
+                              Req.accountid(), Req.channel());
+    pPlayer->OnCreate(u64RoleID);
+
+    CGameLogManager::GetInstancePtr()->LogRoleCreate(pPlayer);
+
+    Ack.set_retcode(MRC_SUCCESSED);
+    Ack.set_roleid(u64RoleID);
+    response->setCmd((int)symphony::proto::MSG_ROLE_CREATE_ACK);
+    response->setBody(Ack.SerializeAsString());
+
+    return TRUE;
+}
 bool handleMsgRoleDeleteReq(symphony::RockRequest::ptr request,
                             symphony::RockResponse::ptr response,
                             symphony::RockStream::ptr stream);

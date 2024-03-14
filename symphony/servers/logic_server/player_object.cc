@@ -1,4 +1,12 @@
 #include "player_object.h"
+#include "bag_module.h"
+#include "copy_module.h"
+#include "game_log_manager.h"
+#include "mail_manager.h"
+#include "role_module.h"
+#include "symphony/log.h"
+
+static symphony::Logger::ptr g_logger = SYMPHONY_LOG_NAME("system");
 
 CPlayerObject::CPlayerObject() {}
 
@@ -63,19 +71,26 @@ BOOL CPlayerObject::OnLogin() {
     m_IsOnline = TRUE;
 
     CRoleModule* pRoleModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-    ERROR_RETURN_VALUE(pRoleModule != NULL, MRC_UNKNOW_ERROR);
+    if (pRoleModule == NULL) {
+        return MRC_UNKNOW_ERROR;
+    }
 
     if (!CommonFunc::IsSameDay(pRoleModule->GetLastLogoffTime())) {
         for (int i = MT_ROLE; i < MT_END; i++) {
             CModuleBase* pBase = m_MoudleList.at(i);
-            ERROR_RETURN_FALSE(pBase != NULL);
+            if (pBase == NULL) {
+                return false;
+            }
+
             pBase->OnNewDay();
         }
     }
 
     m_uRoomID = 0;
 
-    ERROR_RETURN_FALSE(m_uRoleID != 0);
+    if (m_uRoleID == 0) {
+        return false;
+    }
 
     CMailManager::GetInstancePtr()->ProcessRoleLogin(this);
 
@@ -94,7 +109,10 @@ BOOL CPlayerObject::OnLogin() {
 BOOL CPlayerObject::OnLogout() {
     for (int i = MT_ROLE; i < MT_END; i++) {
         CModuleBase* pBase = m_MoudleList.at(i);
-        ERROR_RETURN_FALSE(pBase != NULL);
+        if (pBase == NULL) {
+            return false;
+        }
+
         pBase->OnLogout();
     }
 
@@ -108,16 +126,22 @@ BOOL CPlayerObject::OnLogout() {
 BOOL CPlayerObject::OnNewDay() {
     for (int i = MT_ROLE; i < MT_END; i++) {
         CModuleBase* pBase = m_MoudleList.at(i);
-        ERROR_RETURN_FALSE(pBase != NULL);
+        if (pBase == NULL) {
+            return false;
+        }
+
         pBase->OnNewDay();
     }
     return TRUE;
 }
 
-BOOL CPlayerObject::ReadFromDBLoginData(DBRoleLoginAck& Ack) {
+BOOL CPlayerObject::ReadFromDBLoginData(symphony::proto::DBRoleLoginAck& Ack) {
     for (int i = MT_ROLE; i < MT_END; i++) {
         CModuleBase* pBase = m_MoudleList.at(i);
-        ERROR_RETURN_FALSE(pBase != NULL);
+        if (pBase == NULL) {
+            return false;
+        }
+
         pBase->ReadFromDBLoginData(Ack);
     }
 
@@ -147,7 +171,9 @@ BOOL CPlayerObject::CreateAllModule() {
 BOOL CPlayerObject::DestroyAllModule() {
     for (int i = MT_ROLE; i < MT_END; i++) {
         CModuleBase* pBase = m_MoudleList.at(i);
-        ERROR_RETURN_FALSE(pBase != NULL);
+        if (pBase == NULL) {
+            return false;
+        }
 
         pBase->OnDestroy();
         delete pBase;
@@ -161,10 +187,9 @@ BOOL CPlayerObject::DestroyAllModule() {
 BOOL CPlayerObject::SendMsgProtoBuf(INT32 nMsgID,
                                     const google::protobuf::Message& pdata) {
     if (m_nProxyConnID == 0) {
-        CLog::GetInstancePtr()->LogWarn(
-            "Error SendMsgProtoBuf Failed m_dwProxyConnID==0 MessageID:%d, "
-            "RoleID:%ld",
-            nMsgID, m_uRoleID);
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "Error SendMsgProtoBuf Failed m_dwProxyConnID==0 MessageID:"
+            << nMsgID << " RoleID:" << m_uRoleID;
         return FALSE;
     }
 
@@ -176,8 +201,9 @@ BOOL CPlayerObject::SendMsgRawData(INT32 nMsgID,
                                    const char* pdata,
                                    UINT32 dwLen) {
     if (m_nProxyConnID == 0) {
-        CLog::GetInstancePtr()->LogError(
-            "Error SendMsgRawData MessageID:%d, RoleID:%ld", nMsgID, m_uRoleID);
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "Error SendMsgRawData Failed m_dwProxyConnID==0 MessageID:"
+            << nMsgID << " RoleID:" << m_uRoleID;
         return FALSE;
     }
 
@@ -231,22 +257,25 @@ UINT32 CPlayerObject::CheckCopyConditoin(UINT32 dwCopyID) {
 BOOL CPlayerObject::SendIntoSceneNotify(UINT32 dwCopyGuid,
                                         UINT32 dwCopyID,
                                         UINT32 dwSvrID) {
-    ERROR_RETURN_FALSE(dwCopyID != 0);
-    ERROR_RETURN_FALSE(dwCopyGuid != 0);
-    ERROR_RETURN_FALSE(dwSvrID != 0);
+    if (dwCopyID == 0 || dwCopyGuid == 0 || dwSvrID == 0) {
+        return false;
+    }
 
-    NotifyIntoScene Nty;
+    symphony::proto::NotifyIntoScene Nty;
     Nty.set_copyid(dwCopyID);
     Nty.set_copyguid(dwCopyGuid);
     Nty.set_serverid(dwSvrID);
     Nty.set_roleid(m_uRoleID);
-    ERROR_RETURN_FALSE(m_uRoleID != 0);
+    if (m_uRoleID == 0) {
+        return false;
+    }
+
     SendMsgProtoBuf(MSG_NOTIFY_INTO_SCENE, Nty);
     return TRUE;
 }
 
 BOOL CPlayerObject::SendLeaveScene(UINT32 dwCopyGuid, UINT32 dwSvrID) {
-    LeaveSceneReq LeaveReq;
+    symphony::proto::LeaveSceneReq LeaveReq;
     LeaveReq.set_roleid(m_uRoleID);
     ServiceBase::GetInstancePtr()->SendMsgProtoBuf(
         CGameSvrMgr::GetInstancePtr()->GetConnIDBySvrID(dwSvrID),
@@ -262,7 +291,9 @@ BOOL CPlayerObject::SetConnectID(UINT32 dwProxyID, UINT32 dwClientID) {
 }
 
 CModuleBase* CPlayerObject::GetModuleByType(UINT32 dwModuleType) {
-    ERROR_RETURN_NULL(dwModuleType < (UINT32)m_MoudleList.size());
+    if (dwModuleType >= m_MoudleList.size()) {
+        return nullptr
+    }
 
     return m_MoudleList.at(dwModuleType);
 }
@@ -273,38 +304,45 @@ UINT64 CPlayerObject::GetRoleID() {
 
 UINT32 CPlayerObject::GetCityCopyID() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-    ERROR_RETURN_FALSE(pModule != NULL);
-    ERROR_RETURN_FALSE(pModule->m_pRoleDataObject != NULL);
+    if (pModule == NULL || pModule->m_pRoleDataObject == NULL) {
+        return 0;
+    }
+
     return pModule->m_pRoleDataObject->m_CityCopyID;
 }
 
 UINT64 CPlayerObject::GetAccountID() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-    ERROR_RETURN_FALSE(pModule != NULL);
-    ERROR_RETURN_FALSE(pModule->m_pRoleDataObject != NULL);
+    if (pModule == NULL || pModule->m_pRoleDataObject == NULL) {
+        return false;
+    }
+
     return pModule->m_pRoleDataObject->m_uAccountID;
 }
 
 UINT32 CPlayerObject::GetActorID() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-
-    ERROR_RETURN_VALUE(pModule != NULL, 0);
+    if (pModule == NULL) {
+        return 0;
+    }
 
     return pModule->GetActorID();
 }
 
 CHAR* CPlayerObject::GetName() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-
-    ERROR_RETURN_VALUE(pModule != NULL, 0);
+    if (pModule == NULL) {
+        return 0;
+    }
 
     return pModule->GetName();
 }
 
 UINT32 CPlayerObject::GetCarrerID() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-
-    ERROR_RETURN_VALUE(pModule != NULL, 0);
+    if (pModule == NULL) {
+        return 0;
+    }
 
     return pModule->GetCarrerID();
 }
@@ -313,9 +351,9 @@ INT64 CPlayerObject::GetProperty(ERoleProperty ePropertyID) {
     INT32 nModuleID = ePropertyID / 100;
 
     if (nModuleID < MT_ROLE || nModuleID >= MT_END) {
-        CLog::GetInstancePtr()->LogError(
-            "CPlayerObject::GetProperty Error Inavlie PropertyID:%d",
-            ePropertyID);
+        SYMPHONY_LOG_ERROR(g_logger)
+            << "CPlayerObject::GetProperty Error Inavlie ModuleID:"
+            << nModuleID;
         return 0;
     }
 
@@ -337,12 +375,17 @@ VOID CPlayerObject::SetRoomID(UINT64 uRoomID) {
 
 BOOL CPlayerObject::SendRoleLoginAck() {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-    ERROR_RETURN_FALSE(pModule != NULL);
-    RoleLoginAck Ack;
+    if (pModule == NULL) {
+        return FALSE;
+    }
+
+    symphony::proto::RoleLoginAck Ack;
     Ack.set_retcode(MRC_SUCCESSED);
     for (int i = MT_ROLE; i < MT_END; i++) {
         CModuleBase* pBase = m_MoudleList.at(i);
-        ERROR_RETURN_FALSE(pBase != NULL);
+        if (pBase == NULL) {
+            return FALSE;
+        }
         pBase->SaveToClientLoginData(Ack);
     }
 
@@ -355,7 +398,7 @@ BOOL CPlayerObject::SendPlayerChange(EChangeType eChangeType,
                                      UINT64 uIntValue1,
                                      UINT64 uIntValue2,
                                      std::string strValue) {
-    ObjectChangeNotify Ntf;
+    symphony::proto::ObjectChangeNotify Ntf;
     Ntf.set_roleid(GetRoleID());
     Ntf.set_changetype(eChangeType);
     Ntf.set_intvalue1(uIntValue1);
@@ -372,8 +415,10 @@ BOOL CPlayerObject::SendPlayerChange(EChangeType eChangeType,
 BOOL CPlayerObject::ToTransferData(TransferDataItem* pTransItem) {
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
 
-    TransRoleData* pRoleData = pTransItem->mutable_roledata();
-    ERROR_RETURN_FALSE(pRoleData != NULL);
+    symphony::proto::TransRoleData* pRoleData = pTransItem->mutable_roledata();
+    if (pRoleData == NULL) {
+        return FALSE;
+    }
 
     pRoleData->set_roleid(m_uRoleID);
     pRoleData->set_carrerid(pModule->m_pRoleDataObject->m_CarrerID);
@@ -470,11 +515,17 @@ BOOL CPlayerObject::CalcFightDataInfo() {
     }
 
     CRoleModule* pModule = (CRoleModule*)GetModuleByType(MT_ROLE);
-    ERROR_RETURN_FALSE(pModule != NULL);
+    if (pModule == NULL) {
+        return FALSE;
+    }
+
     StLevelInfo* pLevelInfo = CStaticData::GetInstancePtr()->GetCarrerLevelInfo(
         pModule->m_pRoleDataObject->m_CarrerID,
         pModule->m_pRoleDataObject->m_Level);
-    ERROR_RETURN_FALSE(pLevelInfo != NULL);
+    if (pLevelInfo == NULL) {
+        return FALSE;
+    }
+
     memcpy(PropertyValue, pLevelInfo->Propertys, sizeof(INT32) * PROPERTY_NUM);
 
     for (int i = 0; i < PROPERTY_NUM; i++) {

@@ -55,29 +55,37 @@ struct ActivityDataObject : public ShareObject {
     } m_Data;
 
     BOOL Create(symphony::MySQL::ptr pdb) {
-        static CDBStoredProcedure csp(
+        std::string szSql =
             "REPLACE INTO activity (id, type, roleid, join_time, data_len, data) \
-			VALUES(?,?,?,?,?,?);");
-        csp.set_uint64(0, m_dwActivityID);
-        csp.set_uint64(1, m_dwActivityType);
-        csp.set_uint64(2, m_uRoleID);
-        csp.set_uint64(3, m_uJoinTime);
-        csp.set_int32(4, m_dwDataLen);
-        csp.set_blob(5, m_Data.m_Bytes, m_dwDataLen);
-        return pDB->Execute(&csp);
+            VALUES(?,?,?,?,?,?);";
+        auto stmt = pdb->prepare(szSql);
+        if (!stmt) {
+            return FALSE;
+        }
+        stmt->bindUint32(0, m_dwActivityID);
+        stmt->bindUint32(1, m_dwActivityType);
+        stmt->bindUint64(2, m_uRoleID);
+        stmt->bindUint64(3, m_uJoinTime);
+        stmt->bindInt32(4, m_dwDataLen);
+        stmt->bindTinyBlob(5, m_Data.m_Bytes, m_dwDataLen);
+        return stmt->execute() == 0;
     }
 
     BOOL Update(symphony::MySQL::ptr pdb) {
-        static CDBStoredProcedure csp(
+        std::string szSql =
             "REPLACE INTO activity (id, type, roleid, join_time, data_len, data) \
-			VALUES(?,?,?,?,?,?);");
-        csp.set_uint64(0, m_dwActivityID);
-        csp.set_uint64(1, m_dwActivityType);
-        csp.set_uint64(2, m_uRoleID);
-        csp.set_uint64(3, m_uJoinTime);
-        csp.set_int32(4, m_dwDataLen);
-        csp.set_blob(5, m_Data.m_Bytes, m_dwDataLen);
-        return pDB->Execute(&csp);
+            VALUES(?,?,?,?,?,?);";
+        auto stmt = pdb->prepare(szSql);
+        if (!stmt) {
+            return FALSE;
+        }
+        stmt->bindUint32(0, m_dwActivityID);
+        stmt->bindUint32(1, m_dwActivityType);
+        stmt->bindUint64(2, m_uRoleID);
+        stmt->bindUint64(3, m_uJoinTime);
+        stmt->bindInt32(4, m_dwDataLen);
+        stmt->bindTinyBlob(5, m_Data.m_Bytes, m_dwDataLen);
+        return stmt->execute() == 0;
     }
 
     BOOL Delete(symphony::MySQL::ptr pdb) { return TRUE; }

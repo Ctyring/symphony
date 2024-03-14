@@ -1,7 +1,7 @@
 #ifndef __CMODULE_BASE_H__
 #define __CMODULE_BASE_H__
+#include "player_object.h"
 #include "symphony/symphony.h"
-
 class CPlayerObject;
 
 class CModuleBase {
